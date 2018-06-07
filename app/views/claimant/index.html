@@ -64,8 +64,8 @@
           {{ claimant.address.city }},
           {{ claimant.address.postcode }}
         </li>
-        <li>Landline:</li>
-        <li>Mobile:</li>
+        <li>Landline: {{ claimant.landline if claimant.landline else "Not on file" }}</li>
+        <li>Mobile: {{ claimant.mobile if claimant.mobile else "Not on file" }}</li>
         {# <li>Date of birth: {{ claimant.dob | join("-") | date("D MMM YYYY") }}</li> #}
         <li>Legacy benefits: {{ claimant.legacyBenefits | join("/") | upper }}</li>
       </ul>

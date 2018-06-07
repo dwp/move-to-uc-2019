@@ -11,7 +11,7 @@
       <form action="/claimant/edit/{{ claimant.nino }}" method="post" class="form">
 
         <h1 class="heading-large">
-          Add a claimant
+          Update claimant&rsquo;s details
         </h1>
 
         <div class="form-group">
@@ -87,6 +87,16 @@
             </div>
 
           </fieldset>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="landline">Landline number</label>
+          <input class="form-control" id="landline" name="landline" value="{{ claimant.landline }}" type="tel" autocomplete="off">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="mobile">Mobile number</label>
+          <input class="form-control" id="mobile" name="mobile" value="{{ claimant.mobile }}" type="tel" autocomplete="off">
         </div>
 
         <div class="form-group">

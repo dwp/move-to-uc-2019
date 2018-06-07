@@ -57,6 +57,8 @@ router.post('/create', (req, res) => {
       city: req.body.addressCity,
       postcode: req.body.addressPostcode
     },
+    landline: req.body.landline,
+    mobile: req.body.mobile,
     partner: req.body.partner,
     partnerName: req.body.partnerName,
     partnerCode: req.body.partnerCode,
@@ -101,6 +103,8 @@ router.post('/claimant/edit/:nino', (req, res) => {
     city: req.body.addressCity,
     postcode: req.body.addressPostcode
   },
+  claimantToEdit[0].landline = req.body.landline,
+  claimantToEdit[0].mobile = req.body.mobile,
   claimantToEdit[0].partner = req.body.partner,
   claimantToEdit[0].partnerName = req.body.partnerName,
   claimantToEdit[0].partnerCode = req.body.partnerCode,
