@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{# hide header links #}
+{% block header_links %}{% endblock %}
+
+{% block content %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge">
+        {{ serviceName }} prototype
+        <span class="heading-secondary">using <a href="https://github.com/alphagov/govuk_prototype_kit">GOV.UK prototype kit</a> {{releaseVersion}}</span>
+      </h1>
+
+      <a class="button button-start" href="find/" role="button">
+        View prototype
+      </a>
+
+    </div>
+  </div>
+{% endblock %}

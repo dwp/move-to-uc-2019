@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block global_header_bar %}
+  {{ nav.global(active='Find a claimant') }}
+{% endblock %}
+
+{% block content %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-large">
+        No match found for &lsquo;{{ data['find'] | nino }}&rsquo;
+      </h1>
+
+      <div class="form-group-related">
+        <a class="button" href="/claimant/create" role="button">Add claimant</a>
+      </div>
+      <p>or <a href="/find">search again</a></p>
+
+    </div>
+  </div>
+{% endblock %}

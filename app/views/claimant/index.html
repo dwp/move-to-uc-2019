@@ -1,0 +1,114 @@
+{% extends "layout.html" %}
+
+{% block global_header_bar %}
+  {{ nav.global() }}
+
+  <div class="header-bar">
+    <div class="header-bar__content">
+      <div class="grid-row">
+        <div class="column-two-thirds">
+          <h1 class="heading-large mt0 mb0">
+            {{ claimant.firstName }} {{ claimant.lastName }}
+            <small class="font-medium">({{ claimant.nino | nino }})</small>
+          </h1>
+        </div>
+        <div class="column-one-third">
+          <strong class="govuk-tag mt5">
+            {{ ["Orientation", "Call to Act", "First Reminder", "Second Reminder", "Completed", "Deferred", "Exempt", "Migrated", "Non-Compliant"] | random }}
+          </strong>
+        </div>
+
+        {% if claimant.appointee == "true" or claimant.partner == "true" or claimant.welsh == "true" %}
+        <div class="column-full mt15">
+          <ul class="header-bar__details">
+            {% if claimant.appointee == "true" %}
+            <li>Appointee for {{ claimant.appointeeName }} (UI 25 56 34 A)</li>
+            {% endif %}
+            {# {% if claimant.partner == "true" %}
+            <li>Partner: <a href="#0">{{ claimant.partnerName }}</a> ({{ claimant.partnerCode }})</li>
+            {% endif %} #}
+            {% if claimant.welsh == "true" %}
+            <li>Welsh speaker</li>
+            {% endif %}
+          </ul>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      {# {{ nav.secondary(
+        [
+          { name: 'Claimant details', url: '#0' },
+          { name: 'Timeline', url: '#0' },
+          { name: 'Action', url: '#0' }
+          ],
+        active='Claimant details'
+      ) }} #}
+
+      <h2 class="heading-medium">
+        Claimant&rsquo;s details
+      </h2>
+      <ul class="list">
+        <li>Accessibility: Blind</li>
+        <li>Address:
+          {{ claimant.address.street }},
+          {% if claimant.address.street2 %}
+            {{ claimant.address.street2 }},
+          {% endif %}
+          {{ claimant.address.city }},
+          {{ claimant.address.postcode }}
+        </li>
+        <li>Landline:</li>
+        <li>Mobile:</li>
+        {# <li>Date of birth: {{ claimant.dob | join("-") | date("D MMM YYYY") }}</li> #}
+        <li>Legacy benefits: {{ claimant.legacyBenefits | join("/") | upper }}</li>
+      </ul>
+      <p class="">
+        <a href="/claimant/edit/{{ claimant.nino }}">Update claimant&rsquo;s details</a>
+      </p>
+
+      <h2 class="heading-medium">
+        Universal Credit status
+      </h2>
+
+      <h3>
+        Monitor stage
+      </h3>
+      <p class="mt0"><span class="bold">Orientation</span> (<a href="#0">reissue letter</a>)</p>
+
+      <h3>
+        UC breakdown
+      </h3>
+      <p class="bold mt0">£200.00 &ndash; £170 UC + £30 TP</p>
+
+    </div>
+    <div class="column-one-third">
+      <h2 class="heading-medium">Claim history</h2>
+      <ul class="timeline">
+        <li>
+          <span class="entry"></span>
+          <h3 class="bold">Claim disallowed</h3>
+          <p>Claimant over state pension age.</p>
+          <span class="font-xsmall">by John Smith</span>
+          <span class="font-xsmall">1 Jan 2018, 14:11</span>
+        </li>
+
+        <li>
+          <span class="entry"></span>
+          <h3 class="bold">Marriage verified</h3>
+          <span>by John Smith</span>
+          <span>1 January 2018</span>
+          <p>
+            Marriage certificate uploaded to DRS.
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+{% endblock %}

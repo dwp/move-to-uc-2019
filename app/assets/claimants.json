@@ -1,0 +1,61 @@
+[
+  {
+    "nino": "QQ123456C",
+    "firstName": "Joe",
+    "lastName": "Bloggs",
+    "dob": [
+      "1980",
+      "1",
+      "1"
+    ],
+    "address": {
+      "street": "23 River View",
+      "street2": "",
+      "city": "Bedlington",
+      "postcode": "NE22 5LS"
+    },
+    "partner": [
+      "true"
+    ],
+    "partnerName": "Jane Doe",
+    "partnerCode": "1234",
+    "appointee": [
+      "true"
+    ],
+    "appointeeName": "Richard Roe",
+    "legacyBenefits": [
+      "ctc",
+      "hb"
+    ],
+    "welsh": [
+      "true"
+    ]
+  },
+  {
+    "nino": "UU123456C",
+    "firstName": "Jane",
+    "lastName": "Doe",
+    "dob": [
+      "1972",
+      "12",
+      "12"
+    ],
+    "address": {
+      "street": "23 River View",
+      "street2": "",
+      "city": "Bedlington",
+      "postcode": "NE22 5LS"
+    },
+    "partner": [
+      "true"
+    ],
+    "partnerName": "Joe Bloggs",
+    "partnerCode": "1234",
+    "appointee": "_unchecked",
+    "appointeeName": "",
+    "legacyBenefits": [
+      "ctc"
+    ],
+    "welsh": "_unchecked"
+  }
+]
