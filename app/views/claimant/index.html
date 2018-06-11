@@ -18,7 +18,7 @@
           </strong>
         </div>
 
-        {% if claimant.appointee == "true" or claimant.partner == "true" or claimant.welsh == "true" %}
+        {% if claimant.appointee == "true" or claimant.welsh == "true" %}
         <div class="column-full mt15">
           <ul class="header-bar__details">
             {% if claimant.appointee == "true" %}
@@ -52,10 +52,10 @@
       ) }} #}
 
       <h2 class="heading-medium">
-        Claimant&rsquo;s details
+        Claimant&rsquo;s personal details
       </h2>
       <ul class="list">
-        <li>Accessibility: Blind</li>
+        {# <li>Accessibility: Blind</li> #}
         <li>Address:
           {{ claimant.address.street }},
           {% if claimant.address.street2 %}
@@ -73,41 +73,42 @@
         <a href="/claimant/edit/{{ claimant.nino }}">Update claimant&rsquo;s details</a>
       </p>
 
-      <h2 class="heading-medium">
-        Universal Credit status
-      </h2>
 
-      <h3>
-        Monitor stage
-      </h3>
-      <p class="mt0"><span class="bold">Orientation</span> (<a href="#0">reissue letter</a>)</p>
+      <table>
+        <caption>
+          <h2 class="heading-medium">
+            Universal Credit breakdown
+          </h2>
+        </caption>
+        <tbody>
+          <tr>
+            <td>Universal Credit amount</td>
+            <td>£108.80 per week</td>
+          </tr>
+          <tr>
+            <td>Transitional protection amount</td>
+            <td>11.20 per week</td>
+          </tr>
+          <tr>
+            <td>Total benefit amount</td>
+            <td>£120.00 per week</td>
+          </tr>
+        </tbody>
+      </table>
+    {# </div>
 
-      <h3>
-        UC breakdown
-      </h3>
-      <p class="bold mt0">£200.00 &ndash; £170 UC + £30 TP</p>
+    <div class="column-one-third"> #}
 
-    </div>
-    <div class="column-one-third">
-      <h2 class="heading-medium">Claim history</h2>
+      <h2 class="heading-medium">Timeline</h2>
       <ul class="timeline">
+      {% for i in claimant.history %}
         <li>
           <span class="entry"></span>
-          <h3 class="bold">Claim disallowed</h3>
-          <p>Claimant over state pension age.</p>
-          <span class="font-xsmall">by John Smith</span>
-          <span class="font-xsmall">1 Jan 2018, 14:11</span>
+          <h3 class="bold">{{ i.title }}</h3>
+          <p>{% if i.link %}<a href="{{ i.link }}">{% endif %}{{ i.body }}{% if i.link %}</a>{% endif %}</p>
+          <span class="font-xsmall">{{ i.time }}</span>
         </li>
-
-        <li>
-          <span class="entry"></span>
-          <h3 class="bold">Marriage verified</h3>
-          <span>by John Smith</span>
-          <span>1 January 2018</span>
-          <p>
-            Marriage certificate uploaded to DRS.
-          </p>
-        </li>
+      {% endfor %}
       </ul>
     </div>
   </div>
