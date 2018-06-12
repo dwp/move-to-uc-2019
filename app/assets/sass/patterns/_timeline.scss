@@ -1,21 +1,33 @@
 .timeline {
   .entry {
     background-color: $govuk-blue;
-    height: 3px;
+    height: 4px;
     left: 0;
     position: absolute;
-    top: 28px;
+    top: 8px;
     width: 10px;
   }
 
   li   {
-    border-left: 3px solid $govuk-blue;
-    padding: 20px 0 20px 20px;
+    border-left: 4px solid $govuk-blue;
+    padding: 0 0 20px 20px;
     position: relative;
+
+    &:last-of-type {
+      padding-bottom: 0;
+    }
   }
 
-  span {
-    color: $secondary-text-colour;
-    display: block;
+    li span {
+      color: $secondary-text-colour;
+      display: block;
+    }
+
+  li.future {
+    border-color: $grey-1;
+  }
+
+  li.future .entry {
+    background-color: $grey-1;
   }
 }

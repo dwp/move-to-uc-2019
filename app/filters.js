@@ -19,6 +19,10 @@ module.exports = function (env) {
     return str.replace(/(\w{2})/g, '$1 ').toUpperCase();
   }
 
+  filters.mobile = function(str) {
+    str = normalize(str, '');
+    return str.replace(/(\d{5})(\d{3})(\d{3})/g, '$1 $2 $3');
+  }
 
   var dateFilter = require('nunjucks-date-filter')
   filters.date = dateFilter

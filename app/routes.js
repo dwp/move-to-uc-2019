@@ -58,6 +58,7 @@ router.post('/claimant/edit/:nino', (req, res) => {
   claimantToEdit[0].partnerCode = req.body.partnerCode,
   claimantToEdit[0].appointee = req.body.appointee,
   claimantToEdit[0].appointeeName = req.body.appointeeName,
+  claimantToEdit[0].appointeeNino = req.body.appointeeNino,
   claimantToEdit[0].legacyBenefits = req.body.legacyBenefits,
   claimantToEdit[0].welsh = req.body.welsh
 

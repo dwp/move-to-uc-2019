@@ -14,7 +14,7 @@
         </div>
         <div class="column-one-third">
           <strong class="govuk-tag mt5">
-            {{ ["Orientation", "Call to Act", "First Reminder", "Second Reminder", "Completed", "Deferred", "Exempt", "Migrated", "Non-Compliant"] | random }}
+            {{ claimant.status }}
           </strong>
         </div>
 
@@ -22,7 +22,7 @@
         <div class="column-full mt15">
           <ul class="header-bar__details">
             {% if claimant.appointee == "true" %}
-            <li>Appointee for {{ claimant.appointeeName }} (UI 25 56 34 A)</li>
+            <li>Appointee for {{ claimant.appointeeName }} ({{ claimant.appointeeNino | nino }})</li>
             {% endif %}
             {# {% if claimant.partner == "true" %}
             <li>Partner: <a href="#0">{{ claimant.partnerName }}</a> ({{ claimant.partnerCode }})</li>
@@ -51,27 +51,49 @@
         active='Claimant details'
       ) }} #}
 
-      <h2 class="heading-medium">
-        Claimant&rsquo;s personal details
-      </h2>
-      <ul class="list">
-        {# <li>Accessibility: Blind</li> #}
-        <li>Address:
-          {{ claimant.address.street }},
-          {% if claimant.address.street2 %}
-            {{ claimant.address.street2 }},
-          {% endif %}
-          {{ claimant.address.city }},
-          {{ claimant.address.postcode }}
-        </li>
-        <li>Landline: {{ claimant.landline if claimant.landline else "Not on file" }}</li>
-        <li>Mobile: {{ claimant.mobile if claimant.mobile else "Not on file" }}</li>
-        {# <li>Date of birth: {{ claimant.dob | join("-") | date("D MMM YYYY") }}</li> #}
-        <li>Legacy benefits: {{ claimant.legacyBenefits | join("/") | upper }}</li>
-      </ul>
-      <p class="">
-        <a href="/claimant/edit/{{ claimant.nino }}">Update claimant&rsquo;s details</a>
-      </p>
+      <table class="form-group-related">
+        <caption>
+          <h2 class="heading-medium">
+            Claimant&rsquo;s personal details
+          </h2>
+        </caption>
+        <tbody>
+          <tr>
+            <td>Address</td>
+            <td>{{ claimant.address.street }},
+            {% if claimant.address.street2 %}
+              {{ claimant.address.street2 }},
+            {% endif %}
+            {{ claimant.address.city }},
+            {{ claimant.address.postcode }}</td>
+          </tr>
+          <tr>
+            <td>Landline number</td>
+            <td>
+              {% if claimant.landline %}
+                {{ claimant.landline }}
+              {% else %}
+                <span class="grey">Not on file</span>
+              {% endif %}
+            </td>
+          </tr>
+          <tr>
+            <td>Mobile number</td>
+            <td>
+              {% if claimant.mobile %}
+                {{ claimant.mobile | mobile }}
+              {% else %}
+                <span class="grey">Not on file</span>
+              {% endif %}
+            </td>
+          </tr>
+          <tr>
+            <td>Legacy benefits</td>
+            <td>{{ claimant.legacyBenefits | join("/") | upper }}</td>
+          </tr>
+        </tbody>
+      </table>
+      <a href="/claimant/edit/{{ claimant.nino }}">Update claimant&rsquo;s details</a>
 
 
       <table>
@@ -95,18 +117,24 @@
           </tr>
         </tbody>
       </table>
-    {# </div>
+    </div>
 
-    <div class="column-one-third"> #}
+    <div class="column-one-third">
 
       <h2 class="heading-medium">Timeline</h2>
       <ul class="timeline">
       {% for i in claimant.history %}
+        {% if i.complete %}
         <li>
+        {% else %}
+        <li class="future">
+        {% endif %}
           <span class="entry"></span>
-          <h3 class="bold">{{ i.title }}</h3>
-          <p>{% if i.link %}<a href="{{ i.link }}">{% endif %}{{ i.body }}{% if i.link %}</a>{% endif %}</p>
-          <span class="font-xsmall">{{ i.time }}</span>
+          <h3 class="bold">
+            {{ i.title }}
+            <span class="font-xsmall">{{ i.time }}</span>
+          </h3>
+          {% if i.link %}<a href="{{ i.link }}">{% endif %}{{ i.body }}{% if i.link %}</a>{% endif %}
         </li>
       {% endfor %}
       </ul>

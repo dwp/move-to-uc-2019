@@ -19,6 +19,8 @@ Example usage:
 
 module.exports = {
 
+  "statuses": ["Orientation", "Call to Act", "First Reminder", "Second Reminder", "Completed", "Deferred", "Exempt", "Migrated", "Non-Compliant"],
+
   "claimants": [
     {
       "nino": "QQ123456C",
@@ -44,6 +46,7 @@ module.exports = {
         "true"
       ],
       "appointeeName": "Richard Roe",
+      "appointeeNino": "UI255634A",
       "legacyBenefits": [
         "ctc",
         "hb"
@@ -53,18 +56,36 @@ module.exports = {
       ],
       "landline": "",
       "mobile": "07000000000",
+      "status": "Orientation",
       "history": [
         {
           "title": "Orientation letter sent",
           "body": "Re-issue letter",
           "link": "#0",
-          "time": "Automated, 1 Jan 2018, 14:11"
+          "time": "1 Jun 2018",
+          "complete": true
         },
         {
-          "title": "Claimant call",
-          "body": "Claimant called to confirm that they didn't need to apply yet. Captured mobile number while on call.",
-          "time": "Rachael Stewart, 9 Jan 2018, 10:10"
+          "title": "Notification letter",
+          "time": "due 1 Jul 2018"
+        },
+        {
+          "title": "Reminder sms",
+          "time": "due 1 Aug 2018"
+        },
+        {
+          "title": "Reminder call",
+          "time": "due 1 Sep 2018"
+        },
+        {
+          "title": "Move to Universal Credit",
+          "time": "due 1 Oct 2018"
         }
+        // {
+        //   "title": "Claimant call",
+        //   "body": "Claimant called to confirm that they didn't need to apply yet. Captured mobile number while on call.",
+        //   "time": "Rachael Stewart, 9 Jan 2018 10:10"
+        // },
       ]
     },
     {
@@ -83,16 +104,54 @@ module.exports = {
         "postcode": "NE22 5LS"
       },
       "partner": [
-        "true"
+        "false"
       ],
-      "partnerName": "Joe Bloggs",
-      "partnerCode": "1234",
+      "partnerName": "",
+      "partnerCode": "",
       "appointee": "_unchecked",
       "appointeeName": "",
       "legacyBenefits": [
         "ctc"
       ],
-      "welsh": "_unchecked"
+      "welsh": "_unchecked",
+      "landline": "0121 496 0649",
+      "mobile": "07700900374",
+      "status": "Complete",
+      "history": [
+        {
+          "title": "Orientation letter sent",
+          "body": "Re-issue letter",
+          "link": "#0",
+          "time": "1 Feb 2018",
+          "complete": true
+        },
+        {
+          "title": "Notification letter sent",
+          "body": "Re-issue letter",
+          "link": "#0",
+          "time": "1 Mar 2018",
+          "complete": true
+        },
+        {
+          "title": "Reminder sms sent",
+          "body": "Re-issue sms",
+          "link": "#0",
+          "time": "1 Apr 2018",
+          "complete": true
+        },
+        {
+          "title": "Reminder call sent",
+          "body": "Re-issue call",
+          "link": "#0",
+          "time": "1 May 2018",
+          "complete": true
+        },
+        {
+          "title": "Moved to Universal Credit",
+          "time": "1 Jun 2018",
+          "complete": true
+        }
+      ]
     }
   ]
 
