@@ -95,7 +95,6 @@
       </table>
       <a href="/claimant/edit/{{ claimant.nino }}">Update claimant&rsquo;s details</a>
 
-
       <table>
         <caption>
           <h2 class="heading-medium">
@@ -137,6 +136,57 @@
           {% if i.link %}<a href="{{ i.link }}">{% endif %}{{ i.body }}{% if i.link %}</a>{% endif %}
         </li>
       {% endfor %}
+      </ul>
+    </div>
+  </div>
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h2 class="heading-medium">
+        Claimant interactions
+      </h2>
+
+      <h3 class="heading-small visuallyhidden">
+        Add an interaction
+      </h3>
+      <form action="addinteraction" method="get" class="form">
+
+        <div class="form-group">
+          <fieldset class="inline">
+            <legend class="visually-hidden">type</legend>
+            <div class="multiple-choice">
+              <input id="interactionPhone" type="radio" name="interactiontype" value="Phone" {{ checked('interactiontype','Phone') }}>
+              <label for="interactionPhone">Phone</label>
+            </div>
+
+            <div class="multiple-choice">
+              <input id="interactionVisit" type="radio" name="interactiontype" value="Visit" {{ checked('interactiontype','Visit') }}>
+              <label for="interactionVisit">Visit</label>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="comment">Comment</label>
+          <textarea class="form-control form-control-3-4" id="comment" name="comment" rows="5" autocomplete="off"></textarea>
+        </div>
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Add interaction">
+        </div>
+
+      </form>
+
+      <h3 class="heading-small visuallyhidden">
+        Previous interactions
+      </h3>
+      <ul class="comments">
+        <li class="comment">
+          <h4 class="comment__header">
+            Claimant visited Leeds Job Centre Plus
+            <span>Karl	Gonzalez, 4 Jun 2018 14:11</span>
+          </h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio laboriosam voluptates asperiores sed quo necessitatibus, maxime eum dolore animi dolorum hic doloribus quia optio nisi dicta possimus, magnam aut quis!</p>
+        </li>
       </ul>
     </div>
   </div>

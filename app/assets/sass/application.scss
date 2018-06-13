@@ -378,3 +378,31 @@ $path: "/public/images/";
     padding: 30px 20px 10px;
   }
 }
+
+
+
+
+
+.comments {
+  margin: 30px 0;
+  border-top: 1px solid $border-colour;
+}
+
+.comment {
+  border-bottom: 1px solid $border-colour;
+}
+
+  .comment__header {
+    @include bold-19();
+    margin-top: 10px;
+
+    span {
+      @include core-16();
+      display: block;
+      color: $grey-1;
+    }
+  }
+
+  .comment p {
+    margin-bottom: 10px;
+  }
