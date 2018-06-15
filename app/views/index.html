@@ -7,14 +7,25 @@
   <div class="grid-row">
     <div class="column-two-thirds">
 
-      <h1 class="heading-xlarge">
+      <h1 class="heading-large">
         {{ serviceName }} prototype
-        <span class="heading-secondary">using <a href="https://github.com/alphagov/govuk_prototype_kit">GOV.UK prototype kit</a> {{releaseVersion}}</span>
       </h1>
 
-      <a class="button button-start" href="find/" role="button">
-        View prototype
-      </a>
+      <div class="panel panel-border-wide">
+        To find the example claimants use the following National Insurance numbers:
+        <ul class="list list-bullet">
+          <li>QQ 12 34 56 C</li>
+          <li>UU 12 34 56 C</li>
+        </ul>
+      </div>
+
+      <div class="form-group">
+        <a class="button button-start" href="find/" role="button">
+          View prototype
+        </a>
+      </div>
+
+      <p class="grey">Built using <a href="https://github.com/alphagov/govuk_prototype_kit">GOV.UK prototype kit</a> {{releaseVersion}}</p>
 
     </div>
   </div>
