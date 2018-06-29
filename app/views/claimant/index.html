@@ -1,46 +1,15 @@
 {% extends "layout.html" %}
 
 {% block global_header_bar %}
-  {{ nav.global() }}
-
-  <div class="header-bar">
-    <div class="header-bar__content">
-      <div class="grid-row">
-        <div class="column-two-thirds">
-          <h1 class="heading-large mt0 mb0">
-            {{ claimant.firstName }} {{ claimant.lastName }}
-            <small class="font-medium">({{ claimant.nino | nino }})</small>
-          </h1>
-        </div>
-        <div class="column-one-third">
-          <strong class="govuk-tag mt5">
-            {{ claimant.status }}
-          </strong>
-        </div>
-
-        {% if claimant.appointee == "true" or claimant.welsh == "true" %}
-        <div class="column-full mt15">
-          <ul class="header-bar__details">
-            {% if claimant.appointee == "true" %}
-            <li>Appointee for {{ claimant.appointeeName }} ({{ claimant.appointeeNino | nino }})</li>
-            {% endif %}
-            {# {% if claimant.partner == "true" %}
-            <li>Partner: <a href="#0">{{ claimant.partnerName }}</a> ({{ claimant.partnerCode }})</li>
-            {% endif %} #}
-            {% if claimant.welsh == "true" %}
-            <li>Welsh speaker</li>
-            {% endif %}
-          </ul>
-        </div>
-        {% endif %}
-      </div>
-    </div>
-  </div>
+  {# {{ nav.global() }} #}
+  {% include "includes/key-details-bar.html" %}
 {% endblock %}
 
 {% block content %}
   <div class="grid-row">
     <div class="column-two-thirds">
+
+      <h1 class="visually-hidden">Claim details: {{ claimant.firstName }} {{ claimant.lastName }}</h1>
 
       {# {{ nav.secondary(
         [
@@ -51,83 +20,108 @@
         active='Claimant details'
       ) }} #}
 
-      <table class="form-group-related">
-        <caption>
-          <h2 class="heading-medium">
-            Claimant&rsquo;s personal details
-          </h2>
-        </caption>
-        <tbody>
-          <tr>
-            <td>Address</td>
-            <td>{{ claimant.address.street }},
+      <h2 class="heading-medium">
+        Personal details
+      </h2>
+      <dl class="govuk-check-your-answers">
+        <div>
+          <dt class="cya-question">
+            Address
+          </dt>
+          <dd class="cya-answer">
+            {{ claimant.address.street }},
             {% if claimant.address.street2 %}
               {{ claimant.address.street2 }},
             {% endif %}
             {{ claimant.address.city }},
-            {{ claimant.address.postcode }}</td>
-          </tr>
-          <tr>
-            <td>Landline number</td>
-            <td>
-              {% if claimant.landline %}
-                {{ claimant.landline }}
-              {% else %}
-                <span class="grey">Not on file</span>
-              {% endif %}
-            </td>
-          </tr>
-          <tr>
-            <td>Mobile number</td>
-            <td>
-              {% if claimant.mobile %}
-                {{ claimant.mobile | mobile }}
-              {% else %}
-                <span class="grey">Not on file</span>
-              {% endif %}
-            </td>
-          </tr>
-          <tr>
-            <td>Legacy benefits</td>
-            <td>{{ claimant.legacyBenefits | join("/") | upper }}</td>
-          </tr>
-        </tbody>
-      </table>
-      <a href="/claimant/edit/{{ claimant.nino }}">Update claimant&rsquo;s details</a>
+            {{ claimant.address.postcode }}
+          </dd>
+        </div>
 
-      <table>
-        <caption>
-          <h2 class="heading-medium">
-            Universal Credit breakdown
-          </h2>
-        </caption>
-        <tbody>
-          <tr>
-            <td>Universal Credit amount</td>
-            <td>£108.80 per week</td>
-          </tr>
-          <tr>
-            <td>Transitional protection amount</td>
-            <td>11.20 per week</td>
-          </tr>
-          <tr>
-            <td>Total benefit amount</td>
-            <td>£120.00 per week</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+        <div>
+          <dt class="cya-question">
+            Landline
+          </dt>
+          <dd class="cya-answer">
+            {% if claimant.landline %}
+              {{ claimant.landline }}
+            {% else %}
+              <span class="grey">Not on file</span>
+            {% endif %}
+          </dd>
+        </div>
+
+        <div>
+          <dt class="cya-question">
+            Mobile
+          </dt>
+          <dd class="cya-answer">
+            {% if claimant.mobile %}
+              {{ claimant.mobile | mobile }}
+            {% else %}
+              <span class="grey">Not on file</span>
+            {% endif %}
+          </dd>
+        </div>
+
+        <div>
+          <dt class="cya-question">
+            Legacy benefits
+          </dt>
+          <dd class="cya-answer">
+            <ul class="list mb0">
+              {% for i in claimant.legacyBenefits %}
+              <li>{{ i }}</li>
+              {% endfor %}
+            </ul>
+          </dd>
+        </div>
+      </dl>
+      {# <a href="/claimant/edit/{{ claimant.nino }}">Update claimant&rsquo;s details</a> #}
+
+
+
+
+      <h2 class="heading-medium">
+        Universal Credit breakdown
+      </h2>
+      <dl class="govuk-check-your-answers">
+        <div>
+          <dt class="cya-question">
+            Universal Credit amount
+          </dt>
+          <dd class="cya-answer">
+            £317.80 per week
+          </dd>
+        </div>
+
+        <div>
+          <dt class="cya-question">
+            Transitional protection amount
+          </dt>
+          <dd class="cya-answer">
+            No TP awarded, UC is more than legacy
+          </dd>
+        </div>
+
+        <div>
+          <dt class="cya-question">
+            Total benefit amount
+          </dt>
+          <dd class="cya-answer">
+            £1317.80 per week
+          </dd>
+        </div>
+      </dl>
+
+    </div> {# col2thirds #}
 
     <div class="column-one-third">
 
       <h2 class="heading-medium">Timeline</h2>
       <ul class="timeline">
       {% for i in claimant.history %}
-        {% if i.complete %}
         <li>
-        {% else %}
-        <li class="future">
-        {% endif %}
           <span class="entry"></span>
           <h3 class="bold">
             {{ i.title }}

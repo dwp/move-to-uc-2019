@@ -48,44 +48,22 @@ module.exports = {
       "appointeeName": "Richard Roe",
       "appointeeNino": "UI255634A",
       "legacyBenefits": [
-        "ctc",
-        "hb"
+        "Child Tax Credit",
+        "Housing Benefit"
       ],
       "welsh": [
         "true"
       ],
       "landline": "",
-      "mobile": "07000000000",
+      "mobile": "07771900900",
       "status": "Orientation",
       "history": [
         {
           "title": "Orientation letter sent",
           "body": "Re-issue letter",
           "link": "#0",
-          "time": "1 Jun 2018",
-          "complete": true
-        },
-        {
-          "title": "Notification letter",
-          "time": "due 1 Jul 2018"
-        },
-        {
-          "title": "Reminder sms",
-          "time": "due 1 Aug 2018"
-        },
-        {
-          "title": "Reminder call",
-          "time": "due 1 Sep 2018"
-        },
-        {
-          "title": "Move to Universal Credit",
-          "time": "due 1 Oct 2018"
+          "time": "1 Jun 2018"
         }
-        // {
-        //   "title": "Claimant call",
-        //   "body": "Claimant called to confirm that they didn't need to apply yet. Captured mobile number while on call.",
-        //   "time": "Rachael Stewart, 9 Jan 2018 10:10"
-        // },
       ]
     },
     {
@@ -122,34 +100,29 @@ module.exports = {
           "title": "Orientation letter sent",
           "body": "Re-issue letter",
           "link": "#0",
-          "time": "1 Feb 2018",
-          "complete": true
+          "time": "1 Feb 2018"
         },
         {
           "title": "Notification letter sent",
           "body": "Re-issue letter",
           "link": "#0",
-          "time": "1 Mar 2018",
-          "complete": true
+          "time": "1 Mar 2018"
         },
         {
           "title": "Reminder sms sent",
           "body": "Re-issue sms",
           "link": "#0",
-          "time": "14 Mar 2018",
-          "complete": true
+          "time": "14 Mar 2018"
         },
         {
           "title": "Reminder call sent",
           "body": "Re-issue call",
           "link": "#0",
-          "time": "28 Mar 2018",
-          "complete": true
+          "time": "28 Mar 2018"
         },
         {
           "title": "Moved to Universal Credit",
-          "time": "29 Mar 2018",
-          "complete": true
+          "time": "29 Mar 2018"
         }
       ]
     }
