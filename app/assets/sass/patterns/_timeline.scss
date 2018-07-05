@@ -1,6 +1,6 @@
 .timeline {
   .entry {
-    background-color: $govuk-blue;
+    background-color: $govuk-link-colour;
     height: 4px;
     left: 0;
     position: absolute;
@@ -9,8 +9,9 @@
   }
 
   li   {
-    border-left: 4px solid $govuk-blue;
+    border-left: 4px solid $govuk-link-colour;
     padding: 0 0 20px 20px;
+    margin-bottom: 0;
     position: relative;
 
     &:last-of-type {
@@ -19,7 +20,7 @@
   }
 
     li span {
-      color: $secondary-text-colour;
+      color: $govuk-secondary-text-colour;
       display: block;
     }
 }

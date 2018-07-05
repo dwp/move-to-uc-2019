@@ -19,7 +19,7 @@ Example usage:
 
 module.exports = {
 
-  "statuses": ["Orientation", "Call to Act", "First Reminder", "Second Reminder", "Completed", "Deferred", "Exempt", "Migrated", "Non-Compliant"],
+  "statuses": ["Prepare", "Notified", "Claimed", "Deferred", "Exempt", "Extended", "Not claimed"],
 
   "claimants": [
     {
@@ -52,14 +52,14 @@ module.exports = {
         "Housing Benefit"
       ],
       "welsh": [
-        "true"
+        "false"
       ],
       "landline": "",
       "mobile": "07771900900",
-      "status": "Orientation",
+      "status": "Prepare",
       "history": [
         {
-          "title": "Orientation letter sent",
+          "title": "Preparation letter sent",
           "body": "Re-issue letter",
           "link": "#0",
           "time": "1 Jun 2018"
@@ -89,15 +89,65 @@ module.exports = {
       "appointee": "_unchecked",
       "appointeeName": "",
       "legacyBenefits": [
-        "ctc"
+        "Child Tax Credit"
+      ],
+      "welsh": "true",
+      "landline": "0121 496 0649",
+      "mobile": "07700900374",
+      "status": "Completed",
+      "history": [
+        {
+          "title": "Preparation letter sent",
+          "body": "Re-issue letter",
+          "link": "#0",
+          "time": "1 Feb 2018"
+        },
+        {
+          "title": "Notification letter sent",
+          "body": "Re-issue letter",
+          "link": "#0",
+          "time": "1 Mar 2018"
+        },
+        {
+          "title": "Reminder sms sent",
+          "body": "Re-issue sms",
+          "link": "#0",
+          "time": "14 Mar 2018"
+        }
+      ]
+    },
+    {
+      "nino": "II123456C",
+      "firstName": "Jane",
+      "lastName": "Roe",
+      "dob": [
+        "1972",
+        "12",
+        "12"
+      ],
+      "address": {
+        "street": "23 River View",
+        "street2": "",
+        "city": "Bedlington",
+        "postcode": "NE22 5LS"
+      },
+      "partner": [
+        "false"
+      ],
+      "partnerName": "",
+      "partnerCode": "",
+      "appointee": "_unchecked",
+      "appointeeName": "",
+      "legacyBenefits": [
+        "Child Tax Credit"
       ],
       "welsh": "_unchecked",
       "landline": "0121 496 0649",
       "mobile": "07700900374",
-      "status": "Complete",
+      "status": "Claimed",
       "history": [
         {
-          "title": "Orientation letter sent",
+          "title": "Preparation letter sent",
           "body": "Re-issue letter",
           "link": "#0",
           "time": "1 Feb 2018"
@@ -121,7 +171,7 @@ module.exports = {
           "time": "28 Mar 2018"
         },
         {
-          "title": "Moved to Universal Credit",
+          "title": "Claimed Universal Credit",
           "time": "29 Mar 2018"
         }
       ]

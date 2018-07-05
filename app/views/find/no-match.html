@@ -5,16 +5,42 @@
 {% endblock %} #}
 
 {% block content %}
-  <div class="grid-row">
-    <div class="column-two-thirds">
-
-      <h1 class="heading-large">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class='govuk-heading-l'>
         No match found for &lsquo;{{ data['find'] | nino }}&rsquo;
       </h1>
 
       <p>The claimant might not have started the move to Universal Credit yet, or the National Insurance number could have been entered incorrectly.</p>
 
-      <a class="button" href="/find" role="button">Search again</a>
+      {# {{ govukButton({
+        text: 'Search again',
+        href: '/find',
+        classes: ''
+      }) }} #}
+
+      <form action="/results" method="get" class="form">
+
+        <h2 class='govuk-heading-m'>
+          Try again
+        </h2>
+
+        {{ govukInput({
+          label: {
+            text: 'National Insurance number',
+            isPageHeading: false
+          },
+          id: 'find',
+          name: 'find',
+          classes: 'govuk-input--width-10'
+        }) }}
+
+        {{ govukButton({
+          text: "Find",
+          classes: ""
+        }) }}
+
+      </form>
 
     </div>
   </div>
