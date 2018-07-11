@@ -36,44 +36,6 @@
           </dd>
         </div>
 
-        {% if claimant.appointee == "true" %}
-        <div class='app-check-your-answers__contents'>
-          <dt class='app-check-your-answers__question'>
-            Appointee name
-          </dt>
-          <dd class='app-check-your-answers__answer'>
-            {{ claimant.appointeeName }}
-          </dd>
-        </div>
-        <div class='app-check-your-answers__contents'>
-          <dt class='app-check-your-answers__question'>
-            Appointee National Insurance number
-          </dt>
-          <dd class='app-check-your-answers__answer'>
-            {{ claimant.appointeeNino | nino }}
-          </dd>
-        </div>
-        {% endif %}
-
-        {% if claimant.child == "true" %}
-        <div class='app-check-your-answers__contents'>
-          <dt class='app-check-your-answers__question'>
-            Child&rsquo;s date of birth
-          </dt>
-          <dd class='app-check-your-answers__answer'>
-            {{ claimant.childDOB | date("DD MMMM YYYY") }}
-          </dd>
-        </div>
-        <div class='app-check-your-answers__contents'>
-          <dt class='app-check-your-answers__question'>
-            Child&rsquo;s
-          </dt>
-          <dd class='app-check-your-answers__answer'>
-            {{ claimant.appointeeNino | nino }}
-          </dd>
-        </div>
-        {% endif %}
-
         {% if claimant.welsh == "true" %}
         <div class='app-check-your-answers__contents'>
           <dt class='app-check-your-answers__question'>
@@ -143,16 +105,40 @@
 
 
 
+      {% if claimant.appointee == "true" %}
+      <h2 class='govuk-heading-m'>
+        Appointee details
+      </h2>
+
+      <dl class='app-check-your-answers app-check-your-answers--long govuk-!-margin-bottom-9'>
+        <div class='app-check-your-answers__contents'>
+          <dt class='app-check-your-answers__question'>
+            Name
+          </dt>
+          <dd class='app-check-your-answers__answer'>
+            {{ claimant.appointeeName }}
+          </dd>
+        </div>
+        <div class='app-check-your-answers__contents'>
+          <dt class='app-check-your-answers__question'>
+            National Insurance number
+          </dt>
+          <dd class='app-check-your-answers__answer'>
+            {{ claimant.appointeeNino | nino }}
+          </dd>
+        </div>
+      </dl>
+      {% endif %}
+
+
+
+
+
       {% if claimant.child == "true" %}
-      <!-- only add a heading for a list if there is more than one list -->
       <h2 class='govuk-heading-m'>
         Child details
       </h2>
 
-      <!-- use additional modifier class to change column widths for multiple groups of questions and answers: -->
-      <!--   * `app-check-your-answers--short` for short questions -->
-      <!--   * `app-check-your-answers__questions-long` for long questions -->
-      <!--   * none for single group of q&a -->
       <dl class='app-check-your-answers app-check-your-answers--long govuk-!-margin-bottom-9'>
         <div class='app-check-your-answers__contents'>
           <dt class='app-check-your-answers__question'>

@@ -66,17 +66,17 @@ module.exports = {
         }
       ],
       "ucbreakdown": [
-        {
-          "title": "Universal Credit amount",
-          "amount": "£317.80 per week"
-        },
-        {
-          "title": "Transitional protection amount",
-          "amount": "No TP awarded, UC is more than legacy"
-        },
+        // {
+        //   "title": "Universal Credit amount",
+        //   "amount": "£317.80 per week"
+        // },
+        // {
+        //   "title": "Transitional protection amount",
+        //   "amount": "No TP awarded, UC is more than legacy"
+        // },
         {
           "title": "Total payment amount",
-          "amount": "£317.80 per week"
+          "amount": "£317.82 per week"
         }
       ]
     },
@@ -139,17 +139,21 @@ module.exports = {
         }
       ],
       "ucbreakdown": [
-        {
-          "title": "Universal Credit amount",
-          "amount": "£317.80 per week"
-        },
-        {
-          "title": "Universal Credit amount",
-          "amount": "No TP awarded, UC is more than legacy"
-        },
+        // {
+        //   "title": "Universal Credit amount",
+        //   "amount": "251.77 per week"
+        // },
+        // {
+        //   "title": "Universal Credit amount",
+        //   "amount": "No TP awarded, UC is more than legacy"
+        // },
+        // {
+        //   "title": "Child award",
+        //   "amount": "£277.08"
+        // },
         {
           "title": "Total payment amount",
-          "amount": "£317.80 per week"
+          "amount": "£528.85 per week"
         }
       ]
     },
@@ -158,7 +162,7 @@ module.exports = {
       "firstName": "Jane",
       "lastName": "Roe",
       "dob": [
-        "1972",
+        "1998",
         "12",
         "12"
       ],
@@ -211,17 +215,17 @@ module.exports = {
         }
       ],
       "ucbreakdown": [
-        {
-          "title": "Universal Credit amount",
-          "amount": "£317.80 per week"
-        },
-        {
-          "title": "Universal Credit amount",
-          "amount": "No TP awarded, UC is more than legacy"
-        },
+        // {
+        //   "title": "Universal Credit amount",
+        //   "amount": "£317.80 per week"
+        // },
+        // {
+        //   "title": "Universal Credit amount",
+        //   "amount": "No TP awarded, UC is more than legacy"
+        // },
         {
           "title": "Total payment amount",
-          "amount": "£317.80 per week"
+          "amount": "395.20 per week"
         }
       ]
     }
