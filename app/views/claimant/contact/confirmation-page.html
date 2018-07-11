@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      {{ govukPanel({
+        titleText: 'Contact saved',
+        classes: 'govuk-!-padding-bottom-1'
+      }) }}
+
+      <p><a href="/results?find={{ data['find'] }}">Back to claimant&rsquo;s case</p>
+
+    </div>
+  </div>
+
+{% endblock %}

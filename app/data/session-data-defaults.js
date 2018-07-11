@@ -48,8 +48,8 @@ module.exports = {
       "appointeeName": "Richard Roe",
       "appointeeNino": "UI255634A",
       "legacyBenefits": [
-        "Child Tax Credit",
-        "Housing Benefit"
+        "Housing Benefit",
+        "income-based Jobseeker’s Allowance (JSA)"
       ],
       "welsh": [
         "false"
@@ -61,8 +61,22 @@ module.exports = {
         {
           "title": "Preparation letter sent",
           "body": "Re-issue letter",
-          "link": "#0",
+          "link": "Preparation letter",
           "time": "1 Jun 2018"
+        }
+      ],
+      "ucbreakdown": [
+        {
+          "title": "Universal Credit amount",
+          "amount": "£317.80 per week"
+        },
+        {
+          "title": "Universal Credit amount",
+          "amount": "No TP awarded, UC is more than legacy"
+        },
+        {
+          "title": "Total benefit amount",
+          "amount": "£317.80 per week"
         }
       ]
     },
@@ -84,6 +98,15 @@ module.exports = {
       "partner": [
         "false"
       ],
+      "child": [
+        "true"
+      ],
+      "childDOB": [
+        "2009",
+        "7",
+        "23"
+      ],
+      "childDisability": "true",
       "partnerName": "",
       "partnerCode": "",
       "appointee": "_unchecked",
@@ -99,20 +122,34 @@ module.exports = {
         {
           "title": "Preparation letter sent",
           "body": "Re-issue letter",
-          "link": "#0",
+          "link": "Preparation letter",
           "time": "1 Feb 2018"
         },
         {
           "title": "Notification letter sent",
           "body": "Re-issue letter",
-          "link": "#0",
+          "link": "Notification letter",
           "time": "1 Mar 2018"
         },
         {
-          "title": "Reminder sms sent",
-          "body": "Re-issue sms",
-          "link": "#0",
+          "title": "Reminder text sent",
+          "body": "Re-issue text",
+          "link": "Reminder text",
           "time": "14 Mar 2018"
+        }
+      ],
+      "ucbreakdown": [
+        {
+          "title": "Universal Credit amount",
+          "amount": "£317.80 per week"
+        },
+        {
+          "title": "Universal Credit amount",
+          "amount": "No TP awarded, UC is more than legacy"
+        },
+        {
+          "title": "Total benefit amount",
+          "amount": "£317.80 per week"
         }
       ]
     },
@@ -139,7 +176,7 @@ module.exports = {
       "appointee": "_unchecked",
       "appointeeName": "",
       "legacyBenefits": [
-        "Child Tax Credit"
+        "income-related Employment and Support Allowance (ESA)"
       ],
       "welsh": "_unchecked",
       "landline": "0121 496 0649",
@@ -149,30 +186,42 @@ module.exports = {
         {
           "title": "Preparation letter sent",
           "body": "Re-issue letter",
-          "link": "#0",
+          "link": "Preparation letter",
           "time": "1 Feb 2018"
         },
         {
           "title": "Notification letter sent",
           "body": "Re-issue letter",
-          "link": "#0",
+          "link": "Notification letter",
           "time": "1 Mar 2018"
         },
         {
-          "title": "Reminder sms sent",
-          "body": "Re-issue sms",
-          "link": "#0",
+          "title": "Reminder text sent",
+          "body": "Re-issue text",
+          "link": "Reminder text",
           "time": "14 Mar 2018"
         },
         {
           "title": "Reminder call sent",
-          "body": "Re-issue call",
-          "link": "#0",
           "time": "28 Mar 2018"
         },
         {
           "title": "Claimed Universal Credit",
           "time": "29 Mar 2018"
+        }
+      ],
+      "ucbreakdown": [
+        {
+          "title": "Universal Credit amount",
+          "amount": "£317.80 per week"
+        },
+        {
+          "title": "Universal Credit amount",
+          "amount": "No TP awarded, UC is more than legacy"
+        },
+        {
+          "title": "Total benefit amount",
+          "amount": "£317.80 per week"
         }
       ]
     }

@@ -43,3 +43,12 @@ $govuk-global-styles: true;
 .secondary-text {
   color: $govuk-secondary-text-colour;
 }
+
+
+
+
+
+// Override visted link state for prototype
+.govuk-link:visited {
+  color: #005ea5!important;
+}

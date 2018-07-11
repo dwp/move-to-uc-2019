@@ -55,6 +55,25 @@
         </div>
         {% endif %}
 
+        {# {% if claimant.child == "true" %}
+        <div class='app-check-your-answers__contents'>
+          <dt class='app-check-your-answers__question'>
+            Child&rsquo;s date of birth
+          </dt>
+          <dd class='app-check-your-answers__answer'>
+            {{ claimant.childDOB | date("DD MMMM YYYY") }}
+          </dd>
+        </div>
+        <div class='app-check-your-answers__contents'>
+          <dt class='app-check-your-answers__question'>
+            Child&rsquo;s
+          </dt>
+          <dd class='app-check-your-answers__answer'>
+            {{ claimant.appointeeNino | nino }}
+          </dd>
+        </div>
+        {% endif %} #}
+
         {% if claimant.welsh == "true" %}
         <div class='app-check-your-answers__contents'>
           <dt class='app-check-your-answers__question'>
@@ -130,32 +149,16 @@
       <!--   * `app-check-your-answers__questions-long` for long questions -->
       <!--   * none for single group of q&a -->
       <dl class='app-check-your-answers govuk-!-margin-bottom-9'>
-        <div class='app-check-your-answers__contents'>
-          <dt class='app-check-your-answers__question'>
-            Universal Credit amount
-          </dt>
-          <dd class='app-check-your-answers__answer'>
-            £317.80 per week
-          </dd>
-        </div>
-
-        <div class='app-check-your-answers__contents'>
-          <dt class='app-check-your-answers__question'>
-            Transitional protection amount
-          </dt>
-          <dd class='app-check-your-answers__answer'>
-            No TP awarded, UC is more than legacy
-          </dd>
-        </div>
-
-        <div class='app-check-your-answers__contents'>
-          <dt class='app-check-your-answers__question'>
-            Total benefit amount
-          </dt>
-          <dd class='app-check-your-answers__answer'>
-            £317.80 per week
-          </dd>
-        </div>
+        {% for i in claimant.ucbreakdown %}
+          <div class='app-check-your-answers__contents'>
+            <dt class='app-check-your-answers__question'>
+              {{ i.title }}
+            </dt>
+            <dd class='app-check-your-answers__answer'>
+              {{ i.amount }}
+            </dd>
+          </div>
+        {% endfor %}
       </dl>
     </div>
 
@@ -165,17 +168,21 @@
       </h2>
 
       <p>
-        <a href="#">Add contact with claimant</a>
+        <a class="govuk-link" href="/claimant/contact/">Add contact with claimant</a>
       </p>
       <ul class="govuk-list timeline">
       {% for i in claimant.history | reverse %}
         <li>
           <span class="entry"></span>
           <h3 class="govuk-heading-s govuk-!-margin-0">
-            {{ i.title }}
-            <span class="govuk-body-s govuk-!-margin-0">{{ i.time }}</span>
+            {{ i.title | capitalize }}
+            <span class="govuk-body-s">{{ i.time | date("DD MMM YYYY") }}</span>
           </h3>
-          {% if i.link %}<a href="{{ i.link }}">{% endif %}{{ i.body }}{% if i.link %}</a>{% endif %}
+          {% if i.link %}
+            <a class="govuk-link" href="/reissue/{{ i.link }}">{{ i.body | capitalize }}</a>
+          {% elif i.body %}
+            <p class="govuk-!-margin-0">{{ i.body | nl2br | safe }}</p>
+          {% endif %}
         </li>
       {% endfor %}
       </ul>

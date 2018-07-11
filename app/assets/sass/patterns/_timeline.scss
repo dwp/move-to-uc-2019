@@ -22,5 +22,11 @@
     li span {
       color: $govuk-secondary-text-colour;
       display: block;
+      margin-bottom: 0;
+    }
+
+    li a {
+      display: block;
+      margin-top: 10px;
     }
 }

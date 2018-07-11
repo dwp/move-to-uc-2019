@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block beforeContent %}
+  <a href="/results?find={{ data['current-nino'] }}" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+  <form action='/claimant/contact/confirmation-page' method='post' class='form' autocomplete='off'>
+    <div class="govuk-grid-row">
+
+      <div class="govuk-grid-column-full">
+        <h1 class='govuk-heading-l'>
+          Add contact with {{ claimant.firstName }} {{ claimant.lastName }}
+        </h1>
+      </div>
+
+      <div class="govuk-grid-column-two-thirds">
+        {{ govukRadios({
+          classes: 'govuk-radios--inlin',
+          idPrefix: 'contactType',
+          name: 'contactType',
+          fieldset: {
+            legend: {
+              text: 'How did the claimant contact you?',
+              isPageHeading: false,
+              classes: ''
+            }
+          },
+          items: [
+            {
+              value: 'call',
+              text: 'Call'
+            },
+            {
+              value: 'jcp',
+              text: 'Job centre walk in'
+            }
+          ]
+        }) }}
+
+        {{ govukTextarea({
+          classes: '',
+          name: 'contactDetails',
+          id: 'contactDetails',
+          rows: '8',
+          label: {
+            text: 'Details of the contact'
+          }
+        }) }}
+
+        {{ govukButton({
+          text: "Submit",
+          classes: ""
+        }) }}
+      </div>
+    </div>
+  </form>
+{% endblock %}
