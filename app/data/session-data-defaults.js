@@ -130,12 +130,6 @@ module.exports = {
           "body": "Resend letter",
           "link": "Notification letter",
           "time": "1 Mar 2018"
-        },
-        {
-          "title": "Reminder text sent",
-          "body": "Resend text",
-          "link": "Reminder text",
-          "time": "14 Mar 2018"
         }
       ],
       "ucbreakdown": [
