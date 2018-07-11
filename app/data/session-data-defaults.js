@@ -60,7 +60,7 @@ module.exports = {
       "history": [
         {
           "title": "Preparation letter sent",
-          "body": "Re-issue letter",
+          "body": "Resend letter",
           "link": "Preparation letter",
           "time": "1 Jun 2018"
         }
@@ -71,11 +71,11 @@ module.exports = {
           "amount": "£317.80 per week"
         },
         {
-          "title": "Universal Credit amount",
+          "title": "Transitional protection amount",
           "amount": "No TP awarded, UC is more than legacy"
         },
         {
-          "title": "Total benefit amount",
+          "title": "Total payment amount",
           "amount": "£317.80 per week"
         }
       ]
@@ -121,19 +121,19 @@ module.exports = {
       "history": [
         {
           "title": "Preparation letter sent",
-          "body": "Re-issue letter",
+          "body": "Resend letter",
           "link": "Preparation letter",
           "time": "1 Feb 2018"
         },
         {
           "title": "Notification letter sent",
-          "body": "Re-issue letter",
+          "body": "Resend letter",
           "link": "Notification letter",
           "time": "1 Mar 2018"
         },
         {
           "title": "Reminder text sent",
-          "body": "Re-issue text",
+          "body": "Resend text",
           "link": "Reminder text",
           "time": "14 Mar 2018"
         }
@@ -148,7 +148,7 @@ module.exports = {
           "amount": "No TP awarded, UC is more than legacy"
         },
         {
-          "title": "Total benefit amount",
+          "title": "Total payment amount",
           "amount": "£317.80 per week"
         }
       ]
@@ -185,19 +185,19 @@ module.exports = {
       "history": [
         {
           "title": "Preparation letter sent",
-          "body": "Re-issue letter",
+          "body": "Resend letter",
           "link": "Preparation letter",
           "time": "1 Feb 2018"
         },
         {
           "title": "Notification letter sent",
-          "body": "Re-issue letter",
+          "body": "Resend letter",
           "link": "Notification letter",
           "time": "1 Mar 2018"
         },
         {
           "title": "Reminder text sent",
-          "body": "Re-issue text",
+          "body": "Resend text",
           "link": "Reminder text",
           "time": "14 Mar 2018"
         },
@@ -220,7 +220,7 @@ module.exports = {
           "amount": "No TP awarded, UC is more than legacy"
         },
         {
-          "title": "Total benefit amount",
+          "title": "Total payment amount",
           "amount": "£317.80 per week"
         }
       ]

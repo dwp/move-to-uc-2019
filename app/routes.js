@@ -52,7 +52,7 @@ router.post('/claimant/reissue/confirmation-page/:type', (req, res) => {
   let claimantToEdit = req.session.data['claimants'].filter(claimant => claimant.nino === search)
 
   const newItem = Object.assign({
-    title: req.params.type+" re-issued",
+    title: req.params.type+" resent",
     time: Date.now()
   })
 
@@ -87,7 +87,7 @@ router.post('/claimant/contact/confirmation-page', (req, res) => {
   if (req.body.contactType == "call") {
     var titleText = "Claimant called"
   } else {
-    var titleText = "Claimant visited job centre"
+    var titleText = "Claimant visited jobcentre"
   }
 
   const newItem = Object.assign({

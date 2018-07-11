@@ -10,7 +10,7 @@
 
       <div class="govuk-grid-column-full">
         <h1 class='govuk-heading-l'>
-          Reissue {{ type | lower }} to {{ claimant.firstName }} {{ claimant.lastName }}
+          Resend {{ type | lower }} to {{ claimant.firstName }} {{ claimant.lastName }}
         </h1>
       </div>
         {# <p class="govuk-body-l">This will send the {{ type | lower }} to the claimant again.</p> #}
@@ -71,7 +71,7 @@
             items: [
               {
                 value: 'yes',
-                text: 'Send the letter to a different address',
+                text: 'Resend the letter to a different address',
                 conditional: {
                   html: condNewAddress
                 }
@@ -79,7 +79,7 @@
             ]
           }) }}
 
-          {% set btnText = "Send letter" %}
+          {% set btnText = "Resend letter" %}
         {% else %}
           {% set condNewNumber %}
             {{ govukInput({
@@ -98,7 +98,7 @@
             items: [
               {
                 value: 'yes',
-                text: 'Send the text to a different number',
+                text: 'Resend the text to a different number',
                 conditional: {
                   html: condNewNumber
                 }
@@ -106,7 +106,7 @@
             ]
           }) }}
 
-          {% set btnText = "Send text" %}
+          {% set btnText = "Resend text" %}
         {% endif %}
 
 

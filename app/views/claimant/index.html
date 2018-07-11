@@ -5,7 +5,7 @@
 
     <div class="govuk-grid-column-two-thirds">
       <h1 class='govuk-heading-l govuk-!-display-inline-block'>
-        <span class='govuk-caption-l'>Claim details</span>
+        <span class='govuk-caption-l'>Case details</span>
         {{ claimant.firstName }} {{ claimant.lastName }}
       </h1>
 
@@ -26,7 +26,7 @@
       <!--   * `app-check-your-answers--short` for short questions -->
       <!--   * `app-check-your-answers__questions-long` for long questions -->
       <!--   * none for single group of q&a -->
-      <dl class='app-check-your-answers govuk-!-margin-bottom-9'>
+      <dl class='app-check-your-answers app-check-your-answers--long govuk-!-margin-bottom-9'>
         <div class='app-check-your-answers__contents'>
           <dt class='app-check-your-answers__question'>
             National Insurance number
@@ -55,7 +55,7 @@
         </div>
         {% endif %}
 
-        {# {% if claimant.child == "true" %}
+        {% if claimant.child == "true" %}
         <div class='app-check-your-answers__contents'>
           <dt class='app-check-your-answers__question'>
             Child&rsquo;s date of birth
@@ -72,7 +72,7 @@
             {{ claimant.appointeeNino | nino }}
           </dd>
         </div>
-        {% endif %} #}
+        {% endif %}
 
         {% if claimant.welsh == "true" %}
         <div class='app-check-your-answers__contents'>
@@ -101,7 +101,7 @@
 
         <div class='app-check-your-answers__contents'>
           <dt class='app-check-your-answers__question'>
-            Landline
+            Telephone
           </dt>
           <dd class='app-check-your-answers__answer'>
             {% if claimant.landline %}
@@ -139,16 +139,55 @@
         </div>
       </dl>
 
+
+
+
+
+      {% if claimant.child == "true" %}
       <!-- only add a heading for a list if there is more than one list -->
       <h2 class='govuk-heading-m'>
-        Universal Credit breakdown
+        Child details
       </h2>
 
       <!-- use additional modifier class to change column widths for multiple groups of questions and answers: -->
       <!--   * `app-check-your-answers--short` for short questions -->
       <!--   * `app-check-your-answers__questions-long` for long questions -->
       <!--   * none for single group of q&a -->
-      <dl class='app-check-your-answers govuk-!-margin-bottom-9'>
+      <dl class='app-check-your-answers app-check-your-answers--long govuk-!-margin-bottom-9'>
+        <div class='app-check-your-answers__contents'>
+          <dt class='app-check-your-answers__question'>
+            Child&rsquo;s date of birth
+          </dt>
+          <dd class='app-check-your-answers__answer'>
+            {{ claimant.childDOB | date("DD MMMM YYYY") }}
+          </dd>
+        </div>
+        <div class='app-check-your-answers__contents'>
+          <dt class='app-check-your-answers__question'>
+            Child has disability
+          </dt>
+          <dd class='app-check-your-answers__answer'>
+            {{ "Yes" if claimant.childDisability == "true" else "No" }}
+          </dd>
+        </div>
+      </dl>
+      {% endif %}
+
+
+
+
+
+
+      <!-- only add a heading for a list if there is more than one list -->
+      <h2 class='govuk-heading-m'>
+        Universal Credit estimate
+      </h2>
+
+      <!-- use additional modifier class to change column widths for multiple groups of questions and answers: -->
+      <!--   * `app-check-your-answers--short` for short questions -->
+      <!--   * `app-check-your-answers__questions-long` for long questions -->
+      <!--   * none for single group of q&a -->
+      <dl class='app-check-your-answers app-check-your-answers--long govuk-!-margin-bottom-9'>
         {% for i in claimant.ucbreakdown %}
           <div class='app-check-your-answers__contents'>
             <dt class='app-check-your-answers__question'>
