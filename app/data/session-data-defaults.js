@@ -35,7 +35,7 @@ module.exports = {
         "street": "23 River View",
         "street2": "",
         "city": "Bedlington",
-        "postcode": "NE22 5LS"
+        "postcode": "NE2 5LS"
       },
       "partner": [
         "true"
@@ -90,10 +90,10 @@ module.exports = {
         "12"
       ],
       "address": {
-        "street": "23 River View",
+        "street": "98  Wrexham Rd",
         "street2": "",
-        "city": "Bedlington",
-        "postcode": "NE22 5LS"
+        "city": "Fairstead",
+        "postcode": "NR10 0WX"
       },
       "partner": [
         "false"
@@ -120,10 +120,10 @@ module.exports = {
       "status": "Completed",
       "history": [
         {
-          "title": "Preparation letter sent",
-          "body": "Resend letter",
-          "link": "Preparation letter",
-          "time": "1 Feb 2018"
+          "title": "Preparation text sent",
+          "body": "Resend text",
+          "link": "Preparation text",
+          "time": "28 Feb 2018"
         },
         {
           "title": "Notification letter sent",
