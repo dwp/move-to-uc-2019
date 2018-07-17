@@ -36,17 +36,6 @@
           </dd>
         </div>
 
-        {% if claimant.welsh == "true" %}
-        <div class='app-check-your-answers__contents'>
-          <dt class='app-check-your-answers__question'>
-            Language
-          </dt>
-          <dd class='app-check-your-answers__answer'>
-              Welsh speaker
-          </dd>
-        </div>
-        {% endif %}
-
         <div class='app-check-your-answers__contents'>
           <dt class='app-check-your-answers__question'>
             Address
@@ -190,13 +179,13 @@
       <p>
         <a class="govuk-link" href="/claimant/contact/">Add contact with claimant</a>
       </p>
-      <ul class="govuk-list timeline">
+      <ol class="govuk-list timeline">
       {% for i in claimant.history | reverse %}
         <li>
           <span class="entry"></span>
           <h3 class="govuk-heading-s govuk-!-margin-0">
             {{ i.title | capitalize }}
-            <span class="govuk-body-s">{{ i.time | date("DD MMM YYYY") }}</span>
+            <span class="govuk-body-s">{{ i.time | date("DD MMM YYYY") }}, {{ i.name }}</span>
           </h3>
           {% if i.link %}
             <a class="govuk-link" href="/reissue/{{ i.link }}">{{ i.body | capitalize }}</a>
@@ -205,7 +194,7 @@
           {% endif %}
         </li>
       {% endfor %}
-      </ul>
+    </ol>
     </div>
   </div>
 {% endblock %}
