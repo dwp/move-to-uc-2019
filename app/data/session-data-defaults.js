@@ -62,7 +62,8 @@ module.exports = {
           "title": "Preparation letter sent",
           "body": "Resend letter",
           "link": "Preparation letter",
-          "time": "1 Jun 2018"
+          "time": "1 Jun 2018",
+          "name": "Automated"
         }
       ],
       "ucbreakdown": [
@@ -123,13 +124,15 @@ module.exports = {
           "title": "Preparation text sent",
           "body": "Resend text",
           "link": "Preparation text",
-          "time": "28 Feb 2018"
+          "time": "28 Feb 2018",
+          "name": "Automated"
         },
         {
           "title": "Notification letter sent",
           "body": "Resend letter",
           "link": "Notification letter",
-          "time": "1 Mar 2018"
+          "time": "1 Mar 2018",
+          "name": "Automated"
         }
       ],
       "ucbreakdown": [
@@ -185,27 +188,32 @@ module.exports = {
           "title": "Preparation letter sent",
           "body": "Resend letter",
           "link": "Preparation letter",
-          "time": "1 Feb 2018"
+          "time": "1 Feb 2018",
+          "name": "Automated"
         },
         {
           "title": "Notification letter sent",
           "body": "Resend letter",
           "link": "Notification letter",
-          "time": "1 Mar 2018"
+          "time": "1 Mar 2018",
+          "name": "Automated"
         },
         {
           "title": "Reminder text sent",
           "body": "Resend text",
           "link": "Reminder text",
-          "time": "14 Mar 2018"
+          "time": "14 Mar 2018",
+          "name": "Automated"
         },
         {
           "title": "Reminder call sent",
-          "time": "28 Mar 2018"
+          "time": "28 Mar 2018",
+          "name": "Kay Hubbard"
         },
         {
           "title": "Claimed Universal Credit",
-          "time": "29 Mar 2018"
+          "time": "29 Mar 2018",
+          "name": "Claimant"
         }
       ],
       "ucbreakdown": [
