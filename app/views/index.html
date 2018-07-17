@@ -15,21 +15,18 @@
 
       {% from 'inset-text/macro.njk' import govukInsetText %}
 
-      {{ govukInsetText({
-        html: '<p>There are currently 3 example claimants:</p>
-        <ul class="govuk-list govuk-list--bullet">
-          <li>
-            <a href="/results?find=qq123456c">QQ 12 34 56 C</a>
-          </li>
-          <li>
-            <a href="/results?find=uu123456c">UU 12 34 56 C</a>
-          </li>
-          <li>
-            <a href="/results?find=ii123456c">II 12 34 56 C</a>
-          </li>
-        </ul>',
-        classes: ''
-      }) }}
+      <p>There are currently 3 example claimants:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          <a href="/results?find=qq123456c">QQ 12 34 56 C</a>
+        </li>
+        <li>
+          <a href="/results?find=uu123456c">UU 12 34 56 C</a>
+        </li>
+        <li>
+          <a href="/results?find=ii123456c">II 12 34 56 C</a>
+        </li>
+      </ul>
 
       {{ govukButton({
         text: 'View prototype',
@@ -37,7 +34,27 @@
         classes: "govuk-button--start "
       }) }}
 
-      <p class="secondary-text">Built using <a href="https://github.com/alphagov/govuk_prototype_kit">GOV.UK prototype kit</a> {{releaseVersion}}</p>
+      <h2 class='govuk-heading-m'>
+        Previous versions
+      </h2>
+      <ul class="govuk-list">
+        <li>
+          <a class="govuk-heading-s" href="https://move-to-uc-v1.herokuapp.com">Version 1</a>
+          <p>Evaluated 12 July 2018 in Halifax Jobcentre, looking at:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>finding a claimant using only a National Insurance number</li>
+            <li>if security checks will be done in this service</li>
+            <li>if there's enough data about the claimant, appointee, and children</li>
+            <li>the history of the case</li>
+            <li>re-issuing comms and automatically saving to the history</li>
+            <li>re-issuing to a different address or phone number</li>
+            <li>logging interactions with claimants</li>
+            <li>if they'd log interactions after the system has logged about re-issuing comms</li>
+          </ul>
+        </li>
+      </ul>
+
+      <p class="secondary-text govuk-!-margin-top-9">Built using <a href="https://github.com/alphagov/govuk_prototype_kit">GOV.UK prototype kit</a> {{releaseVersion}}</p>
     </div>
 </div>
 
