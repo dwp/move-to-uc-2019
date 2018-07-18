@@ -53,7 +53,8 @@ router.post('/claimant/reissue/confirmation-page/:type', (req, res) => {
 
   const newItem = Object.assign({
     title: req.params.type+" resent",
-    time: Date.now()
+    time: Date.now(),
+    name: req.session.data['user-name']
   })
 
   claimantToEdit[0].history.push(newItem)
@@ -93,7 +94,8 @@ router.post('/claimant/contact/confirmation-page', (req, res) => {
   const newItem = Object.assign({
     title: titleText,
     body: req.body.contactDetails,
-    time: Date.now()
+    time: Date.now(),
+    name: req.session.data['user-name']
   })
 
   claimantToEdit[0].history.push(newItem)
