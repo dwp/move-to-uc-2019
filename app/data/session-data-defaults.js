@@ -45,6 +45,7 @@ module.exports = {
       "appointee": [
         "true"
       ],
+      "appointeeType": "Personal",
       "appointeeName": "Richard Roe",
       "appointeeNino": "UI255634A",
       "legacyBenefits": [
@@ -60,10 +61,8 @@ module.exports = {
       "history": [
         {
           "title": "Preparation letter sent",
-          "body": "Resend letter",
           "link": "Preparation letter",
-          "time": "1 Jun 2018",
-          "name": "Automated"
+          "date": "10"
         }
       ],
       "ucbreakdown": [
@@ -122,17 +121,29 @@ module.exports = {
       "history": [
         {
           "title": "Preparation text sent",
-          "body": "Resend text",
           "link": "Preparation text",
-          "time": "28 Feb 2018",
-          "name": "Automated"
+          "date": "7"
         },
         {
           "title": "Notification letter sent",
-          "body": "Resend letter",
           "link": "Notification letter",
-          "time": "1 Mar 2018",
-          "name": "Automated"
+          "date": "6"
+        },
+        {
+          "title": "Contact with claimant added",
+          "link": "Notification letter",
+          "date": "3",
+          "name": "Paul Mason",
+          "body": "Claimant visited jobcentre about:",
+          "reasons": [
+            "Notification letter",
+            "When they have to claim by"
+          ]
+        },
+        {
+          "title": "Reminder text sent",
+          "link": "Reminder text",
+          "date": "1"
         }
       ],
       "ucbreakdown": [
@@ -186,34 +197,33 @@ module.exports = {
       "history": [
         {
           "title": "Preparation letter sent",
-          "body": "Resend letter",
           "link": "Preparation letter",
-          "time": "1 Feb 2018",
-          "name": "Automated"
+          "date": "53"
+        },
+        {
+          "title": "Preparation letter resent",
+          "link": "Preparation letter",
+          "date": "48",
+          "name": "Paul Mason"
         },
         {
           "title": "Notification letter sent",
-          "body": "Resend letter",
           "link": "Notification letter",
-          "time": "1 Mar 2018",
-          "name": "Automated"
+          "date": "23"
         },
         {
           "title": "Reminder text sent",
-          "body": "Resend text",
           "link": "Reminder text",
-          "time": "14 Mar 2018",
-          "name": "Automated"
+          "date": "19"
         },
         {
-          "title": "Reminder call sent",
-          "time": "28 Mar 2018",
+          "title": "Reminder call",
+          "date": "12",
           "name": "Kay Hubbard"
         },
         {
           "title": "Claimed Universal Credit",
-          "time": "29 Mar 2018",
-          "name": "Claimant"
+          "date": "10"
         }
       ],
       "ucbreakdown": [

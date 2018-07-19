@@ -7,9 +7,9 @@
 
       {% set regExp = r/letter/ %}
       {% if regExp.test(type) %}
-        {% set title = "Letter resent" %}
+        {% set title = "Letter reissued" %}
       {% else %}
-        {% set title = "Text resent" %}
+        {% set title = "Text reissued" %}
       {% endif %}
 
       {{ govukPanel({
@@ -20,7 +20,7 @@
       {# <h2 class="govuk-heading-m">What happens next</h2>
       <p>The letter will be posted out to the claimant and should be with them in 3-5 working days.</p> #}
 
-      <p><a href="/results?find={{ data['find'] }}">Back to claimant&rsquo;s case</p>
+      <p><a href="/results?find={{ data['find'] }}">Back to claimant&rsquo;s account</p>
 
     </div>
   </div>

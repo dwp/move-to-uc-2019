@@ -6,11 +6,12 @@
     <div class="govuk-grid-column-two-thirds">
 
       {{ govukPanel({
-        titleText: 'Contact added',
-        classes: 'govuk-!-padding-bottom-1'
+        titleText: 'Contact submitted',
+        html: 'It&rsquo;s been added to the account history',
+        classes: ''
       }) }}
 
-      <p><a href="/results?find={{ data['find'] }}">Back to claimant&rsquo;s case</p>
+      <p><a href="/results?find={{ data['find'] }}">Back to claimant&rsquo;s account</p>
 
     </div>
   </div>
