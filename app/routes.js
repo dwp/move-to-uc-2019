@@ -31,34 +31,51 @@ router.get('/results', (req, res) => {
 
 
 
-router.get('/reissue/:type', (req, res) => {
+router.get('/reissue', (req, res) => {
   const search = req.session.data['find'].replace(/ /g,'').toUpperCase()
   const claimant = req.session.data['claimants'].filter(claimant => claimant.nino === search)
-  const type = req.params.type
 
   res.locals.claimant = claimant[0]
 
   if (claimant == false) {
     res.render('find/no-match')
   } else {
-    res.render('claimant/reissue/index', {type})
+    res.render('claimant/reissue/index')
   }
 })
 
-router.post('/claimant/reissue/confirmation-page/:type', (req, res) => {
-  const type = req.params.type
+router.post('/claimant/reissue/confirm', (req, res) => {
+  const type = req.session.data['reissueType']
   const search = req.session.data['find'].replace(/ /g,'').toUpperCase()
+  const claimant = req.session.data['claimants'].filter(claimant => claimant.nino === search)
 
   let claimantToEdit = req.session.data['claimants'].filter(claimant => claimant.nino === search)
 
-  const newItem = Object.assign({
-    title: req.params.type+" resent",
-    name: req.session.data['user-name']
-  })
+  if (type == "print") {
+    const newItem = Object.assign({
+      title: "Letter printed and reissued",
+      name: req.session.data['user-name']
+    })
+    claimantToEdit[0].history.push(newItem)
 
-  claimantToEdit[0].history.push(newItem)
+    res.render('claimant/reissue/print')
+  } else if (type == "newaddress") {
+    const newItem = Object.assign({
+      title: "Letter reissued to new address",
+      name: req.session.data['user-name']
+    })
+    claimantToEdit[0].history.push(newItem)
 
-  res.render('claimant/reissue/confirmation-page', {type})
+    res.render('claimant/reissue/confirmation-page')
+  } else {
+    const newItem = Object.assign({
+      title: "Letter reissued",
+      name: req.session.data['user-name']
+    })
+    claimantToEdit[0].history.push(newItem)
+
+    res.render('claimant/reissue/confirmation-page')
+  }
 })
 
 
@@ -90,7 +107,6 @@ router.post('/claimant/contact/confirmation-page', (req, res) => {
     reasons: req.body.contactReason,
     name: req.session.data['user-name']
   })
-
   claimantToEdit[0].history.push(newItem)
 
   res.render('claimant/contact/confirmation-page')

@@ -1,0 +1,98 @@
+{% extends "layout_unbranded.html" %}
+
+{% block beforeContent %}
+  <a href="/results?find={{ data['find'] }}" class="govuk-back-link">Back to claimant&rsquo;s account</a>
+{% endblock %}
+
+{% block content %}
+<style>
+  .govuk-width-container {
+    max-width: 700px;
+  }
+  .govuk-section-break--l {
+    margin-top: 0
+  }
+</style>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <img src="/public/images/universal-credit.png" width="150px" alt="Universal Credit" class="govuk-!-margin-bottom-6">
+  </div>
+  <div class="govuk-grid-column-two-thirds">
+    <p class="govuk-body">
+      Joe Bloggs<br>
+      23 River View<br>
+      Bedlington<br>
+      NE2 5LS
+    </p>
+  </div>
+  <div class="govuk-grid-column-one-third">
+    <p class="govuk-body" style="text-align:right">{{ date | date("D MMMM YYYY") }}</p>
+  </div>
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-l govuk-!-margin-top-5 govuk-!-margin-bottom-2">
+      Your current benefits are ending
+    </h1>
+    <p class="govuk-body">
+      Move to Universal Credit by <strong>19 August 2018</strong>, or your payments may stop
+    </p>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <p class="govuk-body">Dear Joe</p>
+    <p class="govuk-body">Your current benefits are now ending.</p>
+
+    <p class="govuk-body">You need to <strong>move to Universal Credit by 19 August 2018</strong>, or:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>your payments may stop</li>
+      <li>you may lose any help you get with your rent</li>
+    </ul>
+
+    <p class="govuk-body">To move, go to <strong>www.gov.uk/apply-universal-credit</strong> or search for ‘apply for Universal Credit’. </p>
+
+
+    <h2 class="govuk-heading-m govuk-!-margin-bottom-2">Get help with the internet</h2>
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+    <p class="govuk-body">If you need help getting online or using the internet, your jobcentre can give you access to a computer and help you make a claim. </p>
+    <p class="govuk-body">Contact us on 01442 306 799 to ask for help.</p>
+
+
+    <h2 class="govuk-heading-m govuk-!-margin-bottom-2">What you&rsquo;ll need</h2>
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+    <p class="govuk-body">You’ll need:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>a current telephone number</li>
+      <li>your own personal email address</li>
+      <li>your own bank account</li>
+    </ul>
+
+    <p class="govuk-body">You’ll also need evidence of:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>housing costs - like rent, mortgage payments or service charges</li>
+      <li>childcare costs</li>
+      <li>earnings if you’re in work</li>
+      <li>savings or other income</li>
+      <li>any medical conditions or fit notes</li>
+    </ul>
+
+    <h2 class="govuk-heading-m govuk-!-margin-bottom-2">Until you&rsquo;ve moved</h2>
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+    <p class="govuk-body">Until you’ve completed your Universal Credit claim, please continue to:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>tell us about any changes to your circumstances</li>
+      <li>attend any appointments you have booked</li>
+    </ul>
+
+    <p class="govuk-body">If you do not, you may be paid more or less Universal Credit than you should.</p>
+
+
+    <p class="govuk-body govuk-!-margin-top-6 govuk-!-margin-bottom-9">Yours sincerely,</p>
+    <p class="govuk-body">Chris Hanson<br>Office Manager</p>
+
+  </div>
+</div>
+
+<script>
+  window.print();
+</script>
+{% endblock %}

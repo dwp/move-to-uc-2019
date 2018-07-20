@@ -49,13 +49,16 @@
             <div class="govuk-checkboxes">
 
               {% for i in claimant.history %}
+              {% set regExp = r/Contact with claimant/ %}
                 {% if i.link %}
+                {% if regExp.test(i.title) %}{% else %}
                   <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="contactReason-{{i}}" name="contactReason" type="checkbox" value="{{ i.title }}">
-                    <label class="govuk-label govuk-checkboxes__label" for="contactReason-{{i}}">
+                    <input class="govuk-checkboxes__input" id="contactReason-{{loop.index}}" name="contactReason" type="checkbox" value="{{ i.title }}">
+                    <label class="govuk-label govuk-checkboxes__label" for="contactReason-{{loop.index}}">
                       {{ i.title }} on {{ date  | date("subtract", i.date, "days") | date("D MMMM YYYY") }}
                     </label>
                   </div>
+                {% endif %}
                 {% endif %}
               {% endfor %}
 

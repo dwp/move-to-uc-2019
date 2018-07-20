@@ -37,11 +37,6 @@ module.exports = {
         "city": "Bedlington",
         "postcode": "NE2 5LS"
       },
-      "partner": [
-        "true"
-      ],
-      "partnerName": "Jane Doe",
-      "partnerCode": "1234",
       "appointee": [
         "true"
       ],
@@ -64,20 +59,6 @@ module.exports = {
           "link": "Preparation letter",
           "date": "10"
         }
-      ],
-      "ucbreakdown": [
-        // {
-        //   "title": "Universal Credit amount",
-        //   "amount": "£317.80 per week"
-        // },
-        // {
-        //   "title": "Transitional protection amount",
-        //   "amount": "No TP awarded, UC is more than legacy"
-        // },
-        {
-          "title": "Total payment amount",
-          "amount": "£317.82 per week"
-        }
       ]
     },
     {
@@ -95,24 +76,32 @@ module.exports = {
         "city": "Fairstead",
         "postcode": "NR10 0WX"
       },
-      "partner": [
-        "false"
+      "children": [
+        {
+          "childDOB": [
+            "2009",
+            "7",
+            "23"
+          ],
+          "childDisability": "true",
+        },
+        {
+          "childDOB": [
+            "2011",
+            "9",
+            "17"
+          ],
+          "childDisability": "false",
+        }
       ],
-      "child": [
-        "true"
-      ],
-      "childDOB": [
-        "2009",
-        "7",
-        "23"
-      ],
-      "childDisability": "true",
-      "partnerName": "",
-      "partnerCode": "",
+
+
       "appointee": "_unchecked",
       "appointeeName": "",
       "legacyBenefits": [
-        "Child Tax Credit"
+        "Child Tax Credit",
+        "Housing Benefit",
+        "Income Support"
       ],
       "welsh": "true",
       "landline": "0121 496 0649",
@@ -145,24 +134,6 @@ module.exports = {
           "link": "Reminder text",
           "date": "1"
         }
-      ],
-      "ucbreakdown": [
-        // {
-        //   "title": "Universal Credit amount",
-        //   "amount": "251.77 per week"
-        // },
-        // {
-        //   "title": "Universal Credit amount",
-        //   "amount": "No TP awarded, UC is more than legacy"
-        // },
-        // {
-        //   "title": "Child award",
-        //   "amount": "£277.08"
-        // },
-        {
-          "title": "Total payment amount",
-          "amount": "£528.85 per week"
-        }
       ]
     },
     {
@@ -180,11 +151,6 @@ module.exports = {
         "city": "Bedlington",
         "postcode": "NE22 5LS"
       },
-      "partner": [
-        "false"
-      ],
-      "partnerName": "",
-      "partnerCode": "",
       "appointee": "_unchecked",
       "appointeeName": "",
       "legacyBenefits": [
@@ -224,20 +190,6 @@ module.exports = {
         {
           "title": "Claimed Universal Credit",
           "date": "10"
-        }
-      ],
-      "ucbreakdown": [
-        // {
-        //   "title": "Universal Credit amount",
-        //   "amount": "£317.80 per week"
-        // },
-        // {
-        //   "title": "Universal Credit amount",
-        //   "amount": "No TP awarded, UC is more than legacy"
-        // },
-        {
-          "title": "Total payment amount",
-          "amount": "395.20 per week"
         }
       ]
     }
