@@ -1,13 +1,9 @@
-.govuk-skip-link, .govuk-back-link {
-  display: none;
-}
+.govuk-skip-link, .govuk-back-link { display: none; }
 
 @page { size: auto;  margin: 0mm; }
 
 .govuk-main-wrapper  { margin: 1.5cm }
 
-.govuk-body {
-  line-height: 1.5;
-}
+.govuk-body { line-height: 1.5; }
 
 .page-break { page-break-before: always; }
