@@ -59,7 +59,12 @@ module.exports = {
           "link": "Preparation letter",
           "date": "10"
         }
-      ]
+      ],
+      "lastLetter": {
+        "title": "Preparation letter",
+        "date": "6",
+        "remaining": "24"
+      }
     },
     {
       "nino": "UU123456C",
@@ -120,7 +125,6 @@ module.exports = {
         },
         {
           "title": "Contact with claimant added",
-          "link": "Notification letter",
           "date": "3",
           "name": "Paul Mason",
           "body": "Claimant visited jobcentre about:",
@@ -134,7 +138,12 @@ module.exports = {
           "link": "Reminder text",
           "date": "1"
         }
-      ]
+      ],
+      "lastLetter": {
+        "title": "Notification letter",
+        "date": "6",
+        "remaining": "24"
+      }
     },
     {
       "nino": "II123456C",

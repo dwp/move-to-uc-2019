@@ -49,6 +49,8 @@ router.post('/claimant/reissue/confirm', (req, res) => {
   const search = req.session.data['find'].replace(/ /g,'').toUpperCase()
   const claimant = req.session.data['claimants'].filter(claimant => claimant.nino === search)
 
+  res.locals.claimant = claimant[0]
+
   let claimantToEdit = req.session.data['claimants'].filter(claimant => claimant.nino === search)
 
   if (type == "print") {
