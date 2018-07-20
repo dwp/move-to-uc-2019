@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block beforeContent %}
-  <a href="/results?find={{ data['current-nino'] }}" class="govuk-back-link">Back</a>
+  <a href="/results?find={{ data['find'] }}" class="govuk-back-link">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -28,25 +28,52 @@
           },
           items: [
             {
-              value: 'call',
+              value: 'Claimant called',
               text: 'Call'
             },
             {
-              value: 'jcp',
+              value: 'Claimant visited jobcentre',
               text: 'Jobcentre walk-in'
             }
           ]
         }) }}
 
-        {{ govukTextarea({
-          classes: '',
-          name: 'contactDetails',
-          id: 'contactDetails',
-          rows: '8',
-          label: {
-            text: 'Why did they contact you and what did you do?'
-          }
-        }) }}
+        <div class="govuk-form-group">
+
+          <fieldset class="govuk-fieldset">
+
+            <legend class="govuk-fieldset__legend">
+              What did they need help with?
+            </legend>
+
+            <div class="govuk-checkboxes">
+
+              {% for i in claimant.history %}
+              {% set regExp = r/Contact with claimant/ %}
+                {% if i.link %}
+                {% if regExp.test(i.title) %}{% else %}
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="contactReason-{{loop.index}}" name="contactReason" type="checkbox" value="{{ i.title }}">
+                    <label class="govuk-label govuk-checkboxes__label" for="contactReason-{{loop.index}}">
+                      {{ i.title }} on {{ date  | date("subtract", i.date, "days") | date("D MMMM YYYY") }}
+                    </label>
+                  </div>
+                {% endif %}
+                {% endif %}
+              {% endfor %}
+
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="contactReason-last" name="contactReason" type="checkbox" value="When they have to claim by">
+                <label class="govuk-label govuk-checkboxes__label" for="contactReason-last">
+                  When they have to claim by
+                </label>
+              </div>
+
+            </div>
+          </fieldset>
+
+
+        </div>
 
         {{ govukButton({
           text: "Submit",

@@ -5,22 +5,13 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      {% set regExp = r/letter/ %}
-      {% if regExp.test(type) %}
-        {% set title = "Letter resent" %}
-      {% else %}
-        {% set title = "Text resent" %}
-      {% endif %}
-
       {{ govukPanel({
-        titleText: title,
-        classes: 'govuk-!-padding-bottom-1'
+        titleText: "Letter reissued",
+        text: 'The claimant should get this in the post within 3-5 working days',
+        classes: ''
       }) }}
 
-      {# <h2 class="govuk-heading-m">What happens next</h2>
-      <p>The letter will be posted out to the claimant and should be with them in 3-5 working days.</p> #}
-
-      <p><a href="/results?find={{ data['find'] }}">Back to claimant&rsquo;s case</p>
+      <p><a href="/results?find={{ data['find'] }}">Back to claimant&rsquo;s account</a></p>
 
     </div>
   </div>

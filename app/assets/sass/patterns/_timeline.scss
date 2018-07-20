@@ -1,32 +1,41 @@
 .timeline {
-  .entry {
+  border-left: 3px solid $govuk-link-colour;
+}
+
+.timeline-entry {
+  margin: 2em 0;
+  padding-left: 1em;
+  position: relative;
+
+  &:first-of-type {
+    margin-top: 0;
+  }
+
+  &::before {
     background-color: $govuk-link-colour;
-    height: 4px;
+    content: ' ';
+    height: 3px;
     left: 0;
     position: absolute;
-    top: 8px;
+    top: .5em;
     width: 10px;
   }
 
-  li   {
-    border-left: 4px solid $govuk-link-colour;
-    padding: 0 0 20px 20px;
+  .timeline-title {
     margin-bottom: 0;
-    position: relative;
-
-    &:last-of-type {
-      padding-bottom: 0;
-    }
   }
 
-    li span {
-      color: $govuk-secondary-text-colour;
-      display: block;
-      margin-bottom: 0;
-    }
+  .timeline-author,
+  .timeline-date {
+    color: $govuk-secondary-text-colour;
+    display: block;
+  }
 
-    li a {
-      display: block;
-      margin-top: 10px;
-    }
+  .timeline-info {
+    margin-top: 0;
+  }
+
+  .timeline-body {
+    display: block;
+  }
 }

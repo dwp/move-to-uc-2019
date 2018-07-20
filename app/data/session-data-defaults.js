@@ -37,14 +37,10 @@ module.exports = {
         "city": "Bedlington",
         "postcode": "NE2 5LS"
       },
-      "partner": [
-        "true"
-      ],
-      "partnerName": "Jane Doe",
-      "partnerCode": "1234",
       "appointee": [
         "true"
       ],
+      "appointeeType": "Personal",
       "appointeeName": "Richard Roe",
       "appointeeNino": "UI255634A",
       "legacyBenefits": [
@@ -60,25 +56,15 @@ module.exports = {
       "history": [
         {
           "title": "Preparation letter sent",
-          "body": "Resend letter",
           "link": "Preparation letter",
-          "time": "1 Jun 2018"
+          "date": "10"
         }
       ],
-      "ucbreakdown": [
-        // {
-        //   "title": "Universal Credit amount",
-        //   "amount": "£317.80 per week"
-        // },
-        // {
-        //   "title": "Transitional protection amount",
-        //   "amount": "No TP awarded, UC is more than legacy"
-        // },
-        {
-          "title": "Total payment amount",
-          "amount": "£317.82 per week"
-        }
-      ]
+      "lastLetter": {
+        "title": "Preparation letter",
+        "date": "6",
+        "remaining": "24"
+      }
     },
     {
       "nino": "UU123456C",
@@ -95,24 +81,32 @@ module.exports = {
         "city": "Fairstead",
         "postcode": "NR10 0WX"
       },
-      "partner": [
-        "false"
+      "children": [
+        {
+          "childDOB": [
+            "2009",
+            "7",
+            "23"
+          ],
+          "childDisability": "true",
+        },
+        {
+          "childDOB": [
+            "2011",
+            "9",
+            "17"
+          ],
+          "childDisability": "false",
+        }
       ],
-      "child": [
-        "true"
-      ],
-      "childDOB": [
-        "2009",
-        "7",
-        "23"
-      ],
-      "childDisability": "true",
-      "partnerName": "",
-      "partnerCode": "",
+
+
       "appointee": "_unchecked",
       "appointeeName": "",
       "legacyBenefits": [
-        "Child Tax Credit"
+        "Child Tax Credit",
+        "Housing Benefit",
+        "Income Support"
       ],
       "welsh": "true",
       "landline": "0121 496 0649",
@@ -121,35 +115,35 @@ module.exports = {
       "history": [
         {
           "title": "Preparation text sent",
-          "body": "Resend text",
           "link": "Preparation text",
-          "time": "28 Feb 2018"
+          "date": "7"
         },
         {
           "title": "Notification letter sent",
-          "body": "Resend letter",
           "link": "Notification letter",
-          "time": "1 Mar 2018"
+          "date": "6"
+        },
+        {
+          "title": "Contact with claimant added",
+          "date": "3",
+          "name": "Paul Mason",
+          "body": "Claimant visited jobcentre about:",
+          "reasons": [
+            "Notification letter",
+            "When they have to claim by"
+          ]
+        },
+        {
+          "title": "Reminder text sent",
+          "link": "Reminder text",
+          "date": "1"
         }
       ],
-      "ucbreakdown": [
-        // {
-        //   "title": "Universal Credit amount",
-        //   "amount": "251.77 per week"
-        // },
-        // {
-        //   "title": "Universal Credit amount",
-        //   "amount": "No TP awarded, UC is more than legacy"
-        // },
-        // {
-        //   "title": "Child award",
-        //   "amount": "£277.08"
-        // },
-        {
-          "title": "Total payment amount",
-          "amount": "£528.85 per week"
-        }
-      ]
+      "lastLetter": {
+        "title": "Notification letter",
+        "date": "6",
+        "remaining": "24"
+      }
     },
     {
       "nino": "II123456C",
@@ -166,11 +160,6 @@ module.exports = {
         "city": "Bedlington",
         "postcode": "NE22 5LS"
       },
-      "partner": [
-        "false"
-      ],
-      "partnerName": "",
-      "partnerCode": "",
       "appointee": "_unchecked",
       "appointeeName": "",
       "legacyBenefits": [
@@ -183,43 +172,33 @@ module.exports = {
       "history": [
         {
           "title": "Preparation letter sent",
-          "body": "Resend letter",
           "link": "Preparation letter",
-          "time": "1 Feb 2018"
+          "date": "53"
+        },
+        {
+          "title": "Preparation letter resent",
+          "link": "Preparation letter",
+          "date": "48",
+          "name": "Paul Mason"
         },
         {
           "title": "Notification letter sent",
-          "body": "Resend letter",
           "link": "Notification letter",
-          "time": "1 Mar 2018"
+          "date": "23"
         },
         {
           "title": "Reminder text sent",
-          "body": "Resend text",
           "link": "Reminder text",
-          "time": "14 Mar 2018"
+          "date": "19"
         },
         {
-          "title": "Reminder call sent",
-          "time": "28 Mar 2018"
+          "title": "Reminder call",
+          "date": "12",
+          "name": "Kay Hubbard"
         },
         {
           "title": "Claimed Universal Credit",
-          "time": "29 Mar 2018"
-        }
-      ],
-      "ucbreakdown": [
-        // {
-        //   "title": "Universal Credit amount",
-        //   "amount": "£317.80 per week"
-        // },
-        // {
-        //   "title": "Universal Credit amount",
-        //   "amount": "No TP awarded, UC is more than legacy"
-        // },
-        {
-          "title": "Total payment amount",
-          "amount": "395.20 per week"
+          "date": "10"
         }
       ]
     }

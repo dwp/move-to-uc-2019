@@ -5,7 +5,7 @@
 
     <div class="govuk-grid-column-two-thirds">
       <h1 class='govuk-heading-l govuk-!-display-inline-block'>
-        <span class='govuk-caption-l'>Case details</span>
+        <span class='govuk-caption-l'>Claimant&rsquo;s account</span>
         {{ claimant.firstName }} {{ claimant.lastName }}
       </h1>
 
@@ -16,16 +16,121 @@
       }) }} #}
     </div>
 
+    {% set lastLetter %}
+      {% for i in claimant.history %}
+        {{ i.link }}
+      {% endfor %}
+    {% endset -%}
     <div class="govuk-grid-column-two-thirds">
-      <!-- only add a heading for a list if there is more than one list -->
+      {% if claimant.status != "Claimed" %}
+      <h2 class='govuk-heading-m govuk-visually-hiden'>
+        Account actions
+      </h2>
+      <ul class="govuk-list">
+        <li>
+          <a class="govuk-link" href="/claimant/contact/">Add contact with claimant</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="/reissue">Reissue lastest letter</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#0">Exempt claimant</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#0">Extend case</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#0">Defer claimant</a>
+        </li>
+        {# <li>{{claimant.history[0].link}}</li> #}
+      </ul>
+      {% endif %}
+
+
+
+
+      {% if claimant.appointee == "true" %}
+      <h2 class='govuk-heading-m'>
+        Appointee details
+      </h2>
+
+      <dl class='app-check-your-answers app-check-your-answers--long govuk-!-margin-bottom-9'>
+        <div class='app-check-your-answers__contents'>
+          <dt class='app-check-your-answers__question'>
+            Appointee type
+          </dt>
+          <dd class='app-check-your-answers__answer'>
+            {{ claimant.appointeeType }}
+          </dd>
+        </div>
+
+        <div class='app-check-your-answers__contents'>
+          <dt class='app-check-your-answers__question'>
+            Name
+          </dt>
+          <dd class='app-check-your-answers__answer'>
+            {{ claimant.appointeeName }}
+          </dd>
+        </div>
+
+        <div class='app-check-your-answers__contents'>
+          <dt class='app-check-your-answers__question'>
+            National Insurance number
+          </dt>
+          <dd class='app-check-your-answers__answer'>
+            {{ claimant.appointeeNino | nino }}
+          </dd>
+        </div>
+
+        <div class='app-check-your-answers__contents'>
+          <dt class='app-check-your-answers__question'>
+            Address
+          </dt>
+          <dd class='app-check-your-answers__answer'>
+            {{ claimant.address.street }},
+            {% if claimant.address.street2 %}
+              {{ claimant.address.street2 }},
+            {% endif %}
+            {{ claimant.address.city }},
+            {{ claimant.address.postcode }}
+          </dd>
+        </div>
+
+        <div class='app-check-your-answers__contents'>
+          <dt class='app-check-your-answers__question'>
+            Telephone
+          </dt>
+          <dd class='app-check-your-answers__answer'>
+            {% if claimant.landline %}
+              {{ claimant.landline }}
+            {% else %}
+              <span class="secondary-text">Not on file</span>
+            {% endif %}
+          </dd>
+        </div>
+
+        <div class='app-check-your-answers__contents'>
+          <dt class='app-check-your-answers__question'>
+            Mobile
+          </dt>
+          <dd class='app-check-your-answers__answer'>
+            {% if claimant.mobile %}
+              {{ claimant.mobile | mobile }}
+            {% else %}
+              <span class="secondary-text">Not on file</span>
+            {% endif %}
+          </dd>
+        </div>
+      </dl>
+      {% endif %}
+
+
+
+
+
       <h2 class='govuk-heading-m'>
         Personal details
       </h2>
-
-      <!-- use additional modifier class to change column widths for multiple groups of questions and answers: -->
-      <!--   * `app-check-your-answers--short` for short questions -->
-      <!--   * `app-check-your-answers__questions-long` for long questions -->
-      <!--   * none for single group of q&a -->
       <dl class='app-check-your-answers app-check-your-answers--long govuk-!-margin-bottom-9'>
         <div class='app-check-your-answers__contents'>
           <dt class='app-check-your-answers__question'>
@@ -35,17 +140,6 @@
             {{ claimant.nino | nino }}
           </dd>
         </div>
-
-        {% if claimant.welsh == "true" %}
-        <div class='app-check-your-answers__contents'>
-          <dt class='app-check-your-answers__question'>
-            Language
-          </dt>
-          <dd class='app-check-your-answers__answer'>
-              Welsh speaker
-          </dd>
-        </div>
-        {% endif %}
 
         <div class='app-check-your-answers__contents'>
           <dt class='app-check-your-answers__question'>
@@ -105,107 +199,69 @@
 
 
 
-      {% if claimant.appointee == "true" %}
-      <h2 class='govuk-heading-m'>
-        Appointee details
-      </h2>
+      {% if claimant.children %}
+        {% for child in claimant.children %}
+          <h2 class='govuk-heading-m'>
+            Child {{loop.index}} details
+          </h2>
 
-      <dl class='app-check-your-answers app-check-your-answers--long govuk-!-margin-bottom-9'>
-        <div class='app-check-your-answers__contents'>
-          <dt class='app-check-your-answers__question'>
-            Name
-          </dt>
-          <dd class='app-check-your-answers__answer'>
-            {{ claimant.appointeeName }}
-          </dd>
-        </div>
-        <div class='app-check-your-answers__contents'>
-          <dt class='app-check-your-answers__question'>
-            National Insurance number
-          </dt>
-          <dd class='app-check-your-answers__answer'>
-            {{ claimant.appointeeNino | nino }}
-          </dd>
-        </div>
-      </dl>
-      {% endif %}
-
-
-
-
-
-      {% if claimant.child == "true" %}
-      <h2 class='govuk-heading-m'>
-        Child details
-      </h2>
-
-      <dl class='app-check-your-answers app-check-your-answers--long govuk-!-margin-bottom-9'>
-        <div class='app-check-your-answers__contents'>
-          <dt class='app-check-your-answers__question'>
-            Child&rsquo;s date of birth
-          </dt>
-          <dd class='app-check-your-answers__answer'>
-            {{ claimant.childDOB | date("DD MMMM YYYY") }}
-          </dd>
-        </div>
-        <div class='app-check-your-answers__contents'>
-          <dt class='app-check-your-answers__question'>
-            Child has disability
-          </dt>
-          <dd class='app-check-your-answers__answer'>
-            {{ "Yes" if claimant.childDisability == "true" else "No" }}
-          </dd>
-        </div>
-      </dl>
-      {% endif %}
-
-
-
-
-
-
-      {# <h2 class='govuk-heading-m'>
-        Universal Credit estimate
-      </h2>
-
-      <dl class='app-check-your-answers app-check-your-answers--long govuk-!-margin-bottom-9'>
-        {% for i in claimant.ucbreakdown %}
-          <div class='app-check-your-answers__contents'>
-            <dt class='app-check-your-answers__question'>
-              {{ i.title }}
-            </dt>
-            <dd class='app-check-your-answers__answer'>
-              {{ i.amount }}
-            </dd>
-          </div>
+          <dl class='app-check-your-answers app-check-your-answers--long govuk-!-margin-bottom-9'>
+            <div class='app-check-your-answers__contents'>
+              <dt class='app-check-your-answers__question'>
+                <span class="govuk-visually-hidden">Child {loop.index}}&rsquo;s </span>Date of birth
+              </dt>
+              <dd class='app-check-your-answers__answer'>
+                {{ child.childDOB | date("DD MMMM YYYY") }}
+              </dd>
+            </div>
+            <div class='app-check-your-answers__contents'>
+              <dt class='app-check-your-answers__question'>
+                <span class="govuk-visually-hidden">Child {loop.index}} </span>Disability
+              </dt>
+              <dd class='app-check-your-answers__answer'>
+                {{ "Yes" if child.childDisability == "true" else "No" }}
+              </dd>
+            </div>
+          </dl>
         {% endfor %}
-      </dl> #}
+      {% endif %}
+
     </div>
 
     <div class="govuk-grid-column-one-third">
       <h2 class='govuk-heading-m'>
-        Claim history
+        Account history
       </h2>
-
-      <p>
-        <a class="govuk-link" href="/claimant/contact/">Add contact with claimant</a>
-      </p>
-      <ul class="govuk-list timeline">
-      {% for i in claimant.history | reverse %}
-        <li>
-          <span class="entry"></span>
-          <h3 class="govuk-heading-s govuk-!-margin-0">
-            {{ i.title | capitalize }}
-            <span class="govuk-body-s">{{ i.time | date("DD MMM YYYY") }}</span>
-          </h3>
-          {% if i.link %}
-            <a class="govuk-link" href="/reissue/{{ i.link }}">{{ i.body | capitalize }}</a>
-          {% elif i.body %}
-            <p class="govuk-!-margin-0">{{ i.body | nl2br | safe }}</p>
-          {% endif %}
-        </li>
-      {% endfor %}
-      </ul>
+      <ol class="govuk-list timeline">
+        {% for i in claimant.history %} {# | reverse #}
+          <li class="timeline-entry">
+            <h3 class="govuk-heading-s timeline-title">{{ i.title | capitalize }}</h3>
+            <p class="timeline-info govuk-body-s">
+              <span class="govuk-visually-hidden">{{ i.title | capitalize }}</span>
+              {% if i.name %}
+                <span class="timeline-author">by {{ i.name | title }}</span>
+              {% endif %}
+              <span class="timeline-date">{{ date  | date("subtract", i.date, "days") | date("D MMMM YYYY") }}</span>
+            </p>
+            {# {% if i.link %}
+            <p class="timeline-body">
+              <a class="govuk-link" href="/reissue/{{ i.link }}">{{ i.body | capitalize }}</a>
+            </p> #}
+            {% if i.body %}
+              <p class="timeline-body">
+                {{ i.body | nl2br | safe }}
+              </p>
+              {% if i.reasons %}
+                <ul class="govuk-list govuk-list--bullet">
+                  {% for reason in i.reasons %}
+                    <li>{{ reason  | replace("sent", "") }}</li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ol>
     </div>
   </div>
 {% endblock %}
