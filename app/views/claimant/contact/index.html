@@ -10,38 +10,88 @@
 
       <div class="govuk-grid-column-full">
         <h1 class='govuk-heading-l'>
-          Add contact with {{ claimant.firstName }} {{ claimant.lastName }}
+          Add contact
         </h1>
       </div>
 
       <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+
+          <legend class="govuk-fieldset__legend">
+            Who made contact with you?
+          </legend>
+
+
+          <div class="govuk-radios govuk-radios--inlin">
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="contactPerson-1" name="contactPerson" type="radio" value="claimant">
+              <label class="govuk-label govuk-radios__label" for="contactPerson-1">
+                Claimant
+              </label>
+            </div>
+
+            {% if claimant.appointee == "true" %}
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="contactPerson-2" name="contactPerson" type="radio" value="appointee">
+              <label class="govuk-label govuk-radios__label" for="contactPerson-2">
+                Appointee
+              </label>
+            </div>
+            {% endif %}
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="contactPerson-3" name="contactPerson" type="radio" value="family/friend">
+              <label class="govuk-label govuk-radios__label" for="contactPerson-3">
+                Family/friend
+              </label>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="contactPerson-4" name="contactPerson" type="radio" value="third party">
+              <label class="govuk-label govuk-radios__label" for="contactPerson-4">
+                Third party
+              </label>
+            </div>
+
+          </div>
+          </fieldset>
+        </div>
+
+
+
+
+
         {{ govukRadios({
           classes: 'govuk-radios--inlin',
           idPrefix: 'contactType',
           name: 'contactType',
           fieldset: {
             legend: {
-              text: 'How did the claimant contact you?',
+              text: 'How did they contact you?',
               isPageHeading: false,
               classes: ''
             }
           },
           items: [
             {
-              value: 'Claimant called',
+              value: 'Called',
               text: 'Call'
             },
             {
-              value: 'Claimant visited jobcentre',
+              value: 'Visited jobcentre',
               text: 'Jobcentre walk-in'
             }
           ]
         }) }}
 
+
+
+
+
         <div class="govuk-form-group">
-
           <fieldset class="govuk-fieldset">
-
             <legend class="govuk-fieldset__legend">
               What did they need help with?
             </legend>
@@ -53,8 +103,8 @@
                 {% if i.link %}
                 {% if regExp.test(i.title) %}{% else %}
                   <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="contactReason-{{loop.index}}" name="contactReason" type="checkbox" value="{{ i.title }}">
-                    <label class="govuk-label govuk-checkboxes__label" for="contactReason-{{loop.index}}">
+                    <input class="govuk-checkboxes__input" id="contactReason-letter{{loop.index}}" name="contactReason" type="checkbox" value="{{ i.title }}">
+                    <label class="govuk-label govuk-checkboxes__label" for="contactReason-letter{{loop.index}}">
                       {{ i.title }} on {{ date  | date("subtract", i.date, "days") | date("D MMMM YYYY") }}
                     </label>
                   </div>
@@ -63,22 +113,68 @@
               {% endfor %}
 
               <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="contactReason-last" name="contactReason" type="checkbox" value="When they have to claim by">
-                <label class="govuk-label govuk-checkboxes__label" for="contactReason-last">
+                <input class="govuk-checkboxes__input" id="contactReason-ucinfo" name="contactReason" type="checkbox" value="Information about Universal Credit">
+                <label class="govuk-label govuk-checkboxes__label" for="contactReason-ucinfo">
+                  Information about Universal Credit
+                </label>
+              </div>
+
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="contactReason-digisupport" name="contactReason" type="checkbox" value="Digital support">
+                <label class="govuk-label govuk-checkboxes__label" for="contactReason-digisupport">
+                  Digital support
+                </label>
+              </div>
+
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="contactReason-claimdate" name="contactReason" type="checkbox" value="When they have to claim by">
+                <label class="govuk-label govuk-checkboxes__label" for="contactReason-claimdate">
                   When they have to claim by
                 </label>
               </div>
 
             </div>
           </fieldset>
-
-
         </div>
+
+
+
+
+
+        {{ govukCheckboxes({
+          idPrefix: 'contactMarkers',
+          name: 'contactMarkers',
+          fieldset: {
+            legend: {
+              text: 'Update markers',
+              isPageHeading: false,
+              classes: ''
+            }
+          },
+          items: [
+            {
+              value: 'Potentially violent',
+              text: 'Potentially violent',
+              checked: checked('contactMarkers', 'Potentially violent')
+            },
+            {
+              value: 'Unaccecpable behaviour',
+              text: 'Unaccecpable behaviour',
+              checked: checked('contactMarkers', 'Unaccecpable behaviour')
+            },
+            {
+              value: 'Vulnerable',
+              text: 'Vulnerable',
+              checked: checked('contactMarkers', 'Vulnerable')
+            }
+          ]
+        }) }}
 
         {{ govukButton({
           text: "Submit",
           classes: ""
         }) }}
+
       </div>
     </div>
   </form>

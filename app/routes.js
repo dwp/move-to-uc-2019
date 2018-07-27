@@ -91,24 +91,29 @@ router.get('/claimant/contact', (req, res) => {
 
   res.locals.claimant = claimant[0]
 
+
   if (claimant == false) {
     res.render('find/no-match')
   } else {
-    res.render('claimant/contact/index')
+    req.session.data['contactMarkers'] = claimant[0].markers
+    res.redirect('/claimant/contact/index')
   }
 })
 
 router.post('/claimant/contact/confirmation-page', (req, res) => {
   const search = req.session.data['find'].replace(/ /g,'').toUpperCase()
-
   let claimantToEdit = req.session.data['claimants'].filter(claimant => claimant.nino === search)
 
   const newItem = Object.assign({
-    title: "Contact with claimant added",
+    title: "Contact with "+req.body.contactPerson+" added",
     body: req.body.contactType+" about:",
-    reasons: req.body.contactReason,
-    name: req.session.data['user-name']
+    reasons: req.session.data['contactReason'],
+    name: req.session.data['user-name'],
+    oldMarkers: claimantToEdit[0].markers,
+    newMarkers: req.body.contactMarkers
   })
+
+  claimantToEdit[0].markers = req.body.contactMarkers
   claimantToEdit[0].history.push(newItem)
 
   res.render('claimant/contact/confirmation-page')

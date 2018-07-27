@@ -11,11 +11,11 @@
 
       <dl class="header-details">
         <dt>Status:</dt>
-        <dd>Preparation</dd>
+        <dd>{{ claimant.status }}</dd>
         <dt>Application start date:</dt>
-        <dd>{{ date  | date("add", 5, "days") | date("D MMMM YYYY") }}</dd>
+        <dd>{{ date  | date("subtract", claimant.day1, "days") | date("D MMMM YYYY") }}</dd>
         <dt>Application due date:</dt>
-        <dd>{{ date  | date("add", 35, "days") | date("D MMMM YYYY") }}</dd>
+        <dd>{{ date  | date("subtract", claimant.day1, "days") | date("add", 1, "month") | date("D MMMM YYYY") }}</dd>
       </dl>
     </div>
 
@@ -31,7 +31,7 @@
       </h2>
       <ul class="govuk-list">
         <li>
-          <a class="govuk-link" href="/claimant/contact/">Add contact with claimant</a>
+          <a class="govuk-link" href="/claimant/contact/">Add contact</a>
         </li>
         <li>
           <a class="govuk-link" href="/reissue">Reissue latest letter</a>
@@ -40,7 +40,7 @@
           <a class="govuk-link" href="#0">Exempt claimant</a>
         </li>
         <li>
-          <a class="govuk-link" href="#0">Extend case</a>
+          <a class="govuk-link" href="#0">Extend deadline</a>
         </li>
         {# <li>
           <a class="govuk-link" href="#0">Defer claimant</a>
@@ -196,6 +196,21 @@
             </ul>
           </dd>
         </div>
+
+        {% if claimant.markers and claimant.markers != "_unchecked" %}
+        <div class='app-check-your-answers__contents'>
+          <dt class='app-check-your-answers__question'>
+            Markers
+          </dt>
+          <dd class='app-check-your-answers__answer'>
+            <ul class="govuk-list govuk-!-margin-0">
+              {% for i in claimant.markers %}
+              <li>{{ i }}</li>
+              {% endfor %}
+            </ul>
+          </dd>
+        </div>
+        {% endif %}
       </dl>
 
 
@@ -261,6 +276,9 @@
                   {% endfor %}
                 </ul>
               {% endif %}
+            {% endif %}
+            {% if i.oldMarkers | dump != i.newMarkers |dump %}
+              <p class="timeline-body">Markers updated from {{ "None" if i.oldMarkers == "_unchecked" else i.oldMarkers }} to {{ "None" if i.newMarkers == "_unchecked" else i.newMarkers }}</p>
             {% endif %}
           </li>
         {% endfor %}

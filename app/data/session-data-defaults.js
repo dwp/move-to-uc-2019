@@ -19,7 +19,7 @@ Example usage:
 
 module.exports = {
 
-  "statuses": ["Prepare", "Notified", "Claimed", "Deferred", "Exempt", "Extended", "Not claimed"],
+  "statuses": ["Preparation", "Notified", "Claimed", "Deferred", "Exempt", "Extended", "Not claimed"],
 
   "claimants": [
     {
@@ -52,7 +52,10 @@ module.exports = {
       ],
       "landline": "",
       "mobile": "07771900900",
-      "status": "Prepare",
+      "markers": [
+        "_unchecked"
+      ],
+      "status": "Preparation",
       "history": [
         {
           "title": "Preparation letter sent",
@@ -60,12 +63,18 @@ module.exports = {
           "date": "10"
         }
       ],
+      "day1": "10",
       "lastLetter": {
         "title": "Preparation letter",
         "date": "6",
         "remaining": "24"
       }
     },
+
+
+
+
+
     {
       "nino": "UU123456C",
       "firstName": "Jane",
@@ -99,8 +108,6 @@ module.exports = {
           "childDisability": "false",
         }
       ],
-
-
       "appointee": "_unchecked",
       "appointeeName": "",
       "legacyBenefits": [
@@ -111,7 +118,7 @@ module.exports = {
       "welsh": "true",
       "landline": "0121 496 0649",
       "mobile": "07700900374",
-      "status": "Completed",
+      "status": "Notified",
       "history": [
         {
           "title": "Preparation text sent",
@@ -139,12 +146,18 @@ module.exports = {
           "date": "1"
         }
       ],
+      "day1": "6",
       "lastLetter": {
         "title": "Notification letter",
         "date": "6",
         "remaining": "24"
       }
     },
+
+
+
+
+
     {
       "nino": "II123456C",
       "firstName": "Jane",
