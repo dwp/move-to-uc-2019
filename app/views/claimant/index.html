@@ -3,18 +3,18 @@
 {% block content %}
   <div class="govuk-grid-row">
 
-    <div class="govuk-grid-column-two-thirds">
-      <h1 class='govuk-heading-l govuk-!-display-inline-block'>
+    <div class="govuk-grid-column-full">
+      <h1 class='govuk-heading-l govuk-!-margin-bottom-0'>
         <span class='govuk-caption-l'>Claimant&rsquo;s account</span>
         {{ claimant.firstName }} {{ claimant.lastName }}
       </h1>
 
-      <dl>
-        <dt>Status</dt>
-        <dd>Prepartion</dd>
-        <dt>Application start date</dt>
+      <dl class="header-details">
+        <dt>Status:</dt>
+        <dd>Preparation</dd>
+        <dt>Application start date:</dt>
         <dd>{{ date  | date("add", 5, "days") | date("D MMMM YYYY") }}</dd>
-        <dt>Application due date</dt>
+        <dt>Application due date:</dt>
         <dd>{{ date  | date("add", 35, "days") | date("D MMMM YYYY") }}</dd>
       </dl>
     </div>
@@ -42,9 +42,9 @@
         <li>
           <a class="govuk-link" href="#0">Extend case</a>
         </li>
-        <li>
+        {# <li>
           <a class="govuk-link" href="#0">Defer claimant</a>
-        </li>
+        </li> #}
         {# <li>{{claimant.history[0].link}}</li> #}
       </ul>
       {% endif %}

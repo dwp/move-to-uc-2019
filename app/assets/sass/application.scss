@@ -63,3 +63,57 @@ $govuk-global-styles: true;
 .app-check-your-answers {
   width: 100%;
 }
+
+
+
+
+
+.header-details {
+  @include govuk-font(19);
+
+  padding-bottom: 20px;
+  margin: 15px 0 30px;
+  border-bottom: 1px solid govuk-colour("grey-2");
+  display: flex;
+  flex-wrap: wrap;
+
+  dt {
+    margin: 0 5px 0 0;
+    font-weight: 700;
+  }
+
+  dd {
+    padding: 0 20px 0 0;
+    margin: 0 20px 0 0;
+    border-right: 1px solid govuk-colour("grey-2");
+
+    &:first-of-type{
+      padding-left: 0px;
+    }
+
+    &:last-of-type{
+      padding-right: 0px;
+      border-right: 0;
+    }
+
+    @media (max-width:989px) {
+      border-right: 0;
+    }
+  }
+
+  dt, dd {
+    line-height: 1;
+    box-sizing: border-box;
+
+    @media (max-width:989px) {
+      width: 50%;
+      margin: 0;
+      padding: 5px 0 0 0;
+    }
+
+    @media (max-width:640px) {
+      width: 100%;
+      padding: 5px 0 0 0;
+    }
+  }
+}
