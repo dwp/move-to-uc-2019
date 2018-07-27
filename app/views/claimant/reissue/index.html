@@ -83,7 +83,7 @@
           items: [
             {
               value: 'sameaddress',
-              text: 'Reissue to same address'
+              text: 'Reissue to current address ( '+claimant.address.street+', '+claimant.address.city+', '+claimant.address.postcode+')'
             },
             {
               value: 'newaddress',
@@ -94,7 +94,7 @@
             },
             {
               value: 'print',
-              text: 'Print'
+              text: 'Print and hand over'
             }
           ]
         }) }}

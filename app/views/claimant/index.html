@@ -12,9 +12,11 @@
       <dl class="header-details">
         <dt>Status:</dt>
         <dd>{{ claimant.status }}</dd>
-        <dt>Call to action date:</dt>
+        {% if claimant.status == "Preparation" %}
+        <dt>Notification date:</dt>
         <dd>{{ date  | date("subtract", claimant.day1, "days") | date("D MMMM YYYY") }}</dd>
-        <dt>Application due date:</dt>
+        {% endif %}
+        <dt>Claim by:</dt>
         <dd>{{ date  | date("subtract", claimant.day1, "days") | date("add", 1, "month") | date("D MMMM YYYY") }}</dd>
       </dl>
     </div>
@@ -31,7 +33,7 @@
       </h2>
       <ul class="govuk-list">
         <li>
-          <a class="govuk-link" href="/claimant/contact/">Add contact</a>
+          <a class="govuk-link" href="/claimant/contact/">Log a query</a>
         </li>
         <li>
           <a class="govuk-link" href="/reissue">Reissue latest letter</a>

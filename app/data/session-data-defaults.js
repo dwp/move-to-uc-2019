@@ -114,7 +114,7 @@ module.exports = {
           "link": "Notification letter"
         },
         {
-          "title": "Contact with claimant added",
+          "title": "Query from claimant logged",
           "date": "3",
           "name": "Paul Mason",
           "body": "Claimant visited jobcentre about:",

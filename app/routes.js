@@ -104,7 +104,7 @@ router.post('/claimant/contact/confirmation-page', (req, res) => {
   let claimantToEdit = req.session.data['claimants'].filter(claimant => claimant.nino === search)
 
   const newItem = Object.assign({
-    title: "Contact with "+req.body.contactPerson+" added",
+    title: "Query from "+req.body.contactPerson+" logged",
     body: req.body.contactType+" about:",
     reasons: req.session.data['contactReason'],
     name: req.session.data['user-name'],
