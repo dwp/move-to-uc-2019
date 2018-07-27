@@ -26,11 +26,6 @@ module.exports = {
       "nino": "QQ123456C",
       "firstName": "Joe",
       "lastName": "Bloggs",
-      "dob": [
-        "1980",
-        "1",
-        "1"
-      ],
       "address": {
         "street": "23 River View",
         "street2": "",
@@ -47,13 +42,10 @@ module.exports = {
         "Housing Benefit",
         "income-based Jobseeker’s Allowance (JSA)"
       ],
-      "welsh": [
-        "false"
-      ],
       "landline": "",
       "mobile": "07771900900",
       "markers": [
-        "_unchecked"
+        "Vulnerable"
       ],
       "status": "Preparation",
       "history": [
@@ -78,11 +70,6 @@ module.exports = {
       "nino": "UU123456C",
       "firstName": "Jane",
       "lastName": "Doe",
-      "dob": [
-        "1972",
-        "12",
-        "12"
-      ],
       "address": {
         "street": "98  Wrexham Rd",
         "street2": "",
@@ -114,7 +101,6 @@ module.exports = {
         "Housing Benefit",
         "Income Support"
       ],
-      "welsh": "true",
       "landline": "0121 496 0649",
       "mobile": "07700900374",
       "status": "Notified",
@@ -159,11 +145,6 @@ module.exports = {
       "nino": "II123456C",
       "firstName": "Jane",
       "lastName": "Roe",
-      "dob": [
-        "1998",
-        "12",
-        "12"
-      ],
       "address": {
         "street": "23 River View",
         "street2": "",
@@ -175,7 +156,6 @@ module.exports = {
       "legacyBenefits": [
         "income-related Employment and Support Allowance (ESA)"
       ],
-      "welsh": "_unchecked",
       "landline": "0121 496 0649",
       "mobile": "07700900374",
       "status": "Claimed",
