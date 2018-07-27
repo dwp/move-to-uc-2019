@@ -23,6 +23,7 @@ router.get('/results', (req, res) => {
     res.render('find/no-match')
   } else {
     res.render('claimant/index')
+    req.session.data['contactMarkers'] = claimant[0].markers
   }
 })
 
@@ -55,7 +56,7 @@ router.post('/claimant/reissue/confirm', (req, res) => {
 
   if (type == "print") {
     const newItem = Object.assign({
-      title: "Letter printed and reissued",
+      title: "Letter printed and handed over",
       name: req.session.data['user-name']
     })
     claimantToEdit[0].history.push(newItem)
@@ -71,7 +72,7 @@ router.post('/claimant/reissue/confirm', (req, res) => {
     res.render('claimant/reissue/confirmation-page')
   } else {
     const newItem = Object.assign({
-      title: "Letter reissued",
+      title: "Letter reissued to current address",
       name: req.session.data['user-name']
     })
     claimantToEdit[0].history.push(newItem)
@@ -91,12 +92,10 @@ router.get('/claimant/contact', (req, res) => {
 
   res.locals.claimant = claimant[0]
 
-
   if (claimant == false) {
     res.render('find/no-match')
   } else {
-    req.session.data['contactMarkers'] = claimant[0].markers
-    res.redirect('/claimant/contact/index')
+    res.render('claimant/contact/index')
   }
 })
 
