@@ -59,8 +59,7 @@ module.exports = {
       "history": [
         {
           "title": "Preparation letter sent",
-          "link": "Preparation letter",
-          "date": "10"
+          "link": "Preparation letter"
         }
       ],
       "day1": "10",
@@ -121,14 +120,12 @@ module.exports = {
       "status": "Notified",
       "history": [
         {
-          "title": "Preparation text sent",
-          "link": "Preparation text",
-          "date": "7"
+          "title": "Preparation letter sent",
+          "link": "Preparation text"
         },
         {
           "title": "Notification letter sent",
-          "link": "Notification letter",
-          "date": "6"
+          "link": "Notification letter"
         },
         {
           "title": "Contact with claimant added",
@@ -185,35 +182,26 @@ module.exports = {
       "history": [
         {
           "title": "Preparation letter sent",
-          "link": "Preparation letter",
-          "date": "53"
-        },
-        {
-          "title": "Preparation letter resent",
-          "link": "Preparation letter",
-          "date": "48",
-          "name": "Paul Mason"
+          "link": "Preparation letter"
         },
         {
           "title": "Notification letter sent",
-          "link": "Notification letter",
-          "date": "23"
+          "link": "Notification letter"
         },
         {
           "title": "Reminder text sent",
-          "link": "Reminder text",
-          "date": "19"
+          "link": "Reminder text"
         },
         {
           "title": "Reminder call",
-          "date": "12",
           "name": "Kay Hubbard"
         },
         {
           "title": "Claimed Universal Credit",
-          "date": "10"
+          "date": "2"
         }
-      ]
+      ],
+      "day1": "26",
     }
   ]
 
