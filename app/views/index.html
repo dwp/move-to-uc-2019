@@ -1,14 +1,42 @@
 {% extends "layout.html" %}
 
+{% block header %}
+  {# Set serviceName in config.js. #}
+  {{ govukHeader({
+    serviceName: serviceName + " prototype",
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+  }) }}
+{% endblock %}
+
 {% block content %}
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-l">
-        {{ serviceName }} prototype
+      <h1 class="govuk-heading-m ">
+        Current version
       </h1>
 
-      <p>There are currently 3 example claimants:</p>
+      <form action='/find' method='post' class='form' autocomplete='off'>
+
+        {{ govukInput({
+          label: {
+            html: 'Enter participant&rsquo;s full name',
+            isPageHeading: false
+          },
+          id: 'user-name',
+          name: 'user-name',
+          classes: 'govuk-input--width-20'
+        }) }}
+
+        {{ govukButton({
+          text: 'Start prototype',
+          classes: "govuk-button--start "
+        }) }}
+
+      </form>
+
+      <p>There are 2 scenarios:</p>
       <ul class="govuk-list govuk-list--bullet">
         <li>
           <a href="/results?find=qq123456c">QQ 12 34 56 C</a>
@@ -16,16 +44,13 @@
         <li>
           <a href="/results?find=uu123456c">UU 12 34 56 C</a>
         </li>
-        <li>
-          <a href="/results?find=ii123456c">II 12 34 56 C</a>
-        </li>
       </ul>
 
-      {{ govukButton({
-        text: 'View prototype',
-        href: "sign-in",
-        classes: "govuk-button--start "
-      }) }}
+
+
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+
 
       <h2 class='govuk-heading-m'>
         Previous versions

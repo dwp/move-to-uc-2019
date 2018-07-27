@@ -9,11 +9,14 @@
         {{ claimant.firstName }} {{ claimant.lastName }}
       </h1>
 
-      {# <p class="govuk-visually-hidden">Claim status:</p>
-      {{ govukTag({
-        text: claimant.status,
-        classes: ''
-      }) }} #}
+      <dl>
+        <dt>Status</dt>
+        <dd>Prepartion</dd>
+        <dt>Application start date</dt>
+        <dd>{{ date  | date("add", 5, "days") | date("D MMMM YYYY") }}</dd>
+        <dt>Application due date</dt>
+        <dd>{{ date  | date("add", 35, "days") | date("D MMMM YYYY") }}</dd>
+      </dl>
     </div>
 
     {% set lastLetter %}
@@ -233,7 +236,7 @@
         Account history
       </h2>
       <ol class="govuk-list timeline">
-        {% for i in claimant.history %} {# | reverse #}
+        {% for i in claimant.history | reverse %}
           <li class="timeline-entry">
             <h3 class="govuk-heading-s timeline-title">{{ i.title | capitalize }}</h3>
             <p class="timeline-info govuk-body-s">
