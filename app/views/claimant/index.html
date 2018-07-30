@@ -33,12 +33,14 @@
           </dd>
           {% endif %}
 
+          {% if claimant.status != "Claimed" %}
           <dt>
             Claim by:
           </dt>
           <dd>
             {{ date  | date("subtract", claimant.day1, "days") | date("add", 1, "month") | date("D MMMM YYYY") }}
           </dd>
+          {% endif %}
         </dl>
 
         {% if claimant.status != "Claimed" %}

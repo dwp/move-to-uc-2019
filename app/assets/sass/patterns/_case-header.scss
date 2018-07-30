@@ -1,3 +1,9 @@
+.case-header {
+  margin: 0 0 50px;
+  // padding: 0 0 15px;
+  // border-bottom: 1px solid $govuk-border-colour;
+}
+
 .case-header__details {
   @include govuk-font(16);
   margin: 15px 0;
@@ -47,11 +53,6 @@
 }
 
 .case-header__actions {
-  display: block;
-  margin: 0 0 50px;
-  // padding: 0 0 15px;
-  // border-bottom: 1px solid $govuk-border-colour;
-
   .govuk-button {
     margin-bottom: 5px;
   }
