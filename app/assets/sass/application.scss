@@ -95,11 +95,29 @@ $govuk-button-secondary-colour: darken(govuk-colour("grey-3"), 5%);
 
   &:hover,
   &:focus {
-    background-color: darken($govuk-button-secondary-colour, 5%);
+    background-color: lighten($govuk-button-secondary-colour, 5%);
   }
 }
 
 .govuk-button--small {
   @include govuk-typography-responsive($size: 16, $override-line-height: 1);
-  padding: 6px 7px 5px;
+}
+
+.govuk-button--group {
+  float: left;
+  border: 1px solid darken($govuk-button-secondary-colour, 15%);
+  border-bottom: 0;
+  border-right-width: 0;
+  padding: 8px 12px;
+
+  &:first-of-type {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+  }
+
+  &:last-of-type {
+    border-right-width: 1px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
 }

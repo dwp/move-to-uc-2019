@@ -56,4 +56,11 @@
   .govuk-button {
     margin-bottom: 5px;
   }
+
+  // clearfix
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 }
