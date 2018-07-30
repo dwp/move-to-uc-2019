@@ -1,59 +1,70 @@
 {% extends "layout.html" %}
 
+{% set lastLetter %}
+  {% for i in claimant.history %}
+    {{ i.link }}
+  {% endfor %}
+{% endset -%}
+
 {% block content %}
   <div class="govuk-grid-row">
 
     <div class="govuk-grid-column-full">
-      <h1 class='govuk-heading-l govuk-!-margin-bottom-0'>
-        <span class='govuk-caption-l'>Claimant&rsquo;s account</span>
-        {{ claimant.firstName }} {{ claimant.lastName }}
-      </h1>
+      <div class="case-header">
+        <h1 class='govuk-heading-l govuk-!-margin-bottom-0'>
+          <span class='govuk-caption-l'>Claimant&rsquo;s account</span>
+          {{ claimant.firstName }} {{ claimant.lastName }}
+        </h1>
 
-      <dl class="header-details">
-        <dt>Status:</dt>
-        <dd>{{ claimant.status }}</dd>
-        {% if claimant.status == "Preparation" %}
-        <dt>Notification date:</dt>
-        <dd>{{ date  | date("subtract", claimant.day1, "days") | date("D MMMM YYYY") }}</dd>
+        <dl class="case-header__details govuk-body-s">
+          {% if claimant.status == "Preparation" %}
+          <dt>Notification:</dt>
+          <dd>{{ date  | date("subtract", claimant.day1, "days") | date("D MMMM YYYY") }}</dd>
+          {% endif %}
+          <dt>Claim by:</dt>
+          <dd>{{ date  | date("subtract", claimant.day1, "days") | date("add", 1, "month") | date("D MMMM YYYY") }}</dd>
+          <dt class="govuk-visually-hidden">Status:</dt>
+          <dd><span class="govuk-tag">{{ claimant.status }}</span></dd>
+        </dl>
+
+        {% if claimant.status != "Claimed" %}
+        <div class="case-header__actions">
+          <h2 class='govuk-heading-m govuk-visually-hidden'>
+            Account actions
+          </h2>
+
+          {{ govukButton({
+            text: 'Log a query',
+            href: '/claimant/contact/',
+            classes: 'govuk-button--secondary govuk-button--small'
+          }) }}
+          {{ govukButton({
+            text: 'Reissue latest letter',
+            href: '/reissue',
+            classes: 'govuk-button--secondary govuk-button--small'
+          }) }}
+          {{ govukButton({
+            text: 'Defer claimant',
+            href: '#0',
+            classes: 'govuk-button--secondary govuk-button--small'
+          }) }}
+          {{ govukButton({
+            text: 'Exempt claimant',
+            href: '#0',
+            classes: 'govuk-button--secondary govuk-button--small'
+          }) }}
+          {{ govukButton({
+            text: 'Extend deadline',
+            href: '#0',
+            classes: 'govuk-button--secondary govuk-button--small'
+          }) }}
+        </div>
         {% endif %}
-        <dt>Claim by:</dt>
-        <dd>{{ date  | date("subtract", claimant.day1, "days") | date("add", 1, "month") | date("D MMMM YYYY") }}</dd>
-      </dl>
+
+      </div>
     </div>
 
-    {% set lastLetter %}
-      {% for i in claimant.history %}
-        {{ i.link }}
-      {% endfor %}
-    {% endset -%}
     <div class="govuk-grid-column-two-thirds">
-      {% if claimant.status != "Claimed" %}
-      <h2 class='govuk-heading-m govuk-visually-hiden'>
-        Account actions
-      </h2>
-      <ul class="govuk-list">
-        <li>
-          <a class="govuk-link" href="/claimant/contact/">Log a query</a>
-        </li>
-        <li>
-          <a class="govuk-link" href="/reissue">Reissue latest letter</a>
-        </li>
-        <li>
-          <a class="govuk-link" href="#0">Exempt claimant</a>
-        </li>
-        <li>
-          <a class="govuk-link" href="#0">Extend deadline</a>
-        </li>
-        {# <li>
-          <a class="govuk-link" href="#0">Defer claimant</a>
-        </li> #}
-        {# <li>{{claimant.history[0].link}}</li> #}
-      </ul>
-      {% endif %}
-
-
-
-
       {% if claimant.appointee == "true" %}
       <h2 class='govuk-heading-m'>
         Appointee details

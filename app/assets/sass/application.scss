@@ -15,9 +15,17 @@ $govuk-global-styles: true;
 // Components that aren't in Frontend
 @import "components/cookie-banner";
 
+
+
+
+
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
 @import 'patterns/timeline';
+@import 'patterns/case-header';
+
+
+
 
 
 
@@ -60,6 +68,7 @@ $govuk-global-styles: true;
 
 
 
+// Ensure full width on check answers tables
 .app-check-your-answers {
   width: 100%;
 }
@@ -68,52 +77,27 @@ $govuk-global-styles: true;
 
 
 
-.header-details {
-  @include govuk-font(19);
+// Button modifiers
+.govuk-button--secondary {
+  background-color: govuk-colour("grey-3");
+  color: $govuk-text-colour;
+  box-shadow: 0 2px 0 darken(govuk-colour("grey-3"), 15%);
 
-  padding-bottom: 20px;
-  margin: 15px 0 30px;
-  border-bottom: 1px solid govuk-colour("grey-2");
-  display: flex;
-  flex-wrap: wrap;
-
-  dt {
-    margin: 0 5px 0 0;
-    font-weight: 700;
+  &:link,
+  &:visited,
+  &:active,
+  &:hover {
+    color: $govuk-text-colour;
+    text-decoration: none;
   }
 
-  dd {
-    padding: 0 20px 0 0;
-    margin: 0 20px 0 0;
-    border-right: 1px solid govuk-colour("grey-2");
-
-    &:first-of-type{
-      padding-left: 0px;
-    }
-
-    &:last-of-type{
-      padding-right: 0px;
-      border-right: 0;
-    }
-
-    @media (max-width:989px) {
-      border-right: 0;
-    }
+  &:hover,
+  &:focus {
+    background-color: darken(govuk-colour("grey-3"), 5%);
   }
+}
 
-  dt, dd {
-    line-height: 1;
-    box-sizing: border-box;
-
-    @media (max-width:989px) {
-      width: 50%;
-      margin: 0;
-      padding: 5px 0 0 0;
-    }
-
-    @media (max-width:640px) {
-      width: 100%;
-      padding: 5px 0 0 0;
-    }
-  }
+.govuk-button--small {
+  @include govuk-typography-responsive($size: 16, $override-line-height: 1);
+  padding: 6px 7px 5px;
 }
