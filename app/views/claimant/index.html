@@ -17,14 +17,28 @@
         </h1>
 
         <dl class="case-header__details govuk-body-s">
+          <dt class="govuk-visually-hidden">
+            Status:
+          </dt>
+          <dd>
+            <span class="govuk-tag">{{ claimant.status }}</span>
+          </dd>
+
           {% if claimant.status == "Preparation" %}
-          <dt>Notification:</dt>
-          <dd>{{ date  | date("subtract", claimant.day1, "days") | date("D MMMM YYYY") }}</dd>
+          <dt>
+            Notification date:
+          </dt>
+          <dd>
+            {{ date  | date("subtract", claimant.day1, "days") | date("D MMMM YYYY") }}
+          </dd>
           {% endif %}
-          <dt>Claim by:</dt>
-          <dd>{{ date  | date("subtract", claimant.day1, "days") | date("add", 1, "month") | date("D MMMM YYYY") }}</dd>
-          <dt class="govuk-visually-hidden">Status:</dt>
-          <dd><span class="govuk-tag">{{ claimant.status }}</span></dd>
+
+          <dt>
+            Claim by:
+          </dt>
+          <dd>
+            {{ date  | date("subtract", claimant.day1, "days") | date("add", 1, "month") | date("D MMMM YYYY") }}
+          </dd>
         </dl>
 
         {% if claimant.status != "Claimed" %}
