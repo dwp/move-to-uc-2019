@@ -56,9 +56,7 @@ module.exports = {
       ],
       "day1": "10",
       "lastLetter": {
-        "title": "Preparation letter",
-        "date": "6",
-        "remaining": "24"
+        "title": "Preparation letter"
       }
     },
 
@@ -115,7 +113,7 @@ module.exports = {
         },
         {
           "title": "Query from claimant logged",
-          "date": "3",
+          "date": "-3",
           "name": "Paul Mason",
           "body": "Claimant visited jobcentre about:",
           "reasons": [
@@ -129,11 +127,9 @@ module.exports = {
           "date": "1"
         }
       ],
-      "day1": "6",
+      "day1": "-6",
       "lastLetter": {
-        "title": "Notification letter",
-        "date": "6",
-        "remaining": "24"
+        "title": "Notification letter"
       }
     },
 
@@ -177,11 +173,10 @@ module.exports = {
           "name": "Kay Hubbard"
         },
         {
-          "title": "Claimed Universal Credit",
-          "date": "2"
+          "title": "Claimed Universal Credit"
         }
       ],
-      "day1": "26",
+      "day1": "-50",
     }
   ]
 

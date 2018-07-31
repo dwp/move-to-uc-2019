@@ -3,7 +3,7 @@
     Your current benefits are ending
   </h1>
   <p class="govuk-body">
-    Move to Universal Credit by <strong>{{ date | date("add", claimant.lastLetter.remaining, "days") | date("D MMMM YYYY") }}</strong>, or your payments may stop
+    Move to Universal Credit by <strong>{{ date  | date("add", claimant.day1, "days") | date("add", 1, "month") | date("D MMMM YYYY") }}</strong>, or your payments may stop
   </p>
 
   <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
@@ -11,7 +11,7 @@
   <p class="govuk-body">Dear Joe</p>
   <p class="govuk-body">Your current benefits are now ending.</p>
 
-  <p class="govuk-body">You need to <strong>move to Universal Credit by {{ date | date("add", claimant.lastLetter.remaining, "days") | date("D MMMM YYYY") }}</strong>, or:</p>
+  <p class="govuk-body">You need to <strong>move to Universal Credit by {{ date  | date("add", claimant.day1, "days") | date("add", 1, "month") | date("D MMMM YYYY") }}</strong>, or:</p>
   <ul class="govuk-list govuk-list--bullet">
     <li>your payments may stop</li>
     <li>you may lose any help you get with your rent</li>

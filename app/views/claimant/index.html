@@ -29,7 +29,7 @@
             Notification date:
           </dt>
           <dd>
-            {{ date  | date("subtract", claimant.day1, "days") | date("D MMMM YYYY") }}
+            {{ date  | date("add", claimant.day1, "days") | date("D MMMM YYYY") }}
           </dd>
           {% endif %}
 
@@ -38,7 +38,7 @@
             Claim by:
           </dt>
           <dd>
-            {{ date  | date("subtract", claimant.day1, "days") | date("add", 1, "month") | date("D MMMM YYYY") }}
+            {{ date  | date("add", claimant.day1, "days") | date("add", 1, "month") | date("D MMMM YYYY") }}
           </dd>
           {% endif %}
         </dl>
@@ -289,15 +289,17 @@
                 <span class="timeline-author">by {{ i.name | title }}</span>
               {% endif %}
               {% if i.title == "Preparation letter sent" %}
-                <span class="timeline-date">{{ date  | date("subtract", claimant.day1, "days") | date("subtract", 1, "month") | date("D MMMM YYYY") }}</span>
+                <span class="timeline-date">{{ date | date("add", claimant.day1, "days") | date("subtract", 1, "month") | date("D MMMM YYYY") }}</span>
               {% elif i.title == "Notification letter sent" %}
-                <span class="timeline-date">{{ date  | date("subtract", claimant.day1, "days") | date("D MMMM YYYY") }}</span>
+                <span class="timeline-date">{{ date | date("add", claimant.day1, "days") | date("D MMMM YYYY") }}</span>
               {% elif i.title == "Reminder text sent" %}
-                <span class="timeline-date">{{ date  | date("subtract", claimant.day1, "days") | date("add", 2, "weeks") | date("D MMMM YYYY") }}</span>
+                <span class="timeline-date">{{ date | date("add", claimant.day1, "days") | date("add", 2, "weeks") | date("D MMMM YYYY") }}</span>
               {% elif i.title == "Reminder call" %}
-                <span class="timeline-date">{{ date  | date("subtract", claimant.day1, "days") | date("add", 3, "weeks") | date("D MMMM YYYY") }}</span>
+                <span class="timeline-date">{{ date | date("add", claimant.day1, "days") | date("add", 3, "weeks") | date("D MMMM YYYY") }}</span>
+              {% elif i.title == "Claimed Universal Credit" %}
+                <span class="timeline-date">{{ date | date("add", claimant.day1, "days") | date("add", 1, "month") | date("D MMMM YYYY") }}</span>
               {% else %}
-                <span class="timeline-date">{{ date  | date("subtract", i.date, "days") | date("D MMMM YYYY") }}</span>
+                <span class="timeline-date">{{ date | date("add", i.date, "days") | date("D MMMM YYYY") }}</span>
               {% endif %}
             </p>
             {# {% if i.link %}
