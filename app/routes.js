@@ -23,6 +23,7 @@ router.get('/results', (req, res) => {
     res.render('find/no-match')
   } else {
     res.render('claimant/index')
+    req.session.data['contactMarkers'] = claimant[0].markers
   }
 })
 
@@ -55,7 +56,7 @@ router.post('/claimant/reissue/confirm', (req, res) => {
 
   if (type == "print") {
     const newItem = Object.assign({
-      title: "Letter printed and reissued",
+      title: "Letter printed and handed over",
       name: req.session.data['user-name']
     })
     claimantToEdit[0].history.push(newItem)
@@ -71,7 +72,7 @@ router.post('/claimant/reissue/confirm', (req, res) => {
     res.render('claimant/reissue/confirmation-page')
   } else {
     const newItem = Object.assign({
-      title: "Letter reissued",
+      title: "Letter reissued to current address",
       name: req.session.data['user-name']
     })
     claimantToEdit[0].history.push(newItem)
@@ -100,15 +101,18 @@ router.get('/claimant/contact', (req, res) => {
 
 router.post('/claimant/contact/confirmation-page', (req, res) => {
   const search = req.session.data['find'].replace(/ /g,'').toUpperCase()
-
   let claimantToEdit = req.session.data['claimants'].filter(claimant => claimant.nino === search)
 
   const newItem = Object.assign({
-    title: "Contact with claimant added",
+    title: "Query from "+req.body.contactPerson+" logged",
     body: req.body.contactType+" about:",
-    reasons: req.body.contactReason,
-    name: req.session.data['user-name']
+    reasons: req.session.data['contactReason'],
+    name: req.session.data['user-name'],
+    oldMarkers: claimantToEdit[0].markers,
+    newMarkers: req.body.contactMarkers
   })
+
+  claimantToEdit[0].markers = req.body.contactMarkers
   claimantToEdit[0].history.push(newItem)
 
   res.render('claimant/contact/confirmation-page')

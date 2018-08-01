@@ -19,18 +19,13 @@ Example usage:
 
 module.exports = {
 
-  "statuses": ["Prepare", "Notified", "Claimed", "Deferred", "Exempt", "Extended", "Not claimed"],
+  "statuses": ["Preparation", "Notified", "Claimed", "Deferred", "Exempt", "Extended", "Not claimed"],
 
   "claimants": [
     {
       "nino": "QQ123456C",
       "firstName": "Joe",
       "lastName": "Bloggs",
-      "dob": [
-        "1980",
-        "1",
-        "1"
-      ],
       "address": {
         "street": "23 River View",
         "street2": "",
@@ -47,34 +42,32 @@ module.exports = {
         "Housing Benefit",
         "income-based Jobseeker’s Allowance (JSA)"
       ],
-      "welsh": [
-        "false"
-      ],
       "landline": "",
       "mobile": "07771900900",
-      "status": "Prepare",
+      "markers": [
+        "Vulnerable"
+      ],
+      "status": "Preparation",
       "history": [
         {
           "title": "Preparation letter sent",
-          "link": "Preparation letter",
-          "date": "10"
+          "link": "Preparation letter"
         }
       ],
+      "day1": "10",
       "lastLetter": {
-        "title": "Preparation letter",
-        "date": "6",
-        "remaining": "24"
+        "title": "Preparation letter"
       }
     },
+
+
+
+
+
     {
       "nino": "UU123456C",
       "firstName": "Jane",
       "lastName": "Doe",
-      "dob": [
-        "1972",
-        "12",
-        "12"
-      ],
       "address": {
         "street": "98  Wrexham Rd",
         "street2": "",
@@ -99,8 +92,6 @@ module.exports = {
           "childDisability": "false",
         }
       ],
-
-
       "appointee": "_unchecked",
       "appointeeName": "",
       "legacyBenefits": [
@@ -108,24 +99,21 @@ module.exports = {
         "Housing Benefit",
         "Income Support"
       ],
-      "welsh": "true",
       "landline": "0121 496 0649",
       "mobile": "07700900374",
-      "status": "Completed",
+      "status": "Notified",
       "history": [
         {
-          "title": "Preparation text sent",
-          "link": "Preparation text",
-          "date": "7"
+          "title": "Preparation letter sent",
+          "link": "Preparation text message"
         },
         {
           "title": "Notification letter sent",
-          "link": "Notification letter",
-          "date": "6"
+          "link": "Notification letter"
         },
         {
-          "title": "Contact with claimant added",
-          "date": "3",
+          "title": "Query from claimant logged",
+          "date": "-3",
           "name": "Paul Mason",
           "body": "Claimant visited jobcentre about:",
           "reasons": [
@@ -134,26 +122,25 @@ module.exports = {
           ]
         },
         {
-          "title": "Reminder text sent",
-          "link": "Reminder text",
+          "title": "Reminder text message sent",
+          "link": "Reminder text message",
           "date": "1"
         }
       ],
+      "day1": "-6",
       "lastLetter": {
-        "title": "Notification letter",
-        "date": "6",
-        "remaining": "24"
+        "title": "Notification letter"
       }
     },
+
+
+
+
+
     {
       "nino": "II123456C",
       "firstName": "Jane",
       "lastName": "Roe",
-      "dob": [
-        "1998",
-        "12",
-        "12"
-      ],
       "address": {
         "street": "23 River View",
         "street2": "",
@@ -165,42 +152,31 @@ module.exports = {
       "legacyBenefits": [
         "income-related Employment and Support Allowance (ESA)"
       ],
-      "welsh": "_unchecked",
       "landline": "0121 496 0649",
       "mobile": "07700900374",
       "status": "Claimed",
       "history": [
         {
           "title": "Preparation letter sent",
-          "link": "Preparation letter",
-          "date": "53"
-        },
-        {
-          "title": "Preparation letter resent",
-          "link": "Preparation letter",
-          "date": "48",
-          "name": "Paul Mason"
+          "link": "Preparation letter"
         },
         {
           "title": "Notification letter sent",
-          "link": "Notification letter",
-          "date": "23"
+          "link": "Notification letter"
         },
         {
-          "title": "Reminder text sent",
-          "link": "Reminder text",
-          "date": "19"
+          "title": "Reminder text message sent",
+          "link": "Reminder text message"
         },
         {
           "title": "Reminder call",
-          "date": "12",
           "name": "Kay Hubbard"
         },
         {
-          "title": "Claimed Universal Credit",
-          "date": "10"
+          "title": "Claimed Universal Credit"
         }
-      ]
+      ],
+      "day1": "-50",
     }
   ]
 

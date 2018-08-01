@@ -1,54 +1,86 @@
 {% extends "layout.html" %}
 
+{% set lastLetter %}
+  {% for i in claimant.history %}
+    {{ i.link }}
+  {% endfor %}
+{% endset -%}
+
 {% block content %}
   <div class="govuk-grid-row">
 
-    <div class="govuk-grid-column-two-thirds">
-      <h1 class='govuk-heading-l govuk-!-display-inline-block'>
-        <span class='govuk-caption-l'>Claimant&rsquo;s account</span>
-        {{ claimant.firstName }} {{ claimant.lastName }}
-      </h1>
+    <div class="govuk-grid-column-full">
+      <div class="case-header">
+        <h1 class='govuk-heading-l govuk-!-margin-bottom-0'>
+          <span class='govuk-caption-l'>Claimant&rsquo;s account</span>
+          {{ claimant.firstName }} {{ claimant.lastName }}
+        </h1>
 
-      {# <p class="govuk-visually-hidden">Claim status:</p>
-      {{ govukTag({
-        text: claimant.status,
-        classes: ''
-      }) }} #}
+        <dl class="case-header__details govuk-body-s">
+          <dt class="govuk-visually-hidden">
+            Status:
+          </dt>
+          <dd>
+            <span class="govuk-tag">{{ claimant.status }}</span>
+          </dd>
+
+          {% if claimant.status == "Preparation" %}
+          <dt>
+            Notification date:
+          </dt>
+          <dd>
+            {{ date  | date("add", claimant.day1, "days") | date("D MMMM YYYY") }}
+          </dd>
+          {% endif %}
+
+          {% if claimant.status != "Claimed" %}
+          <dt>
+            Claim by:
+          </dt>
+          <dd>
+            {{ date  | date("add", claimant.day1, "days") | date("add", 1, "month") | date("D MMMM YYYY") }}
+          </dd>
+          {% endif %}
+        </dl>
+
+        {% if claimant.status != "Claimed" %}
+        <div class="case-header__actions">
+          <h2 class='govuk-heading-m govuk-visually-hidden'>
+            Account actions
+          </h2>
+
+          {{ govukButton({
+            text: 'Log a query',
+            href: '/claimant/contact/',
+            classes: 'govuk-button--secondary govuk-button--small'
+          }) }}
+          {{ govukButton({
+            text: 'Reissue latest letter',
+            href: '/reissue',
+            classes: 'govuk-button--secondary govuk-button--small'
+          }) }}
+          {{ govukButton({
+            text: 'Defer claimant',
+            href: '#0',
+            classes: 'govuk-button--secondary govuk-button--small'
+          }) }}
+          {{ govukButton({
+            text: 'Exempt claimant',
+            href: '#0',
+            classes: 'govuk-button--secondary govuk-button--small'
+          }) }}
+          {{ govukButton({
+            text: 'Extend deadline',
+            href: '#0',
+            classes: 'govuk-button--secondary govuk-button--small'
+          }) }}
+        </div>
+        {% endif %}
+
+      </div>
     </div>
 
-    {% set lastLetter %}
-      {% for i in claimant.history %}
-        {{ i.link }}
-      {% endfor %}
-    {% endset -%}
     <div class="govuk-grid-column-two-thirds">
-      {% if claimant.status != "Claimed" %}
-      <h2 class='govuk-heading-m govuk-visually-hiden'>
-        Account actions
-      </h2>
-      <ul class="govuk-list">
-        <li>
-          <a class="govuk-link" href="/claimant/contact/">Add contact with claimant</a>
-        </li>
-        <li>
-          <a class="govuk-link" href="/reissue">Reissue latest letter</a>
-        </li>
-        <li>
-          <a class="govuk-link" href="#0">Exempt claimant</a>
-        </li>
-        <li>
-          <a class="govuk-link" href="#0">Extend case</a>
-        </li>
-        <li>
-          <a class="govuk-link" href="#0">Defer claimant</a>
-        </li>
-        {# <li>{{claimant.history[0].link}}</li> #}
-      </ul>
-      {% endif %}
-
-
-
-
       {% if claimant.appointee == "true" %}
       <h2 class='govuk-heading-m'>
         Appointee details
@@ -193,6 +225,21 @@
             </ul>
           </dd>
         </div>
+
+        {% if claimant.markers and claimant.markers != "_unchecked" %}
+        <div class='app-check-your-answers__contents'>
+          <dt class='app-check-your-answers__question'>
+            Markers
+          </dt>
+          <dd class='app-check-your-answers__answer'>
+            <ul class="govuk-list govuk-!-margin-0">
+              {% for i in claimant.markers %}
+              <li>{{ i }}</li>
+              {% endfor %}
+            </ul>
+          </dd>
+        </div>
+        {% endif %}
       </dl>
 
 
@@ -233,7 +280,7 @@
         Account history
       </h2>
       <ol class="govuk-list timeline">
-        {% for i in claimant.history %} {# | reverse #}
+        {% for i in claimant.history | reverse %}
           <li class="timeline-entry">
             <h3 class="govuk-heading-s timeline-title">{{ i.title | capitalize }}</h3>
             <p class="timeline-info govuk-body-s">
@@ -241,7 +288,19 @@
               {% if i.name %}
                 <span class="timeline-author">by {{ i.name | title }}</span>
               {% endif %}
-              <span class="timeline-date">{{ date  | date("subtract", i.date, "days") | date("D MMMM YYYY") }}</span>
+              {% if i.title == "Preparation letter sent" %}
+                <span class="timeline-date">{{ date | date("add", claimant.day1, "days") | date("subtract", 1, "month") | date("D MMMM YYYY") }}</span>
+              {% elif i.title == "Notification letter sent" %}
+                <span class="timeline-date">{{ date | date("add", claimant.day1, "days") | date("D MMMM YYYY") }}</span>
+              {% elif i.title == "Reminder text sent" %}
+                <span class="timeline-date">{{ date | date("add", claimant.day1, "days") | date("add", 2, "weeks") | date("D MMMM YYYY") }}</span>
+              {% elif i.title == "Reminder call" %}
+                <span class="timeline-date">{{ date | date("add", claimant.day1, "days") | date("add", 3, "weeks") | date("D MMMM YYYY") }}</span>
+              {% elif i.title == "Claimed Universal Credit" %}
+                <span class="timeline-date">{{ date | date("add", claimant.day1, "days") | date("add", 1, "month") | date("D MMMM YYYY") }}</span>
+              {% else %}
+                <span class="timeline-date">{{ date | date("add", i.date, "days") | date("D MMMM YYYY") }}</span>
+              {% endif %}
             </p>
             {# {% if i.link %}
             <p class="timeline-body">
@@ -258,6 +317,9 @@
                   {% endfor %}
                 </ul>
               {% endif %}
+            {% endif %}
+            {% if i.oldMarkers | dump != i.newMarkers |dump %}
+              <p class="timeline-body">Markers updated from {{ "None" if i.oldMarkers == "_unchecked" else i.oldMarkers }} to {{ "None" if i.newMarkers == "_unchecked" else i.newMarkers }}</p>
             {% endif %}
           </li>
         {% endfor %}
