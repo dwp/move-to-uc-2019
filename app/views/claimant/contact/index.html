@@ -105,7 +105,13 @@
                   <div class="govuk-checkboxes__item">
                     <input class="govuk-checkboxes__input" id="contactReason-letter{{loop.index}}" name="contactReason" type="checkbox" value="{{ i.title }}">
                     <label class="govuk-label govuk-checkboxes__label" for="contactReason-letter{{loop.index}}">
-                      {{ i.title }} on {{ date  | date("subtract", i.date, "days") | date("D MMMM YYYY") }}
+                      {% if i.title == "Preparation letter sent" %}
+                        {{ i.title }} on {{ date | date("add", claimant.day1, "days") | date("subtract", 1, "month") | date("D MMMM YYYY") }}
+                      {% elif i.title == "Notification letter sent" %}
+                        {{ i.title }} on {{ date | date("add", claimant.day1, "days") | date("D MMMM YYYY") }}
+                      {% elif i.title == "Reminder text message sent" %}
+                        {{ i.title }} on {{ date | date("add", claimant.day1, "days") | date("add", 2, "weeks") | date("D MMMM YYYY") }}
+                      {% endif %}
                     </label>
                   </div>
                 {% endif %}
