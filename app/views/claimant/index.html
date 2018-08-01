@@ -292,7 +292,7 @@
                 <span class="timeline-date">{{ date | date("add", claimant.day1, "days") | date("subtract", 1, "month") | date("D MMMM YYYY") }}</span>
               {% elif i.title == "Notification letter sent" %}
                 <span class="timeline-date">{{ date | date("add", claimant.day1, "days") | date("D MMMM YYYY") }}</span>
-              {% elif i.title == "Reminder text sent" %}
+              {% elif i.title == "Reminder text message sent" %}
                 <span class="timeline-date">{{ date | date("add", claimant.day1, "days") | date("add", 2, "weeks") | date("D MMMM YYYY") }}</span>
               {% elif i.title == "Reminder call" %}
                 <span class="timeline-date">{{ date | date("add", claimant.day1, "days") | date("add", 3, "weeks") | date("D MMMM YYYY") }}</span>
