@@ -54,7 +54,7 @@ module.exports = {
           "link": "Preparation letter"
         }
       ],
-      "day1": "10",
+      "day1": "25",
       "lastLetter": {
         "title": "Preparation letter"
       }
@@ -111,23 +111,22 @@ module.exports = {
           "title": "Notification letter sent",
           "link": "Notification letter"
         },
-        {
-          "title": "Query from claimant logged",
-          "date": "-3",
-          "name": "Paul Mason",
-          "body": "Claimant visited jobcentre about:",
-          "reasons": [
-            "Notification letter",
-            "When they have to claim by"
-          ]
-        },
+        // {
+        //   "title": "Query from claimant logged",
+        //   "date": "-3",
+        //   "name": "Paul Mason",
+        //   "body": "Claimant visited jobcentre about:",
+        //   "reasons": [
+        //     "Notification letter",
+        //     "When they have to claim by"
+        //   ]
+        // },
         {
           "title": "Reminder text message sent",
-          "link": "Reminder text message",
-          "date": "1"
+          "link": "Reminder text message"
         }
       ],
-      "day1": "-6",
+      "day1": "-15",
       "lastLetter": {
         "title": "Notification letter"
       }
@@ -176,7 +175,7 @@ module.exports = {
           "title": "Claimed Universal Credit"
         }
       ],
-      "day1": "-50",
+      "day1": "-55",
     }
   ]
 
