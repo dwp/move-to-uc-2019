@@ -105,7 +105,7 @@ module.exports = {
       "history": [
         {
           "title": "Preparation letter sent",
-          "link": "Preparation text"
+          "link": "Preparation text message"
         },
         {
           "title": "Notification letter sent",
@@ -122,8 +122,8 @@ module.exports = {
           ]
         },
         {
-          "title": "Reminder text sent",
-          "link": "Reminder text",
+          "title": "Reminder text message sent",
+          "link": "Reminder text message",
           "date": "1"
         }
       ],
@@ -165,8 +165,8 @@ module.exports = {
           "link": "Notification letter"
         },
         {
-          "title": "Reminder text sent",
-          "link": "Reminder text"
+          "title": "Reminder text message sent",
+          "link": "Reminder text message"
         },
         {
           "title": "Reminder call",
