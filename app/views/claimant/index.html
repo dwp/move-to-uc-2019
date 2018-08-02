@@ -318,7 +318,7 @@
                 </ul>
               {% endif %}
             {% endif %}
-            {% if i.oldMarkers | dump != i.newMarkers |dump %}
+            {% if i.oldMarkers | dump != i.newMarkers | dump %}
               <p class="timeline-body">Markers updated from {{ "None" if i.oldMarkers == "_unchecked" else i.oldMarkers }} to {{ "None" if i.newMarkers == "_unchecked" else i.newMarkers }}</p>
             {% endif %}
           </li>
