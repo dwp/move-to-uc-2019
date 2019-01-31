@@ -1,0 +1,42 @@
+.timeline {
+  border-left: 3px solid $govuk-link-colour;
+}
+
+.timeline-entry {
+  margin: 2em 0;
+  padding-left: 1em;
+  position: relative;
+
+  &:first-of-type {
+    margin-top: 0;
+  }
+
+  &::before {
+    background-color: $govuk-link-colour;
+    content: ' ';
+    height: 3px;
+    left: 0;
+    position: absolute;
+    top: .5em;
+    width: 10px;
+  }
+
+  .timeline-title {
+    margin-bottom: 0;
+  }
+
+  .timeline-author,
+  .timeline-date {
+    color: $govuk-secondary-text-colour;
+    display: block;
+  }
+
+  .timeline-info {
+    margin-top: 0;
+  }
+
+  .timeline-body {
+    display: block;
+    margin-bottom: 0;
+  }
+}

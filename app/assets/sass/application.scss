@@ -1,0 +1,123 @@
+// Override the govuk-frontend font stack
+$govuk-font-family: "Arial", sans-serif;
+
+// global styles for <a> and <p> tags
+$govuk-global-styles: true;
+
+// Import GOV.UK Frontend
+@import "node_modules/govuk-frontend/all";
+
+// Patterns that aren't in Frontend
+@import "patterns/check-your-answers";
+@import "patterns/task-list";
+@import "patterns/related-items";
+
+// Components that aren't in Frontend
+@import "components/cookie-banner";
+
+
+
+
+
+// Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+
+@import 'patterns/timeline';
+@import 'patterns/case-header';
+
+
+
+
+
+
+// Hide GOV.UK logo and bump size of service name
+.govuk-header__logo {display: none}
+.govuk-header__link--service-name {
+  font-size: 26px;
+  @include govuk-media-query($from: desktop) {
+    font-size: 30px;
+  }
+}
+
+// Move sign out link to top right
+.govuk-header__navigation-item:last-of-type {
+  @include govuk-media-query($from: desktop) {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+}
+
+
+
+
+
+.secondary-text {
+  color: $govuk-secondary-text-colour;
+}
+
+
+
+
+
+// Override visted link state for prototype
+.govuk-link:visited {
+  color: #005ea5!important;
+}
+
+
+
+
+
+// Ensure full width on check answers tables
+.app-check-your-answers {
+  width: 100%;
+}
+
+
+
+
+
+// Button modifiers
+$govuk-button-secondary-colour: darken(govuk-colour("grey-3"), 5%);
+
+.govuk-button--secondary {
+  background-color: $govuk-button-secondary-colour;
+  color: $govuk-text-colour;
+  box-shadow: 0 2px 0 darken($govuk-button-secondary-colour, 15%);
+
+  &:link,
+  &:visited,
+  &:active,
+  &:hover {
+    color: $govuk-text-colour;
+    text-decoration: none;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: lighten($govuk-button-secondary-colour, 5%);
+  }
+}
+
+.govuk-button--small {
+  @include govuk-typography-responsive($size: 16, $override-line-height: 1);
+}
+
+.govuk-button--group {
+  float: left;
+  border: 1px solid darken($govuk-button-secondary-colour, 15%);
+  border-bottom: 0;
+  border-right-width: 0;
+  padding: 8px 12px;
+
+  &:first-of-type {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+  }
+
+  &:last-of-type {
+    border-right-width: 1px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+}
