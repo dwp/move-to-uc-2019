@@ -13,7 +13,7 @@ $govuk-global-styles: true;
 @import "patterns/related-items";
 
 // Components that aren't in Frontend
-@import "components/cookie-banner";
+@import "patterns/cookie-banner";
 
 
 
@@ -21,9 +21,36 @@ $govuk-global-styles: true;
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
-@import 'patterns/timeline';
+@import 'patterns/buttons';
 @import 'patterns/case-header';
+@import 'patterns/timeline';
 
+
+
+
+
+
+// fix tag height with font
+.govuk-tag {
+  padding: 5px 8px 3px;
+}
+
+
+
+
+
+// Wider notice like on gov.uk, cos it looks good :)
+.govuk-inset-text--wide {
+  border-left-width: 1em;
+}
+
+
+
+
+// Override date label colour to act as hint
+.govuk-date-input__label {
+  color: $govuk-secondary-text-colour;
+}
 
 
 
@@ -51,6 +78,7 @@ $govuk-global-styles: true;
 
 
 
+// Add a lighter text colour for secondary content, eg disabled things
 .secondary-text {
   color: $govuk-secondary-text-colour;
 }
@@ -68,56 +96,55 @@ $govuk-global-styles: true;
 
 
 
-// Ensure full width on check answers tables
-.app-check-your-answers {
-  width: 100%;
-}
-
-
-
-
-
-// Button modifiers
-$govuk-button-secondary-colour: darken(govuk-colour("grey-3"), 5%);
-
-.govuk-button--secondary {
-  background-color: $govuk-button-secondary-colour;
-  color: $govuk-text-colour;
-  box-shadow: 0 2px 0 darken($govuk-button-secondary-colour, 15%);
-
-  &:link,
-  &:visited,
-  &:active,
-  &:hover {
-    color: $govuk-text-colour;
-    text-decoration: none;
-  }
-
-  &:hover,
-  &:focus {
-    background-color: lighten($govuk-button-secondary-colour, 5%);
-  }
-}
-
-.govuk-button--small {
-  @include govuk-typography-responsive($size: 16, $override-line-height: 1);
-}
-
-.govuk-button--group {
-  float: left;
-  border: 1px solid darken($govuk-button-secondary-colour, 15%);
-  border-bottom: 0;
-  border-right-width: 0;
-  padding: 8px 12px;
+.app-related-items {
+  border-top-width: 0;
+  padding: 15px 0 0;
 
   &:first-of-type {
-    border-top-left-radius: 3px;
-    border-bottom-left-radius: 3px;
+    border-top-width: 6px;
   }
+}
 
-  &:last-of-type {
-    border-right-width: 1px;
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px;
+.app-related-items .govuk-link {
+  text-decoration: none;
+
+  &:hover, &:active, &:focus {
+    text-decoration: underline;
+    color: $govuk-link-hover-colour;
   }
+}
+
+.case-main-content {
+  border-top: 1px solid govuk-colour("grey-2");
+  padding-top: 20px;
+}
+
+.app-check-your-answers__contents,
+.app-check-your-answers__question,
+.app-check-your-answers__answer,
+.app-check-your-answers__change {
+  border: 0;
+  font-weight: normal;
+}
+
+.app-check-your-answers__question,
+.app-check-your-answers__answer,
+.app-check-your-answers__change {
+  @include govuk-media-query($from: desktop) {
+    padding: govuk-em(5, 19) govuk-em(20, 19) govuk-em(5, 19) 0;
+  }
+}
+
+%govuk-heading-xs {
+  @include govuk-text-colour;
+  @include govuk-font($size: 16, $weight: bold);
+
+  display: block;
+
+  margin-top: 0;
+  @include govuk-responsive-margin(4, "bottom");
+}
+
+.govuk-heading-xs {
+  @extend %govuk-heading-xs;
 }
