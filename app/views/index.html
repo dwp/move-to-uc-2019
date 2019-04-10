@@ -14,100 +14,11 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-m ">
-        Current version TP
+        TP Calc
       </h1>
-
-      <form action='/find' method='post' class='form' autocomplete='off'>
-
-        {{ govukInput({
-          label: {
-            html: 'Enter participant&rsquo;s full name',
-            isPageHeading: false
-          },
-          id: 'user-name',
-          name: 'user-name',
-          classes: 'govuk-input--width-20'
-        }) }}
-
-        {{ govukButton({
-          text: 'Start prototype',
-          classes: "govuk-button--start "
-        }) }}
-
-      </form>
-
-      <p>There are 2 scenarios:</p>
-      <ul class="govuk-list govuk-list--bullet">
-        <li>
-          <a href="/results?find=QF507122A">QF 50 71 22 A</a>
-        </li>
-        <li>
-          <a href="/results?find=IV365241A">IV 36 52 41 A</a>
-        </li>
-      </ul>
-
-      <p>There&rsquo;s also an additional claimant, <a href="/results?find=FQ764723C">FQ 76 47 23 C</a> to show a closed case.</p>
-
-
-
-      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
-
-
-
-      <h2 class='govuk-heading-m'>
-        Previous versions
-      </h2>
-      <ul class="govuk-list">
-        <li>
-          <a class="govuk-heading-s" href="https://move-to-uc-v3.herokuapp.com">Version 3</a>
-          <p>Evaluated 1 August 2018 in Hartlepool Service Centre and 3 August 2018 in Peterlee Job Centre, looking at:</p>
-          <ul class="govuk-list govuk-list--bullet">
-            <li>added status, notification date, and application due date to header</li>
-            <li>moved case actions into header as buttons</li>
-            <li>updated contact page with who made contact, more reasons for contact, and markers</li>
-            <li>added markers to personal details</li>
-            <li>updated copy throughout</li>
-          </ul>
-        </li>
-
-
-
-
-
-        <li>
-          <a class="govuk-heading-s" href="https://move-to-uc-v2.herokuapp.com">Version 2</a>
-          <p>Evaluated 24 July 2018 in Middlesborough Service Centre and 25 July 2018 in Bishop Auckland Job Centre, looking at:</p>
-          <ul class="govuk-list govuk-list--bullet">
-            <li>moving all account actions to one section</li>
-            <li>only resending the last letter, no text resend</li>
-            <li>option to print last letter as well</li>
-            <li>replacing textarea with limited options in loggin contact</li>
-            <li>more informative confirmation pages</li>
-            <li>longer history on second example</li>
-            <li>including a name in the history</li>
-            <li>swapped history order</li>
-          </ul>
-        </li>
-
-
-
-
-
-        <li>
-          <a class="govuk-heading-s" href="https://move-to-uc-v1.herokuapp.com">Version 1</a>
-          <p>Evaluated 12 July 2018 in Halifax Jobcentre, looking at:</p>
-          <ul class="govuk-list govuk-list--bullet">
-            <li>finding a claimant using only a National Insurance number</li>
-            <li>if security checks will be done in this service</li>
-            <li>if there's enough data about the claimant, appointee, and children</li>
-            <li>the history of the case</li>
-            <li>re-issuing comms and automatically saving to the history</li>
-            <li>re-issuing to a different address or phone number</li>
-            <li>logging interactions with claimants</li>
-            <li>if they'd log interactions after the system has logged about re-issuing comms</li>
-          </ul>
-        </li>
-      </ul>
+      <a href="#" role="button" draggable="false" class="govuk-button govuk-button--start">
+  Start now
+</a>
 
       <p class="secondary-text govuk-!-margin-top-9">Built using <a href="https://github.com/alphagov/govuk_prototype_kit">GOV.UK prototype kit</a> {{releaseVersion}}</p>
     </div>
