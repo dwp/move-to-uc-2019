@@ -1,0 +1,94 @@
+{% extends "layout.html" %}
+
+{% block header %}
+  {# Set serviceName in config.js. #}
+  {{ govukHeader({
+    serviceName: serviceName + " prototype",
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+  }) }}
+{% endblock %}
+
+{% block beforeContent %}
+  <a href="tp-carer" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <span class="govuk-caption-l">Step 4 of 6</span>
+        <h2 class="govuk-heading-l">Income and other benefits</h2>
+      </div>
+  </div>
+
+
+<fieldset class="govuk-fieldset">
+<form action='tp-deductions' method='post' class='form' autocomplete='off'>
+
+
+<p class="govuk-body govuk-!-font-weight-bold">Does the claimant receive any of the following?</p>
+
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="citizenship-conditional-hint">
+    <span id="citizenship-conditional-hint" class="govuk-hint">
+      Select all options that are relevant to you.
+    </span>
+    <div class="govuk-checkboxes" data-module="checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="citizenship-conditional-1" name="citizen" type="checkbox" value="email" data-aria-controls="conditional-citizenship-conditional-1">
+        <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-1">
+          Housing element
+        </label>
+      </div>
+      <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional-1">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="contact-by-email">
+            How much are they receiving per month?
+          </label>
+          <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="contact-by-email" type="email" spellcheck="false">
+        </div>
+
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="citizenship-conditional-2" name="citizen" type="checkbox" value="phone" data-aria-controls="conditional-citizenship-conditional-2">
+        <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-2">
+          Child care costs
+        </label>
+      </div>
+      <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional-2">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="contact-by-phone">
+            How much are they receiving per month?
+          </label>
+          <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="contact-by-phone" type="tel">
+          <p class="govuk-body govuk-!-margin-bottom-4"></p>
+          <label class="govuk-label" for="contact-by-phone">
+            Number of cared for childen
+          </label>
+          <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="contact-by-phone" type="tel">
+        </div>
+
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+                    <p class="govuk-body govuk-!-margin-bottom-7"></p>
+
+                          <button type="submit" class="govuk-button">
+                            Continue
+                          </button>
+
+
+  </fieldset>
+  <div>
+  <a href="tp-task-list-income" class="govuk-link">Save and continue later</a>
+  </div>
+  </main>
+
+
+
+{% endblock %}

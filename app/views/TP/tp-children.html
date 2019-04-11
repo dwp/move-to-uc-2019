@@ -1,0 +1,123 @@
+{% extends "layout.html" %}
+
+{% block header %}
+  {# Set serviceName in config.js. #}
+  {{ govukHeader({
+    serviceName: serviceName + " prototype",
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+  }) }}
+{% endblock %}
+
+{% block beforeContent %}
+  <a href="tp-claimant-details" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <span class="govuk-caption-l">Step 2 of 6</span>
+        <h2 class="govuk-heading-l">Children</h2>
+      </div>
+  </div>
+
+
+<fieldset class="govuk-fieldset">
+<form action='tp-carer' method='post' class='form' autocomplete='off'>
+
+
+  <p class="govuk-body govuk-!-font-weight-bold">Does the claimant have children?</p>
+         <div class="govuk-radios govuk-radios">
+
+
+                  <div class="govuk-radios" data-module="radios">
+                     <div class="govuk-radios__item">
+                       <input class="govuk-radios__input" id="citizenship-conditional-1" name="citizen" type="radio" value="email" data-aria-controls="conditional-citizenship-conditional-1">
+                       <label class="govuk-label govuk-radios__label" for="citizenship-conditional-1">
+                         Yes
+                       </label>
+                     </div>
+
+
+                     <div class="govuk-radios" data-module="radios">
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="citizenship-conditional-2" name="citizen" type="radio" value="email" data-aria-controls="conditional-citizenship-conditional-2">
+                          <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
+                            No
+                          </label>
+                        </div>
+                        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-citizenship-conditional-2">
+                          <div class="govuk-form-group">
+
+                          </div>
+                        </div>
+
+
+<p class="govuk-body govuk-!-margin-bottom-7"></p>
+                        <div class="" id="conditional-citizenship-conditional-1">
+                          <div class="govuk-form-group">
+                            <p class="govuk-body"><p class="govuk-body govuk-!-font-weight-bold">Child 1 date of birth</p>
+                            <div class="govuk-form-group">
+                              <fieldset class="govuk-fieldset" aria-describedby="passport-issued-hint" role="group">
+
+                                <div class="govuk-date-input" id="passport-issued">
+                                  <div class="govuk-date-input__item">
+                                    <div class="govuk-form-group">
+                                      <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                                        Day
+                                      </label>
+                                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="number" pattern="[0-9]*">
+                                    </div>
+                                  </div>
+                                  <div class="govuk-date-input__item">
+                                    <div class="govuk-form-group">
+                                      <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                                        Month
+                                      </label>
+                                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="number" pattern="[0-9]*">
+                                    </div>
+                                  </div>
+                                  <div class="govuk-date-input__item">
+                                    <div class="govuk-form-group">
+                                      <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                                        Year
+                                      </label>
+                                      <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="number" pattern="[0-9]*">
+                                    </div>
+                                  </div>
+                                </div>
+
+
+
+
+
+
+
+                              </fieldset>
+                            </div>
+
+
+
+                          </div>
+                        </div>
+
+
+
+                        <p class="govuk-body govuk-!-margin-bottom-7"></p>
+
+                          <button type="submit" class="govuk-button">
+                            Continue
+                          </button>
+
+
+  </fieldset>
+  <div>
+  <a href="tp-task-list-children" class="govuk-link">Save and continue later</a>
+  </div>
+  </main>
+
+
+
+{% endblock %}

@@ -1,0 +1,253 @@
+{% extends "layout.html" %}
+
+{% block header %}
+  {# Set serviceName in config.js. #}
+  {{ govukHeader({
+    serviceName: serviceName + " prototype",
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+  }) }}
+{% endblock %}
+
+{% block beforeContent %}
+  <a href="index" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <span class="govuk-caption-l">Step 1 of 6</span>
+        <h2 class="govuk-heading-l">Claimant details</h2>
+      </div>
+  </div>
+
+
+<fieldset class="govuk-fieldset">
+<form action='tp-children' method='post' class='form' autocomplete='off'>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="address-postcode">
+        <p class="govuk-body govuk-!-font-weight-bold">Postcode</p>
+      </label>
+      <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text">
+    </div>
+
+<p class="govuk-body"><p class="govuk-body govuk-!-font-weight-bold">Date of birth</p>
+     <div class="govuk-date-input" id="passport-issued">
+       <div class="govuk-date-input__item">
+         <div class="govuk-form-group">
+           <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+             Day
+           </label>
+           <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="number" pattern="[0-9]*">
+         </div>
+       </div>
+       <div class="govuk-date-input__item">
+         <div class="govuk-form-group">
+           <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+             Month
+           </label>
+           <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="number" pattern="[0-9]*">
+         </div>
+       </div>
+       <div class="govuk-date-input__item">
+         <div class="govuk-form-group">
+           <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+             Year
+           </label>
+           <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="number" pattern="[0-9]*">
+         </div>
+       </div>
+
+<p class="govuk-body govuk-!-font-weight-bold">Is claimant in receipt of LCW or LCWWRA?</p>
+       <div class="govuk-radios govuk-radios">
+
+       <div class="govuk-radios" data-module="radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="citizenship-conditional-1" name="citizen" type="radio" value="email" data-aria-controls="conditional-citizenship-conditional-1">
+            <label class="govuk-label govuk-radios__label" for="citizenship-conditional-1">
+              LCW
+            </label>
+          </div>
+          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-citizenship-conditional-1">
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="contact-by-email">
+                Date of current health related claim
+              </label>
+
+              <div>
+                <div class="govuk-date-input" id="passport-issued">
+     <div class="govuk-date-input__item">
+       <div class="govuk-form-group">
+         <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+           Day
+         </label>
+         <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="number" pattern="[0-9]*">
+       </div>
+     </div>
+     <div class="govuk-date-input__item">
+       <div class="govuk-form-group">
+         <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+           Month
+         </label>
+         <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="number" pattern="[0-9]*">
+       </div>
+     </div>
+     <div class="govuk-date-input__item">
+       <div class="govuk-form-group">
+         <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+           Year
+         </label>
+         <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="number" pattern="[0-9]*">
+       </div>
+     </div>
+   </div>
+                <input class="govuk-radios__input" id="changed-name-1" name="changed-name" type="radio" value="yes">
+      
+              </div>
+            </div>
+          </div>
+
+          <div class="govuk-radios" data-module="radios">
+             <div class="govuk-radios__item">
+               <input class="govuk-radios__input" id="citizenship-conditional-2" name="citizen" type="radio" value="email" data-aria-controls="conditional-citizenship-conditional-2">
+               <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
+                 LCWWRA
+               </label>
+             </div>
+             <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-citizenship-conditional-2">
+               <div class="govuk-form-group">
+
+               </div>
+             </div>
+
+
+
+
+       <p class="govuk-body govuk-!-margin-bottom-7"></p>
+       <div class="govuk-form-group">
+         <label class="govuk-label" for="address-postcode">
+           <p class="govuk-body govuk-!-font-weight-bold">Total amount of earnings</p>
+         </label>
+         <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text">
+       </div>
+
+<p class="govuk-body govuk-!-margin-bottom-7"></p>
+       <p class="govuk-body govuk-!-font-weight-bold">Current employment status</p>
+              <div class="govuk-radios govuk-radios">
+
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="changed-name-1" name="changed-name" type="radio" value="yes">
+                  <label class="govuk-label govuk-radios__label" for="changed-name-1">
+                    Working
+                  </label>
+                </div>
+
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="changed-name-1" name="changed-name" type="radio" value="yes">
+                  <label class="govuk-label govuk-radios__label" for="changed-name-1">
+                    Not working
+                  </label>
+                </div>
+
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="changed-name-1" name="changed-name" type="radio" value="yes">
+                  <label class="govuk-label govuk-radios__label" for="changed-name-1">
+                    Excempt
+                  </label>
+                </div>
+              </div>
+
+<p class="govuk-body govuk-!-margin-bottom-7"></p>
+            <p class="govuk-body govuk-!-font-weight-bold">Is the claimant in receipt of any external awards?</p>
+            <span id="waste-hint" class="govuk-hint">
+              Select all that apply.
+            </span>
+            <div class="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="waste-1" name="waste" type="checkbox" value="carcasses">
+                <label class="govuk-label govuk-checkboxes__label" for="waste-1">
+                  Employment and Support Allowance with Support Component
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+                <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                  Jobseeker Allowance
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                  Bereavement Allowance
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                  Child Benefit
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                  Maternity Allowance
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                  Widowed Mothers Allowance
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                  Widowed Parents Allowance
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                  Widowed Pension Allowance
+                </label>
+              </div>
+            </div>
+
+
+            <p class="govuk-body govuk-!-margin-bottom-7"></p>
+                   <p class="govuk-body govuk-!-font-weight-bold">Is this part of a joint claim?</p>
+                          <div class="govuk-radios govuk-radios">
+
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="changed-name-1" name="changed-name" type="radio" value="yes">
+                              <label class="govuk-label govuk-radios__label" for="changed-name-1">
+                                Yes
+                              </label>
+                            </div>
+
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="changed-name-1" name="changed-name" type="radio" value="yes">
+                              <label class="govuk-label govuk-radios__label" for="changed-name-1">
+                                No
+                              </label>
+                            </div>
+                          </div>
+                          <p class="govuk-body govuk-!-margin-bottom-7"></p>
+
+                          <button type="submit" class="govuk-button">
+                            Continue
+                          </button>
+
+
+  </fieldset>
+  <div>
+  <a href="tp-task-list-claimant-details" class="govuk-link">Save and continue later</a>
+  </div>
+  </main>
+
+
+
+{% endblock %}

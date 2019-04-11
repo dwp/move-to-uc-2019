@@ -1,0 +1,131 @@
+{% extends "layout.html" %}
+
+{% block header %}
+  {# Set serviceName in config.js. #}
+  {{ govukHeader({
+    serviceName: serviceName + " prototype",
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+  }) }}
+{% endblock %}
+
+{% block beforeContent %}
+  <a href="tp-check-answers" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <h2 class="govuk-heading-l">Calcuation result</h2>
+      </div>
+  </div>
+
+  <fieldset class="govuk-fieldset">
+  <form action='' method='post' class='form' autocomplete='off'>
+
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-third">
+        <span class="govuk-caption-m">Notional UC Award</span>
+        <h1 class="govuk-heading-xl">£1,250.91</h1>
+      </div>
+      <div class="govuk-grid-column-one-third">
+        <span class="govuk-caption-m">Monthly legacy award</span>
+        <h1 class="govuk-heading-xl">£1,262.77</h1>
+      </div>
+      <div class="govuk-grid-column-one-third">
+        <span class="govuk-caption-m">Notional UC Award</span>
+        <h1 class="govuk-heading-xl">£101.86</h1>
+      </div>
+    </div>
+
+
+  <h3 class="govuk-heading-m">Notional UC award breakdown</h3>
+    <table class="govuk-table">
+
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="col">Type of award</th>
+          <th class="govuk-table__header" scope="col">Rate</th>
+          <th class="govuk-table__header govuk-table__header--numeric" scope="col">Amount per month</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="row">Standard Allowance</th>
+          <td class="govuk-table__cell">Single claimant under 25</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">£95</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="row">Child Award 1</th>
+          <td class="govuk-table__cell">Standard rate</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">£55</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="row">Child Award 2</th>
+          <td class="govuk-table__cell">Higher rate</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">£125</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="row">Disability Award</th>
+          <td class="govuk-table__cell">Limited capability for work and work-related activity</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">£125</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="row">Capital Adjustment</th>
+          <td class="govuk-table__cell">£165</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">£125</td>
+        </tr>
+      </tbody>
+    </table>
+
+<p class="govuk-body govuk-!-margin-bottom-8"></p>
+
+    <h3 class="govuk-heading-m">Monthly legacy award breakdown</h3>
+      <table class="govuk-table">
+
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="col">Type of award</th>
+            <th class="govuk-table__header" scope="col">Rate</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Amount per month</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">JSA</th>
+            <td class="govuk-table__cell">Legacy JSA award</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">	£316.77</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">Income Support</th>
+            <td class="govuk-table__cell">Legacy Income Support award</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">	£490</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">Housing Benefit</th>
+            <td class="govuk-table__cell">Legacy Housing Benefit award</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">£546</td>
+          </tr>
+
+        </tbody>
+      </table>
+
+
+
+    <p class="govuk-body govuk-!-margin-bottom-7"></p>
+
+    <button type="submit" class="govuk-button">Download as PDF</button>
+
+
+  </fieldset>
+  <div>
+  <a href="claimant-case-complete" class="govuk-link">Back to claimant case</a>
+  </div>
+  </main>
+
+
+
+{% endblock %}

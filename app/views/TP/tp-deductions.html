@@ -1,0 +1,130 @@
+{% extends "layout.html" %}
+
+{% block header %}
+  {# Set serviceName in config.js. #}
+  {{ govukHeader({
+    serviceName: serviceName + " prototype",
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+  }) }}
+{% endblock %}
+
+{% block beforeContent %}
+  <a href="tp-children" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <span class="govuk-caption-l">Step 5 of 6</span>
+        <h2 class="govuk-heading-l">Deductions</h2>
+      </div>
+  </div>
+
+
+<fieldset class="govuk-fieldset">
+<form action='tp-legacy' method='post' class='form' autocomplete='off'>
+
+
+<p class="govuk-body govuk-!-font-weight-bold">Does the claimant have savings over £6,000?</p>
+       <div class="govuk-radios govuk-radios">
+
+
+                <div class="govuk-radios" data-module="radios">
+                   <div class="govuk-radios__item">
+                     <input class="govuk-radios__input" id="citizenship-conditional-1" name="citizen" type="radio" value="email" data-aria-controls="conditional-citizenship-conditional-1">
+                     <label class="govuk-label govuk-radios__label" for="citizenship-conditional-1">
+                       Yes
+                     </label>
+                   </div>
+                   <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-citizenship-conditional-1">
+                     <div class="govuk-form-group">
+                       <label class="govuk-label" for="contact-by-email">
+                         Does the claimaint provide care for more than 35 hours per week?
+                       </label>
+
+                       <div>
+                         <input class="govuk-radios__input" id="changed-name-1" name="changed-name" type="radio" value="yes">
+                         <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="contact-by-email" type="email" spellcheck="false">
+                       </div>
+                     </div>
+                   </div>
+
+                   <div class="govuk-radios" data-module="radios">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="citizenship-conditional-2" name="citizen" type="radio" value="email" data-aria-controls="conditional-citizenship-conditional-2">
+                        <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
+                          No
+                        </label>
+                      </div>
+                      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-citizenship-conditional-2">
+                        <div class="govuk-form-group">
+
+                        </div>
+                      </div>
+
+
+<p class="govuk-body govuk-!-margin-bottom-8">
+                      <p class="govuk-body govuk-!-font-weight-bold">Is the claimant receiving tax credits?</p>
+                             <div class="govuk-radios govuk-radios">
+
+
+                                      <div class="govuk-radios" data-module="radios">
+                                         <div class="govuk-radios__item">
+                                           <input class="govuk-radios__input" id="citizenship-conditional-3" name="citizen" type="radio" value="email" data-aria-controls="conditional-citizenship-conditional-3">
+                                           <label class="govuk-label govuk-radios__label" for="citizenship-conditional-3">
+                                             Yes
+                                           </label>
+                                         </div>
+                                         <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-citizenship-conditional-3">
+                                           <div class="govuk-form-group">
+                                             <label class="govuk-label" for="contact-by-email">
+                                               How much are they receiving per month?
+                                             </label>
+
+                                             <div>
+                                               <input class="govuk-radios__input" id="changed-name-1" name="changed-name" type="radio" value="yes">
+                                               <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="contact-by-email" type="email" spellcheck="false">
+                                             </div>
+                                           </div>
+                                         </div>
+
+                                         <div class="govuk-radios" data-module="radios">
+                                            <div class="govuk-radios__item">
+                                              <input class="govuk-radios__input" id="citizenship-conditional-2" name="citizen" type="radio" value="email" data-aria-controls="conditional-citizenship-conditional-2">
+                                              <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
+                                                No
+                                              </label>
+                                            </div>
+                                            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-citizenship-conditional-2">
+                                              <div class="govuk-form-group">
+
+                                              </div>
+                                            </div>
+
+
+
+
+
+
+
+
+
+                        <p class="govuk-body govuk-!-margin-bottom-7"></p>
+
+                          <button type="submit" class="govuk-button">
+                            Continue
+                          </button>
+
+
+  </fieldset>
+  <div>
+  <a href="tp-task-list-deduction" class="govuk-link">Save and continue later</a>
+  </div>
+  </main>
+
+
+
+{% endblock %}
