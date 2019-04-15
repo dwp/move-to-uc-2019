@@ -655,18 +655,29 @@ input.form-control.block {
 
 .key-details-bar {
   background-color: #005ea5;
-  margin: 0 auto;
-  max-width: 960px;
+  margin: 0;
+  margin-top: -10px;
+  width: 100%;
   padding: 20px 30px;
   color: #ffffff;
   position: relative;
   font-family: "ntatabularnumbers", "nta", Arial, sans-serif;
   font-size: 18px;
+  box-sizing: border-box;
+}
+
+.key-details-wrapper {
+  margin: 0 auto;
+  max-width: 940px;
+}
+
+.govuk-header__container {
+  border-bottom: 0;
 }
 
 .key-details-link {
   margin: 0 auto;
-  max-width: 960px;
+
   color: #ffffff;
   position: relative;
 }
@@ -680,6 +691,16 @@ input.form-control.block {
   font-size: 38px;
 }
 
+.key-details-nino {
+  margin: 0 auto;
+  color: #ffffff;
+  position: relative;
+  font-weight: normal;
+  font-family: "ntatabularnumbers", "nta", Arial, sans-serif;
+  font-size: 25px;
+  padding-left: 10px;
+}
+
 .key-details-claimant-details {
   margin: 0 auto;
   color: #ffffff;
@@ -687,6 +708,7 @@ input.form-control.block {
   position: relative;
   font-family: "ntatabularnumbers", "nta", Arial, sans-serif;
   font-size: 20px;
+
 }
 
 .key-details-working-on {

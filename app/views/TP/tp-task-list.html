@@ -1,19 +1,37 @@
 {% extends "layout.html" %}
 
-{% block header %}
-  {# Set serviceName in config.js. #}
-  {{ govukHeader({
-    serviceName: serviceName + " prototype",
-    serviceUrl: "/",
-    containerClasses: "govuk-width-container"
-  }) }}
-{% endblock %}
+
+{% block main %}
 
 {% block beforeContent %}
-  <a href="index.html" class="govuk-back-link">Back</a>
+
+<div class="key-details-bar">
+  <div class="key-details-wrapper">
+    <h1 class="key-details-ni">
+
+      <span class="key-details-claimant-ni">John Doe</span><span class="key-details-nino">  QQ423881A</span>
+      <div class="key-details-tag" style="float: right;">CLAIM MADE</div>
+      <p class="govuk-body govuk-!-margin-bottom-1"></p>
+    </h1>
+
+    <hr class="key-details-line">
+    <p class="govuk-body govuk-!-margin-bottom-3"></p>
+
+    <div class="key-details-link">
+      Deadline date: 12 December 2019
+    </div>
+  </div>
+
+</div>
+
+
+
+
 {% endblock %}
 
 {% block content %}
+<div class="govuk-width-container">
+  <a href="index.html" class="govuk-back-link">Back</a>
 
 
 
@@ -91,5 +109,8 @@
           </main>
 </div>
 
+</div>
+
+{% endblock %}
 
 {% endblock %}
