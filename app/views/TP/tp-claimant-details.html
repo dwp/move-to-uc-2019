@@ -1,19 +1,11 @@
 {% extends "layout.html" %}
 
-{% block header %}
-  {# Set serviceName in config.js. #}
-  {{ govukHeader({
-    serviceName: serviceName + " prototype",
-    serviceUrl: "/",
-    containerClasses: "govuk-width-container"
-  }) }}
-{% endblock %}
-
-{% block beforeContent %}
-  <a href="tp-task-list" class="govuk-back-link">Back</a>
-{% endblock %}
-
+{% block main %}
 {% block content %}
+<div class="govuk-width-container">
+
+<a href="index.html" class="govuk-back-link">Back</a>
+
 
 
     <div class="govuk-grid-row">
@@ -248,4 +240,6 @@
   </div>
 
 
+</div>
+{% endblock %}
 {% endblock %}

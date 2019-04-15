@@ -668,7 +668,7 @@ input.form-control.block {
 
 .key-details-wrapper {
   margin: 0 auto;
-  max-width: 940px;
+  max-width: 960px;
 }
 
 .govuk-header__container {
@@ -1422,4 +1422,52 @@ input.form-control.block {
     margin-top: 0;
     margin-bottom: 0;
   }
+}
+
+.header-text-wrapper {
+    width: 100%;
+    padding-bottom: .3rem;
+    padding-top: -.5rem;
+    text-align: right;
+}
+
+.service-name {
+    float: left;
+    margin-top: .3rem;
+}
+
+.inline-nav {
+    display: inline;
+}
+
+.inline-nav {
+    text-align: right;
+    display: inline;
+}
+
+.inline-nav > ul {
+    display: inline-block;
+    width: auto;
+}
+
+.inline-nav > ul > li {
+    display: inline-block;
+    font-weight: bold;
+    padding: 0 1rem;
+    vertical-align: .2rem;
+    box-sizing: border-box;
+}
+
+.inline-nav > ul > li:last-of-type {
+    margin-left: 2rem;
+}
+
+.govuk-header__container {
+    padding-top: 0;
+}
+
+.header-link {
+    display: block;
+    width: 100%;
+    height: 100%;
 }
