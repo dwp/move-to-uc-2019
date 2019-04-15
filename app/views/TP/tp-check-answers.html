@@ -38,7 +38,7 @@
             Postcode
             </dt>
             <dd class="govuk-summary-list__value">
-              LS20 8BL
+              <p>{{ data['postcode'] }}</p>
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
@@ -52,6 +52,7 @@
             </dt>
             <dd class="govuk-summary-list__value">
               5 January 1978
+              <p>{{ data['passport-issued-day'] }}</p>
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
@@ -74,12 +75,13 @@
               </a>
             </dd>
           </div>
+
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
               Total earnings
             </dt>
             <dd class="govuk-summary-list__value">
-              <p class="govuk-body">£9,000</p>
+                <p>£{{ data['earning-amount'] }}</p>
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
@@ -165,11 +167,24 @@
             Is the claimant caring for someone?
             </dt>
             <dd class="govuk-summary-list__value">
-              More than 35 hours per week
+              Yes
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
                 Change
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+            How many hours
+            </dt>
+            <dd class="govuk-summary-list__value">
+              More than 35 hours per week
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+
               </a>
             </dd>
           </div>
@@ -239,20 +254,7 @@
             Is the claimant receiving tax credits?
             </dt>
             <dd class="govuk-summary-list__value">
-              No
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">
-              </a>
-            </dd>
-          </div>
-
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-            Number of cared for children
-            </dt>
-            <dd class="govuk-summary-list__value">
-              1
+              Yes
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
@@ -302,45 +304,6 @@
               </a>
             </dd>
           </div>
-
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-            Housing Benefit
-            </dt>
-            <dd class="govuk-summary-list__value">
-
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">
-              </a>
-            </dd>
-          </div>
-
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-            Working Tax Credit
-            </dt>
-            <dd class="govuk-summary-list__value">
-
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">
-              </a>
-            </dd>
-          </div>
-
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-            Child Tax Credit
-            </dt>
-            <dd class="govuk-summary-list__value">
-
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">
-              </a>
-            </dd>
-          </div>
         </dl>
 
 
@@ -351,7 +314,7 @@
 </div>
 
 <button type="submit" class="govuk-button">Calculate Transitional Protection</button>
-
+</form>
 
   </fieldset>
   <div>
