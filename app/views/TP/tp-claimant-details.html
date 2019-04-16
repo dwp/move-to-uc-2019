@@ -120,34 +120,34 @@
          <label class="govuk-label" for="address-postcode">
            <p class="govuk-body govuk-!-font-weight-bold">Total amount of earnings</p>
          </label>
-         <input class="govuk-input govuk-input--width-10" id="address-postcode" name="earning-amount" type="text">
+         <input class="govuk-input govuk-input--width-10" id="address-postcode" name="earning-amount" type="text" value="£">
        </div>
 
 <p class="govuk-body govuk-!-margin-bottom-7"></p>
        <p class="govuk-body govuk-!-font-weight-bold">Current employment status</p>
               <div class="govuk-radios govuk-radios">
 
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="changed-name-1" name="working" type="radio" value="yes" {{ checked("employment-working", "working") }}>
-                  <label class="govuk-label govuk-radios__label" for="changed-name-1">
-                    Working
-                  </label>
+                <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="vehicle-type-car" name="vehicle-type" type="radio" value="Working" {{ checked("vehicle-type", "Working") }}>
+                    <label class="govuk-label govuk-radios__label" for="vehicle-type-car">
+                      Working
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="vehicle-type-lorry" name="vehicle-type" type="radio" value="Not working" {{ checked("vehicle-type", "Not working") }}>
+                    <label class="govuk-label govuk-radios__label" for="vehicle-type-lorry">
+                      Not working
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="vehicle-type-motorcycle" name="vehicle-type" type="radio" value="Exempt" {{ checked("vehicle-type", "Exempt") }}>
+                    <label class="govuk-label govuk-radios__label" for="vehicle-type-motorcycle">
+                      Exempt
+                    </label>
+                  </div>
                 </div>
 
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="changed-name-1" name="changed-name" type="radio" value="yes">
-                  <label class="govuk-label govuk-radios__label" for="changed-name-1">
-                    Not working
-                  </label>
-                </div>
-
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="changed-name-1" name="changed-name" type="radio" value="yes">
-                  <label class="govuk-label govuk-radios__label" for="changed-name-1">
-                    Excempt
-                  </label>
-                </div>
-              </div>
 
 <p class="govuk-body govuk-!-margin-bottom-7"></p>
             <p class="govuk-body govuk-!-font-weight-bold">Is the claimant in receipt of any external awards?</p>
@@ -156,49 +156,49 @@
             </span>
             <div class="govuk-checkboxes">
               <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="waste-1" name="waste" type="checkbox" value="carcasses">
+                <input class="govuk-checkboxes__input" id="waste-1" name="vehicle-features" type="checkbox" value="Employment and Support Allowance with Support Component" {{ checked("vehicle-features", "Employment and Support Allowance with Support Component") }}>
                 <label class="govuk-label govuk-checkboxes__label" for="waste-1">
                   Employment and Support Allowance with Support Component
                 </label>
               </div>
               <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+                <input class="govuk-checkboxes__input" id="waste-2" name="vehicle-features" type="checkbox" value="Jobseeker Allowance" {{ checked("vehicle-features", "Jobseeker Allowance") }}>
                 <label class="govuk-label govuk-checkboxes__label" for="waste-2">
                   Jobseeker Allowance
                 </label>
               </div>
               <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                <input class="govuk-checkboxes__input" id="waste-3" name="vehicle-features" type="checkbox" value="Bereavement Allowance" {{ checked("vehicle-features", "Bereavement Allowance") }}>
                 <label class="govuk-label govuk-checkboxes__label" for="waste-3">
                   Bereavement Allowance
                 </label>
               </div>
               <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                <input class="govuk-checkboxes__input" id="waste-3" name="vehicle-features" type="checkbox" value="Child Benefit" {{ checked("Child Benefit", "Child Benefit") }}>
                 <label class="govuk-label govuk-checkboxes__label" for="waste-3">
                   Child Benefit
                 </label>
               </div>
               <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                <input class="govuk-checkboxes__input" id="waste-3" name="vehicle-features" type="checkbox" value="Maternity Allowance" {{ checked("vehicle-features", "Maternity Allowance") }}>
                 <label class="govuk-label govuk-checkboxes__label" for="waste-3">
                   Maternity Allowance
                 </label>
               </div>
               <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                <input class="govuk-checkboxes__input" id="waste-3" name="vehicle-features" type="checkbox" value="Widowed Mothers Allowance" {{ checked("vehicle-features", "Widowed Mothers Allowance") }}>
                 <label class="govuk-label govuk-checkboxes__label" for="waste-3">
                   Widowed Mothers Allowance
                 </label>
               </div>
               <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                <input class="govuk-checkboxes__input" id="waste-3" name="vehicle-features" type="checkbox" value="Widowed Parents Allowance" {{ checked("vehicle-features", "Widowed Parents Allowance") }}>
                 <label class="govuk-label govuk-checkboxes__label" for="waste-3">
                   Widowed Parents Allowance
                 </label>
               </div>
               <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                <input class="govuk-checkboxes__input" id="waste-3" name="vehicle-features" type="checkbox" value="Widowed Pension Allowance" {{ checked("vehicle-features", "Widowed Pension Allowance") }}>
                 <label class="govuk-label govuk-checkboxes__label" for="waste-3">
                   Widowed Pension Allowance
                 </label>

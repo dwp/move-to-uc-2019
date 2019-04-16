@@ -84,7 +84,8 @@
             Employment status
             </dt>
             <dd class="govuk-summary-list__value">
-              <p class="govuk-body">Not working</p>
+              <!-- <p class="govuk-body">Not working</p> -->
+            <p>{{ data['vehicle-type'] }}</p>
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
@@ -96,7 +97,13 @@
             External awards
             </dt>
             <dd class="govuk-summary-list__value">
-              <p class="govuk-body">Bereavement Allowance</p>
+              <ul class="govuk-list govuk-list--bullet">
+                {% for feature in data['vehicle-features'] %}
+                  <li>{{ feature }}</li>
+                {% else %}
+                  <li>No awards selected</li>
+                {% endfor %}
+              </ul>
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
@@ -115,7 +122,7 @@
             Does the claimant have children?
             </dt>
             <dd class="govuk-summary-list__value">
-              Yes
+              <p>{{ data['hasChildren'] }}</p>
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
@@ -128,7 +135,7 @@
               Child 1 date of birth
             </dt>
             <dd class="govuk-summary-list__value">
-              3 October 2015
+              <p>{{ data['passport-issued-day'] }}  / {{ data['passport-issued-month'] }} / {{ data['passport-issued-year'] }}</p>
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
@@ -137,10 +144,11 @@
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Is the child in receipt of DLA
+              Is the child in receipt of DLA?
             </dt>
             <dd class="govuk-summary-list__value">
-              No
+              <p>{{ data['dla'] }}</p>
+              <p>{{ data['rate'] }}</p>
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
@@ -167,10 +175,10 @@
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-            How many hours
+          For more than 35 hours per week?
             </dt>
             <dd class="govuk-summary-list__value">
-              More than 35 hours per week
+              <p>{{ data['caring'] }}</p>
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
@@ -184,10 +192,11 @@
         <dl class="govuk-summary-list govuk-!-margin-bottom-9">
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-            Is the claimant in receipt of Housing Benefit?
+            Does the claimant receive any other income or benefits?
             </dt>
             <dd class="govuk-summary-list__value">
-              £316.77
+             <li>{{ data['award'] }} ({{ data['amount'] }})</li>
+             <li>{{ data['childcare'] }} ({{ data['amount2'] }})</li>
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
@@ -198,23 +207,10 @@
 
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-            Is the claimant in receipt of Child Care?
-            </dt>
-            <dd class="govuk-summary-list__value">
-              £400
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">
-              </a>
-            </dd>
-          </div>
-
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
             Number of cared for children
             </dt>
             <dd class="govuk-summary-list__value">
-              1
+              <p>{{ data['numberchildren'] }}</p>
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
@@ -257,10 +253,16 @@
         <dl class="govuk-summary-list govuk-!-margin-bottom-9">
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-            Job Seekers Allowance
+            What legacy awards is the claimant receiving?
             </dt>
             <dd class="govuk-summary-list__value">
-              £316.77
+              <ul class="govuk-list govuk-list--bullet">
+                {% for feature in data['citizen'] %}
+                  <li>{{ feature }}</li>
+                {% else %}
+                  <li>No awards selected</li>
+                {% endfor %}
+              </ul>
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
@@ -269,32 +271,6 @@
             </dd>
           </div>
 
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-            Employment and Support Allowance
-            </dt>
-            <dd class="govuk-summary-list__value">
-              £400
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">
-              </a>
-            </dd>
-          </div>
-
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-            Income support
-            </dt>
-            <dd class="govuk-summary-list__value">
-            £546
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">
-              </a>
-            </dd>
-          </div>
-        </dl>
 
       </div>
     </div>
