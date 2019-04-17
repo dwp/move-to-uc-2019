@@ -259,10 +259,12 @@
               <ul class="govuk-list govuk-list--bullet">
                 {% for feature in data['citizen'] %}
                   <li>{{ feature }}</li>
+                  <p>{{ data['income'] }}</p>
                 {% else %}
                   <li>No awards selected</li>
                 {% endfor %}
               </ul>
+
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
