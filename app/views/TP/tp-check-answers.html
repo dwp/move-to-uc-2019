@@ -195,14 +195,24 @@
             Does the claimant receive any other income or benefits?
             </dt>
             <dd class="govuk-summary-list__value">
-              <ul class="govuk-list govuk-list--bullet">
+              <!-- <ul class="govuk-list govuk-list--bullet">
                 {% for feature in data['award'] %}
                   <li>{{ feature }}</li>
                   <p>{{ data['amount2'] }}</p>
                 {% else %}
                   <li>No awards selected</li>
                 {% endfor %}
+              </ul> -->
+
+              <ul class="govuk-list govuk-list--bullet">
+                {% for feature in data['award'] %}
+                  <li>{{ feature }}</li>
+                  <p>{{ data['amount-' + loop.index] }}</p>
+                {% else %}
+                  <li>No awards selected</li>
+                {% endfor %}
               </ul>
+
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
@@ -274,7 +284,6 @@
                   <li>No awards selected</li>
                 {% endfor %}
               </ul>
-
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
