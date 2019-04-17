@@ -9,12 +9,14 @@
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
         <span class="govuk-caption-l">Step 6 of 6</span>
-        <h2 class="govuk-heading-l">Legacy Awards</h2>
+        <h2 class="govuk-heading-l">Legacy awards</h2>
       </div>
   </div>
 
   <fieldset class="govuk-fieldset">
   <form action='tp-check-answers' method='post' class='form' autocomplete='off'>
+
+  <p class="govuk-body govuk-!-font-weight-bold">Which legacy benefits or tax credits is the claimant receiving?</p>  
 
   <div class="govuk-form-group">
     <fieldset class="govuk-fieldset" aria-describedby="citizenship-conditional-hint">
@@ -25,7 +27,7 @@
         <div class="govuk-checkboxes__item">
           <input class="govuk-checkboxes__input" id="citizenship-conditional-1" name="citizen" type="checkbox" value="Job Seekers Allowance" data-aria-controls="conditional-citizenship-conditional-1" {{ checked("vehicle-features", "Jobseeker Allowance") }}>
           <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-1">
-            Job Seekers Allowance
+            Job Seeker's Allowance (JSA)
           </label>
         </div>
         <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional-1">
@@ -40,7 +42,7 @@
         <div class="govuk-checkboxes__item">
           <input class="govuk-checkboxes__input" id="citizenship-conditional-2" name="citizen" type="checkbox" value="Employment and Support Allowance" data-aria-controls="conditional-citizenship-conditional-2" {{ checked("vehicle-features", "Employment and Support Allowance") }}>
           <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-2">
-            Employment and Support Allowance
+            Employment and Support Allowance (ESA)
           </label>
         </div>
         <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional-2">

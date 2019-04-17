@@ -17,19 +17,19 @@
 <form action='tp-deductions' method='post' class='form' autocomplete='off'>
 
 
-<p class="govuk-body govuk-!-font-weight-bold">Does the claimant receive any of the following?</p>
+<p class="govuk-body govuk-!-font-weight-bold">Is the claimant receiving any other income or benefits?</p>
 
 
 <div class="govuk-form-group">
   <fieldset class="govuk-fieldset" aria-describedby="citizenship-conditional-hint">
     <span id="citizenship-conditional-hint" class="govuk-hint">
-      Select all options that are relevant to you.
+      Select all that apply.
     </span>
     <div class="govuk-checkboxes" data-module="checkboxes">
       <div class="govuk-checkboxes__item">
         <input class="govuk-checkboxes__input" id="citizenship-conditional-1" name="award" type="checkbox" data-aria-controls="conditional-citizenship-conditional-1" value="Housing element" {{ checked("award", "Housing element") }}>
         <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-1">
-          Housing element
+          Carer's Allowance
         </label>
       </div>
       <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional-1">
@@ -44,7 +44,7 @@
       <div class="govuk-checkboxes__item">
         <input class="govuk-checkboxes__input" id="citizenship-conditional-2" name="award" type="checkbox" value="Child care costs" data-aria-controls="conditional-citizenship-conditional-2" value="Child care costs" {{ checked("childcare", "Child care costs") }}>
         <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-2">
-          Child care costs
+          Childcare costs
         </label>
       </div>
       <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional-2">
@@ -55,7 +55,7 @@
           <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="amount-2" spellcheck="false" value="£" {{ checked("amount2", "How much per month") }}>
           <p class="govuk-body govuk-!-margin-bottom-4"></p>
           <label class="govuk-label" for="contact-by-phone">
-            Number of cared for childen
+            Number of children receiving childcare
           </label>
           <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="numberchildren" type="tel" value="" {{ checked("numberchildren", "children") }}>
         </div>
