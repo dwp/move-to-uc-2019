@@ -122,39 +122,49 @@
                   </label>
                 </div>
 
-
-       <p class="govuk-body govuk-!-margin-bottom-7"></p>
-       <div class="govuk-form-group">
-         <label class="govuk-label" for="address-postcode">
-           <p class="govuk-body govuk-!-font-weight-bold">Total earnings per month</p>
-         </label>
-         <input class="govuk-input govuk-input--width-10" id="address-postcode" name="earning-amount" type="text" value="£">
-       </div>
-
 <p class="govuk-body govuk-!-margin-bottom-7"></p>
-       <p class="govuk-body govuk-!-font-weight-bold">Current employment status</p>
-              <div class="govuk-radios govuk-radios">
 
-                <div class="govuk-radios">
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="vehicle-type-car" name="vehicle-type" type="radio" value="Working" {{ checked("vehicle-type", "Working") }}>
-                    <label class="govuk-label govuk-radios__label" for="vehicle-type-car">
-                      Working
-                    </label>
-                  </div>
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="vehicle-type-lorry" name="vehicle-type" type="radio" value="Not working" {{ checked("vehicle-type", "Not working") }}>
-                    <label class="govuk-label govuk-radios__label" for="vehicle-type-lorry">
-                      Not working
-                    </label>
-                  </div>
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="vehicle-type-motorcycle" name="vehicle-type" type="radio" value="Exempt" {{ checked("vehicle-type", "Exempt") }}>
-                    <label class="govuk-label govuk-radios__label" for="vehicle-type-motorcycle">
-                      Exempt
-                    </label>
-                  </div>
-                </div>
+                <p class="govuk-body govuk-!-font-weight-bold">Current employment status</p>
+                       <div class="govuk-radios govuk-radios">
+
+                       <div class="govuk-radios" data-module="radios">
+
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="citizenship-conditional-10" name="workrate" type="radio" value="Working" data-aria-controls="conditional-citizenship-conditional-10" value="Working" {{ checked("workrate", "Working") }}>
+                            <label class="govuk-label govuk-radios__label" for="citizenship-conditional-10">
+                              Working
+                            </label>
+                          </div>
+                          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-citizenship-conditional-10">
+                            <div class="govuk-form-group">
+                              <label class="govuk-label" for="address-postcode">
+                                <p class="govuk-body govuk-!-font-weight-bold">Total earnings per month</p>
+                              </label>
+                              <input class="govuk-input govuk-input--width-10" id="address-postcode" name="earning-amount" type="text" value="£" {{ checked("vehicle-features", "Jobseeker Allowance") }}>
+                            </div>
+                              <div>
+
+                              </div>
+                            </div>
+                          </div>
+
+
+                             <div class="govuk-radios__item">
+                               <input class="govuk-radios__input" id="citizenship-conditional-15" name="workrate" type="radio" value="Not working" data-aria-controls="conditional-citizenship-conditional-15" value="Not working" {{ checked("workrate", "Not working") }}>
+                               <label class="govuk-label govuk-radios__label" for="citizenship-conditional-15">
+                                 Not working
+                               </label>
+                             </div>
+
+
+
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="citizenship-conditional-12" name="workrate" type="radio" value="Exempt" data-aria-controls="conditional-citizenship-conditional-12" value="Exempt" {{ checked("workrate", "Exempt") }}>
+                                  <label class="govuk-label govuk-radios__label" for="citizenship-conditional-12">
+                                    Exempt
+                                  </label>
+                                </div>
+
 
 
 <p class="govuk-body govuk-!-margin-bottom-7"></p>
