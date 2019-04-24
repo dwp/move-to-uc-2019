@@ -3,6 +3,20 @@
 
 {% block main %}
 {% block content %}
+<script>
+window.onload = function() {
+    document.getElementById("months").innerHTML = getMonth(12);
+};
+
+function getMonth(month) {
+    var monthName;
+    if (month === 12) {
+        monthName = "December";
+    }
+    return monthName;
+}
+</script>
+
 <div class="govuk-width-container">
     <a href="issue.html" class="govuk-back-link">Back</a>
 
@@ -10,7 +24,7 @@
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
         <p class="govuk-body govuk-!-margin-bottom-2"></p>
-        <h2 class="govuk-heading-l">The claim date is {{ data['passport-issued-day'] }}  / {{ data['passport-issued-month'] }} / {{ data['passport-issued-year'] }}</h2>
+        <h2 class="govuk-heading-l">The claim date is 30 July 2019</h2>
       </div>
   </div>
 
@@ -24,7 +38,8 @@
       <div class="govuk-checkboxes__item">
         <input class="govuk-checkboxes__input" id="citizenship-conditional-1" name="citizen" type="checkbox" value="Job Seekers Allowance" data-aria-controls="conditional-citizenship-conditional-1" {{ checked("vehicle-features", "Jobseeker Allowance") }}>
         <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-1">
-          I’ve added the claim date of {{ data['passport-issued-day'] }}  / {{ data['passport-issued-month'] }} / {{ data['passport-issued-year'] }} to the Migration Notice
+          I’ve added the claim date of 30 July 2019 to the Migration Notice
+          <!-- I’ve added the claim date of {{ data['passport-issued-day'] }}  / {{ data['months'] }} / {{ data['passport-issued-year'] }} to the Migration Notice -->
         </label>
       </div>
       <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional-1">
