@@ -3,19 +3,6 @@
 
 {% block main %}
 {% block content %}
-<script>
-window.onload = function() {
-    document.getElementById("months").innerHTML = getMonth(12);
-};
-
-function getMonth(month) {
-    var monthName;
-    if (month === 12) {
-        monthName = "December";
-    }
-    return monthName;
-}
-</script>
 
 <div class="govuk-width-container">
     <a href="issue.html" class="govuk-back-link">Back</a>
@@ -24,9 +11,39 @@ function getMonth(month) {
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
         <p class="govuk-body govuk-!-margin-bottom-2"></p>
-        <h2 class="govuk-heading-l">The claim date is 30 July 2019</h2>
+        <h2 class="govuk-heading-l">The claim date is
+        {{ data['passport-issued-day'] }}
+        {% if data['passport-issued-month'] === "1" %}
+          January
+        {% elif data['passport-issued-month'] === "2" %}
+          February
+        {% elif data['passport-issued-month'] === "3" %}
+          March
+        {% elif data['passport-issued-month'] === "4" %}
+          April
+        {% elif data['passport-issued-month'] === "5" %}
+          May
+        {% elif data['passport-issued-month'] === "6" %}
+          June
+        {% elif data['passport-issued-month'] === "7" %}
+          July
+        {% elif data['passport-issued-month'] === "8" %}
+          August
+        {% elif data['passport-issued-month'] === "9" %}
+          September
+        {% elif data['passport-issued-month'] === "10" %}
+          October
+        {% elif data['passport-issued-month'] === "11" %}
+          November
+        {% elif data['passport-issued-month'] === "12" %}
+          December
+        {% endif %}
+        {{ data['passport-issued-year'] }}
+      </h2>
       </div>
   </div>
+
+
 
 <fieldset class="govuk-fieldset">
 <form action='success' method='post' class='form' autocomplete='off'>
@@ -38,8 +55,33 @@ function getMonth(month) {
       <div class="govuk-checkboxes__item">
         <input class="govuk-checkboxes__input" id="citizenship-conditional-1" name="citizen" type="checkbox" value="Job Seekers Allowance" data-aria-controls="conditional-citizenship-conditional-1" {{ checked("vehicle-features", "Jobseeker Allowance") }}>
         <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-1">
-          I’ve added the claim date of 30 July 2019 to the Migration Notice
-          <!-- I’ve added the claim date of {{ data['passport-issued-day'] }}  / {{ data['months'] }} / {{ data['passport-issued-year'] }} to the Migration Notice -->
+          I’ve added the claim date of         {{ data['passport-issued-day'] }}
+                  {% if data['passport-issued-month'] === "1" %}
+                    January
+                  {% elif data['passport-issued-month'] === "2" %}
+                    February
+                  {% elif data['passport-issued-month'] === "3" %}
+                    March
+                  {% elif data['passport-issued-month'] === "4" %}
+                    April
+                  {% elif data['passport-issued-month'] === "5" %}
+                    May
+                  {% elif data['passport-issued-month'] === "6" %}
+                    June
+                  {% elif data['passport-issued-month'] === "7" %}
+                    July
+                  {% elif data['passport-issued-month'] === "8" %}
+                    August
+                  {% elif data['passport-issued-month'] === "9" %}
+                    September
+                  {% elif data['passport-issued-month'] === "10" %}
+                    October
+                  {% elif data['passport-issued-month'] === "11" %}
+                    November
+                  {% elif data['passport-issued-month'] === "12" %}
+                    December
+                  {% endif %}
+                  {{ data['passport-issued-year'] }} to the Migration Notice        
         </label>
       </div>
       <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional-1">

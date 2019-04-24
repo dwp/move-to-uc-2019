@@ -4,19 +4,6 @@
 {% block main %}
 {% block content %}
 
-<script>
-window.onload = function() {
-    document.getElementById("months").innerHTML = getMonth(12);
-};
-
-function getMonth(month) {
-    var monthName;
-    if (month === 12) {
-        monthName = "December";
-    }
-    return monthName;
-}
-</script>
 
 <div class="govuk-width-container">
   <a href="../claimantdash/readytomove.html" class="govuk-back-link">Back</a>
@@ -55,10 +42,10 @@ function getMonth(month) {
      </div>
      <div class="govuk-date-input__item">
        <div class="govuk-form-group">
-         <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
-           Month
-         </label>
-         <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="months" name="months" type="number" pattern="[0-9]*">
+        <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+          Month
+        </label>
+        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="number" pattern="[0-9]*">
        </div>
      </div>
      <div class="govuk-date-input__item">

@@ -87,8 +87,33 @@
             <h3 class="govuk-heading-s timeline-title">Claim made</h3>
             <p class="timeline-info govuk-body-s">
               <span class="timeline-date">25 April 2019</span>
-              <p>Claim made: 25 April 2019</p>
-              <!-- <p>Claim made: {{ data['claimDateDay'] }} {{ data['claimDateMonth'] }} {{ data['claimDateYear'] }}</p> -->
+              <p>Claim made: {{ data['passport-issued-day'] }}
+                      {% if data['passport-issued-month'] === "1" %}
+                        January
+                      {% elif data['passport-issued-month'] === "2" %}
+                        February
+                      {% elif data['passport-issued-month'] === "3" %}
+                        March
+                      {% elif data['passport-issued-month'] === "4" %}
+                        April
+                      {% elif data['passport-issued-month'] === "5" %}
+                        May
+                      {% elif data['passport-issued-month'] === "6" %}
+                        June
+                      {% elif data['passport-issued-month'] === "7" %}
+                        July
+                      {% elif data['passport-issued-month'] === "8" %}
+                        August
+                      {% elif data['passport-issued-month'] === "9" %}
+                        September
+                      {% elif data['passport-issued-month'] === "10" %}
+                        October
+                      {% elif data['passport-issued-month'] === "11" %}
+                        November
+                      {% elif data['passport-issued-month'] === "12" %}
+                        December
+                      {% endif %}
+                      {{ data['passport-issued-year'] }}</p>
             </p>
           </li>
           <li class="timeline-entry">
