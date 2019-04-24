@@ -1,0 +1,65 @@
+{% set claimStatus = 'migration notice issued' %}
+{% extends "layout.html" %}
+
+{% block main %}
+{% block content %}
+<div class="govuk-width-container">
+    <a href="../claimantdash/migrationissued.html" class="govuk-back-link">Back</a>
+
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <p class="govuk-body govuk-!-margin-bottom-2"></p>
+        <h2 class="govuk-heading-l">When did the claimant make a Universal Credit claim?</h2>
+      </div>
+  </div>
+
+
+<fieldset class="govuk-fieldset">
+<form action='success' method='post' class='form' autocomplete='off'>
+
+  <div class="govuk-date-input" id="claimDate">
+
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="claimDateDay">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2 " id="claimDateDay" name="claimDateDay" type="number" pattern="[0-9]*">
+        </div>
+      </div>
+
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="claimDateMonth">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2 " id="claimDateMonth" name="claimDateMonth" type="number" pattern="[0-9]*">
+        </div>
+      </div>
+
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="claimDateYear">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4 " id="claimDateYear" name="claimDateYear" type="number" pattern="[0-9]*">
+        </div>
+      </div>
+
+    </div>
+                                                        </fieldset>
+
+                                                          <p class="govuk-body govuk-!-margin-bottom-7"></p>
+                                                        <div>
+                                                          <button type="submit" class="govuk-button">
+                                                            Continue
+                                                          </button>
+                                                          </form>
+                                                        </div>
+                                                        </main>
+                                                      <p class="govuk-body govuk-!-margin-bottom-7"></p>
+
+                                                      </div>
+                                                      {% endblock %}
+                                                      {% endblock %}

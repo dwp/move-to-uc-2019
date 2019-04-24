@@ -4,7 +4,7 @@
 {% block content %}
 <div class="govuk-width-container">
 
-<a href="index.html" class="govuk-back-link">Back</a>
+<a href="../claimantdash/claimmade.html" class="govuk-back-link">Back</a>
 
 
 
@@ -114,11 +114,19 @@
                </div>
              </div>
 
+             <div class="govuk-radios" data-module="radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="citizenship-conditional-2" name="workrate" type="radio" value="N/A" data-aria-controls="conditional-citizenship-conditional-2" value="N/A" {{ checked("workrate", "N/A") }}>
+                  <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
+                    Not applicable
+                  </label>
+                </div>
+
 
        <p class="govuk-body govuk-!-margin-bottom-7"></p>
        <div class="govuk-form-group">
          <label class="govuk-label" for="address-postcode">
-           <p class="govuk-body govuk-!-font-weight-bold">Total amount of earnings</p>
+           <p class="govuk-body govuk-!-font-weight-bold">Total earnings per month</p>
          </label>
          <input class="govuk-input govuk-input--width-10" id="address-postcode" name="earning-amount" type="text" value="£">
        </div>
@@ -173,12 +181,7 @@
                   Bereavement Allowance
                 </label>
               </div>
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="waste-3" name="vehicle-features" type="checkbox" value="Child Benefit" {{ checked("Child Benefit", "Child Benefit") }}>
-                <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-                  Child Benefit
-                </label>
-              </div>
+
               <div class="govuk-checkboxes__item">
                 <input class="govuk-checkboxes__input" id="waste-3" name="vehicle-features" type="checkbox" value="Maternity Allowance" {{ checked("vehicle-features", "Maternity Allowance") }}>
                 <label class="govuk-label govuk-checkboxes__label" for="waste-3">

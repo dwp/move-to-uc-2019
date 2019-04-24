@@ -1,0 +1,63 @@
+{% set claimStatus = 'selected' %}
+{% extends "layout3.html" %}
+
+{% block main %}
+{% block content %}
+<div class="govuk-width-container">
+    <a href="../claimantdash/migrationissued.html" class="govuk-back-link">Back</a>
+
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+        <p class="govuk-body govuk-!-margin-bottom-2"></p>
+        <h2 class="govuk-heading-l">Why can’t the claimant move?</h2>
+      </div>
+  </div>
+  <!-- <div class="govuk-inset-text govuk-inset-text--wide">
+    The current deadline is 12 December 2019
+  </div> -->
+
+
+<fieldset class="govuk-fieldset">
+<form action='confirm' method='post' class='form' autocomplete='off'>
+
+
+                      <div class="govuk-radios govuk-radios">
+
+                                  <div class="govuk-radios" data-module="radios">
+                                     <div class="govuk-radios__item">
+                                       <input class="govuk-radios__input" id="citizenship-conditional-2" name="reason3" type="radio" value="Terminal illness" data-aria-controls="conditional-citizenship-conditional-2" {{ checked("reason3", "Terminal illness") }}>
+                                       <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
+                                         Terminal illness
+                                       </label>
+                                     </div>
+                                     <div class="govuk-radios__item">
+                                       <input class="govuk-radios__input" id="citizenship-conditional-2" name="reason3" type="radio" value="Claimant’s found work" data-aria-controls="conditional-citizenship-conditional-2" {{ checked("reason3", "Claimant’s found work") }}>
+                                       <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
+                                         Claimant’s found work
+                                       </label>
+                                     </div>
+                                     <div class="govuk-radios__item">
+                                       <input class="govuk-radios__input" id="citizenship-conditional-2" name="reason3" type="radio" value="Within 6 months of Pension Credit age" data-aria-controls="conditional-citizenship-conditional-2" {{ checked("reason3", "Within 6 months of Pension Credit age") }}>
+                                       <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
+                                         Within 6 months of Pension Credit age
+                                       </label>
+                                     </div>
+
+
+
+                                                        <p class="govuk-body govuk-!-margin-bottom-7"></p>
+
+                                                        </fieldset>
+                                                          <p class="govuk-body govuk-!-margin-bottom-7"></p>
+                                                        <div>
+                                                          <button type="submit" class="govuk-button">
+                                                            Continue
+                                                          </button>
+                                                        </div>
+                                                        </main>
+                                                      <p class="govuk-body govuk-!-margin-bottom-7"></p>
+
+                                                      </div>
+                                                      {% endblock %}
+                                                      {% endblock %}

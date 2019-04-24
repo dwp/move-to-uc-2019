@@ -1,0 +1,82 @@
+{% set claimStatus = 'ready to move' %}
+{% extends "layout3.html" %}
+
+{% block main %}
+{% block content %}
+<div class="govuk-width-container">
+    <a href="../claimantdash/readytomove.html" class="govuk-back-link">Back</a>
+
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+        <p class="govuk-body govuk-!-margin-bottom-2"></p>
+        <h2 class="govuk-heading-l">Are you issuing the Migration Notice today?</h2>
+      </div>
+  </div>
+
+<fieldset class="govuk-fieldset">
+<form action='/migrationnotice/confirm-answer' method='post' class='form' autocomplete='off'>
+
+       <div class="govuk-radios govuk-radios">
+
+                   <div class="govuk-radios" data-module="radios">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="migrationnotice-1" name="migrationnotice" type="radio" value="yes">
+                        <label class="govuk-label govuk-radios__label" for="migrationnotice-1">
+                          Yes
+                        </label>
+                      </div>
+
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="migrationnotice-2" name="migrationnotice" type="radio" value="no" data-aria-controls="conditional-migrationnotice-2">
+                        <label class="govuk-label govuk-radios__label" for="migrationnotice-2">
+                          No
+                        </label>
+                      </div>
+
+                      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-migrationnotice-2">
+                        <div class="govuk-form-group">
+                        <div>
+
+                            <p class="govuk-body"><p class="govuk-body govuk-!-font-weight-bold">When are you issuing it?</p>
+                                 <div class="govuk-date-input" id="passport-issued">
+                                   <div class="govuk-date-input__item">
+                                     <div class="govuk-form-group">
+                                       <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                                         Day
+                                       </label>
+                                       <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="number" pattern="[0-9]*">
+                                     </div>
+                                   </div>
+                                   <div class="govuk-date-input__item">
+                                     <div class="govuk-form-group">
+                                       <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                                         Month
+                                       </label>
+                                       <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="number" pattern="[0-9]*">
+                                     </div>
+                                   </div>
+                                   <div class="govuk-date-input__item">
+                                     <div class="govuk-form-group">
+                                       <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                                         Year
+                                       </label>
+                                       <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="number" pattern="[0-9]*">
+                                     </div>
+                                   </div>
+
+
+
+                                                        </fieldset>
+                                                          <p class="govuk-body govuk-!-margin-bottom-7"></p>
+                                                        <div>
+                                                          <button type="submit" class="govuk-button">
+                                                            Continue
+                                                          </button>
+                                                        </div>
+                                                        </main>
+                                                      <p class="govuk-body govuk-!-margin-bottom-7"></p>
+
+                                                      </div>
+                                                      {% endblock %}
+                                                      {% endblock %}

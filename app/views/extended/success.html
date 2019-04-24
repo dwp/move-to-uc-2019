@@ -1,0 +1,35 @@
+{% set claimStatus = 'migration notice issued' %}
+{% extends "layout.html" %}
+
+{% block main %}
+{% block content %}
+<div class="govuk-width-container">
+
+
+<p class="govuk-body govuk-!-margin-bottom-7"></p>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-panel govuk-panel--confirmation">
+          <br>
+          <h1 class="govuk-panel__title">
+            You’ve given the claimant
+            another 3 months to claim
+          </h1>
+          <h3>They need to claim before 19 August 2019</h3>
+
+        </div>
+
+      
+<p class="govuk-body govuk-!-margin-bottom-7"></p>
+        <p class="govuk-body">
+          <a href="../claimantdash/moretime.html" class="govuk-link">Back to claimant case</a>
+        </p>
+        <p class="govuk-body govuk-!-margin-bottom-7"></p>
+      </div>
+  </div>
+
+
+
+  </div>
+  {% endblock %}
+    {% endblock %}

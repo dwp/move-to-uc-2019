@@ -222,7 +222,20 @@ router.post('/claimant/resume/confirmation-page', (req, res) => {
   res.render('claimant/resume/confirmation-page')
 })
 
+// Testing routes
 
+router.post('/migrationnotice/confirm-answer', function (req, res) {
+
+  let migrationnotice = req.session.data['migrationnotice']
+
+  if (migrationnotice === 'yes') {
+    res.redirect('confirm')
+  // } else if (migrationnotice === 'no') {
+  //   res.redirect('no')
+  } else {
+    res.redirect('confirm-nottoday')
+  }
+})
 
 
 
