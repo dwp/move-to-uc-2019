@@ -25,10 +25,10 @@
         <dl class="govuk-summary-list govuk-!-margin-bottom-9">
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-            Postcode
+            Date of birth
             </dt>
             <dd class="govuk-summary-list__value">
-              <p>NE2 5LS</p>
+              <p>3 October 1979</p>
               <!-- <p>{{ data['postcode'] }}</p> -->
             </dd>
             <dd class="govuk-summary-list__actions">
@@ -38,19 +38,18 @@
             </dd>
           </div>
           <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
+            <!-- <dt class="govuk-summary-list__key">
               Date of birth
             </dt>
             <dd class="govuk-summary-list__value">
               3 October 1979
-              <!-- <p>{{ data['passport-issued-day'] }}</p> -->
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
 
                 <span class="govuk-visually-hidden"> date of birth</span>
               </a>
-            </dd>
+            </dd> -->
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
@@ -163,27 +162,14 @@
         <dl class="govuk-summary-list govuk-!-margin-bottom-9">
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-            Is the claimant caring for someone?
+            Is the claimant caring for someone with a health condition or disability?
             </dt>
             <dd class="govuk-summary-list__value">
-              Yes
+                <p>{{ data['caring1'] }}</p>
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
                 Change
-              </a>
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-          For more than 35 hours per week?
-            </dt>
-            <dd class="govuk-summary-list__value">
-              <p>{{ data['caring'] }}</p>
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">
-
               </a>
             </dd>
           </div>
@@ -196,15 +182,6 @@
             Is the claimant receiving any other income or benefits?
             </dt>
             <dd class="govuk-summary-list__value">
-              <!-- <ul class="govuk-list govuk-list--bullet">
-                {% for feature in data['award'] %}
-                  <li>{{ feature }}</li>
-                  <p>{{ data['amount2'] }}</p>
-                {% else %}
-                  <li>No awards selected</li>
-                {% endfor %}
-              </ul> -->
-
               <ul class="govuk-list govuk-list--bullet">
                 {% for feature in data['award'] %}
                   <li>{{ feature }}</li>

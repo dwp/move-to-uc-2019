@@ -105,11 +105,20 @@
                                        Yes
                                      </label>
                                    </div>
-                                   <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-citizenship-conditional-5">
+
+
+                                   <div class="govuk-radios__item">
+                                     <input class="govuk-radios__input" id="citizenship-conditional-6" name="dla" type="radio" data-aria-controls="conditional-citizenship-conditional-6" value="No" {{ checked("dla", "No") }}>
+                                     <label class="govuk-label govuk-radios__label" for="citizenship-conditional-6">
+                                       No
+                                     </label>
+                                   </div>
+
+                                   <div id="conditional-citizenship-conditional-5">
                                      <div class="govuk-form-group">
-
+                                       <p class="govuk-body govuk-!-margin-bottom-6"></p>
                                        <div class="govuk-radios govuk-radios">
-
+                                         <h4 class="govuk-heading-s">What is the rate they are receiving?</h4>
                                          <div class="govuk-radios__item">
                                            <input class="govuk-radios__input" id="changed-name-1" name="rate" type="radio" value="Higher rate" {{ checked("rate", "Higher rate") }}>
                                            <label class="govuk-label govuk-radios__label" for="changed-name-1">
@@ -134,12 +143,7 @@
                                      </div>
                                    </div>
 
-                                   <div class="govuk-radios__item">
-                                     <input class="govuk-radios__input" id="citizenship-conditional-6" name="dla" type="radio" data-aria-controls="conditional-citizenship-conditional-6" value="No" {{ checked("dla", "No") }}>
-                                     <label class="govuk-label govuk-radios__label" for="citizenship-conditional-6">
-                                       No
-                                     </label>
-                                   </div>
+
                                    <p class="govuk-body govuk-!-margin-bottom-4"></p>
                                    <a href="#" class="govuk-link">Add another child</a>
                                    <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-citizenship-conditional-6">

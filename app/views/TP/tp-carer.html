@@ -18,53 +18,30 @@
 <form action='tp-income-benefits' method='post' class='form' autocomplete='off'>
 
 
-<p class="govuk-body govuk-!-font-weight-bold">Is the claimant caring for someone with a health condition or disability? </p>
+<p class="govuk-body govuk-!-font-weight-bold">Is the claimant caring for someone with a health condition or disability?</p>
        <div class="govuk-radios govuk-radios">
-
-
-                <div class="govuk-radios" data-module="radios">
-                   <div class="govuk-radios__item">
-                     <input class="govuk-radios__input" id="citizenship-conditional-1" name="caring1" type="radio" data-aria-controls="conditional-citizenship-conditional-1" value="Yes" {{ checked("caring1", "Yes") }}>
-                     <label class="govuk-label govuk-radios__label" for="citizenship-conditional-1">
-                       Yes
-                     </label>
-                   </div>
-                   <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-citizenship-conditional-1">
-                     <div class="govuk-form-group">
-                       <label class="govuk-label" for="contact-by-email">
-                         Does the claimaint provide care for more than 35 hours per week?
-                       </label>
-
-                       <div class="govuk-radios__item">
-                         <input class="govuk-radios__input" id="changed-name-1" name="caring" type="radio" value="Yes" {{ checked("caring", "Yes") }}>
-                         <label class="govuk-label govuk-radios__label" for="changed-name-1">
-                           Yes
-                         </label>
-                       </div>
-                       <div class="govuk-radios__item">
-                         <input class="govuk-radios__input" id="changed-name-1" name="caring" type="radio" value="No" {{ checked("caring", "No") }}>
-                         <label class="govuk-label govuk-radios__label" for="changed-name-1">
-                           No
-                         </label>
-                       </div>
-
-                     </div>
-                   </div>
 
                    <div class="govuk-radios" data-module="radios">
                       <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="citizenship-conditional-2" name="caring" type="radio" data-aria-controls="conditional-citizenship-conditional-2" value="No" {{ checked("caring1", "No") }}>
-                        <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
-                          No
+                        <input class="govuk-radios__input" id="citizenship-conditional-2" name="caring1" type="radio" data-aria-controls="conditional-citizenship-conditional-2" value="Yes - for more than 35 hours per week" {{ checked("caring1", "No") }}>
+                        <label class="govuk-label govuk-radios__label" for="citizenship-conditional-1">
+                          Yes - for more than 35 hours per week
                         </label>
                       </div>
-                      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-citizenship-conditional-2">
-                        <div class="govuk-form-group">
-
-                        </div>
-                      </div>
-
-
+                      <div class="govuk-radios" data-module="radios">
+                         <div class="govuk-radios__item">
+                           <input class="govuk-radios__input" id="citizenship-conditional-2" name="caring1" type="radio" data-aria-controls="conditional-citizenship-conditional-2" value="Yes - for fewer than 35 hours per week" {{ checked("caring1", "No") }}>
+                           <label class="govuk-label govuk-radios__label" for="citizenship-conditional-1">
+                             Yes - for fewer than 35 hours per week
+                           </label>
+                         </div>
+                         <div class="govuk-radios" data-module="radios">
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="citizenship-conditional-2" name="caring1" type="radio" data-aria-controls="conditional-citizenship-conditional-2" value="No" {{ checked("caring1", "No") }}>
+                              <label class="govuk-label govuk-radios__label" for="citizenship-conditional-1">
+                                No
+                              </label>
+                            </div>
 
 
 
