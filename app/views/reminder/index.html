@@ -1,0 +1,97 @@
+{% set claimStatus = 'migration notice issued' %}
+{% extends "layout.html" %}
+
+{% block main %}
+{% block content %}
+<div class="govuk-width-container">
+    <a href="issue.html" class="govuk-back-link">Back</a>
+
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+        <p class="govuk-body govuk-!-margin-bottom-2"></p>
+      <h2 class="govuk-heading-l">What type of reminder have you issued?</h2>
+      <div class="govuk-warning-text">
+  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+  <strong class="govuk-warning-text__text">
+    <span class="govuk-warning-text__assistive">Warning</span>
+    You must provide the claimant with two methods of reminder
+  </strong>
+</div>
+      <p class="govuk-body govuk-!-margin-bottom-4"></p>
+      </div>
+  </div>
+
+<fieldset class="govuk-fieldset">
+<form action='success' method='post' class='form' autocomplete='off'>
+
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="citizenship-conditional-hint">
+    <div class="govuk-checkboxes" data-module="checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="citizenship-conditional-00" name="reminder" type="checkbox" value="Face to face" data-aria-controls="conditional-citizenship-conditional-00" {{ checked("vehicle-features", "Jobseeker Allowance") }}>
+        <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-00">
+          Face to face
+        </label>
+      </div>
+
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="citizenship-conditional-0" name="reminder" type="checkbox" value="Text message" data-aria-controls="conditional-citizenship-conditional-0" {{ checked("vehicle-features", "Jobseeker Allowance") }}>
+        <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-0">
+          Text message
+        </label>
+      </div>
+
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="citizenship-conditional-1" name="reminder" type="checkbox" value="Letter" data-aria-controls="conditional-citizenship-conditional-1" {{ checked("vehicle-features", "Jobseeker Allowance") }}>
+        <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-1">
+          Letter
+        </label>
+      </div>
+
+      <p class="govuk-body govuk-!-margin-bottom-7"></p>
+      <div  id="conditional-citizenship-conditional-1">
+        <div class="govuk-form-group">
+          <p class="govuk-body govuk-!-margin-bottom-4"></p>
+          <label class="govuk-label" for="contact-by-email">
+            <p class="govuk-body govuk-!-font-weight-bold">How was the reminder letter issued?</p>
+          </label>
+
+                          <div class="govuk-radios">
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="vehicle-type-car" name="method" type="radio" value="Letter given to the claimant" {{ checked("method", "Letter given to the claimant") }}>
+                              <label class="govuk-label govuk-radios__label" for="vehicle-type-car">
+                                Given to the claimant
+                              </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="vehicle-type-lorry" name="method" type="radio" value="Letter posted to the claimant" {{ checked("method", "Letter posted to the claimant") }}>
+                              <label class="govuk-label govuk-radios__label" for="vehicle-type-lorry">
+                                Posted to the claimant
+                              </label>
+                            </div>
+
+                          </div>
+        </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+                                                        </fieldset>
+
+                                                        <div>
+                                                          <button type="submit" class="govuk-button">
+                                                            Submit
+                                                          </button>
+                                                        </div>
+                                                        </main>
+                                                      <p class="govuk-body govuk-!-margin-bottom-7"></p>
+
+                                                      </div>
+                                                      {% endblock %}
+                                                      {% endblock %}
