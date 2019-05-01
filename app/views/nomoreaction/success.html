@@ -1,4 +1,4 @@
-{% set claimStatus = 'selected to move' %}
+{% set claimStatus = 'SELECTED TO MOVE' %}
 {% extends "layout3.html" %}
 
 {% block main %}
@@ -12,14 +12,14 @@
         <div class="govuk-panel govuk-panel--confirmation">
           <br>
           <h1 class="govuk-panel__title">
-          You’ve paused the  claimant’s move
+            Move cancelled
           </h1>
           <h3>Reason: {{ data['reason'] }}</h3>
 
         </div>
 <p class="govuk-body govuk-!-margin-bottom-7"></p>
         <p class="govuk-body">
-          <a href="../claimantdash/paused.html" class="govuk-link">Back to claimant case</a>
+          <a href="../claimantdash/selected-noaction2.html" class="govuk-link">Back to claimant case</a>
         </p>
         <p class="govuk-body govuk-!-margin-bottom-7"></p>
       </div>
