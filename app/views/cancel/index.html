@@ -1,5 +1,5 @@
-{% set claimStatus = 'selected to move' %}
-{% extends "layout3.html" %}
+{% set claimStatus = 'MIGRATION NOTICE ISSUED' %}
+{% extends "layout.html" %}
 
 {% block main %}
 {% block content %}
@@ -10,35 +10,94 @@
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
         <p class="govuk-body govuk-!-margin-bottom-2"></p>
-        <h2 class="govuk-heading-l">Why can’t the claimant move?</h2>
+        <h2 class="govuk-heading-l">When would you like to set the review date for?</h2>
       </div>
   </div>
 
 <fieldset class="govuk-fieldset">
 <form action='confirm' method='post' class='form' autocomplete='off'>
 
+  <div class="govuk-radios" data-module="radios">
+     <div class="govuk-radios__item">
+       <input class="govuk-radios__input" id="citizenship-conditional-2" name="citizen" type="radio" value="email" data-aria-controls="conditional-citizenship-conditional-2" >
+       <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
+         1 week
+       </label>
+     </div>
+     <div class="govuk-radios__item">
+       <input class="govuk-radios__input" id="citizenship-conditional-2" name="citizen" type="radio" value="email" data-aria-controls="conditional-citizenship-conditional-2" >
+       <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
+         2 weeks
+       </label>
+     </div>
+     <div class="govuk-radios__item">
+       <input class="govuk-radios__input" id="citizenship-conditional-2" name="citizen" type="radio" value="email" data-aria-controls="conditional-citizenship-conditional-2" >
+       <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
+         1 month
+       </label>
+     </div>
 
-                      <div class="govuk-radios govuk-radios">
+     <div class="govuk-radios__item">
+       <input class="govuk-radios__input" id="citizenship-conditional-2" name="citizen" type="radio" value="email" data-aria-controls="conditional-citizenship-conditional-2" >
+       <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
+         3 months
+       </label>
+     </div>
 
-                                  <div class="govuk-radios" data-module="radios">
-                                     <div class="govuk-radios__item">
-                                       <input class="govuk-radios__input" id="citizenship-conditional-2" name="reason3" type="radio" value="Terminal illness" data-aria-controls="conditional-citizenship-conditional-2" {{ checked("reason3", "Terminal illness") }}>
-                                       <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
-                                         Terminal illness
-                                       </label>
-                                     </div>
-                                     <div class="govuk-radios__item">
-                                       <input class="govuk-radios__input" id="citizenship-conditional-2" name="reason3" type="radio" value="Claimant’s found work" data-aria-controls="conditional-citizenship-conditional-2" {{ checked("reason3", "Claimant’s found work") }}>
-                                       <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
-                                         Claimant’s found work
-                                       </label>
-                                     </div>
-                                     <div class="govuk-radios__item">
-                                       <input class="govuk-radios__input" id="citizenship-conditional-2" name="reason3" type="radio" value="Within 6 months of Pension Credit age" data-aria-controls="conditional-citizenship-conditional-2" {{ checked("reason3", "Within 6 months of Pension Credit age") }}>
-                                       <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
-                                         Within 6 months of Pension Credit age
-                                       </label>
-                                     </div>
+     <div class="govuk-radios__item">
+       <input class="govuk-radios__input" id="citizenship-conditional-2" name="citizen" type="radio" value="email" data-aria-controls="conditional-citizenship-conditional-2" >
+       <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
+         6 months
+       </label>
+     </div>
+
+<p class="govuk-body govuk-!-margin-bottom-7"></p>
+
+     <div class="govuk-radios govuk-radios">
+<p class="govuk-body govuk-!-font-weight-bold">Why can’t the claimant move?</p>
+                 <div class="govuk-radios" data-module="radios">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="citizenship-conditional-12" name="reason" type="radio" value="Claimant in hospital" data-aria-controls="conditional-citizenship-conditional-2" {{ checked("reason", "Claimant in hospital") }}>
+                      <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
+                        Claimant between 16 and 17 years old
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="citizenship-conditional-12" name="reason" type="radio" value="Fraud case under investigation" data-aria-controls="conditional-citizenship-conditional-2" {{ checked("reason", "Fraud case under investigation") }}>
+                      <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
+                        Fraud case under investigation
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="citizenship-conditional-12" name="reason" type="radio" value="Claimant identified as a frontier worker" data-aria-controls="conditional-citizenship-conditional-2" {{ checked("reason", "Claimant indentifeid as a frontier worker") }}>
+                      <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
+                        Claimant identified as a frontier worker
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="citizenship-conditional-12" name="reason" type="radio" value="Waiting on outcome of work capability assessment" data-aria-controls="conditional-citizenship-conditional-2" {{ checked("reason", "Waiting on outcome of work capability assessment") }}>
+                      <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
+                        Waiting on outcome of work capability assessment
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="citizenship-conditional-12" name="reason" type="radio" value="Claimant in prison" data-aria-controls="conditional-citizenship-conditional-2" {{ checked("reason", "Claimant in prison") }}>
+                      <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
+                        Claimant in prison
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="citizenship-conditional-12" name="reason" type="radio" value="Claimant within 6 months of state pension age" data-aria-controls="conditional-citizenship-conditional-2" {{ checked("reason", "Claimant within 6 months of state pension age") }}>
+                      <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
+                        Claimant within 6 months of state pension age
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="citizenship-conditional-12" name="reason" type="radio" value="Claimant receiving tax credits nil award" data-aria-controls="conditional-citizenship-conditional-2" {{ checked("reason", "Claimant receiving tax credits nil award") }}>
+                      <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
+                        Claimant receiving tax credits nil award
+                      </label>
+                    </div>
 
 
 
