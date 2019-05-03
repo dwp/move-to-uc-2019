@@ -14,27 +14,61 @@
       </div>
   </div>
 
-<fieldset class="govuk-fieldset">
-<form action='success' method='post' class='form' autocomplete='off'>
+
+  <form action='success' method='post' class='form' autocomplete='off'>
 
 
-<div class="govuk-form-group">
-  <fieldset class="govuk-fieldset" aria-describedby="citizenship-conditional-hint">
-    <div class="govuk-checkboxes" data-module="checkboxes">
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="citizenship-conditional-1" name="citizen" type="checkbox" value="Job Seekers Allowance" data-aria-controls="conditional-citizenship-conditional-1" {{ checked("vehicle-features", "Jobseeker Allowance") }}>
-        <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-1">
-          I’m happy the claimant is ready to move
-        </label>
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="citizenship-conditional-hint">
+      <div class="govuk-radios" data-module="radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="citizenship-conditional-0" name="citizen" type="radio" value="Ready to move" data-aria-controls="conditional-citizenship-conditional-0" {{ checked("vehicle-features", "Jobseeker Allowance") }}>
+          <label class="govuk-label govuk-radios__label" for="citizenship-conditional-0">
+            I'm happy the claimant is ready to move
+          </label>
+        </div>
+
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="citizenship-conditional-1" name="citizen" type="radio" value="Not ready to move" data-aria-controls="conditional-citizenship-conditional-1" {{ checked("vehicle-features", "Jobseeker Allowance") }}>
+          <label class="govuk-label govuk-radios__label" for="citizenship-conditional-1">
+            I'm not happy the claimant is ready to move
+          </label>
+        </div>
+
+        <p class="govuk-body govuk-!-margin-bottom-7"></p>
+        <div  id="conditional-citizenship-conditional-1">
+          <div class="govuk-form-group">
+            <p class="govuk-body govuk-!-margin-bottom-4"></p>
+            <label class="govuk-label" for="contact-by-email">
+              <p class="govuk-body govuk-!-font-weight-bold">Why is the claimant not ready?</p>
+            </label>
+
+                            <div class="govuk-radios">
+                              <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="vehicle-type-car" name="vehicle-type" type="radio" value="Reason 1" {{ checked("vehicle-type", "Working") }}>
+                                <label class="govuk-label govuk-radios__label" for="vehicle-type-car">
+                                  Reason 1
+                                </label>
+                              </div>
+                              <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="vehicle-type-lorry" name="vehicle-type" type="radio" value="Reason 2" {{ checked("vehicle-type", "Not working") }}>
+                                <label class="govuk-label govuk-radios__label" for="vehicle-type-lorry">
+                                  Reason 2
+                                </label>
+                              </div>
+
+                            </div>
+          </div>
+
       </div>
-
+    </div>
   </div>
-</div>
 
 
 
 
-                                                        </fieldset>
+                                                          </fieldset>
+
 
                                                         <div>
                                                           <button type="submit" class="govuk-button">
