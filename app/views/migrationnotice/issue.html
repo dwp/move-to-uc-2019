@@ -10,55 +10,43 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <p class="govuk-body govuk-!-margin-bottom-2"></p>
-      <h2 class="govuk-heading-l">Are you issuing the Migration Notice today?</h2>
+      <h2 class="govuk-heading-l">What date was the Migration Notice issued?</h2>
     </div>
   </div>
 
   <form action='/migrationnotice/confirm-answer' method='post' class='form' autocomplete='off'>
-     <fieldset class="govuk-fieldset" aria-describedby="how-contacted-conditional-hint">
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="passport-issued-hint" role="group">
 
-        <div class="govuk-radios govuk-radios--conditional" data-module="radios">
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="migrationnotice-1" name="migrationnotice" type="radio" value="yes">
-            <label class="govuk-label govuk-radios__label" for="migrationnotice-1">
-              Yes
-            </label>
+        <div class="govuk-date-input" id="passport-issued">
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                Day
+              </label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="number" pattern="[0-9]*">
+            </div>
           </div>
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="migrationnotice-2" name="migrationnotice" type="radio" value="no" data-aria-controls="conditional-migrationnotice-2">
-            <label class="govuk-label govuk-radios__label" for="migrationnotice-2">
-              No
-            </label>
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                Month
+              </label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="number" pattern="[0-9]*">
+            </div>
           </div>
-          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-migrationnotice-2">
-            <div class="govuk-date-input" id="passport-issued">
-     <div class="govuk-date-input__item">
-       <div class="govuk-form-group">
-         <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
-           Day
-         </label>
-         <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="number" pattern="[0-9]*">
-       </div>
-     </div>
-     <div class="govuk-date-input__item">
-       <div class="govuk-form-group">
-        <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
-          Month
-        </label>
-        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="number" pattern="[0-9]*">
-       </div>
-     </div>
-     <div class="govuk-date-input__item">
-       <div class="govuk-form-group">
-         <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
-           Year
-         </label>
-         <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="number" pattern="[0-9]*">
-       </div>
-     </div>
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                Year
+              </label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="number" pattern="[0-9]*">
+            </div>
           </div>
         </div>
       </fieldset>
+    </div>
+
 
 
 
