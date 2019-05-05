@@ -250,6 +250,17 @@ router.post('/readytomove/confirm-answer', function (req, res) {
   }
 })
 
+router.post('/changecircs/confirm-answer', function (req, res) {
+
+  let changecircs = req.session.data['changecircs']
+
+  if (changecircs === 'yes') {
+    res.redirect('../pause/index')
+  } else {
+    res.redirect('../nomoreaction/index')
+  }
+})
+
 router.post('/changecircs2/confirm-answer', function (req, res) {
 
   let changecircs2 = req.session.data['changecircs2']
