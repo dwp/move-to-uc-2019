@@ -7,11 +7,10 @@
 <div class="govuk-width-container">
     <a href="issue.html" class="govuk-back-link">Back</a>
 
-
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
         <p class="govuk-body govuk-!-margin-bottom-2"></p>
-        <h2 class="govuk-heading-l">Confirm the claim date
+        <h2 class="govuk-heading-l">Confirm the Migration Notice claim date
         <!-- {{ data['passport-issued-day'] }}
         {% if data['passport-issued-month'] === "1" %}
           January
@@ -55,7 +54,7 @@
       <div class="govuk-checkboxes__item">
         <input class="govuk-checkboxes__input" id="citizenship-conditional-1" name="citizen" type="checkbox" value="Job Seekers Allowance" data-aria-controls="conditional-citizenship-conditional-1" {{ checked("vehicle-features", "Jobseeker Allowance") }}>
         <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-1">
-          I’ve added the claim date of 3 August 2019 to the Migration Notice
+          I’ve issued a Migration Notice with the claim date of 3 August 2019
         </label>
       </div>
 
@@ -64,20 +63,20 @@
         <div class="govuk-form-group">
           <p class="govuk-body govuk-!-margin-bottom-4"></p>
           <label class="govuk-label" for="contact-by-email">
-            <p class="govuk-body govuk-!-font-weight-bold">How was the Migration Notice issued?</p>
+            <p class="govuk-body govuk-!-font-weight-bold">How did you issue the Migration Notice?</p>
           </label>
 
                           <div class="govuk-radios">
                             <div class="govuk-radios__item">
                               <input class="govuk-radios__input" id="vehicle-type-car" name="vehicle-type" type="radio" value="Working" {{ checked("vehicle-type", "Working") }}>
                               <label class="govuk-label govuk-radios__label" for="vehicle-type-car">
-                                Given to the claimant
+                                I gave it to the claimant
                               </label>
                             </div>
                             <div class="govuk-radios__item">
                               <input class="govuk-radios__input" id="vehicle-type-lorry" name="vehicle-type" type="radio" value="Not working" {{ checked("vehicle-type", "Not working") }}>
                               <label class="govuk-label govuk-radios__label" for="vehicle-type-lorry">
-                                Posted to the claimant
+                                  I posted it
                               </label>
                             </div>
 

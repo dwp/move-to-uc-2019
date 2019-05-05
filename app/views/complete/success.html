@@ -1,4 +1,4 @@
-{% set claimStatus = 'MIGRATION NOTICE ISSUED' %}
+{% set claimStatus = 'Claim made' %}
 {% extends "layout.html" %}
 
 {% block main %}
@@ -12,15 +12,13 @@
         <div class="govuk-panel govuk-panel--confirmation">
           <br>
           <h1 class="govuk-panel__title">
-            You’ve cancelled the
-claimant’s move
+            You’ve logged case as complete
           </h1>
-          <h3>Reason: {{ data['reason'] }}</h3>
 
         </div>
 <p class="govuk-body govuk-!-margin-bottom-7"></p>
         <p class="govuk-body">
-          <a href="../claimantdash/cancel.html" class="govuk-link">Back to claimant case</a>
+          <a href="../claimantdash/complete.html" class="govuk-link">Back to claimant case</a>
         </p>
         <p class="govuk-body govuk-!-margin-bottom-7"></p>
       </div>
