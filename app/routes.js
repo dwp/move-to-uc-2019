@@ -239,14 +239,14 @@ router.post('/migrationnotice/confirm-answer', function (req, res) {
 
 router.post('/readytomove/confirm-answer', function (req, res) {
 
-  let migrationnotice = req.session.data['migrationnotice']
+  let readytomove = req.session.data['readytomove']
 
-  if (migrationnotice === 'yes') {
-    res.redirect('confirm')
+  if (readytomove === 'yes') {
+    res.redirect('success')
   // } else if (migrationnotice === 'no') {
   //   res.redirect('no')
   } else {
-    res.redirect('confirm-nottoday')
+    res.redirect('success-2')
   }
 })
 
