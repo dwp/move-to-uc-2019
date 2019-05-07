@@ -272,6 +272,19 @@ router.post('/changecircs2/confirm-answer', function (req, res) {
   }
 })
 
+router.post('/changecircs2/confirm-answer', function (req, res) {
+
+ let changecircs2 = req.session.data['changecircs2']
+
+ if (changecircs2 === 'yes') {
+   res.redirect('../extended/index')
+ } else if (changecircs2 === 'withdraw') {
+    res.redirect('../nomoreaction/index')
+ } else {
+   res.redirect('../cancel/index')
+ }
+})
+
 
 
 // Add your routes above the module.exports line
