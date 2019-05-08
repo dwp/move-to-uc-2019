@@ -266,11 +266,11 @@ router.post('/changecircs2/confirm-answer', function (req, res) {
  let changecircs2 = req.session.data['changecircs2']
 
  if (changecircs2 === 'yes') {
-   res.redirect('../extended/index')
+   res.redirect('../extended/confirm')
  } else if (changecircs2 === 'withdraw') {
-    res.redirect('../nomoreaction/index')
+    res.redirect('../nomoreaction/success')
  } else {
-   res.redirect('../cancel/index')
+   res.redirect('../cancel/confirm')
  }
 })
 
