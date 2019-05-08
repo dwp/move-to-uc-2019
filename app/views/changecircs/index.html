@@ -14,28 +14,16 @@
     </div>
   </div>
 
-  <form action='/changecircs/confirm-answer' method='post' class='form' autocomplete='off'>
-     <fieldset class="govuk-fieldset" aria-describedby="how-contacted-conditional-hint">
+
+     <!-- <fieldset class="govuk-fieldset" aria-describedby="how-contacted-conditional-hint">
 
         <div class="govuk-radios govuk-radios--conditional" data-module="radios">
-          <!-- <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="changecircs-1" name="changecircs" type="radio" value="yes">
-            <label class="govuk-label govuk-radios__label" for="changecircs-1">
-              Give the claimant more time to claim
-            </label>
-          </div> -->
           <div class="govuk-radios__item">
             <input class="govuk-radios__input" id="changecircs-2" name="changecircs" type="radio" value="yes">
             <label class="govuk-label govuk-radios__label" for="changecircs-2">
               Pause claimants move to UC
             </label>
           </div>
-          <!-- <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="changecircs-3" name="changecircs" type="radio" value="no" data-aria-controls="conditional-migrationnotice-2">
-            <label class="govuk-label govuk-radios__label" for="changecircs-3">
-              Cancel migration notice
-            </label>
-          </div> -->
           <div class="govuk-radios__item">
             <input class="govuk-radios__input" id="changecircs-4" name="changecircs" type="radio" value="no" data-aria-controls="conditional-migrationnotice-2">
             <label class="govuk-label govuk-radios__label" for="changecircs-4">
@@ -44,11 +32,153 @@
           </div>
 
 
-    </div>
+    </div> -->
 
+    <fieldset class="govuk-fieldset">
+    <form action='/changecircs/confirm-answer' method='post' class='form' autocomplete='off'>
 
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="citizenship-conditional-hint">
+        <div class="govuk-radios" data-module="radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="citizenship-conditional-1" name="changecircs" type="radio" value="yes" data-aria-controls="conditional-citizenship-conditional-1" {{ checked("vehicle-features", "Jobseeker Allowance") }}>
+            <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
+              Pause claimants move to UC
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="citizenship-conditional-3" name="changecircs" type="radio" value="no" data-aria-controls="conditional-citizenship-conditional-3" {{ checked("vehicle-features", "Jobseeker Allowance") }}>
+            <label class="govuk-label govuk-radios__label" for="citizenship-conditional-3">
+              Withdraw claimant from move to UC
+            </label>
+          </div>
 
+          <p class="govuk-body govuk-!-margin-bottom-7"></p>
+          <div id="conditional-citizenship-conditional-1">
+            <div class="govuk-form-group">
+              <p class="govuk-body govuk-!-margin-bottom-4"></p>
 
+              <div class="govuk-radios govuk-radios">
+         <p class="govuk-body govuk-!-font-weight-bold">How long are you pausing the move for?</p>
+                          <div class="govuk-radios" data-module="radios">
+                             <div class="govuk-radios__item">
+                               <input class="govuk-radios__input" id="citizenship-conditional-1" name="citizen" type="radio" value="email" data-aria-controls="conditional-citizenship-conditional-2" >
+                               <label class="govuk-label govuk-radios__label" for="citizenship-conditional-1">
+                                 1 week
+                               </label>
+                             </div>
+                             <div class="govuk-radios__item">
+                               <input class="govuk-radios__input" id="citizenship-conditional-1" name="citizen" type="radio" value="email" data-aria-controls="conditional-citizenship-conditional-2" >
+                               <label class="govuk-label govuk-radios__label" for="citizenship-conditional-1">
+                                 2 weeks
+                               </label>
+                             </div>
+                             <div class="govuk-radios__item">
+                               <input class="govuk-radios__input" id="citizenship-conditional-1" name="citizen" type="radio" value="email" data-aria-controls="conditional-citizenship-conditional-2" >
+                               <label class="govuk-label govuk-radios__label" for="citizenship-conditional-1">
+                                 1 month
+                               </label>
+                             </div>
+
+                             <div class="govuk-radios__item">
+                               <input class="govuk-radios__input" id="citizenship-conditional-2" name="citizen" type="radio" value="email" data-aria-controls="conditional-citizenship-conditional-2" >
+                               <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
+                                 3 months
+                               </label>
+                             </div>
+
+                             <div class="govuk-radios__item">
+                               <input class="govuk-radios__input" id="citizenship-conditional-2" name="citizen" type="radio" value="email" data-aria-controls="conditional-citizenship-conditional-2" >
+                               <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
+                                 6 months
+                               </label>
+                             </div>
+                           </div>
+                         </div>
+                       </div>
+
+                       <p class="govuk-body govuk-!-margin-bottom-7"></p>
+
+                   <div class="govuk-radios govuk-radios">
+              <p class="govuk-body govuk-!-font-weight-bold">Why are you pausing the move?</p>
+             <div class="govuk-radios" data-module="radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="citizenship-conditional-12" name="reason" type="radio" value="Claimant in hospital" data-aria-controls="conditional-citizenship-conditional-2" {{ checked("reason", "Claimant in hospital") }}>
+                  <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
+                    Claimant between 16 and 17 years old
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="citizenship-conditional-12" name="reason" type="radio" value="Fraud case under investigation" data-aria-controls="conditional-citizenship-conditional-2" {{ checked("reason", "Fraud case under investigation") }}>
+                  <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
+                    Fraud case under investigation
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="citizenship-conditional-12" name="reason" type="radio" value="Claimant identified as a frontier worker" data-aria-controls="conditional-citizenship-conditional-2" {{ checked("reason", "Claimant indentifeid as a frontier worker") }}>
+                  <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
+                    Claimant identified as a frontier worker
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="citizenship-conditional-12" name="reason" type="radio" value="Waiting on outcome of work capability assessment" data-aria-controls="conditional-citizenship-conditional-2" {{ checked("reason", "Waiting on outcome of work capability assessment") }}>
+                  <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
+                    Waiting on outcome of work capability assessment
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="citizenship-conditional-12" name="reason" type="radio" value="Claimant in prison" data-aria-controls="conditional-citizenship-conditional-2" {{ checked("reason", "Claimant in prison") }}>
+                  <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
+                    Claimant in prison
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="citizenship-conditional-12" name="reason" type="radio" value="Claimant within 6 months of state pension age" data-aria-controls="conditional-citizenship-conditional-2" {{ checked("reason", "Claimant within 6 months of state pension age") }}>
+                  <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
+                    Claimant within 6 months of state pension age
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="citizenship-conditional-12" name="reason" type="radio" value="Claimant receiving tax credits nil award" data-aria-controls="conditional-citizenship-conditional-2" {{ checked("reason", "Claimant receiving tax credits nil award") }}>
+                  <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
+                    Claimant receiving tax credits nil award
+                  </label>
+                </div>
+              </div>
+            </div>
+           </div>
+
+            <p class="govuk-body govuk-!-margin-bottom-7"></p>
+            <div id="conditional-citizenship-conditional-3">
+              <div class="govuk-form-group">
+                <p class="govuk-body govuk-!-margin-bottom-4"></p>
+
+                <div class="govuk-radios govuk-radios">
+                  <p class="govuk-body govuk-!-font-weight-bold">Why are you withdrawing the claimant from moving?</p>
+                  <div class="govuk-radios" data-module="radios">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="citizenship-conditional-12" name="citizen" type="radio" value="email" data-aria-controls="conditional-citizenship-conditional-12" >
+                      <label class="govuk-label govuk-radios__label" for="citizenship-conditional-12">
+                        Claimant already moved the Universal Credit
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                     <input class="govuk-radios__input" id="citizenship-conditional-12" name="citizen" type="radio" value="email" data-aria-controls="conditional-citizenship-conditional-12" >
+                     <label class="govuk-label govuk-radios__label" for="citizenship-conditional-12">
+                        Claimant has moved onto state pension credit
+                     </label>
+                   </div>
+                   <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="citizenship-conditional-12" name="citizen" type="radio" value="email" data-aria-controls="conditional-citizenship-conditional-12" >
+                    <label class="govuk-label govuk-radios__label" for="citizenship-conditional-12">
+                       Claimant has moved onto state pension credit
+                    </label>
+                  </div>
+                 </div>
+               </div>
+             </div>
+           </div>
+    </fieldset>
 
   <p class="govuk-body govuk-!-margin-bottom-5"></p>
 
@@ -56,7 +186,10 @@
       <button type="submit" class="govuk-button">Continue</button>
     </div>
       <p class="govuk-body govuk-!-margin-bottom-5"></p>
-        </fieldset></form>
+
+    </div>
+</form>
+</div>
 
 </div>
 

@@ -255,9 +255,9 @@ router.post('/changecircs/confirm-answer', function (req, res) {
   let changecircs = req.session.data['changecircs']
 
   if (changecircs === 'yes') {
-    res.redirect('../pause/index')
+    res.redirect('../pause/success')
   } else {
-    res.redirect('../nomoreaction/index')
+    res.redirect('../nomoreaction/success')
   }
 })
 
