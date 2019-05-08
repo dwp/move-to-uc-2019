@@ -14,7 +14,7 @@
     </div>
   </div>
 
-  <form action='/changecircs/confirm-answer' method='post' class='form' autocomplete='off'>
+
      <!-- <fieldset class="govuk-fieldset" aria-describedby="how-contacted-conditional-hint">
 
         <div class="govuk-radios govuk-radios--conditional" data-module="radios">
@@ -35,7 +35,7 @@
     </div> -->
 
     <fieldset class="govuk-fieldset">
-    <form action='success' method='post' class='form' autocomplete='off'>
+    <form action='/changecircs/confirm-answer' method='post' class='form' autocomplete='off'>
 
 
     <div class="govuk-form-group">
@@ -48,7 +48,7 @@
             </label>
           </div>
           <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="citizenship-conditional-12" name="changecircs" type="radio" value="no" data-aria-controls="conditional-citizenship-conditional-12" {{ checked("vehicle-features", "Jobseeker Allowance") }}>
+            <input class="govuk-radios__input" id="citizenship-conditional-2" name="changecircs" type="radio" value="no" data-aria-controls="conditional-citizenship-conditional-12" {{ checked("vehicle-features", "Jobseeker Allowance") }}>
             <label class="govuk-label govuk-radios__label" for="citizenship-conditional-12">
                 Withdraw claimant from move to UC
             </label>
@@ -144,14 +144,27 @@
                                             </div>
 
 
-                                            <div id="conditional-citizenship-conditional-12">
+                                            <p class="govuk-body govuk-!-margin-bottom-7"></p>
+                                            <div  id="conditional-citizenship-conditional-2">
                                               <div class="govuk-form-group">
                                                 <p class="govuk-body govuk-!-margin-bottom-4"></p>
-                                                <label class="govuk-label" for="contact-by-email">
-                                                  <p class="govuk-body govuk-!-font-weight-bold">How are you issuing the Migration Notice?</p>
-                                                </label>
-                                                </div>
-                                              </div>
+
+                                                <div class="govuk-radios govuk-radios">
+                                           <p class="govuk-body govuk-!-font-weight-bold">Reason for withdrawing the claimant</p>
+                                                            <div class="govuk-radios" data-module="radios">
+                                                               <div class="govuk-radios__item">
+                                                                 <input class="govuk-radios__input" id="citizenship-conditional-2" name="citizen" type="radio" value="email" data-aria-controls="conditional-citizenship-conditional-2" >
+                                                                 <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
+                                                                  Reason 1
+                                                                 </label>
+                                                               </div>
+                                                               <div class="govuk-radios__item">
+                                                                 <input class="govuk-radios__input" id="citizenship-conditional-2" name="citizen" type="radio" value="email" data-aria-controls="conditional-citizenship-conditional-2" >
+                                                                 <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
+                                                                  Reason 1
+                                                                 </label>
+                                                               </div>
+
 
 
                                               </fieldset>
