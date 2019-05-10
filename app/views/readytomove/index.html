@@ -1,4 +1,4 @@
-{% set claimStatus = 'selected to move' %}
+{% set claimStatus = 'Initial conversation complete' %}
 {% extends "layout3.html" %}
 
 {% block main %}
@@ -45,18 +45,34 @@
 
                             <div class="govuk-radios">
                               <div class="govuk-radios__item">
-                                <input class="govuk-radios__input" id="vehicle-type-car" name="vehicle-type" type="radio" value="Reason 1" {{ checked("vehicle-type", "Working") }}>
+                                <input class="govuk-radios__input" id="vehicle-type-car" name="vehicle-type" type="radio" value="Health condition" {{ checked("vehicle-type", "Working") }}>
                                 <label class="govuk-label govuk-radios__label" for="vehicle-type-car">
                                   Health condition
                                 </label>
                               </div>
                               <div class="govuk-radios__item">
-                                <input class="govuk-radios__input" id="vehicle-type-lorry" name="vehicle-type" type="radio" value="Reason 2" {{ checked("vehicle-type", "Not working") }}>
+                                <input class="govuk-radios__input" id="vehicle-type-lorry" name="vehicle-type" type="radio" value="Domestic violence" {{ checked("vehicle-type", "Not working") }}>
                                 <label class="govuk-label govuk-radios__label" for="vehicle-type-lorry">
                                 Domestic violence
                                 </label>
                               </div>
-                            </div>
+                              <div class="govuk-radios__item">
+<input class="govuk-radios__input" id="migrationnotice-12" name="migrationnotice" type="radio" value="no" data-aria-controls="conditional-migrationnotice-12">
+<label class="govuk-label govuk-radios__label" for="migrationnotice-12">
+Another reason
+</label>
+</div>
+<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-migrationnotice-12">
+<div class="govuk-date-input" id="passport-issued">
+
+
+<div class="govuk-form-group">
+<label class="govuk-label" for="event-name">
+Reason
+</label>
+<input class="govuk-input" id="event-name" name="event-name" type="text">
+</div>
+                            </div></div></div>
                           </div>
 
 

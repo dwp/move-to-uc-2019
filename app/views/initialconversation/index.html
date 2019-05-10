@@ -1,0 +1,77 @@
+{% set claimStatus = 'selected to move' %}
+{% extends "layout3.html" %}
+
+{% block main %}
+{% block content %}
+<div class="govuk-width-container">
+    <a href="issue.html" class="govuk-back-link">Back</a>
+
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+        <p class="govuk-body govuk-!-margin-bottom-2"></p>
+        <h2 class="govuk-heading-l">Confirm initial conversation</h2>
+      </div>
+  </div>
+
+<fieldset class="govuk-fieldset">
+<form action='success' method='post' class='form' autocomplete='off'>
+
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="citizenship-conditional-hint">
+    <div class="govuk-checkboxes" data-module="checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="citizenship-conditional-1" name="citizen" type="checkbox" value="Job Seekers Allowance" data-aria-controls="conditional-citizenship-conditional-1" {{ checked("vehicle-features", "Jobseeker Allowance") }}>
+        <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-1">
+         I've had an initial conversation with the claimant about Universal Credit
+        </label>
+      </div>
+
+<!--
+      <p class="govuk-body govuk-!-margin-bottom-7"></p>
+      <div  id="conditional-citizenship-conditional-1">
+        <div class="govuk-form-group">
+          <p class="govuk-body govuk-!-margin-bottom-4"></p>
+          <label class="govuk-label" for="contact-by-email">
+            <p class="govuk-body govuk-!-font-weight-bold">Have you had a conversation with claimants partner?</p>
+          </label>
+
+                          <div class="govuk-radios">
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="vehicle-type-car" name="vehicle-type" type="radio" value="Working" {{ checked("vehicle-type", "Working") }}>
+                              <label class="govuk-label govuk-radios__label" for="vehicle-type-car">
+                                Yes
+                              </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="vehicle-type-lorry" name="vehicle-type" type="radio" value="Not working" {{ checked("vehicle-type", "Not working") }}>
+                              <label class="govuk-label govuk-radios__label" for="vehicle-type-lorry">
+                                No
+                              </label>
+                            </div>
+
+                          </div>
+        </div>
+
+    </div> -->
+
+  </div>
+</div>
+
+
+
+
+                                                        </fieldset>
+
+                                                        <div>
+                                                          <button type="submit" class="govuk-button">
+                                                            Submit
+                                                          </button>
+                                                        </div>
+                                                        </main>
+                                                      <p class="govuk-body govuk-!-margin-bottom-7"></p>
+
+                                                      </div>
+                                                      {% endblock %}
+                                                      {% endblock %}

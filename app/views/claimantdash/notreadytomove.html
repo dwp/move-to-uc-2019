@@ -75,7 +75,7 @@
                 <li><a class="govuk-link govuk-link--no-visited-state" href="../reminder/index.html">Log reminder issued</a></li>
                 <li><a class="govuk-link govuk-link--no-visited-state" href="../changecircs/index.html">Log a change in circumstances</a></li>
                 <li><a class="govuk-link govuk-link--no-visited-state" href="../complete/index.html">Log case as complete</a></li>
-                <li><a class="govuk-link govuk-link--no-visited-state" href="../claimdatecalc/index.html">Calculate the claim by date</a></li>
+                <!-- <li><a class="govuk-link govuk-link--no-visited-state" href="../claimdatecalc/index.html">Calculate the claim by date</a></li> -->
                 <li><a class="govuk-link govuk-link--no-visited-state" href="#">Calculate Transitional Protection</a></li>
         </ul>
 
@@ -86,7 +86,8 @@
             <h3 class="govuk-heading-s timeline-title">{{ data['readytomove'] }}<br></h3>
             <p class="timeline-info govuk-body-s">
               <span class="timeline-date">2 May 2019</span>
-              <p>{{ data['vehicle-type'] }}
+              <p>Reason: {{ data['vehicle-type'] }}<br>
+                Review date: 2 June 2019
             </p>
           </li>
                   <li class="timeline-entry">
