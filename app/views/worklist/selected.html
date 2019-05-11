@@ -4,13 +4,28 @@
 {% block content %}
 
 
+
+
+    <div class="govuk-checkboxes" data-module="checkboxes">
+      <div>
+        <label class="container">
+
+          <input type="checkbox" id="citizenship-conditional-1" data-aria-controls="conditional-citizenship-conditional-1">
+       <span class="checkmark"></span><span class="copy">
+
+         <span class="govuk-link govuk-body govuk-!-font-size-16" id="citizenship-conditional-1"><a href="selected">Select claimants to move</a></span>
+        </label>
+      </div>
+
+<br><br>
+
+
+
 <table class="govuk-table">
 
   <thead class="govuk-table__head">
     <tr class="govuk-table__row">
-
-      <th class="govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold govuk-table__cell" scope="col">Name</th>
-        <th class="govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold govuk-table__cell" scope="col">NINO</th>
+      <th class="govuk-table__cell" scope="col"><span class="ni-margin">National Insurance number</span></th>
       <th class="govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold govuk-table__cell" scope="col">Status</th>
       <th class="govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold govuk-table__cell" scope="col">Claim by date</th>
       <th class="govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold govuk-table__cell" scope="col">Reminder due</th>
@@ -19,50 +34,50 @@
   </thead>
   <tbody class="govuk-table__body">
     <tr class="govuk-table__row">
-      <td class="govuk-body govuk-!-font-size-16 govuk-table__cell"><a href="../claimantdash/selected.html" class="govuk-link govuk-link--no-visited-state">Daniel Smart</a></td>
-      <td class="govuk-body govuk-!-font-size-16 govuk-table__cell">QQ423881A</th>
+      <td class="govuk-body govuk-!-font-size-16 govuk-table__cell"><a href="../claimantdash/selected.html" class="link-margin">QQ423881A</a></th>
       <td class="govuk-body govuk-!-font-size-16 govuk-table__cell">Selected to move</td>
       <td class="govuk-body govuk-!-font-size-16 govuk-table__cell"></td>
       <td class="govuk-body govuk-!-font-size-16 govuk-table__cell"></td>
       <td class="govuk-body govuk-!-font-size-16 govuk-table__cell"></td>
     </tr>
     <tr class="govuk-table__row">
-    <td class="govuk-body govuk-!-font-size-16 govuk-table__cell"><a href="../claimantdash/migrationissued.html" class="govuk-link govuk-link--no-visited-state">John Hallam</a></td>
-      <td class="govuk-body govuk-!-font-size-16 govuk-table__cell">EW234ORI</th>
-
+      <td class="govuk-body govuk-!-font-size-16 govuk-table__cell"><a href="../claimantdash/migrationissued.html" class="link-margin">EW234ORI</a></th>
       <td class="govuk-body govuk-!-font-size-16 govuk-table__cell">Migration notice issued</td>
       <td class="govuk-body govuk-!-font-size-16 govuk-table__cell">2 August 2019</td>
       <td class="govuk-body govuk-!-font-size-16 govuk-table__cell">30 May 2019</td>
       <td class="govuk-body govuk-!-font-size-16 govuk-table__cell"></td>
     </tr>
     <tr class="govuk-table__row">
-      <td class="govuk-body govuk-!-font-size-16 govuk-table__cell"><a href="../claimantdash/claimmade.html" class="govuk-link govuk-link--no-visited-state">Sarah Thomas</a></td>
-      <td class="govuk-body govuk-!-font-size-16 govuk-table__cell">JC12325IC</th>
+      <td class="govuk-body govuk-!-font-size-16 govuk-table__cell"><a href="../claimantdash/claimmade.html" class="link-margin">JC12325IC</a></th>
       <td class="govuk-body govuk-!-font-size-16 govuk-table__cell">Claim submitted</td>
       <td class="govuk-body govuk-!-font-size-16 govuk-table__cell">31 August 2019</td>
       <td class="govuk-body govuk-!-font-size-16 govuk-table__cell"></td>
       <td class="govuk-body govuk-!-font-size-16 govuk-table__cell"></td>
     </tr>
     <tr class="govuk-table__row">
-      <td class="govuk-body govuk-!-font-size-16 govuk-table__cell"><a href="../claimantdash/paused.html" class="govuk-link govuk-link--no-visited-state">Jane Wood</a></td>
-      <td class="govuk-body govuk-!-font-size-16 govuk-table__cell">JB5432LP</th>
+      <td class="govuk-body govuk-!-font-size-16 govuk-table__cell"><a href="../claimantdash/paused.html" class="link-margin">JB5432LP</a></th>
       <td class="govuk-body govuk-!-font-size-16 govuk-table__cell">Paused</td>
       <td class="govuk-body govuk-!-font-size-16 govuk-table__cell"></td>
       <td class="govuk-body govuk-!-font-size-16 govuk-table__cell"></td>
       <td class="govuk-body govuk-!-font-size-16 govuk-table__cell">30 July 2019</td>
     </tr>
-    <!-- <tr class="govuk-table__row">
-      <td class="govuk-body govuk-!-font-size-16 govuk-table__cell"><a href="../claimantdash/paused.html" class="govuk-link govuk-link--no-visited-state">Sally Bower</a></td>
-      <td class="govuk-body govuk-!-font-size-16 govuk-table__cell">JB5432LP</th>
-      <td class="govuk-body govuk-!-font-size-16 govuk-table__cell">In scope
-        <a href="#" class="govuk-link govuk-body govuk-!-font-size-14"> Select to move</a>
-      </td>
+    <tr class="govuk-table__row">
+  <td class="govuk-body govuk-!-font-size-16 govuk-table__cell">
+
+              <a href="../claimantdash/paused.html" class="link-margin">JB5432LP</a>
+            </td>
+      <td class="govuk-body govuk-!-font-size-16 govuk-table__cell">Selected to move</td>
+      <td class="govuk-table__cell"></td>
+    <td class="govuk-body govuk-!-font-size-16 govuk-table__cell"></td>
       <td class="govuk-body govuk-!-font-size-16 govuk-table__cell"></td>
-      <td class="govuk-body govuk-!-font-size-16 govuk-table__cell"></td>
-      <td class="govuk-body govuk-!-font-size-16 govuk-table__cell"></td>
-    </tr> -->
+    </tr>
+
   </tbody>
 </table>
+
+
+
+
 
 
 {% endblock %}
