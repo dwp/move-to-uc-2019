@@ -133,36 +133,7 @@
                             <div class="govuk-form-group">
                                 <p class="govuk-body govuk-!-margin-bottom-4"></p>
                                 <div class="govuk-radios govuk-radios">
-                                    <p class="govuk-body govuk-!-font-weight-bold">When would you like to set the review date for?</p>
-                                    <div class="govuk-radios" data-module="radios">
-                                      <div class="govuk-date-input" id="passport-issued">
-                                        <div class="govuk-date-input__item">
-                                          <div class="govuk-form-group">
-                                            <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
-                                              Day
-                                            </label>
-                                            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="number" pattern="[0-9]*">
-                                          </div>
-                                        </div>
-                                        <div class="govuk-date-input__item">
-                                          <div class="govuk-form-group">
-                                            <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
-                                              Month
-                                            </label>
-                                            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="number" pattern="[0-9]*">
-                                          </div>
-                                        </div>
-                                        <div class="govuk-date-input__item">
-                                          <div class="govuk-form-group">
-                                            <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
-                                              Year
-                                            </label>
-                                            <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="number" pattern="[0-9]*">
-                                          </div>
 
-                                    </div>
-                                </div>
-                            </div>
 
                             <p class="govuk-body govuk-!-margin-bottom-7"></p>
                             <div class="govuk-radios govuk-radios">
@@ -223,22 +194,55 @@
                                         </label>
                                     </div>
                                       <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="citizenship-conditional-12" name="reason" type="radio" value="IT or system failure">
+                                    <input class="govuk-radios__input" id="citizenship-conditional-12" name="reason" type="radio" value="Claimant is deceased" data-toggle="hideOnSelect">
                                     <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
                                         Claimant is deceased
                                     </label>
                                 </div>
+
+                                <div id="hideOnSelect">
+                                  <p class="govuk-body govuk-!-margin-bottom-7"></p>
+                                <p class="govuk-body govuk-!-font-weight-bold">When would you like to set the review date for?</p>
+                                <div class="govuk-radios" data-module="radios">
+                                  <div class="govuk-date-input" id="passport-issued">
+                                    <div class="govuk-date-input__item">
+                                      <div class="govuk-form-group">
+                                        <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                                          Day
+                                        </label>
+                                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="number" pattern="[0-9]*">
+                                      </div>
+                                    </div>
+                                    <div class="govuk-date-input__item">
+                                      <div class="govuk-form-group">
+                                        <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                                          Month
+                                        </label>
+                                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="number" pattern="[0-9]*">
+                                      </div>
+                                    </div>
+                                    <div class="govuk-date-input__item">
+                                      <div class="govuk-form-group">
+                                        <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                                          Year
+                                        </label>
+                                        <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="number" pattern="[0-9]*">
+                                      </div>
+
                                 </div>
                             </div>
+                          </div>
+                                </div>
+
                         </div>
-  </div>
-
-
+                      </div>
                     </div>
+                  </div>
+                  </div>
 
 
 
-                    <p class="govuk-body govuk-!-margin-bottom-5"></p>
+                    <p class="govuk-body govuk-!-margin-bottom-6"></p>
 
                     <div>
                         <button type="submit" class="govuk-button">Continue</button>
