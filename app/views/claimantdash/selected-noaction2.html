@@ -1,4 +1,4 @@
-{% set claimStatus = 'case closed' %}
+{% set claimStatus = 'withdrawn' %}
 {% extends "layout3.html" %}
 
 {% block main %}
@@ -142,7 +142,7 @@
 <h2 class="govuk-heading-m">Case history</h2>
         <ol class="govuk-list timeline">
           <li class="timeline-entry">
-            <h3 class="govuk-heading-s timeline-title">Claimant move cancelled</h3>
+            <h3 class="govuk-heading-s timeline-title">Claimant withdrawn</h3>
           <p class="timeline-info govuk-body-s">
             <span class="timeline-date">2 May 2019</span>
             <p>Reason: {{ data['reason'] }}
