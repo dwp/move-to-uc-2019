@@ -1,4 +1,4 @@
-{% set claimStatus = 'SELECTED TO MOVE' %}
+{% set claimStatus = 'IN SCOPE TO MOVE' %}
 {% extends "layout3.html" %}
 
 {% block main %}
@@ -23,7 +23,7 @@
 
                  <div class="govuk-radios" data-module="radios">
                     <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="citizenship-conditional-12" name="reason" type="radio" value="Claimant already moved the Universal Credit" data-aria-controls="conditional-citizenship-conditional-2" {{ checked("reason", "Claimant already moved the Universal Credit") }}>
+                      <input class="govuk-radios__input" id="citizenship-conditional-12" name="reason" type="radio" value="Claimant already moved to Universal Credit" data-aria-controls="conditional-citizenship-conditional-2" {{ checked("reason", "Claimant already moved the Universal Credit") }}>
                       <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
                         Claimant already moved the Universal Credit
                       </label>
