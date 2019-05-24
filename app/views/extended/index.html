@@ -19,73 +19,9 @@
 
 
 <fieldset class="govuk-fieldset">
-<form action='review-info' method='post' class='form' autocomplete='off'>
+<form action='success' method='post' class='form' autocomplete='off'>
 
        <div class="govuk-radios govuk-radios">
-  <p class="govuk-body govuk-!-font-weight-bold">How much time do they need?</p>
-                   <div class="govuk-radios" data-module="radios">
-                      <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="citizenship-conditional-2" name="citizen" type="radio" value="email" data-aria-controls="conditional-citizenship-conditional-2" >
-                        <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
-                          1 month
-                        </label>
-                      </div>
-                      <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="citizenship-conditional-2" name="citizen" type="radio" value="email" data-aria-controls="conditional-citizenship-conditional-2" >
-                        <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
-                        3 months
-                        </label>
-                      </div>
-                      <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="citizenship-conditional-2" name="citizen" type="radio" value="email" data-aria-controls="conditional-citizenship-conditional-2" >
-                        <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
-                          6 months
-                        </label>
-                      </div>
-
-                      <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="citizenship-conditional-2" name="citizen" type="radio" value="email" data-aria-controls="conditional-citizenship-conditional-2" >
-                        <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
-                          12 months
-                        </label>
-                      </div>
-                      <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="how-contacted-conditional-2" name="citizen" type="radio" value="phone" data-aria-controls="conditional-how-contacted-conditional-2">
-                        <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-2">
-                          Set a specific date
-                        </label> </div>
-                      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-2">
-                        <div class="govuk-date-input" id="passport-issued">
-                          <div class="govuk-date-input__item">
-                            <div class="govuk-form-group">
-                              <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
-                                Day
-                              </label>
-                              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="number" pattern="[0-9]*">
-                            </div>
-                          </div>
-                          <div class="govuk-date-input__item">
-                            <div class="govuk-form-group">
-                              <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
-                                Month
-                              </label>
-                              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="number" pattern="[0-9]*">
-                            </div>
-                          </div>
-                          <div class="govuk-date-input__item">
-                            <div class="govuk-form-group">
-                              <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
-                                Year
-                              </label>
-                              <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="number" pattern="[0-9]*">
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-
-
-<p class="govuk-body govuk-!-margin-bottom-7"></p>
 
                       <div class="govuk-radios govuk-radios">
                  <p class="govuk-body govuk-!-font-weight-bold">Why do they need more time?</p>
@@ -129,15 +65,109 @@
                                      </div>
 
 
+                                     <p class="govuk-body govuk-!-margin-bottom-7"></p>
+                                     <p class="govuk-body govuk-!-font-weight-bold">When did you issue the Extension Notice?</p>
+
+                                     <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                                       <div class="govuk-radios__item">
+                                         <input class="govuk-radios__input" id="how-contacted-conditional-1" name="how-contacted" type="radio" value="email" data-aria-controls="conditional-how-contacted-conditional-1">
+                                         <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-1">
+                                           Today
+                                         </label>
+                                       </div>
+                                       <div class="govuk-radios__item">
+                                         <input class="govuk-radios__input" id="how-contacted-conditional-2" name="how-contacted" type="radio" value="phone" data-aria-controls="conditional-how-contacted-conditional-2">
+                                         <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-2">
+                                           Another date
+                                         </label> </div>
+                                       <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-2">
+                                         <div class="govuk-date-input" id="passport-issued">
+                                           <div class="govuk-date-input__item">
+                                             <div class="govuk-form-group">
+                                               <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                                                 Day
+                                               </label>
+                                               <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="number" pattern="[0-9]*">
+                                             </div>
+                                           </div>
+                                           <div class="govuk-date-input__item">
+                                             <div class="govuk-form-group">
+                                               <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                                                 Month
+                                               </label>
+                                               <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="number" pattern="[0-9]*">
+                                             </div>
+                                           </div>
+                                           <div class="govuk-date-input__item">
+                                             <div class="govuk-form-group">
+                                               <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                                                 Year
+                                               </label>
+                                               <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="number" pattern="[0-9]*">
+                                             </div>
+                                           </div>
 
 
-                                                        <p class="govuk-body govuk-!-margin-bottom-7"></p>
+                                       </div>
+                                     </div>
+
+
+
+                                                         <p class="govuk-body govuk-!-margin-bottom-7">
+                                                         <h2 class="govuk-heading-s">How did you issue the Extension Notice?</h2>
+                                                               <div class="govuk-radios">
+                                                                 <div class="govuk-radios__item">
+                                                                   <input class="govuk-radios__input" id="vehicle-type-car" name="vehicle-type" type="radio" value="Working" {{ checked("vehicle-type", "Working") }}>
+                                                                   <label class="govuk-label govuk-radios__label" for="vehicle-type-car">
+                                                                     I gave it to the claimant
+                                                                   </label>
+                                                                 </div>
+                                                                 <div class="govuk-radios__item">
+                                                                   <input class="govuk-radios__input" id="vehicle-type-lorry" name="vehicle-type" type="radio" value="Not working" {{ checked("vehicle-type", "Not working") }}>
+                                                                   <label class="govuk-label govuk-radios__label" for="vehicle-type-lorry">
+                                                                       I posted it
+                                                                   </label>
+                                                                 </div>
+
+                                                               </div>
+
+                                                               <p class="govuk-body govuk-!-margin-bottom-7"></p>
+                                                               <h2 class="govuk-heading-s">What is the new claim by date?</h2>
+                                                                   <div class="govuk-date-input" id="passport-issued">
+                                                                     <div class="govuk-date-input__item">
+                                                                       <div class="govuk-form-group">
+                                                                         <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                                                                           Day
+                                                                         </label>
+                                                                         <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="number" pattern="[0-9]*">
+                                                                       </div>
+                                                                     </div>
+                                                                     <div class="govuk-date-input__item">
+                                                                       <div class="govuk-form-group">
+                                                                         <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                                                                           Month
+                                                                         </label>
+                                                                         <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="number" pattern="[0-9]*">
+                                                                       </div>
+                                                                     </div>
+                                                                     <div class="govuk-date-input__item">
+                                                                       <div class="govuk-form-group">
+                                                                         <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                                                                           Year
+                                                                         </label>
+                                                                         <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="number" pattern="[0-9]*">
+                                                                       </div>
+                                                                     </div>
+                                                                   </div>
+
+
+                                                    
 
                                                         </fieldset>
-                                                          <p class="govuk-body govuk-!-margin-bottom-7"></p>
+
                                                         <div>
                                                           <button type="submit" class="govuk-button">
-                                                            Continue
+                                                            Submit
                                                           </button>
                                                         </div>
                                                         </main>
