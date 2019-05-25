@@ -1,4 +1,4 @@
-{% set claimStatus = 'Initial conversation complete' %}
+{% set claimStatus = 'IN SCOPE TO MOVE' %}
 {% extends "layout3.html" %}
 
 {% block main %}
@@ -12,18 +12,14 @@
         <div class="govuk-panel govuk-panel--confirmation">
           <br>
           <h1 class="govuk-panel__title">
-            You’ve confirmed the
-            claimant is ready for the Migration Notice
+          You’ve deferred the  claimant’s move
           </h1>
+          <h3>Reason: {{ data['reason'] }}</h3>
 
         </div>
 <p class="govuk-body govuk-!-margin-bottom-7"></p>
-<h4 class="govuk-heading-s">What to do next</h4>
         <p class="govuk-body">
-          <a href="../migrationnotice2/index" class="govuk-link">Confirm Migration Notice issued</a>
-        </p>
-        <p class="govuk-body">
-          <a href="../claimantdash/readytomove.html" class="govuk-link">Go back to the claimant's case</a>
+          <a href="../claimantdash/paused.html" class="govuk-link">Back to claimant case</a>
         </p>
         <p class="govuk-body govuk-!-margin-bottom-7"></p>
       </div>
