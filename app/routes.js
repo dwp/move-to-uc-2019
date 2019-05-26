@@ -287,6 +287,18 @@ router.post('/changecircs2/confirm-answer', function (req, res) {
  }
 })
 
+router.post('/pauseexclude/confirm-answer', function (req, res) {
+
+  let pauseexclude = req.session.data['pauseexclude']
+
+  if (pauseexclude === 'defer') {
+    res.redirect('success-defer')
+  } else {
+    res.redirect('success-exclude')
+  }
+})
+
+
 
 
 // Add your routes above the module.exports line
