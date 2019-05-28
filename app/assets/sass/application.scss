@@ -217,16 +217,16 @@ $govuk-global-styles: true;
 }
 
 hr {
-    background: #bfc1c3;
+    background: #E3E3E3;
 }
 
 hr {
     display: block;
-    background: #bfc1c3;
+    background: #E3E3E3;
     border: 0;
     height: 1px;
     margin-top: 1px;
-    margin-bottom: 1px;
+    margin-bottom: 20px;
     padding: 0;
 }
 
@@ -1605,4 +1605,13 @@ input.form-control.block {
 .govuk-button--secondary:link, .govuk-button--secondary:visited, .govuk-button--secondary:active, .govuk-button--secondary:hover {
     color: #ffffff;
     text-decoration: none;
+}
+
+.claimant-heading {
+
+  color: #black;
+  font-family: 'nta', Arial, sans-serif;
+  font-size: 33px;
+  font-weight: 700;
+  padding: -500px 8px 5px;
 }
