@@ -11,7 +11,7 @@
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
         <p class="govuk-body govuk-!-margin-bottom-2"></p>
-        <h2 class="govuk-heading-l">Was the Migration Notice issued today?</h2>
+        <h2 class="govuk-heading-l">When was the Migration Notice issued?</h2>
       </div>
   </div>
 
@@ -25,17 +25,17 @@
         <div class="govuk-radios__item">
           <input class="govuk-radios__input" id="how-contacted-conditional-1" name="how-contacted" type="radio" value="email" data-aria-controls="conditional-how-contacted-conditional-1">
           <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-1">
-            Yes
+            Today
           </label>
         </div>
         <div class="govuk-radios__item">
           <input class="govuk-radios__input" id="how-contacted-conditional-2" name="how-contacted" type="radio" value="phone" data-aria-controls="conditional-how-contacted-conditional-2">
           <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-2">
-            No
+            Another date
           </label> </div>
         <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-2">
           <div class="govuk-date-input" id="passport-issued">
-              <p>What date was the Migration Notice issued?</p>
+
             <div class="govuk-date-input__item">
               <div class="govuk-form-group">
                 <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
@@ -63,6 +63,37 @@
         </div>
       </div>
 
+
+      <p class="govuk-body govuk-!-margin-bottom-7"></p>
+      <h2 class="govuk-heading-s">What is the claim by date?</h2>
+          <div class="govuk-date-input" id="passport-issued">
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                  Day
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="number" pattern="[0-9]*">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                  Month
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="number" pattern="[0-9]*">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                  Year
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="number" pattern="[0-9]*">
+              </div>
+            </div>
+          </div>
+
+
 <p class="govuk-body govuk-!-margin-bottom-5">
 <h2 class="govuk-heading-s">How did you issue the Migration Notice?</h2>
       <div class="govuk-radios">
@@ -80,6 +111,8 @@
         </div>
 
       </div>
+
+
 
 
 
