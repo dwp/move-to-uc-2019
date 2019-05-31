@@ -874,7 +874,7 @@ input.form-control.block {
   text-align: right;
 }
 
-.app-step-nav__button {
+.app-step-inline-nav__button {
   color: $govuk-link-colour;
   cursor: pointer;
   background: none;
@@ -1581,30 +1581,38 @@ input.form-control.block {
 
 }
 
-.govuk-button--secondary {
+.govuk-button--select {
     background-color: #00823B;
     color: #0b0c0c;
     box-shadow: 0 2px 0 #006435;
-    margin-bottom: 18px;
+    margin-bottom: -500px;
+    margin-top: -1px;
+
+
 }
 
-.govuk-button--secondary:hover {
+.govuk-button--select:hover {
     background-color: #00823B;
     color: #999999;
     box-shadow: 0 2px 0 #006435;
+    margin-bottom: -500px;
 }
 
-.govuk-button--secondary:visited {
+.govuk-button--select:visited {
     background-color: #00823B;
     color: #999999;
     box-shadow: 0 2px 0 #006435;
+    margin-bottom: -500px;
 }
 
 
 
-.govuk-button--secondary:link, .govuk-button--secondary:visited, .govuk-button--secondary:active, .govuk-button--secondary:hover {
+.govuk-button--select:link, .govuk-button--select:visited, .govuk-button--select:active, .govuk-button--select:hover {
     color: #ffffff;
+    width:150px;
     text-decoration: none;
+    margin-bottom: -500px;
+
 }
 
 .claimant-heading {
@@ -1614,4 +1622,26 @@ input.form-control.block {
   font-size: 33px;
   font-weight: 700;
   padding: -500px 8px 5px;
+}
+
+
+.sidemenu-bar {
+  background-color: #005ea5;
+  padding: 5px 10px;
+  padding-top: 1px;
+  margin-bottom: 20px;
+  margin-top: 25px;
+}
+
+.sidemenu-bar-noselect {
+  background-color: #005ea5;
+  padding: 5px 10px;
+  padding-top: 1px;
+  margin-bottom: 20px;
+  margin-top: 44px;
+}
+
+.govuk-list {
+  margin-top: -10px;
+  font-size: 18px;
 }
