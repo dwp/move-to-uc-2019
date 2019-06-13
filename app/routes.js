@@ -250,6 +250,21 @@ router.post('/readytomove/confirm-answer', function (req, res) {
   }
 })
 
+router.post('/couple/readytomove/confirm-answer-2', function (req, res) {
+
+  let readytomove = req.session.data['readytomove']
+
+  if (readytomove === 'Ready to move') {
+    res.redirect('success')
+  // } else if (migrationnotice === 'no') {
+  //   res.redirect('no')
+  } else {
+    res.redirect('success-2')
+  }
+})
+
+
+
 router.post('/readytomove-alt/confirm-answer', function (req, res) {
 
   let readytomove = req.session.data['readytomove']
