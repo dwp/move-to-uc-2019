@@ -13,86 +13,115 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-m ">
-        Current version
-      </h1>
-
-      <form action='/find' method='post' class='form' autocomplete='off'>
-
-        {{ govukInput({
-          label: {
-            html: 'Enter participant&rsquo;s full name',
-            isPageHeading: false
-          },
-          id: 'user-name',
-          name: 'user-name',
-          classes: 'govuk-input--width-20'
-        }) }}
-
-        {{ govukButton({
-          text: 'Start prototype',
-          classes: "govuk-button--start "
-        }) }}
-
-      </form>
-
-      <p>There are 2 scenarios:</p>
-      <ul class="govuk-list govuk-list--bullet">
-        <li>
-          <a href="/results?find=qq123456c">QQ 12 34 56 C</a>
-        </li>
-        <li>
-          <a href="/results?find=uu123456c">UU 12 34 56 C</a>
-        </li>
-      </ul>
+  <!-- <p class="govuk-body govuk-!-margin-bottom-7"></p>
+<h2 class="govuk-heading-l">Transitional Protection Prototype</h2>
+<a href="../tp/tp-income-benefits-alt" role="button" draggable="false" class="govuk-button govuk-button--start">
+Start
+</a> -->
+<!-- <h2 class="govuk-heading-l">Track a move to UC Prototype - V2</h2>
+<a href="scenarios.html" role="button" draggable="false" class="govuk-button govuk-button--start">
+Start
+</a>
+<hr> -->
+<h2 class="govuk-heading-m">Manage a move to UC Prototype - V3</h2>
+<h4 class="govuk-heading-s">Sprint 36</h4>
+<hr>
+<h4 class="govuk-heading-s">Couples UI exploration</h4>
+<a href="claimantdash/selected" class="govuk-link">Version 1</a><br>
+<a href="claimantdash/selectedV2" class="govuk-link">Version 2</a>
+<p class="govuk-body govuk-!-margin-bottom-5">
+  <h4 class="govuk-heading-s">UR Feedback</h4>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>Version 1 UI felt more intuititive regarding the placement of the partner link</li>
+    <li>Version 1 also felt refelctive of the current UC partner UI and therefore felt familiar</li>
+    <li>Work coaches would potentially want to open the claimant and their partner details in seperate tabs in order to run the records along side each other.
+    <span class="govuk-!-font-weight-bold">This needs further exploration and testing</span></li>
+    <li>Work coaches would typically treat a claimant and their partner as separates - "Having two seperate records would make sense"</li>
+    <li>We need to consider having the ability to 'unlink' partners in a scenario where a couples splits up.
+    <span class="govuk-!-font-weight-bold">This needs further exploration and testing</span></li>
+    <li>Wouldn't need the ablity to add a partner for a single claimant who is already in the journey as this would class as a natural migration</li>
+    <li>A further consideration would be to have a combined timeline (for claimant and partner) on each record</li>
+  </ul>
+<hr>
 
 
+<h2 class="govuk-heading-m">Manage a move to UC Prototype - V2</h2>
+<h4 class="govuk-heading-s">Sprint 35</h4>
+<a href="https://dwp-move-to-uc-v2.herokuapp.com/scenarios/scenarios.html" role="button" draggable="false" class="govuk-button govuk-button--start">
+Start
+</a>
+<h4 class="govuk-heading-s">UR Feedback</h4>
+<ul class="govuk-list govuk-list--bullet">
+  <li>Would more than likely post 'cancel' and 'withdraw' notices</li>
+  <li>Would like some guidance around review date timeframes in general</li>
+  <li>Would like guidance on reasons for allowing extensions</li>
+  <li>UC claim made comment - 'As a work coach, that's me done'</li>
+  <li>Timeline - would expect this to expand within the page rather than linking to a seperate screen</li>
+  <li>Confirmation screens - generally went 'back to my cases'</li>
+  <li>General comment - 'It's easy to use'</li>
+  <li>Questioned why 'frontier workers' where on the list of deferrals and cancellations</li>
+</ul>
 
-      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+<hr>
+
+<h2 class="govuk-heading-m">Manage a move to UC Prototype - V1</h2>
+<h4 class="govuk-heading-s">Sprint 34</h4>
+<a href="https://dwp-move-to-uc-v1.herokuapp.com/scenarios-v1/scenarios.html" role="button" draggable="false" class="govuk-button govuk-button--start">
+Start
+</a>
+<h4 class="govuk-heading-s">UR Feedback</h4>
+<p> Log initial conversation:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>What if you’ve had this and then they’re ready for the migration notice? Is there a way to link this to the readiness conversation?</li>
+</ul>
+
+<p> Readiness conversation:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>Readiness to move – if select no – got confused why it said ‘readiness to move’ again. Expected to see something like ‘review readiness’ or something along those lines to highlight more that they haven’t been ready but may be after</li>
+</ul>
+
+<p> Migration notice:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li> Useful, no problems going through – the date is the key thing she needs so was all good “I’d just go off and add this date to the letter”</li>
+  <li>Ideally want it in the system (so gave Sarah a sneak peek of 2b) and she was super happy as was something mentioned spontaneously to save time. Also there were some concerns over saving and changing templates which has happened in the past (but she was thinking when this scales up – it will be fine for day one)</li>
+</ul>
+
+<p> Reminders:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>Visit could be an option</li>
+  <li>Ideally want it in the system (so gave Sarah a sneak peek of 2b) Also there were some concerns over saving and changing templates which has happened in the past (but she was thinking when this scales up – it will be fine for day one)</li>
+</ul>
+
+<p> Extension notice:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>  Envisage it being done the same – process wise - as the migration notice and cancellation notice</li>
+  <li>Would wait until the last moment to do this. E.g. John Doe tells Sarah he is going in to hospital in 3 weeks for 6 weeks, then Sarah would wait until the last appointment/moment to extend. She may do it there and then and keep extending but more likely to the former</li>
+</ul>
+
+<p> Log claim made:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>Confusion over this wording, driven by the fact it didn’t have UC in the title – “I don’t understand this, is this that the claim has been submitted by the claimant? It’s not clear”</li>
+</ul>
+
+<p> Complete:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>Confusion over this, as in her mind it was that legacy had been shut down, so didn’t know what this was about</li>
+  <li>Upon probing when she thought it might end, “it would be after the first AP, that’s when TP and payments are done”</li>
+</ul>
 
 
-
-      <h2 class='govuk-heading-m'>
-        Previous versions
-      </h2>
-      <ul class="govuk-list">
-        <li>
-          <a class="govuk-heading-s" href="https://move-to-uc-v2.herokuapp.com">Version 2</a>
-          <p>Evaluated 24 July 2018 in Middlesborough Service Centre and 25 July 2018 in Bishop Auckland Job Centre, looking at:</p>
-          <ul class="govuk-list govuk-list--bullet">
-            <li>moving all account actions to one section</li>
-            <li>only resending the last letter, no text resend</li>
-            <li>option to print last letter as well</li>
-            <li>replacing textarea with limited options in loggin contact</li>
-            <li>more informative confirmation pages</li>
-            <li>longer history on second example</li>
-            <li>including a name in the history</li>
-            <li>swapped history order</li>
-          </ul>
-        </li>
-
-
-
-
-
-        <li>
-          <a class="govuk-heading-s" href="https://move-to-uc-v1.herokuapp.com">Version 1</a>
-          <p>Evaluated 12 July 2018 in Halifax Jobcentre, looking at:</p>
-          <ul class="govuk-list govuk-list--bullet">
-            <li>finding a claimant using only a National Insurance number</li>
-            <li>if security checks will be done in this service</li>
-            <li>if there's enough data about the claimant, appointee, and children</li>
-            <li>the history of the case</li>
-            <li>re-issuing comms and automatically saving to the history</li>
-            <li>re-issuing to a different address or phone number</li>
-            <li>logging interactions with claimants</li>
-            <li>if they'd log interactions after the system has logged about re-issuing comms</li>
-          </ul>
-        </li>
-      </ul>
-
-      <p class="secondary-text govuk-!-margin-top-9">Built using <a href="https://github.com/alphagov/govuk_prototype_kit">GOV.UK prototype kit</a> {{releaseVersion}}</p>
-    </div>
+<!-- <a href="" role="button" draggable="false" class="govuk-button govuk-button--start">
+Start
+</a> -->
+<!-- <p class="govuk-body govuk-!-font-weight-bold">Key user needs</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>If work coaches had the ability to record when an inital discussion about UC took place then they would know when to progress that conversation further becuase they have traceability.</li>
+  <li>If work coaches were able to record when a claimant is and isn't ready to receive a Migration Notice then they can manage the claimants needs effectively because they have traceability of their circumstances.</li>
+  <li>If a claimant had a change in circumstances the work coach needs the ability to record this because they need to know when to review the case.</li>
+  <li>If work coaches have the ability to record when they have reminded a claimant then it provides reassurance because it allows traceability when the reminder has been issued and in what method.</Li>
+</ul> -->
+</div>
+</div>
 </div>
 
 {% endblock %}

@@ -31,6 +31,41 @@ router.get('/results', (req, res) => {
 
 
 
+router.get('/contact', (req, res) => {
+  const search = req.session.data['find'].replace(/ /g,'').toUpperCase()
+  const claimant = req.session.data['claimants'].filter(claimant => claimant.nino === search)
+
+  res.locals.claimant = claimant[0]
+
+  if (claimant == false) {
+    res.render('find/no-match')
+  } else {
+    res.render('claimant/contact/index')
+  }
+})
+
+router.post('/claimant/contact/confirmation-page', (req, res) => {
+  const search = req.session.data['find'].replace(/ /g,'').toUpperCase()
+  let claimantToEdit = req.session.data['claimants'].filter(claimant => claimant.nino === search)
+
+  const newItem = Object.assign({
+    title: "Query from "+req.body.contactPerson+" logged",
+    body: req.body.contactType+" about:",
+    reasons: req.session.data['contactReason'],
+    name: req.session.data['user-name'],
+    oldMarkers: claimantToEdit[0].markers,
+    newMarkers: req.body.contactMarkers
+  })
+
+  claimantToEdit[0].markers = req.body.contactMarkers
+  claimantToEdit[0].history.push(newItem)
+
+  res.render('claimant/contact/confirmation-page')
+})
+
+
+
+
 
 router.get('/reissue', (req, res) => {
   const search = req.session.data['find'].replace(/ /g,'').toUpperCase()
@@ -85,8 +120,7 @@ router.post('/claimant/reissue/confirm', (req, res) => {
 
 
 
-
-router.get('/claimant/contact', (req, res) => {
+router.get('/extend', (req, res) => {
   const search = req.session.data['find'].replace(/ /g,'').toUpperCase()
   const claimant = req.session.data['claimants'].filter(claimant => claimant.nino === search)
 
@@ -95,29 +129,189 @@ router.get('/claimant/contact', (req, res) => {
   if (claimant == false) {
     res.render('find/no-match')
   } else {
-    res.render('claimant/contact/index')
+    res.render('claimant/extend/index')
   }
 })
 
-router.post('/claimant/contact/confirmation-page', (req, res) => {
+router.post('/claimant/extend/confirmation-page', (req, res) => {
   const search = req.session.data['find'].replace(/ /g,'').toUpperCase()
   let claimantToEdit = req.session.data['claimants'].filter(claimant => claimant.nino === search)
 
+
+  claimantToEdit[0].extensionDate = req.body.entendDateYear+"-"+req.body.entendDateMonth+"-"+req.body.entendDateDay
+
   const newItem = Object.assign({
-    title: "Query from "+req.body.contactPerson+" logged",
-    body: req.body.contactType+" about:",
-    reasons: req.session.data['contactReason'],
-    name: req.session.data['user-name'],
-    oldMarkers: claimantToEdit[0].markers,
-    newMarkers: req.body.contactMarkers
+    title: "Deadline extended",
+    body: req.session.data['extendReason'],
+    name: req.session.data['user-name']
   })
 
-  claimantToEdit[0].markers = req.body.contactMarkers
   claimantToEdit[0].history.push(newItem)
 
-  res.render('claimant/contact/confirmation-page')
+  res.render('claimant/extend/confirmation-page')
 })
 
+
+
+
+
+
+router.get('/cancel', (req, res) => {
+  const search = req.session.data['find'].replace(/ /g,'').toUpperCase()
+  const claimant = req.session.data['claimants'].filter(claimant => claimant.nino === search)
+
+  res.locals.claimant = claimant[0]
+
+  if (claimant == false) {
+    res.render('find/no-match')
+  } else {
+    res.render('claimant/cancel/index')
+  }
+})
+
+router.post('/claimant/cancel/confirmation-page', (req, res) => {
+  const search = req.session.data['find'].replace(/ /g,'').toUpperCase()
+  let claimantToEdit = req.session.data['claimants'].filter(claimant => claimant.nino === search)
+
+
+  claimantToEdit[0].status = "Cancelled"
+
+  const newItem = Object.assign({
+    title: "Move canceled",
+    body: req.session.data['cancelReason'],
+    name: req.session.data['user-name']
+  })
+
+  claimantToEdit[0].history.push(newItem)
+
+  res.render('claimant/cancel/confirmation-page')
+})
+
+
+
+
+
+router.get('/resume', (req, res) => {
+  const search = req.session.data['find'].replace(/ /g,'').toUpperCase()
+  const claimant = req.session.data['claimants'].filter(claimant => claimant.nino === search)
+
+  res.locals.claimant = claimant[0]
+
+  if (claimant == false) {
+    res.render('find/no-match')
+  } else {
+    res.render('claimant/resume/index')
+  }
+})
+
+router.post('/claimant/resume/confirmation-page', (req, res) => {
+  const search = req.session.data['find'].replace(/ /g,'').toUpperCase()
+  let claimantToEdit = req.session.data['claimants'].filter(claimant => claimant.nino === search)
+
+
+  claimantToEdit[0].status = "Preparation"
+
+  const newItem = Object.assign({
+    title: "Move resumed",
+    body: req.session.data['resumeReason'],
+    name: req.session.data['user-name']
+  })
+
+  claimantToEdit[0].history.push(newItem)
+
+  res.render('claimant/resume/confirmation-page')
+})
+
+// Testing routes
+
+router.post('/migrationnotice/confirm-answer', function (req, res) {
+
+  let migrationnotice = req.session.data['migrationnotice']
+
+  if (migrationnotice === 'yes') {
+    res.redirect('confirm')
+  // } else if (migrationnotice === 'no') {
+  //   res.redirect('no')
+  } else {
+    res.redirect('confirm-nottoday')
+  }
+})
+
+router.post('/readytomove/confirm-answer', function (req, res) {
+
+  let readytomove = req.session.data['readytomove']
+
+  if (readytomove === 'Ready to move') {
+    res.redirect('success')
+  // } else if (migrationnotice === 'no') {
+  //   res.redirect('no')
+  } else {
+    res.redirect('success-2')
+  }
+})
+
+router.post('/couple/readytomove/confirm-answer-2', function (req, res) {
+
+  let readytomove = req.session.data['readytomove']
+
+  if (readytomove === 'Ready to move') {
+    res.redirect('success')
+  // } else if (migrationnotice === 'no') {
+  //   res.redirect('no')
+  } else {
+    res.redirect('success-2')
+  }
+})
+
+
+
+router.post('/readytomove-alt/confirm-answer', function (req, res) {
+
+  let readytomove = req.session.data['readytomove']
+
+  if (readytomove === 'Ready to move') {
+    res.redirect('success')
+  // } else if (migrationnotice === 'no') {
+  //   res.redirect('no')
+  } else {
+    res.redirect('success-2')
+  }
+})
+
+router.post('/changecircs/confirm-answer', function (req, res) {
+
+  let changecircs = req.session.data['changecircs']
+
+  if (changecircs === 'yes') {
+    res.redirect('../pause/success')
+  } else {
+    res.redirect('../nomoreaction/success')
+  }
+})
+
+router.post('/changecircs2/confirm-answer', function (req, res) {
+
+ let changecircs2 = req.session.data['changecircs2']
+
+ if (changecircs2 === 'yes') {
+   res.redirect('../extended/confirm')
+ } else if (changecircs2 === 'withdraw') {
+    res.redirect('../nomoreaction/success')
+ } else {
+   res.redirect('../cancel/confirm')
+ }
+})
+
+router.post('/pauseexclude/confirm-answer', function (req, res) {
+
+  let pauseexclude = req.session.data['pauseexclude']
+
+  if (pauseexclude === 'defer') {
+    res.redirect('success-defer')
+  } else {
+    res.redirect('success-exclude')
+  }
+})
 
 
 
