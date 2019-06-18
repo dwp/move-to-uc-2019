@@ -19,13 +19,13 @@ Example usage:
 
 module.exports = {
 
-  "statuses": ["Preparation", "Notified", "Claimed", "Deferred", "Exempt", "Extended", "Not claimed"],
+  "statuses": ["Preparation", "Notified", "Claimed", "Deferred-x", "Exempt-x", "Extended-?", "Not claimed-?", "Cancelled"],
 
   "claimants": [
     {
-      "nino": "QQ123456C",
-      "firstName": "Joe",
-      "lastName": "Bloggs",
+      "nino": "QF507122A",
+      "firstName": "Ralph",
+      "lastName": "Waters",
       "address": {
         "street": "23 River View",
         "street2": "",
@@ -36,8 +36,8 @@ module.exports = {
         "true"
       ],
       "appointeeType": "Personal",
-      "appointeeName": "Richard Roe",
-      "appointeeNino": "UI255634A",
+      "appointeeName": "Neave Sinclair",
+      "appointeeNino": "VQ815200A",
       "legacyBenefits": [
         "Housing Benefit",
         "income-based Jobseeker’s Allowance (JSA)"
@@ -65,9 +65,9 @@ module.exports = {
 
 
     {
-      "nino": "UU123456C",
-      "firstName": "Jane",
-      "lastName": "Doe",
+      "nino": "IV365241A",
+      "firstName": "Veronica",
+      "lastName": "Gomez",
       "address": {
         "street": "98  Wrexham Rd",
         "street2": "",
@@ -138,9 +138,9 @@ module.exports = {
 
 
     {
-      "nino": "II123456C",
-      "firstName": "Jane",
-      "lastName": "Roe",
+      "nino": "FQ764723C",
+      "firstName": "Ania",
+      "lastName": "Jasińska",
       "address": {
         "street": "23 River View",
         "street2": "",
