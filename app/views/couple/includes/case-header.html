@@ -1,0 +1,77 @@
+<div class="case-header">
+  <h1 class='govuk-heading-l govuk-!-margin-bottom-0'>
+    <span class='govuk-caption-l'>Claimant&rsquo;s account</span>
+    {{ claimant.firstName }} {{ claimant.lastName }}
+  </h1>
+
+  <dl class="case-header__details">
+    <dt class="govuk-visually-hidden">
+      Status:
+    </dt>
+    <dd>
+      <span class="govuk-tag">{{ claimant.status }}</span>
+    </dd>
+
+    {% if claimant.status == "Preparation" %}
+    <dt>
+      Notification date:
+    </dt>
+    <dd>
+      {% if claimant.extensionDate %}
+        {{ claimant.extensionDate | date("subtract", 1, "month") | date("D MMMM YYYY") }}
+      {% else %}
+        {{ date  | date("add", claimant.day1, "days") | date("D MMMM YYYY") }}
+      {% endif %}
+    </dd>
+    {% endif %}
+
+    {% if claimant.status != "Claimed" and claimant.status != "Cancelled" %}
+    <dt>
+      Claim by:
+    </dt>
+    <dd>
+      {% if claimant.extensionDate %}
+        {{ claimant.extensionDate | date("D MMMM YYYY") }}
+      {% else %}
+        {{ date  | date("add", claimant.day1, "days") | date("add", 1, "month") | date("D MMMM YYYY") }}
+      {% endif %}
+    </dd>
+    {% endif %}
+  </dl>
+
+  {# {% if claimant.status != "Claimed" %}
+  <div class="case-header__actions">
+    <h2 class='govuk-heading-m govuk-visually-hidden'>
+      Account actions
+    </h2>
+
+    {{ govukButton({
+      text: 'Log a query',
+      href: '/claimant/contact/',
+      classes: 'govuk-button--secondary govuk-button--small'
+    }) }}
+
+    {{ govukButton({
+      text: 'Reissue latest letter',
+      href: '/reissue',
+      classes: 'govuk-button--secondary govuk-button--small'
+    }) }}
+
+    {{ govukButton({
+      text: 'Extend deadline',
+      href: '#0',
+      classes: 'govuk-button--secondary govuk-button--small'
+    }) }}
+
+    {% if claimant.status == "Notified" %}
+      {{ govukButton({
+        text: 'Cancel move',
+        href: '#0',
+        classes: 'govuk-button--secondary govuk-button--small'
+      }) }}
+    {% endif %}
+
+  </div>
+  {% endif %} #}
+
+</div>

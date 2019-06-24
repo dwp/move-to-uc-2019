@@ -1,0 +1,22 @@
+<h2 class='govuk-heading-m'>
+  Child {{loop.index}} details
+</h2>
+
+<dl class='app-check-your-answers app-check-your-answers--short govuk-!-margin-bottom-6'>
+  <div class='app-check-your-answers__contents'>
+    <dt class='app-check-your-answers__question'>
+      <span class="govuk-visually-hidden">Child {loop.index}}&rsquo;s </span>Date of birth
+    </dt>
+    <dd class='app-check-your-answers__answer'>
+      {{ child.childDOB | date("DD MMMM YYYY") }}
+    </dd>
+  </div>
+  <div class='app-check-your-answers__contents'>
+    <dt class='app-check-your-answers__question'>
+      <span class="govuk-visually-hidden">Child {loop.index}} </span>Disability
+    </dt>
+    <dd class='app-check-your-answers__answer'>
+      {{ "Yes" if child.childDisability == "true" else "No" }}
+    </dd>
+  </div>
+</dl>

@@ -1,30 +1,42 @@
+{% set claimStatus = 'SELECTED' %}
 {% extends "layout.html" %}
 
-{% block pageTitle %}
-  Example - Branching - Over 18
-{% endblock %}
+{% block main %}
 
-{% block beforeContent %}
-  {% include "includes/breadcrumb_examples.html" %}
-{% endblock %}
 
-{% block content %}
+<div class="govuk-width-container">
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+  <main class="govuk-main-wrapper">
 
-        <h1 class="govuk-heading-xl">
-          Over 18
-        </h1>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
 
-        <p>
-          Congratulations, you are over 18.
-        </p>
+    <form action="/docs/examples/over-18" method="get" class="form">
 
-        <p>
-          <a href="/docs/examples/branching">Back to the branching example</a>
-        </p>
+      <h1 class="govuk-heading-xl">
+        Are you happy the claimant is ready to move to Universal Credit?
+      </h1>
 
-    </div>
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+        <div class="govuk-radios govuk-radios--inline">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="over18-1" name="over18" type="radio" value="true">
+            <label class="govuk-label govuk-radios__label" for="over18-1">
+              Preperation conversation completed
+
+        </fieldset>
+      </div>
+
+      <button class="govuk-button">Continue</button>
+
+    </form>
+
   </div>
+</div>
+
+</main>
+</div>
+
+
 {% endblock %}

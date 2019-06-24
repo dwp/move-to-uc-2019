@@ -1,0 +1,56 @@
+<div class="app-related-items">
+  <h2 class='govuk-heading-s'>
+    Account history
+  </h2>
+  <ol class="govuk-list timeline">
+    {% for i in claimant.history | reverse %}
+      <li class="timeline-entry">
+        <h3 class="govuk-heading-xs timeline-title">
+          {% if i.title == "Deadline extended" %}
+            Deadline extended from {{ date  | date("add", claimant.day1, "days") | date("add", 1, "month") | date("D MMMM YYYY") }} to {{ claimant.extensionDate  | date("D MMMM YYYY") }}
+          {% else %}
+            {{ i.title | capitalize }}
+          {% endif %}
+        </h3>
+        <p class="timeline-info">
+          <span class="govuk-visually-hidden">{{ i.title | capitalize }}</span>
+          {% if i.name %}
+            <span class="timeline-author">by {{ i.name | title }}</span>
+          {% endif %}
+          {% if i.title == "Preparation letter sent" %}
+            <span class="timeline-date">{{ date | date("add", claimant.day1, "days") | date("subtract", 1, "month") | date("D MMMM YYYY") }}</span>
+          {% elif i.title == "Notification letter sent" %}
+            <span class="timeline-date">{{ date | date("add", claimant.day1, "days") | date("D MMMM YYYY") }}</span>
+          {% elif i.title == "Reminder text message sent" %}
+            <span class="timeline-date">{{ date | date("add", claimant.day1, "days") | date("add", 2, "weeks") | date("D MMMM YYYY") }}</span>
+          {% elif i.title == "Reminder call" %}
+            <span class="timeline-date">{{ date | date("add", claimant.day1, "days") | date("add", 3, "weeks") | date("D MMMM YYYY") }}</span>
+          {% elif i.title == "Claimed Universal Credit" %}
+            <span class="timeline-date">{{ date | date("add", claimant.day1, "days") | date("add", 1, "month") | date("D MMMM YYYY") }}</span>
+          {% else %}
+            <span class="timeline-date">{{ date | date("add", i.date, "days") | date("D MMMM YYYY") }}</span>
+          {% endif %}
+        </p>
+        {# {% if i.link %}
+        <p class="timeline-body">
+          <a class="govuk-link" href="/reissue/{{ i.link }}">{{ i.body | capitalize }}</a>
+        </p> #}
+        {% if i.body %}
+          <p class="timeline-body">
+            {{ i.body | nl2br | safe }}
+          </p>
+          {% if i.reasons %}
+            <ul class="govuk-list govuk-list--bullet">
+              {% for reason in i.reasons %}
+                <li>{{ reason  | replace("sent", "") }}</li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        {% endif %}
+        {% if i.oldMarkers | dump != i.newMarkers | dump %}
+          <p class="timeline-body">Markers updated from {{ "None" if i.oldMarkers == "_unchecked" else i.oldMarkers }} to {{ "None" if i.newMarkers == "_unchecked" else i.newMarkers }}</p>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ol>
+</div>

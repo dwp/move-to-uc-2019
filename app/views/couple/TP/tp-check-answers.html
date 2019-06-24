@@ -1,0 +1,290 @@
+{% extends "layout.html" %}
+
+{% block main %}
+{% block content %}
+<div class="govuk-width-container">
+    <a href="tp-legacy.html" class="govuk-back-link">Back</a>
+
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <h2 class="govuk-heading-l">Check your answers</h2>
+      </div>
+  </div>
+
+  <div class="govuk-width-container">
+
+  <main class="govuk-main-wrapper" id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <fieldset class="govuk-fieldset">
+        <form action='tp-calculation' method='post' class='form' autocomplete='off'>
+
+        <h2 class="govuk-heading-m">Claimant details</h2>
+
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+            Postcode
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <p>NE2 5LS</p>
+              <!-- <p>{{ data['postcode'] }}</p> -->
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+             <dt class="govuk-summary-list__key">
+              Date of birth
+            </dt>
+            <dd class="govuk-summary-list__value">
+              3 October 1979
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+
+                <span class="govuk-visually-hidden"> date of birth</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Work capability group
+            </dt>
+            <dd class="govuk-summary-list__value">
+              LCWRA
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+
+                <span class="govuk-visually-hidden"> contact information</span>
+              </a>
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+            Employment status
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <!-- <p class="govuk-body">Not working</p> -->
+          <p>{{ data['workrate'] }}</p>
+          <p>{{ data['earning-amount'] }}</p>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+            External awards
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <ul class="govuk-list govuk-list--bullet">
+                {% for feature in data['vehicle-features'] %}
+                  <li>{{ feature }}</li>
+                {% else %}
+                  <li>No awards selected</li>
+                {% endfor %}
+              </ul>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+              </a>
+            </dd>
+          </div>
+        </dl>
+
+
+
+        <h2 class="govuk-heading-m">Children</h2>
+
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+            Does the claimant have children?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <p>{{ data['hasChildren'] }}</p>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Child 1 - date of birth
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <p>{{ data['passport-issued-day'] }}  / {{ data['passport-issued-month'] }} / {{ data['passport-issued-year'] }}</p>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Is the claimant receiving Child Benefit?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <p>{{ data['ChildBen'] }}</p>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Child 1 - receiving DLA or PIP?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <p>{{ data['dla'] }}</p>
+              <p>{{ data['rate'] }}</p>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+              </a>
+            </dd>
+          </div>
+        </dl>
+
+
+        <h2 class="govuk-heading-m">Carer details</h2>
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+            Is the claimant caring for someone with a health condition or disability?
+            </dt>
+            <dd class="govuk-summary-list__value">
+                <p>{{ data['caring1'] }}</p>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change
+              </a>
+            </dd>
+          </div>
+        </dl>
+
+        <h2 class="govuk-heading-m">Income and other benefits</h2>
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+            Is the claimant receiving any other income or benefits?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <ul class="govuk-list govuk-list--bullet">
+                {% for feature in data['award'] %}
+                  <li>{{ feature }}</li>
+                  <p>{{ data['amount-' + loop.index] }}</p>
+                {% else %}
+                  <li>No awards selected</li>
+                {% endfor %}
+              </ul>
+
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change
+              </a>
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+            Number of children receiving childcare
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <p>{{ data['numberchildren'] }}</p>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+              </a>
+            </dd>
+          </div>
+        </dl>
+
+        <h2 class="govuk-heading-m">Deductions</h2>
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+            Does the claimant have savings over £6,000?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <ul class="govuk-list govuk-list--bullet">
+                  <li>Total amount of savings - £1,000</li>
+                  <p></p>
+              </ul>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change
+              </a>
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+            Is the claimant receiving tax credits?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              No
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+              </a>
+            </dd>
+          </div>
+        </dl>
+
+        <h2 class="govuk-heading-m">Legacy awards</h2>
+
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+            Which legacy benefits or tax credits is the claimant receiving?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <ul class="govuk-list govuk-list--bullet">
+                {% for feature in data['citizen'] %}
+                  <li>{{ feature }}</li>
+                  <p>{{ data['income-' + loop.index] }}</p>
+                {% else %}
+                  <li>No awards selected</li>
+                {% endfor %}
+              </ul>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change
+              </a>
+            </dd>
+          </div>
+
+
+      </div>
+    </div>
+
+</div>
+
+<button type="submit" class="govuk-button">Calculate Transitional Protection</button>
+</form>
+<p class="govuk-body govuk-!-margin-bottom-7"></p>
+  </fieldset>
+  <div>
+  </div>
+  </main>
+
+
+</div>
+{% endblock %}
+{% endblock %}
