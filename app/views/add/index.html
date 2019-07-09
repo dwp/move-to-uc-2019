@@ -1,16 +1,23 @@
 {% set claimStatus = 'MIGRATION NOTICE ISSUED' %}
-{% extends "layout3.html" %}
+{% extends "layout2.html" %}
 
 {% block main %}
 {% block content %}
 <div class="govuk-width-container">
-    <a href="../claimantdash/selected.html" class="govuk-back-link">Back</a>
 
 
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
         <p class="govuk-body govuk-!-margin-bottom-2"></p>
-        <h2 class="govuk-heading-l">Why are you withdrawing the claimant from moving?</h2>
+<h2 class="govuk-heading-l">Add a claimant</h2>
+<label class="govuk-label" for="width-20">
+  Lead claimants National Insurance number
+</label>
+  <input class="govuk-input govuk-input--width-20" id="width-20" name="width-20" type="text">
+  <p class="govuk-body govuk-!-margin-bottom-6"></p>
+
+
+      <h4 class="govuk-heading-m">Is this part of a joint claim</h4>
       </div>
   </div>
 
@@ -26,14 +33,14 @@
     <div class="govuk-radios__item">
       <input class="govuk-radios__input" id="how-contacted-conditional-1" name="how-contacted" type="radio" value="email" data-aria-controls="conditional-how-contacted-conditional-1">
       <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-1">
-        Claimant already moved to Universal Credit
+        Yes
       </label> </div>
 
 
     <div class="govuk-radios__item">
       <input class="govuk-radios__input" id="how-contacted-conditional-2" name="how-contacted" type="radio" value="phone">
       <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-2">
-        Claimant has moved to Pension Credit
+        No
       </label> </div>
     <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-2">
       <div class="govuk-form-group">
@@ -44,61 +51,18 @@
       </div>
 
     </div>
-    <div class="govuk-radios__item">
-      <input class="govuk-radios__input" id="how-contacted-conditional-3" name="how-contacted" type="radio" value="text">
-      <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-3">
-        Claimant died
-      </label> </div>
-    <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-3">
-      <div class="govuk-form-group">
-        <label class="govuk-label" for="contact-by-text">
-          Mobile phone number
-        </label>
-        <input class="govuk-input govuk-!-width-one-third" id="contact-by-text" name="contact-by-text" type="tel">
-      </div>
-    </div>
 
-    <div class="govuk-radios__item">
-      <input class="govuk-radios__input" id="how-contacted-conditional-3" name="how-contacted" type="radio" value="text">
-      <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-3">
-        No longer on legacy benefits
-      </label> </div>
-    <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-3">
-      <div class="govuk-form-group">
-        <label class="govuk-label" for="contact-by-text">
-          Mobile phone number
-        </label>
-        <input class="govuk-input govuk-!-width-one-third" id="contact-by-text" name="contact-by-text" type="tel">
-      </div>
-    </div>
-    <p class="govuk-body govuk-!-margin-bottom-8">
+
+    <p class="govuk-body govuk-!-margin-bottom-3">
     <div class="govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-1">
       <div class="govuk-date-input" id="passport-issued">
-        <h4 class="govuk-heading-s">When did the claimant submit a claim to Universal Credit?</h4>
-        <div class="govuk-date-input__item">
-          <div class="govuk-form-group">
-            <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
-              Day
-            </label>
-            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="number" pattern="[0-9]*">
-          </div>
-        </div>
-        <div class="govuk-date-input__item">
-          <div class="govuk-form-group">
-            <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
-              Month
-            </label>
-            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="number" pattern="[0-9]*">
-          </div>
-        </div>
-        <div class="govuk-date-input__item">
-          <div class="govuk-form-group">
-            <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
-              Year
-            </label>
-            <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="number" pattern="[0-9]*">
-          </div>
-        </div>
+        <div class="govuk-form-group">
+    <label class="govuk-label" for="width-20">
+      Partners National Insurance number
+
+    </label>
+    <input class="govuk-input govuk-input--width-20" id="width-20" name="width-20" type="text">
+  </div>
       </div>
     </div>
   </div>
@@ -181,10 +145,10 @@
 
 
                                                         </fieldset>
-                                                        
+
                                                         <div>
                                                           <button type="submit" class="govuk-button">
-                                                            Continue
+                                                            Submit
                                                           </button>
                                                         </div>
                                                         </main>
