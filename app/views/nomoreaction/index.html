@@ -28,37 +28,8 @@
       <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-1">
         Claimant already moved to Universal Credit
       </label> </div>
-    <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-1">
-      <div class="govuk-date-input" id="passport-issued">
-        
-        <p class="govuk-body">When did the claimant submit a claim to Universal Credit?</p>
-        <div class="govuk-date-input__item">
-          <div class="govuk-form-group">
-            <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
-              Day
-            </label>
-            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="number" pattern="[0-9]*">
-          </div>
-        </div>
-        <div class="govuk-date-input__item">
-          <div class="govuk-form-group">
-            <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
-              Month
-            </label>
-            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="number" pattern="[0-9]*">
-          </div>
-        </div>
-        <div class="govuk-date-input__item">
-          <div class="govuk-form-group">
-            <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
-              Year
-            </label>
-            <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="number" pattern="[0-9]*">
-          </div>
-        </div>
-      </div>
 
-    </div>
+
     <div class="govuk-radios__item">
       <input class="govuk-radios__input" id="how-contacted-conditional-2" name="how-contacted" type="radio" value="phone">
       <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-2">
@@ -100,8 +71,40 @@
         <input class="govuk-input govuk-!-width-one-third" id="contact-by-text" name="contact-by-text" type="tel">
       </div>
     </div>
-
+    <p class="govuk-body govuk-!-margin-bottom-8">
+    <div class="govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-1">
+      <div class="govuk-date-input" id="passport-issued">
+        <h4 class="govuk-heading-s">When did the claimant submit a claim to Universal Credit?</h4>
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+              Day
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="number" pattern="[0-9]*">
+          </div>
+        </div>
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+              Month
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="number" pattern="[0-9]*">
+          </div>
+        </div>
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+              Year
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="number" pattern="[0-9]*">
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+
+
+
 </fieldset>
 </div>
 <!--
@@ -175,10 +178,10 @@
 
 
 
-                                                        <p class="govuk-body govuk-!-margin-bottom-7"></p>
+
 
                                                         </fieldset>
-                                                          <p class="govuk-body govuk-!-margin-bottom-7"></p>
+                                                        
                                                         <div>
                                                           <button type="submit" class="govuk-button">
                                                             Continue
