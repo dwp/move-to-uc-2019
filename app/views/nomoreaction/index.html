@@ -19,35 +19,92 @@
 
 
 
-     <div class="govuk-radios govuk-radios">
+  <div class="govuk-form-group">
+<fieldset class="govuk-fieldset" aria-describedby="how-contacted-conditional-hint">
 
-                 <div class="govuk-radios" data-module="radios">
-                    <div class="govuk-radios__item" class="govuk-radios govuk-radios--conditional" >
-                      <input class="govuk-radios__input" id="citizenship-conditional-12" name="reason" type="radio" value="Claimant already moved to Universal Credit" data-aria-controls="conditional-citizenship-conditional-2" {{ checked("reason", "Claimant already moved the Universal Credit") }}>
-                      <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
-                        Claimant already moved to Universal Credit
-                      </label>
-                    </div>
-                    <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="citizenship-conditional-12" name="reason" type="radio" value="Claimant has moved to Pension Credit" data-aria-controls="conditional-citizenship-conditional-2" {{ checked("reason", "Claimant has moved onto a new benefit") }}>
-                      <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
-                        Claimant has moved to Pension Credit
-                      </label>
-                    </div>
-                    <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="citizenship-conditional-12" name="reason" type="radio" value="Claimant has died" data-aria-controls="conditional-citizenship-conditional-2" {{ checked("reason", "Claimant has died") }}>
-                      <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
-                        Claimant has died
-                      </label>
-                    </div>
-                    <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="citizenship-conditional-20" name="reason" type="radio" value="No longer on legacy benefits" data-aria-controls="conditional-citizenship-conditional-20">
-                      <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
-                        No longer on legacy benefits
-                      </label>
-                    </div>
+  <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+    <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="how-contacted-conditional-1" name="how-contacted" type="radio" value="email" data-aria-controls="conditional-how-contacted-conditional-1">
+      <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-1">
+        Claimant already moved to Universal Credit
+      </label> </div>
+    <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-1">
+      <div class="govuk-date-input" id="passport-issued">
+        
+        <p class="govuk-body">When did the claimant submit a claim to Universal Credit?</p>
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+              Day
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="number" pattern="[0-9]*">
+          </div>
+        </div>
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+              Month
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="number" pattern="[0-9]*">
+          </div>
+        </div>
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+              Year
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="number" pattern="[0-9]*">
+          </div>
+        </div>
+      </div>
 
-<!-- 
+    </div>
+    <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="how-contacted-conditional-2" name="how-contacted" type="radio" value="phone">
+      <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-2">
+        Claimant has moved to Pension Credit
+      </label> </div>
+    <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-2">
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="contact-by-phone">
+          Phone number
+        </label>
+        <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="contact-by-phone" type="tel">
+      </div>
+
+    </div>
+    <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="how-contacted-conditional-3" name="how-contacted" type="radio" value="text">
+      <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-3">
+        Claimant died
+      </label> </div>
+    <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-3">
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="contact-by-text">
+          Mobile phone number
+        </label>
+        <input class="govuk-input govuk-!-width-one-third" id="contact-by-text" name="contact-by-text" type="tel">
+      </div>
+    </div>
+
+    <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="how-contacted-conditional-3" name="how-contacted" type="radio" value="text">
+      <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-3">
+        No longer on legacy benefits
+      </label> </div>
+    <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-3">
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="contact-by-text">
+          Mobile phone number
+        </label>
+        <input class="govuk-input govuk-!-width-one-third" id="contact-by-text" name="contact-by-text" type="tel">
+      </div>
+    </div>
+
+  </div>
+</fieldset>
+</div>
+<!--
 
                   <p class="govuk-body govuk-!-margin-bottom-7"></p>
                     <div  data-module="radios" class="govuk-radios__conditional--hidden" id="conditional-citizenship-conditional-20">
