@@ -1,5 +1,5 @@
 {% set claimStatus = 'MIGRATION NOTICE ISSUED' %}
-{% extends "layout3.html" %}
+{% extends "layout.html" %}
 
 {% block main %}
 {% block content %}
@@ -16,7 +16,7 @@
   The current deadline is 12 December 2019
 </div> -->
 
-<form action='../pauseexclude/confirm-answer' method='post' class='form' autocomplete='off'>
+<form action='../cancel/success' method='post' class='form' autocomplete='off'>
   <fieldset class="govuk-fieldset">
 
 
@@ -114,7 +114,7 @@
           </div>
 
           <p class="govuk-body govuk-!-margin-bottom-7"></p>
-          <h2 class="govuk-heading-s">How did you leave the Cancellation Notice?</h2>
+          <h2 class="govuk-heading-s">How did you issue the Cancellation Notice?</h2>
           <div class="govuk-radios__item">
             <input class="govuk-radios__input" id="citizenship-conditional-18" name="reason23" type="radio" value="Claimant receiving tax credits nil award" {{ checked("reason", "Claimant receiving tax credits nil award") }}>
             <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
