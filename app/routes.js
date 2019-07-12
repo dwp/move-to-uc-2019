@@ -302,14 +302,17 @@ router.post('/changecircs2/confirm-answer', function (req, res) {
  }
 })
 
-router.post('/pauseexclude/confirm-answer', function (req, res) {
 
-  let pauseexclude = req.session.data['pauseexclude']
+router.post('/nomoreaction/confirm-answer', function (req, res) {
 
-  if (pauseexclude === 'defer') {
-    res.redirect('success-defer')
+  let nomoreaction = req.session.data['nomoreaction']
+
+  if (nomoreaction === 'died') {
+    res.redirect('success')
+  // } else if (migrationnotice === 'no') {
+  //   res.redirect('no')
   } else {
-    res.redirect('success-exclude')
+    res.redirect('success-died')
   }
 })
 
