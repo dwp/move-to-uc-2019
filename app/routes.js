@@ -308,11 +308,11 @@ router.post('/nomoreaction/confirm-answer', function (req, res) {
   let nomoreaction = req.session.data['nomoreaction']
 
   if (nomoreaction === 'died') {
-    res.redirect('success')
+    res.redirect('success-died')
   // } else if (migrationnotice === 'no') {
   //   res.redirect('no')
   } else {
-    res.redirect('success-died')
+    res.redirect('success')
   }
 })
 
