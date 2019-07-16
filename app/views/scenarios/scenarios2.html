@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block header %}
+  {# Set serviceName in config.js. #}
+  {{ govukHeader({
+    serviceName: serviceName + " prototype",
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+  <!-- <p class="govuk-body govuk-!-margin-bottom-7"></p>
+<h2 class="govuk-heading-l">Transitional Protection Prototype</h2>
+<a href="../tp/tp-income-benefits-alt" role="button" draggable="false" class="govuk-button govuk-button--start">
+Start
+</a> -->
+<h2 class="govuk-heading-l">Scenarios</h2>
+<a href="claimantdash/selected" class="govuk-link">1. Log initial conversation</a><br>
+<a href="claimantdash/initialconvo" class="govuk-link">2. Log readiness conversation outcome</a><br>
+<a href="claimantdash/readytomove" class="govuk-link">3. Log Migration Notice issued</a><br>
+<a href="claimantdash/migrationissued" class="govuk-link">4. Log reminder issued</a><br>
+<a href="claimantdash/migrationissued" class="govuk-link">5. More time given</a><br>
+<a href="claimantdash/migrationissued" class="govuk-link">6. Stop a move - defer</a><br>
+<a href="claimantdash/migrationissued" class="govuk-link">7. UC claim made</a><br>
+<a href="claimantdash/selected" class="govuk-link">8. Withdraw - claimant died</a><br>
+<a href="add/index" class="govuk-link">9. Add a claimant</a><br>
+<a href="claimantdash/selected-unlinkv2" class="govuk-link">10. Unlink from partner record</a><br>
+ <p class="govuk-body govuk-!-margin-bottom-6">
+
+
+
+<!-- <hr>
+<p class="govuk-body govuk-!-font-weight-bold">Appointee details</p>
+<a href="../claimantdash/appointee.html" role="button" draggable="false" class="govuk-button govuk-button--start">
+Start
+</a> -->
+
+
+
+<!-- <hr>
+<h2 class="govuk-heading-l">Transitional Protection Prototype</h2>
+<a href="../worklist/tp.html" role="button" draggable="false" class="govuk-button govuk-button--start">
+  Start
+</a> -->
+</div>
+</div>
+</div>
+
+{% endblock %}
