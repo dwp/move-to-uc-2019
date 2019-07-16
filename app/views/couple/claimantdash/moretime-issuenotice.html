@@ -1,5 +1,5 @@
 {% set claimStatus = 'MORE TIME GIVEN' %}
-{% extends "layout4-extend.html" %}
+{% extends "../layout4-couple.html" %}
 
 {% block main %}
 {% block content %}
@@ -20,9 +20,9 @@
             <li><a class="govuk-link govuk-link--no-visited-state" href="../readytomove/index.html">Outcome of a readiness conversation</a></li>
             <li><a class="govuk-link govuk-link--no-visited-state" href="../migrationnotice/issue.html">Log Migration Notice issued</a></li> -->
             <li><a class="govuk-link govuk-link--no-visited-state" href="../claimmade/claim.html">UC claim made</a></li>
-            <li><a class="govuk-link govuk-link--no-visited-state" href="../reminder/index.html">Reminder sent</a></li>
-            <li><a class="govuk-link govuk-link--no-visited-state" href="../extended/index.html">More time given</a></li>
-            <li><a class="govuk-link govuk-link--no-visited-state" href="../cancel/index2.html">Stop a move</a></li>
+            <!-- <li><a class="govuk-link govuk-link--no-visited-state" href="../reminder/index.html">Reminder sent</a></li>
+            <li><a class="govuk-link govuk-link--no-visited-state" href="../extended/index.html">More time given</a></li> -->
+            <li><a class="govuk-link govuk-link--no-visited-state" href="../extended/index.html">Extension Notice issued</a></li>
             <!-- <li><a class="govuk-link govuk-link--no-visited-state" href="../nomoreaction/index.html">Withdrawn</a></li> -->
              <!-- <li><a class="govuk-link govuk-link--no-visited-state" href="../complete/index.html">Log case as complete</a></li> -->
              <!-- <li><a class="govuk-link govuk-link--no-visited-state" href="../claimdatecalc/index.html">Calculate the claim by date</a></li> -->
@@ -53,10 +53,22 @@
                   </div>
                 </div>
 
+                <div class="govuk-grid-row">
+                  <div class="govuk-grid-column-one-third">
+                    <p>Lead claimant</p>
+                  </div>
+                  <div class="govuk-grid-column-one-third">
+                    <p>No</p>
+                  </div>
+                  <div class="govuk-grid-column-one-third">
+                  </div>
+                  <div class="govuk-grid-column-one-third">
+                  </div>
+                </div>
+
 
                 <p class="govuk-body govuk-!-margin-bottom-6">
                 <h2 class="govuk-heading-m">Case history</h2>
-
               <hr>
                   <p class="govuk-body govuk-!-margin-bottom-6">
                         <ol class="govuk-list timeline">
@@ -65,7 +77,9 @@
                             <p class="timeline-info govuk-body-s">
                               <span class="timeline-date">2 May 2019</span>
                               <p>Reason: Going into hospital<br>
-                                Notice given to the claimant on 2 May 2019</p>
+                                <!-- Method: Notice given to the claimant<br>
+                                Extension Notice issued: 2 May 2019<br> -->
+                              </p>
                           </li>
                           <li class="timeline-entry">
                             <h3 class="govuk-heading-s timeline-title">Migration notice issued</h3>
