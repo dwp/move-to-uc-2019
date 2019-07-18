@@ -316,6 +316,19 @@ router.post('/nomoreaction/confirm-answer', function (req, res) {
   }
 })
 
+router.post('/cancel/confirm-answer', function (req, res) {
+
+  let cancel = req.session.data['cancel']
+
+  if (cancel === 'died') {
+    res.redirect('success-died')
+  // } else if (migrationnotice === 'no') {
+  //   res.redirect('no')
+  } else {
+    res.redirect('success')
+  }
+})
+
 
 
 
