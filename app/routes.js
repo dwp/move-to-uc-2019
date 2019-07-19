@@ -343,6 +343,19 @@ router.post('/cancel/confirm-answer', function (req, res) {
  }
 })
 
+router.post('/sprint39/singles/cancel/confirm-answer', function (req, res) {
+
+ let cancel = req.session.data['cancel']
+
+ if (cancel === 'withdraw') {
+   res.redirect('../cancel/success-withdraw')
+ } else if (cancel === 'exclude') {
+    res.redirect('../cancel/success-exclude')
+ } else {
+   res.redirect('../cancel/success')
+ }
+})
+
 
 router.post('/pauseexclude/confirm-answer', function (req, res) {
 

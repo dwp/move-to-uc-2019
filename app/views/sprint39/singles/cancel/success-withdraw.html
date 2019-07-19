@@ -1,5 +1,5 @@
-{% set claimStatus = 'reminder sent' %}
-{% extends "sprint39/singles/layout.html" %}
+{% set claimStatus = 'MIGRATION NOTICE ISSUED' %}
+{% extends "sprint39/singles/layout3.html" %}
 
 {% block main %}
 {% block content %}
@@ -12,15 +12,15 @@
         <div class="govuk-panel govuk-panel--confirmation">
           <br>
           <h1 class="govuk-panel__title">
-            You’ve issued a
-<br>reminder
+            You’ve withdrawn the claimant
           </h1>
+          <h3>Reason: Claimant died</h3>
 
         </div>
 <p class="govuk-body govuk-!-margin-bottom-7"></p>
 <h4 class="govuk-heading-s">What to do next</h4>
         <p class="govuk-body">
-          <a href="../claimantdash/reminder.html" class="govuk-link">Go back to the claimant's case</a>
+          <a href="../claimantdash/cancel.html" class="govuk-link">Go back to the claimant's case</a>
         </p>
         <p class="govuk-body govuk-!-margin-bottom-7"></p>
       </div>
