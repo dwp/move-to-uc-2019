@@ -224,24 +224,82 @@ router.post('/claimant/resume/confirmation-page', (req, res) => {
 
 // Testing routes
 
-router.post('/migrationnotice/confirm-answer', function (req, res) {
+//
+// router.post('/migrationnotice/confirm-answer', function (req, res) {
+//
+//   let migrationnotice = req.session.data['migrationnotice']
+//
+//   if (migrationnotice === 'yes') {
+//     res.redirect('confirm')
+//   // } else if (migrationnotice === 'no') {
+//   //   res.redirect('no')
+//   } else {
+//     res.redirect('confirm-nottoday')
+//   }
+// })
+//
+//
+//
+//
+//
+// router.post('/readytomove-alt/confirm-answer', function (req, res) {
+//
+//   let readytomove = req.session.data['readytomove']
+//
+//   if (readytomove === 'Ready to move') {
+//     res.redirect('success')
+//   // } else if (migrationnotice === 'no') {
+//   //   res.redirect('no')
+//   } else {
+//     res.redirect('success-2')
+//   }
+// })
+//
+// router.post('/changecircs/confirm-answer', function (req, res) {
+//
+//   let changecircs = req.session.data['changecircs']
+//
+//   if (changecircs === 'yes') {
+//     res.redirect('../pause/success')
+//   } else {
+//     res.redirect('../nomoreaction/success')
+//   }
+// })
+//
+// router.post('/changecircs2/confirm-answer', function (req, res) {
+//
+//  let changecircs2 = req.session.data['changecircs2']
+//
+//  if (changecircs2 === 'yes') {
+//    res.redirect('../extended/confirm')
+//  } else if (changecircs2 === 'withdraw') {
+//     res.redirect('../nomoreaction/success')
+//  } else {
+//    res.redirect('../cancel/confirm')
+//  }
+// })
+//
+//
 
-  let migrationnotice = req.session.data['migrationnotice']
 
-  if (migrationnotice === 'yes') {
-    res.redirect('confirm')
-  // } else if (migrationnotice === 'no') {
-  //   res.redirect('no')
-  } else {
-    res.redirect('confirm-nottoday')
-  }
-})
 
-router.post('/readytomove/confirm-answer', function (req, res) {
+
+
+
+
+
+
+
+// ROUTES FOR SPRINT 39
+
+// Ready to move
+
+
+router.post('/sprint39/singles/readytomove/confirm-answer', function (req, res) {
 
   let readytomove = req.session.data['readytomove']
 
-  if (readytomove === 'Ready to move') {
+  if (readytomove === 'ready') {
     res.redirect('success')
   // } else if (migrationnotice === 'no') {
   //   res.redirect('no')
@@ -250,11 +308,12 @@ router.post('/readytomove/confirm-answer', function (req, res) {
   }
 })
 
-router.post('/couple/readytomove/confirm-answer-2', function (req, res) {
+
+router.post('/sprint39/couples/readytomove/confirm-answer', function (req, res) {
 
   let readytomove = req.session.data['readytomove']
 
-  if (readytomove === 'Ready to move') {
+  if (readytomove === 'ready') {
     res.redirect('success')
   // } else if (migrationnotice === 'no') {
   //   res.redirect('no')
@@ -265,45 +324,9 @@ router.post('/couple/readytomove/confirm-answer-2', function (req, res) {
 
 
 
-router.post('/readytomove-alt/confirm-answer', function (req, res) {
+// No more action
 
-  let readytomove = req.session.data['readytomove']
-
-  if (readytomove === 'Ready to move') {
-    res.redirect('success')
-  // } else if (migrationnotice === 'no') {
-  //   res.redirect('no')
-  } else {
-    res.redirect('success-2')
-  }
-})
-
-router.post('/changecircs/confirm-answer', function (req, res) {
-
-  let changecircs = req.session.data['changecircs']
-
-  if (changecircs === 'yes') {
-    res.redirect('../pause/success')
-  } else {
-    res.redirect('../nomoreaction/success')
-  }
-})
-
-router.post('/changecircs2/confirm-answer', function (req, res) {
-
- let changecircs2 = req.session.data['changecircs2']
-
- if (changecircs2 === 'yes') {
-   res.redirect('../extended/confirm')
- } else if (changecircs2 === 'withdraw') {
-    res.redirect('../nomoreaction/success')
- } else {
-   res.redirect('../cancel/confirm')
- }
-})
-
-
-router.post('/nomoreaction/confirm-answer', function (req, res) {
+router.post('/sprint39/couples/nomoreaction/confirm-answer', function (req, res) {
 
   let nomoreaction = req.session.data['nomoreaction']
 
@@ -316,21 +339,10 @@ router.post('/nomoreaction/confirm-answer', function (req, res) {
   }
 })
 
-// router.post('/cancel/confirm-answer', function (req, res) {
-//
-//   let cancel = req.session.data['cancel']
-//
-//   if (cancel === 'died') {
-//     res.redirect('success-died')
-//   // } else if (migrationnotice === 'no') {
-//   //   res.redirect('no')
-//   } else {
-//     res.redirect('success')
-//   }
-// })
 
+// Stop a move
 
-router.post('/cancel/confirm-answer', function (req, res) {
+router.post('/sprint39/couples/cancel/confirm-answer', function (req, res) {
 
  let cancel = req.session.data['cancel']
 
@@ -357,7 +369,9 @@ router.post('/sprint39/singles/cancel/confirm-answer', function (req, res) {
 })
 
 
-router.post('/pauseexclude/confirm-answer', function (req, res) {
+// Pause/Exclude
+
+router.post('/sprint39/couples/pauseexclude/confirm-answer', function (req, res) {
 
   let pauseexclude = req.session.data['pauseexclude']
 
@@ -369,6 +383,7 @@ router.post('/pauseexclude/confirm-answer', function (req, res) {
     res.redirect('success-exclude')
   }
 })
+
 
 router.post('/sprint39/singles/pauseexclude/confirm-answer', function (req, res) {
 
@@ -382,7 +397,6 @@ router.post('/sprint39/singles/pauseexclude/confirm-answer', function (req, res)
     res.redirect('success-exclude')
   }
 })
-
 
 
 
