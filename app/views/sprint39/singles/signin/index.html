@@ -1,0 +1,45 @@
+{% extends "sprint39/singles/layout2.html" %}
+
+
+{% block content %}
+
+
+<div class="govuk-width-container">
+
+  <form action='/sprint39/singles/signin/index.html' method='post' class='form' autocomplete='off'>
+    <fieldset class="govuk-fieldset">
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+        <p class="govuk-body govuk-!-margin-bottom-2"></p>
+        <h2 class="govuk-heading-l">Sign in</h2>
+      </div>
+    </div>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="width-10">
+        User ID
+      </label>
+      <input class="govuk-input govuk-input--width-10" id="width-10" name="width-10" type="text">
+    </div>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="width-10">
+        Password
+      </label>
+      <input class="govuk-input govuk-input--width-10" id="width-10" name="width-10" type="text">
+    </div>
+
+
+    <button type="submit" class="govuk-button">
+      Sign in
+    </button>
+
+  </fieldset>
+</form>
+
+
+</div>
+
+
+{% endblock %}
