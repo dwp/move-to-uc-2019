@@ -1,4 +1,8 @@
-\{% extends "layout.html" %}
+{% set claimStatus = 'reminder sent' %}
+{% extends "../layout3-couple.html" %}
+
+{% block main %}
+{% block content %}
 
 {% block beforeContent %}
   <a href="/results?find={{ data['find'] }}" class="govuk-back-link">Back</a>
@@ -108,4 +112,6 @@
 
     </div>
   </div>
-{% endblock %}
+
+    {% endblock %}
+    {% endblock %}
