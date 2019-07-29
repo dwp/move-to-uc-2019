@@ -1679,3 +1679,101 @@ input.form-control.block {
   margin-top: -10px;
   font-size: 18px;
 }
+
+
+.work-list-review-due {
+  background-color: #B10D1E;
+  color: #fff;
+  display: inline-block;
+  font-family: 'nta', Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 2px 6px 0;
+  text-decoration: none;
+  text-transform: uppercase;;;
+  text-align: right;
+}
+
+.govuk-radios--small .govuk-radios__label::before {
+    top: 8px;
+    width: 24px;
+    height: 24px;
+}
+
+.govuk-radios__label::before {
+    content: "";
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    border: 2px solid currentColor;
+    border-radius: 50%;
+    background: transparent;
+}
+
+
+.govuk-radios__item {
+    font-family: "nta",Arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.25;
+    display: block;
+    position: relative;
+    min-height: 40px;
+    margin-bottom: 10px;
+    padding-left: 40px;
+    clear: left;
+}
+
+.govuk-radios--small .govuk-radios__item:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.govuk-radios__input:checked+.govuk-radios__label::after {
+    opacity: 1;
+}
+
+.govuk-radios--small .govuk-radios__label::after {
+    top: 14px;
+    left: 6px;
+    border-width: 6px;
+}
+
+.govuk-radios--small .govuk-radios__label {
+    margin-top: -2px;
+    padding: 13px 15px 13px 1px;
+    float: left;
+}
+
+
+
+.govuk-radios__label {
+    display: inline-block;
+    margin-bottom: 0;
+    padding: 8px 15px 5px;
+    cursor: pointer;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+}
+
+.govuk-label {
+    font-family: "nta",Arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.25;
+    color: #0b0c0c;
+    display: block;
+    margin-bottom: 5px;
+}
