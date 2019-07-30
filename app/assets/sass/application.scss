@@ -776,9 +776,6 @@ input.form-control.block {
 
 
 
-
-
-
 .key-details-tag {
   background-color: #fff;
   color: #005ea5;
@@ -792,6 +789,23 @@ input.form-control.block {
   text-transform: uppercase;
   text-align: right;
 }
+
+.key-details-review-tag {
+  background-color: #df3034;
+  color: #fff;
+  display: inline-block;
+  font-family: 'nta', Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 4px 8px 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: right;
+  margin-right: 20px;
+}
+
+
 
 .task-tag {
   background-color: #005ea5;
@@ -1682,7 +1696,7 @@ input.form-control.block {
 
 
 .work-list-review-due {
-  background-color: #B10D1E;
+  background-color: #df3034;
   color: #fff;
   display: inline-block;
   font-family: 'nta', Arial, sans-serif;
