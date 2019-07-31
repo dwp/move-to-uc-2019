@@ -1791,3 +1791,25 @@ input.form-control.block {
     display: block;
     margin-bottom: 5px;
 }
+
+.alert {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    clear: both;
+    border-left-style: solid;
+    padding: 0.78947em;
+    margin-bottom: 1.57895em;
+    border-left-width: 10px;
+    border-color: #2b8cc4;
+    background-color: #eaf4f9;
+}
+
+.alert-body {
+    font-family: "nta",Arial,sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #0b0c0c;
+    display: block;
+    margin-bottom: 0px;
+}
