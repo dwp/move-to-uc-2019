@@ -1709,6 +1709,31 @@ input.form-control.block {
   text-align: right;
 }
 
+
+.alert {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    clear: both;
+    border-left-style: solid;
+    padding: 0.78947em;
+    margin-bottom: 1.57895em;
+    border-left-width: 10px;
+    border-color: #2b8cc4;
+    background-color: #eaf4f9;
+}
+
+.alert-body {
+    font-family: "nta",Arial,sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #0b0c0c;
+    display: block;
+    margin-bottom: 0px;
+}
+
+
+
 .govuk-radios--small .govuk-radios__label::before {
     top: 8px;
     width: 24px;
@@ -1769,8 +1794,7 @@ input.form-control.block {
 }
 
 
-
-.govuk-radios__label {
+.govuk-radios__labelsml {
     display: inline-block;
     margin-bottom: 0;
     padding: 8px 15px 5px;
@@ -1779,7 +1803,7 @@ input.form-control.block {
     touch-action: manipulation;
 }
 
-.govuk-label {
+.govuk-labelsml {
     font-family: "nta",Arial,sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -1790,26 +1814,4 @@ input.form-control.block {
     color: #0b0c0c;
     display: block;
     margin-bottom: 5px;
-}
-
-.alert {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    clear: both;
-    border-left-style: solid;
-    padding: 0.78947em;
-    margin-bottom: 1.57895em;
-    border-left-width: 10px;
-    border-color: #2b8cc4;
-    background-color: #eaf4f9;
-}
-
-.alert-body {
-    font-family: "nta",Arial,sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    color: #0b0c0c;
-    display: block;
-    margin-bottom: 0px;
 }
