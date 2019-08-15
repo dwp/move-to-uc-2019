@@ -67,7 +67,7 @@
 
 
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="how-contacted-conditional-2" name="how-contacted" type="radio" value="phone" data-aria-controls="conditional-how-contacted-conditional-2">
+        <input class="govuk-radios__input" id="how-contacted-conditional-2" name="how-contacted" type="radio" value="phone" data-aria-controls="conditional-how-contacted-conditional-2" checked="checked">
         <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-2">
           Yes
         </label>
@@ -79,7 +79,7 @@
           <label class="govuk-label" for="contact-by-phone">
             Partner's National Insurance number
           </label>
-          <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="contact-by-phone" type="tel">
+          <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="contact-by-phone" type="tel" value="JX234535A">
         </div>
 
         <div class="govuk-date-input" id="passport-issued">
@@ -91,7 +91,7 @@
               <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
                 Month
               </label>
-              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="number" pattern="[0-9]*">
+              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="number" pattern="[0-9]*" value="10">
             </div>
           </div>
           <div class="govuk-date-input__item">
@@ -99,10 +99,31 @@
               <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
                 Year
               </label>
-              <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="number" pattern="[0-9]*">
+              <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="number" pattern="[0-9]*" value="1984">
             </div>
           </div>
         </div>
+
+        <div class="govuk-inset-text">
+          JX234535A already exists. Do you want to link these two records?
+        </div>
+
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+            <div class="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                <label class="govuk-label govuk-checkboxes__label" for="waste">
+                  Yes, link these cases
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+
+
 <!--
     <p class="govuk-body govuk-!-margin-bottom-6"></p>
         <div class="govuk-form-group">
@@ -259,7 +280,7 @@
                                                             </button>
 
                                                           </div>
-                                                            <a href="../claimantdash/selected-single" class="govuk-link">Cancel and return to case</a> 
+                                                           <a href="../claimantdash/selected-single" class="govuk-link">Cancel and return to case</a>
                                                           </main>
                                                         <p class="govuk-body govuk-!-margin-bottom-7"></p>
 

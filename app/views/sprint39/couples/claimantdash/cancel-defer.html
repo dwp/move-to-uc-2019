@@ -1,5 +1,5 @@
-{% set claimStatus = 'selected to move' %}
-{% extends "sprint39/singles/layout3.html" %}
+{% set claimStatus = 'deferred' %}
+{% extends "sprint39/couples/layout3-cancel.html" %}
 
 {% block main %}
 {% block content %}
@@ -12,11 +12,14 @@
 
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-one-quarter">
-        <div class="sidemenu-bar-noselect"></div>
-          <h2 class="govuk-heading-s">Log an action</h2>
+
+        <a href="../claimantdash/readyinitalconvo.html" class="govuk-button--select govuk-button--small">
+        Select to move</a>
+      <div class="sidemenu-bar"></div>
+        <h2 class="govuk-heading-s">Log an action</h2>
+
 <ul class="govuk-list">
-<li><a class="govuk-link govuk-link--no-visited-state" href="../initialconversation/index.html">Initial conversation</a></li>
-<!-- <li><a class="govuk-link govuk-link--no-visited-state" href="../readytomove/index.html">Readiness outcome</a></li> -->
+  <!-- <li><a class="govuk-link govuk-link--no-visited-state" href="../initialconversation/index.html">Log initial conversation</a></li> -->
 <!-- <li><a class="govuk-link govuk-link--no-visited-state" href="../readytomove/index.html">Outcome of a readiness conversation</a></li>
 <li><a class="govuk-link govuk-link--no-visited-state" href="../migrationnotice/issue.html">Log Migration Notice issued</a></li>
 <li><a class="govuk-link govuk-link--no-visited-state" href="../claimmade/claim.html">Log claim made</a></li>
@@ -31,18 +34,52 @@
 
 
 
+        <!-- <div class="govuk-grid-row">
+          <div class="govuk-grid-column-one-third">
+            <p>Address</p>
+          </div>
+          <div class="govuk-grid-column-one-third">
+            <p>23 River View, Bedlington, NE2 5LS</p>
+          </div>
+          <div class="govuk-grid-column-one-third">
+          </div>
+          <div class="govuk-grid-column-one-third">
+          </div>
+        </div>
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-one-third">
+            <p>Telephone number</p>
+          </div>
+          <div class="govuk-grid-column-one-third">
+            <p>07886 342345</p>
+          </div>
+          <div class="govuk-grid-column-one-third">
+          </div>
+          <div class="govuk-grid-column-one-third">
+          </div>
 
-
-
+        </div>
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-one-third">
+            <p>Legacy benefits</p>
+          </div>
+          <div class="govuk-grid-column-one-third">
+            <p>Housing benefit<br>
+              Income support
+              <p>
+          </div>
+          <div class="govuk-grid-column-one-third">
+          </div>
+          <div class="govuk-grid-column-one-third">
+          </div>
+        </div> -->
       </div>
-
 
       <div class="govuk-grid-column-three-quarters">
 
 
-                          <div class="claimant-heading">Claimant details</div>
-                  <hr>
-
+                  <div class="claimant-heading">Claimant details</div>
+          <hr>
                 <div class="govuk-grid-row">
                   <div class="govuk-grid-column-one-third">
                     <p>Date of birth</p>
@@ -56,28 +93,33 @@
                   </div>
                 </div>
 
-
-
                 <p class="govuk-body govuk-!-margin-bottom-6">
                 <h2 class="govuk-heading-m">Case history</h2>
               <hr>
                       <p class="govuk-body govuk-!-margin-bottom-6">
                         <ol class="govuk-list timeline">
                           <li class="timeline-entry">
-                            <h3 class="govuk-heading-s timeline-title">Selected to move</h3>
+                            <h3 class="govuk-heading-s timeline-title">Deferred</h3>
                             <p class="timeline-info govuk-body-s">
                               <span class="timeline-date">2 May 2019</span>
+                              <p>Reason: In prison<br>
+                Cancellation Notice issued: 20 August 2019<br>
+                Method: Given to the claimant<br>
+                Review date: 22 May 2019
+              </p>
+
                             </p>
                           </li>
-                                  <li class="timeline-entry">
-                                    <h3 class="govuk-heading-s timeline-title">In scope to move</h3>
-                                    <p class="timeline-info govuk-body-s">
-                                      <span class="timeline-date">2 May 2019</span>
-                                    </p>
-                                  </li>
+                          <li class="timeline-entry">
+                            <h3 class="govuk-heading-s timeline-title">Migration notice issued</h3>
+                            <p class="timeline-info govuk-body-s">
+                              <span class="timeline-date">2 May 2019</span>
+                              <p>Notice given to the claimant on 2 May 2019<br>
+                Claim date: 2 August 2019</p>
+                            </p>
+                          </li>
                           </ol>
                 <a href="#" class="govuk-link govuk-link--no-visited-state">View full history</a>
-
       </div>
     </div>
 
