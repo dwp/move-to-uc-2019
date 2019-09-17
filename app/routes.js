@@ -399,6 +399,20 @@ router.post('/sprint39/singles/pauseexclude/confirm-answer', function (req, res)
 })
 
 
+router.post('/sprint39/couples/eligibility/confirm-answer', function (req, res) {
+
+  let pauseexclude = req.session.data['pauseexclude']
+
+  if (pauseexclude === 'defer') {
+    res.redirect('success-defer')
+  // } else if (migrationnotice === 'no') {
+  //   res.redirect('no')
+  } else {
+    res.redirect('success-exclude')
+  }
+})
+
+
 
 // Add your routes above the module.exports line
 module.exports = router
