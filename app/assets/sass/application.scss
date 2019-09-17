@@ -1836,3 +1836,43 @@ input.form-control.block {
     display: block;
     margin-bottom: 5px;
 }
+
+
+
+.icon-success {
+    background-image: url(/public/images/icon-tick.svg);
+
+}
+
+.icon-ineligible {
+    background-image: url(/public/images/icon-cross.svg);
+
+}
+
+.icon-investigate {
+    background-image: url(/public/images/icon-investigate.svg);
+
+}
+
+.icon {
+    display: inline-block;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    background-color: white;
+}
+
+.notice {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.mts-body-wrapper .icon {
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+
+.notice .icon-failure, .notice .icon-information, .notice .icon-success {
+    margin-top: -13px;
+}
