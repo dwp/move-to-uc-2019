@@ -698,6 +698,7 @@ input.form-control.block {
   position: relative;
 }
 
+
 .key-details-ni {
   margin: 0 auto;
   color: #ffffff;
@@ -1727,7 +1728,8 @@ input.form-control.block {
   padding: 2px 6px 0;
   text-decoration: none;
   text-transform: uppercase;;;
-  text-align: right;
+  text-align: left;
+
 }
 
 
@@ -1759,6 +1761,18 @@ input.form-control.block {
     top: 8px;
     width: 24px;
     height: 24px;
+    margin-top: -5px;
+
+
+}
+
+.govuk-radios_label_sml {
+    top: 8px;
+    width: 24px;
+    height: 24px;
+    margin-top: -5px;
+
+
 }
 
 .govuk-radios__label::before {
@@ -1773,6 +1787,7 @@ input.form-control.block {
     border: 2px solid currentColor;
     border-radius: 50%;
     background: transparent;
+
 }
 
 
@@ -1790,12 +1805,16 @@ input.form-control.block {
     margin-bottom: 10px;
     padding-left: 40px;
     clear: left;
+
+
 }
 
 .govuk-radios--small .govuk-radios__item:after {
     content: "";
     display: block;
     clear: both;
+
+
 }
 
 .govuk-radios__input:checked+.govuk-radios__label::after {
@@ -1806,19 +1825,21 @@ input.form-control.block {
     top: 14px;
     left: 6px;
     border-width: 6px;
+    margin-top: -5px;
 }
 
 .govuk-radios--small .govuk-radios__label {
     margin-top: -2px;
-    padding: 13px 15px 13px 1px;
+    // padding: 13px 15px 13px 1px;
     float: left;
+    margin-left: -15px;
 }
 
 
 .govuk-radios__labelsml {
     display: inline-block;
     margin-bottom: 0;
-    padding: 8px 15px 5px;
+    // padding: 8px 15px 5px;
     cursor: pointer;
     -ms-touch-action: manipulation;
     touch-action: manipulation;
@@ -1835,4 +1856,49 @@ input.form-control.block {
     color: #0b0c0c;
     display: block;
     margin-bottom: 5px;
+}
+
+
+
+.icon-success {
+    background-image: url(/public/images/icon-tick.svg);
+
+}
+
+.icon-ineligible {
+    background-image: url(/public/images/icon-cross.svg);
+
+}
+
+.icon-investigate {
+    background-image: url(/public/images/icon-investigate.svg);
+
+}
+
+.icon {
+    display: inline-block;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    background-color: white;
+}
+
+.notice {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.mts-body-wrapper .icon {
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+
+.notice .icon-failure, .notice .icon-information, .notice .icon-success {
+    margin-top: -13px;
+}
+
+.clear {
+  margin: 0 auto;
+  color: #333;
 }

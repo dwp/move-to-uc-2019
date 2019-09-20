@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 56 (81588) - https://sketch.com -->
+    <title>Group 6</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-6">
+            <g id="checked" fill="#DF3034" fill-rule="nonzero">
+                <path d="M10,0 C4.47741325,0 0,4.47722575 0,10 C0,15.5227743 4.47741325,20 10,20 C15.5231961,20 20,15.5227743 20,10 C20,4.47722575 15.5230086,0 10,0 Z" id="Shape"></path>
+            </g>
+            <g id="Group" transform="translate(5.000000, 5.000000)" fill="#FFFFFF">
+                <g id="Group-5">
+                    <polygon id="Rectangle" transform="translate(4.929545, 4.979545) rotate(45.000000) translate(-4.929545, -4.979545) " points="4 9.77687312e-14 5.80909091 0.00909090909 5.85909091 9.95909091 4.05 9.95"></polygon>
+                    <polygon id="Rectangle" transform="translate(4.929545, 4.979545) scale(1, -1) rotate(45.000000) translate(-4.929545, -4.979545) " points="4 4.14630451e-16 5.80909091 0.00909090909 5.85909091 9.95909091 4.05 9.95"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
