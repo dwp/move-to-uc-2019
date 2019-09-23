@@ -1829,10 +1829,10 @@ input.form-control.block {
 }
 
 .govuk-radios--small .govuk-radios__label {
-    margin-top: -2px;
+    margin-top: -4px;
     // padding: 13px 15px 13px 1px;
     float: left;
-    margin-left: -15px;
+    margin-left: -1px;
 }
 
 
@@ -1850,8 +1850,21 @@ input.form-control.block {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-weight: 400;
-    font-size: 16px;
-    font-size: 1rem;
+    font-size: 18px;
+    line-height: 1.25;
+    color: #0b0c0c;
+    display: block;
+    margin-bottom: 5px;
+}
+
+
+.govuk-labelsml2 {
+    font-family: "nta",Arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 18px;
+
     line-height: 1.25;
     color: #0b0c0c;
     display: block;
