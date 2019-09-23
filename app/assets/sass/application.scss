@@ -1914,3 +1914,16 @@ input.form-control.block {
   margin: 0 auto;
   color: #333;
 }
+
+.govuk-button--secondary, .govuk-button--secondary:link, .govuk-button--secondary:visited, .govuk-button--secondary:active, .govuk-button--secondary:hover {
+    color: #0b0c0c;
+    height: 38px;
+    width: 130px;
+    margin-bottom: 19px;
+}
+
+.govuk-button--secondary {
+    background-color: #f3f2f1;
+    -webkit-box-shadow: 0 2px 0 #929191;
+    box-shadow: 0 2px 0 #929191;
+}
