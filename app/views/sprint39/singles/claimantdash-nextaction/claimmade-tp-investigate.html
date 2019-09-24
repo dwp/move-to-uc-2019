@@ -1,5 +1,5 @@
-
-{% extends "sprint39/singles/layout3-investigate.html" %}
+{% set claimStatus = 'Investigate eligibility' %}
+{% extends "sprint39/couples/layout.html" %}
 
 {% block main %}
 {% block content %}
@@ -22,7 +22,7 @@
                 <li><a class="govuk-link govuk-link--no-visited-state" href="../claimmade/claim.html">Log claim made</a></li>
                 <li><a class="govuk-link govuk-link--no-visited-state" href="../reminder/index.html">Log reminder issued</a></li> -->
                 <!-- <li><a class="govuk-link govuk-link--no-visited-state" href="../changecircs3/index.html">Log a change in circumstances</a></li> -->
-                    <li><a class="govuk-link govuk-link--no-visited-state" href="../eligibility/index.html">Eligibility outcome</a></li>
+                    <li><a class="govuk-link govuk-link--no-visited-state" href="#">Eligibility outcome</a></li>
                     <li><a class="govuk-link govuk-link--no-visited-state" href="../nomoreaction/index.html">Withdrawn</a></li>
                     <li><a class="govuk-link govuk-link--no-visited-state" href="../complete/index.html">Case complete</a></li>
                 <!-- <li><a class="govuk-link govuk-link--no-visited-state" href="../claimdatecalc/index.html">Calculate the claim by date</a></li> -->
@@ -96,12 +96,12 @@
               <hr>
   <p class="govuk-body govuk-!-margin-bottom-6">
                         <ol class="govuk-list timeline">
-                         <li class="timeline-entry">
-                            <h3 class="govuk-heading-s timeline-title notice">TP eligibility checked</h3>
+                          <li class="timeline-entry">
+                            <h3 class="govuk-heading-s timeline-title notice"><i class="icon icon-investigate"></i><span style="vertical-align:12px">Investigate eligibility</span></h3>
                             <p class="timeline-info govuk-body-s">
                               <span class="timeline-date">2 May 2019</span>
-                              <p>Outcome: Partner NINO does not match</p>
-                              <p><i class="icon icon-success"></i><span style="vertical-align:12px">ID verified: 2 May 2019</span></p>
+                              <p>Reason: Partner NINO does not match</p>
+                              <p>ID verified: 2 May 2019</p>
                             </p>
                           </li>
 
