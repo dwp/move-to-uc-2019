@@ -1,0 +1,64 @@
+{% set claimStatus = 'READINESS CONVERSATION 1: READY' %}
+{% extends "sprint46/couples/layout3.html" %}
+
+{% block main %}
+{% block content %}
+
+
+<div class="govuk-width-container">
+  <a href="../claimantdash/readytomove.html" class="govuk-back-link">Back</a>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <p class="govuk-body govuk-!-margin-bottom-2"></p>
+      <h2 class="govuk-heading-l">When did you issue the Migration Notice?</h2>
+    </div>
+  </div>
+
+  <form action='confirm-nottoday' method='post' class='form' autocomplete='off'>
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="passport-issued-hint" role="group">
+
+        <div class="govuk-date-input" id="passport-issued">
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                Day
+              </label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="number" pattern="[0-9]*">
+            </div>
+          </div>
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                Month
+              </label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="number" pattern="[0-9]*">
+            </div>
+          </div>
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                Year
+              </label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="number" pattern="[0-9]*">
+            </div>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+
+
+
+  <p class="govuk-body govuk-!-margin-bottom-5"></p>
+
+    <div>
+      <button type="submit" class="govuk-button">Continue</button>
+    </div>
+      <p class="govuk-body govuk-!-margin-bottom-5"></p>
+  </form>
+
+</div>
+
+{% endblock %}
+{% endblock %}

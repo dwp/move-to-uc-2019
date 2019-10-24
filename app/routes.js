@@ -414,12 +414,12 @@ router.post('/sprint39/couples/eligibility/confirm-answer', function (req, res) 
 
 
 
-// ROUTES FOR SPRINT 44
+// ROUTES FOR SPRINT 46
 
 // Ready to move
 
 
-router.post('/sprint44/singles/readytomove/confirm-answer', function (req, res) {
+router.post('/sprint46/singles/readytomove/confirm-answer', function (req, res) {
 
   let readytomove = req.session.data['readytomove']
 
@@ -433,7 +433,7 @@ router.post('/sprint44/singles/readytomove/confirm-answer', function (req, res) 
 })
 
 
-router.post('/sprint44/couples/readytomove/confirm-answer', function (req, res) {
+router.post('/sprint46/couples/readytomove/confirm-answer', function (req, res) {
 
   let readytomove = req.session.data['readytomove']
 
@@ -450,7 +450,7 @@ router.post('/sprint44/couples/readytomove/confirm-answer', function (req, res) 
 
 // No more action
 
-router.post('/sprint44/couples/nomoreaction/confirm-answer', function (req, res) {
+router.post('/sprint46/couples/nomoreaction/confirm-answer', function (req, res) {
 
   let nomoreaction = req.session.data['nomoreaction']
 
@@ -466,7 +466,7 @@ router.post('/sprint44/couples/nomoreaction/confirm-answer', function (req, res)
 
 // Stop a move
 
-router.post('/sprint44/couples/cancel/confirm-answer', function (req, res) {
+router.post('/sprint46/couples/cancel/confirm-answer', function (req, res) {
 
  let cancel = req.session.data['cancel']
 
@@ -479,7 +479,7 @@ router.post('/sprint44/couples/cancel/confirm-answer', function (req, res) {
  }
 })
 
-router.post('/sprint44/singles/cancel/confirm-answer', function (req, res) {
+router.post('/sprint46/singles/cancel/confirm-answer', function (req, res) {
 
  let cancel = req.session.data['cancel']
 
@@ -495,7 +495,7 @@ router.post('/sprint44/singles/cancel/confirm-answer', function (req, res) {
 
 // Pause/Exclude
 
-router.post('/sprint44/couples/pauseexclude/confirm-answer', function (req, res) {
+router.post('/sprint46/couples/pauseexclude/confirm-answer', function (req, res) {
 
   let pauseexclude = req.session.data['pauseexclude']
 
@@ -509,7 +509,7 @@ router.post('/sprint44/couples/pauseexclude/confirm-answer', function (req, res)
 })
 
 
-router.post('/sprint44/singles/pauseexclude/confirm-answer', function (req, res) {
+router.post('/sprint46/singles/pauseexclude/confirm-answer', function (req, res) {
 
   let pauseexclude = req.session.data['pauseexclude']
 
@@ -523,7 +523,7 @@ router.post('/sprint44/singles/pauseexclude/confirm-answer', function (req, res)
 })
 
 
-router.post('/sprint44/couples/eligibility/confirm-answer', function (req, res) {
+router.post('/sprint46/couples/eligibility/confirm-answer', function (req, res) {
 
   let pauseexclude = req.session.data['pauseexclude']
 
