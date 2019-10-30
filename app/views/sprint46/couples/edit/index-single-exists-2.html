@@ -19,7 +19,7 @@
     <label class="govuk-label" for="contact-by-phone">
       Partner's National Insurance number
     </label>
-    <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="contact-by-phone" type="tel" value="">
+    <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="contact-by-phone" type="tel" value="JC123456X">
   </div>
 
   <div class="govuk-date-input" id="passport-issued">
@@ -31,7 +31,7 @@
         <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
           Month
         </label>
-        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" value="" type="number" pattern="[0-9]*">
+        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" value="10" type="number" pattern="[0-9]*">
       </div>
     </div>
     <div class="govuk-date-input__item">
@@ -39,11 +39,27 @@
         <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
           Year
         </label>
-        <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" value="" type="number" pattern="[0-9]*">
+        <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" value="1975" type="number" pattern="[0-9]*">
       </div>
     </div>
   </div>
 
+  <div class="govuk-inset-text">
+
+    <h2 class="govuk-heading-m">JC123456X already exists. Do you want to link these cases?</h2>
+
+          <div class="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                  <label class="govuk-label govuk-checkboxes__label" for="waste">
+                    Yes, link these cases
+                  </label>
+                </div>
+              </div>
+
+  </div>
+
+    <p class="govuk-body govuk-!-margin-bottom-6"></p>
 
 
   <!-- <h2 class="govuk-heading-s">Does the claimant have a partner?</h2>
