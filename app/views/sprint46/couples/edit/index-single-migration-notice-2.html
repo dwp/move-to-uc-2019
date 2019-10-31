@@ -10,20 +10,20 @@
           <div class="govuk-grid-column-two-thirds">
           <p class="govuk-body govuk-!-margin-bottom-2"></p>
   <h2 class="govuk-heading-l">Add a partner</h2>
-<!--
-  <div class="govuk-inset-text">
+
+  <!-- <div class="govuk-inset-text">
     You will need to reissue a Migration Notice to the lead claimant and issue one to their partner.
   </div> -->
 
   <fieldset class="govuk-fieldset">
-  <form action='index-single-migration-notice-2' method='post' class='form' autocomplete='off'>
+  <form action='success-migration' method='post' class='form' autocomplete='off'>
 
 
   <div class="govuk-form-group">
     <label class="govuk-label" for="contact-by-phone">
       Partner's National Insurance number
     </label>
-    <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="contact-by-phone" type="tel" value="">
+    <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="contact-by-phone" type="tel" value="JC123456X">
   </div>
 
   <div class="govuk-date-input" id="passport-issued">
@@ -35,7 +35,7 @@
         <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
           Month
         </label>
-        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" value="" type="number" pattern="[0-9]*">
+        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" value="10" type="number" pattern="[0-9]*">
       </div>
     </div>
     <div class="govuk-date-input__item">
@@ -43,12 +43,16 @@
         <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
           Year
         </label>
-        <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" value="" type="number" pattern="[0-9]*">
+        <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" value="1975" type="number" pattern="[0-9]*">
       </div>
     </div>
   </div>
-<!--
-  <p class="govuk-body govuk-!-margin-bottom-2">
+
+
+    <div class="govuk-inset-text">
+      You need to reissue a Migration Notice to the lead claimant and issue one to their partner.
+    </div>
+
 
 <h2 class="govuk-heading-s">When did you issue the Migration Notice?</h2>
 
@@ -124,20 +128,20 @@
   <h2 class="govuk-heading-s">How did you issue the Migration Notice to their partner?</h2>
     <div class="govuk-radios">
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="vehicle-type-car" name="vehicle-type" type="radio" value="Working" {{ checked("vehicle-type", "Working") }}>
+        <input class="govuk-radios__input" id="vehicle-type-car1" name="vehicle-type1" type="radio" value="Working" {{ checked("vehicle-type", "Working") }}>
         <label class="govuk-label govuk-radios__label" for="vehicle-type-car">
           I gave it to the claimant
         </label>
       </div>
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="vehicle-type-lorry" name="vehicle-type" type="radio" value="Not working" {{ checked("vehicle-type", "Not working") }}>
+        <input class="govuk-radios__input" id="vehicle-type-lorry1" name="vehicle-type1" type="radio" value="Not working" {{ checked("vehicle-type", "Not working") }}>
         <label class="govuk-label govuk-radios__label" for="vehicle-type-lorry">
             I posted it
         </label>
       </div>
 
     </div>
- -->
+
 
       </div>
     </div>
