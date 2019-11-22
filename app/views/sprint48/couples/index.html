@@ -1,0 +1,296 @@
+{% extends "layout.html" %}
+
+{% block header %}
+  {# Set serviceName in config.js. #}
+  {{ govukHeader({
+    serviceName: serviceName + " prototype",
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+        <h4 class="govuk-heading-s">Couples - baseline prototype</h4>
+        <a href="../sprint48/couples/scenarios/scenarios2.html" role="button" draggable="false" class="govuk-button govuk-button--start">
+        Start
+        </a>
+         <p class="govuk-body govuk-!-margin-bottom-4">
+
+
+           <h4 class="govuk-heading-s">Single claimant - baseline prototype</h4>
+           <a href="../sprint48/singles/scenarios/scenarios.html" role="button" draggable="false" class="govuk-button govuk-button--start">
+           Start
+           </a>
+
+<p class="govuk-body govuk-!-margin-bottom-6">
+
+             <a href="claimantdash/selected-unlinkv4" class="govuk-link">Edit claimant details - couple</a><br>
+            <a href="claimantdash/selected-single" class="govuk-link">Edit claimant details - single</a><br>
+            <a href="claimantdash/selected-unlinkv5" class="govuk-link">Edit claimant details - alternative placement of link</a><br> 
+<hr>
+
+      <h2 class="govuk-heading-m">Manage a move to UC Prototype - V5</h2>
+      <h4 class="govuk-heading-s">Sprint 38</h4>
+
+<h4 class="govuk-heading-s">UI exploration</h4>
+      <a href="https://dwp-move-to-uc-v5.herokuapp.com/claimantdash/selected" class="govuk-link">Partner link & lead claimant placement</a><br>
+      <a href="https://dwp-move-to-uc-v5.herokuapp.com/claimantdash/selected-unlinkv1" class="govuk-link">Unlink a partner - V1</a><br>
+      <a href="https://dwp-move-to-uc-v5.herokuapp.com/claimantdash/selected-unlinkv2" class="govuk-link">Unlink a partner - V2</a><br>
+      <a href="https://dwp-move-to-uc-v5.herokuapp.com/claimantdash/selected-unlinkv3" class="govuk-link">Unlink a partner - V3</a><br>
+
+      <p class="govuk-body govuk-!-margin-bottom-5">
+        <h4 class="govuk-heading-s">UR Feedback</h4>
+        <p>Unlink a partner - V2</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>Link is more obvious and quick to identify. “That’s where I’d expect to see the link,
+            it’s by the NINO and really clear to see”</li>
+          <li>Favoured option for reasons above “more logical”</li>
+          <li>Want to see confirmation of unlinking and date occurred on both records – work coaches happy to only complete information on one record if product automatically updates information in case history for both</li>
+          <li>“The blue bar is the ‘admin’ bit so makes sense”</li>
+        </ul>
+
+      <p class="govuk-body govuk-!-margin-bottom-6">
+        <h4 class="govuk-heading-s">Scenarios</h4>
+        <a href="https://dwp-move-to-uc-v5.herokuapp.com/claimantdash/selected" class="govuk-link">1. Log initial conversation for both claimants</a><br>
+        <a href="https://dwp-move-to-uc-v5.herokuapp.com/claimantdash/initialconvo" class="govuk-link">2. Log readiness conversation outcome</a><br>
+        <a href="https://dwp-move-to-uc-v5.herokuapp.com/claimantdash/readytomove" class="govuk-link">3. Log Migration Notice issued</a><br>
+        <a href="https://dwp-move-to-uc-v5.herokuapp.com/claimantdash/migrationissued" class="govuk-link">4. Log reminder issued</a><br>
+        <a href="https://dwp-move-to-uc-v5.herokuapp.com/claimantdash/migrationissued" class="govuk-link">5. More time given</a><br>
+        <a href="https://dwp-move-to-uc-v5.herokuapp.com/claimantdash/migrationissued" class="govuk-link">6. Stop a move - defer</a><br>
+        <a href="https://dwp-move-to-uc-v5.herokuapp.com/claimantdash/migrationissued" class="govuk-link">7. UC claim made</a><br>
+        <a href="https://dwp-move-to-uc-v5.herokuapp.com/claimantdash/selected" class="govuk-link">8. Withdraw - claimant died</a><br>
+        <a href="https://dwp-move-to-uc-v5.herokuapp.com/add/index" class="govuk-link">9. Add a claimant</a><br>
+        <a href="https://dwp-move-to-uc-v5.herokuapp.com/claimantdash/selected-unlinkv2" class="govuk-link">10. Unlink from partner record</a><br>
+         <!-- <p class="govuk-body govuk-!-margin-bottom-6">
+        <hr>
+       <a href="https://dwp-move-to-uc-v5.herokuapp.com/claimantdash/selected-unlinkv4" class="govuk-link">Edit claimant details - couple</a><br>
+        <a href="https://dwp-move-to-uc-v5.herokuapp.com/claimantdash/selected-single" class="govuk-link">Edit claimant details - single</a><br> -->
+
+
+        <p class="govuk-body govuk-!-margin-bottom-5">
+          <h4 class="govuk-heading-s">UR Feedback</h4>
+          <p class="govuk-body govuk-!-font-weight-bold">Lead claimant identifier</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>“It’s got the lead claimant on now! This is so important to have because you can’t give info to someone who isn’t the ‘lead’ claimant”</li>
+            <li>Would still prefer name of partner displayed as well as NINO</li>
+            <li>Gives confidence from a security perspective – prevents giving info to the other partner by mistake</li>
+          </ul>
+
+          <p class="govuk-body govuk-!-font-weight-bold">Log initial conversation</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>“Recording actions separately liked “it just makes sense to do it that way, they’re both individuals”</li>
+          </ul>
+
+          <p class="govuk-body govuk-!-font-weight-bold">Log readiness – one ready, another not</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>Expect that the link back to claimant case would take them to the record they had been working on,
+              not back to lead claimant record. This would reduce risk of inputting information on wrong record</li>
+              <li>“When you’ve taken the second action, you’d go back to the claimant”</li>
+          </ul>
+
+          <p class="govuk-body govuk-!-font-weight-bold">Migration Notice - issued to one claimant, partner calls and is unable to attend</p>
+          <ul class="govuk-list govuk-list--bullet">
+              <li>Found the process easy to go through</li>
+              <li>Wouldn’t issue Migration Notice until had spoken to claimant who is unable to attend,
+                then would post individual notices on the same day. “I wouldn’t issue a migration notice if the partner isn’t coming in”</li>
+              <li>If different work coaches, would rely on communication between coaches to ensure all actions taken correctly.</li>
+              <li>“You’d have to work with the partner’s work coach”</li>
+          </ul>
+
+          <p class="govuk-body govuk-!-font-weight-bold">Give more time</p>
+          <ul class="govuk-list govuk-list--bullet">
+              <li>As expected and from feedback last week</li>
+              <li>Work coaches happy that product already recorded reason on partner record therefore not having to duplicate information</li>
+              <li>“I like this, it’s not more work for us. Once you log a reason for one, it automatically updates the other so you’re not repeating the reasons”</li>
+              <li>When submitted, would expect to be taken to partner record to record more time given </li>
+          </ul>
+
+          <p class="govuk-body govuk-!-font-weight-bold">Give more time</p>
+          <ul class="govuk-list govuk-list--bullet">
+              <li>As expected and from feedback last week</li>
+              <li>Work coaches happy that product already recorded reason on partner record therefore not having to duplicate information</li>
+              <li>“I like this, it’s not more work for us. Once you log a reason for one, it automatically updates the other so you’re not repeating the reasons”</li>
+              <li>When submitted, would expect to be taken to partner record to record more time given </li>
+          </ul>
+
+          <p class="govuk-body govuk-!-font-weight-bold">Stop a move</p>
+          <ul class="govuk-list govuk-list--bullet">
+              <li>Work coaches inputted a wrong date accidentally (3019) </li>
+              <li>Prefer this single journey vs the one together</li>
+          </ul>
+
+          <p class="govuk-body govuk-!-font-weight-bold">Make a claim</p>
+          <ul class="govuk-list govuk-list--bullet">
+              <li>Work coaches expect that when updating one record the product would automatically update the partner record</li>
+              <li>“Couples can’t submit a UC claim until they’ve done everything, so this would need to be as one too”</li>
+          </ul>
+
+          <p class="govuk-body govuk-!-font-weight-bold">Add a claimant</p>
+          <ul class="govuk-list govuk-list--bullet">
+              <li>Like the links on the success screen - "This means you can start taking action straight away"</li>
+              <li>"What happens if we enter the wrong NINO?</li>
+              <li>"We might need to go in a edit some details, could there be an edit button somewhere"</li>
+              <li>"Would access Opstrat to get Lead Claimant info"</li>
+              <li>"The success message links are good"</li>
+          </ul>
+
+          <p class="govuk-body govuk-!-font-weight-bold">Unlink from partner</p>
+          <ul class="govuk-list govuk-list--bullet">
+              <li>After unlinking I would expect to be able to link to the other partner, as on case history</li>
+              <li>"Would expect partner NINO to be in the case to go straight to the partner case"</li>
+
+          </ul>
+
+          <p class="govuk-body govuk-!-font-weight-bold">Withdraw - Claimant died</p>
+          <ul class="govuk-list govuk-list--bullet">
+              <li>Would withdraw the claimant who has died and go to the partner record</li>
+              <li>"Before Migration Notice I would defer and after either stop move or defer"</li>
+              <li>Each case is individual so we would need to go back to the partner record to decide on the appropriate action</li>
+              <li>Andy Banks to feedback whether we would class the reason for deferral would be classed as "other" or "bereavement"for the partner.
+              We cannot include another option in reasons for "claimant's partner died" because of policy reasons</li>
+
+          </ul>
+
+
+
+      <hr>
+
+<h2 class="govuk-heading-m">Manage a move to UC Prototype - V4</h2>
+<h4 class="govuk-heading-s">Sprint 37</h4>
+
+<h4 class="govuk-heading-s">Couples UI exploration</h4>
+<a href="https://dp-move-to-uc-v4.herokuapp.com/claimantdash/selected" class="govuk-link">Version 1</a><br>
+<a href="https://dp-move-to-uc-v4.herokuapp.com/claimantdash/couplev2" class="govuk-link">Version 2</a><br>
+<a href="https://dp-move-to-uc-v4.herokuapp.com/claimantdash/couplev3" class="govuk-link">Version 3</a><br>
+<p class="govuk-body govuk-!-margin-bottom-5">
+<h4 class="govuk-heading-s">Scenarios</h4>
+<a href="https://dp-move-to-uc-v4.herokuapp.com/claimantdash/selected" class="govuk-link">1. Log initial conversation for both claimants - same day</a><br>
+<a href="https://dp-move-to-uc-v4.herokuapp.com/claimantdash/initialconvo" class="govuk-link">2. Log readiness conversation outcome - same day</a><br>
+<a href="https://dp-move-to-uc-v4.herokuapp.com/claimantdash/readytomove" class="govuk-link">3. Log Migration Notice issued</a><br>
+<a href="https://dp-move-to-uc-v4.herokuapp.com/claimantdash/migrationissued" class="govuk-link">4. Log reminder issued</a><br>
+<a href="https://dp-move-to-uc-v4.herokuapp.com/claimantdash/migrationissued" class="govuk-link">5. Give more time</a><br>
+<a href="https://dp-move-to-uc-v4.herokuapp.com/claimantdash/migrationissued" class="govuk-link">6. Cancel Migration Notice</a><br>
+<p class="govuk-body govuk-!-margin-bottom-5">
+  <h4 class="govuk-heading-s">UR Feedback</h4>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>Work coaches prefer to treat couples as single journeys because they are individuals</li>
+    <li>Especially important if the claimants have different work coaches and for security purposes</li>
+    <li>Confirmation of main claimant meaning - usually person who is paid</li>
+    <li>There is, however, a need to easily identify a partner through the system - comparisons to current LMS and UC ‘switch’ function. This also tested well in the prototype</li>
+    <li>To ensure the journey is linear, prompts on the success page to then populate partner details were well liked - it makes the journey easier.
+      Our users really liked it and it helped them though this process. It made it easier for them, which is a key user need.</li>
+    <li>Cancelling a journey – there is an expectation that cancelling one person out of the journey would automatically cancel the other (check feasibility with Paul Brennan – he
+      mentioned it was better from a data POV to keep them separate if possible). Cancelling a journey – sensitive information cannot be displayed on the partner record (e.g. cancelled due to partner reasons vs showing their partner went in to prison). We need further research on this</li>
+      <li>Making a claim – this is where the claim becomes one UC claim (one cannot be submitted without another)</li>
+      <li>If the partners broke up after he migration notice – when they go back in to the journey as a single claim, they would like to see the history that it was a previous couple claim. This will help work coaches provide better support to the claimant as they know their background</li>
+      <li>Lead claimant/partner terminology. There is a need to understand who the main claimant is, as they are the ones who get paid</li>
+  </ul>
+<hr>
+
+<h2 class="govuk-heading-m">Manage a move to UC Prototype - V3</h2>
+<h4 class="govuk-heading-s">Sprint 36</h4>
+<hr>
+<h4 class="govuk-heading-s">Couples UI exploration</h4>
+<a href="https://dwp-move-to-uc-v3.herokuapp.com/claimantdash/selected" class="govuk-link">Version 1</a><br>
+<a href="https://dwp-move-to-uc-v3.herokuapp.com/claimantdash/selectedV2" class="govuk-link">Version 2</a><br>
+<p class="govuk-body govuk-!-margin-bottom-5">
+  <h4 class="govuk-heading-s">UR Feedback</h4>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>Version 1 UI felt more intuititive regarding the placement of the partner link</li>
+    <li>Version 1 also felt refelctive of the current UC partner UI and therefore felt familiar</li>
+    <li>Work coaches would potentially want to open the claimant and their partner details in seperate tabs in order to run the records along side each other.
+    <span class="govuk-!-font-weight-bold">This needs further exploration and testing</span></li>
+    <li>Work coaches would typically treat a claimant and their partner as separates - "Having two seperate records would make sense"</li>
+    <li>We need to consider having the ability to 'unlink' partners in a scenario where a couples splits up.
+    <span class="govuk-!-font-weight-bold">This needs further exploration and testing</span></li>
+    <li>Wouldn't need the ablity to add a partner for a single claimant who is already in the journey as this would class as a natural migration</li>
+    <li>A further consideration would be to have a combined timeline (for claimant and partner) on each record</li>
+  </ul>
+<hr>
+
+
+<h2 class="govuk-heading-m">Manage a move to UC Prototype - V2</h2>
+<h4 class="govuk-heading-s">Sprint 35</h4>
+<a href="https://dwp-move-to-uc-v2.herokuapp.com/scenarios/scenarios.html" role="button" draggable="false" class="govuk-button govuk-button--start">
+Start
+</a>
+<h4 class="govuk-heading-s">UR Feedback</h4>
+<ul class="govuk-list govuk-list--bullet">
+  <li>Would more than likely post 'cancel' and 'withdraw' notices</li>
+  <li>Would like some guidance around review date timeframes in general</li>
+  <li>Would like guidance on reasons for allowing extensions</li>
+  <li>UC claim made comment - 'As a work coach, that's me done'</li>
+  <li>Timeline - would expect this to expand within the page rather than linking to a seperate screen</li>
+  <li>Confirmation screens - generally went 'back to my cases'</li>
+  <li>General comment - 'It's easy to use'</li>
+  <li>Questioned why 'frontier workers' where on the list of deferrals and cancellations</li>
+</ul>
+
+<hr>
+
+<h2 class="govuk-heading-m">Manage a move to UC Prototype - V1</h2>
+<h4 class="govuk-heading-s">Sprint 34</h4>
+<a href="https://dwp-move-to-uc-v1.herokuapp.com/scenarios-v1/scenarios.html" role="button" draggable="false" class="govuk-button govuk-button--start">
+Start
+</a>
+<h4 class="govuk-heading-s">UR Feedback</h4>
+<p> Log initial conversation:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>What if you’ve had this and then they’re ready for the migration notice? Is there a way to link this to the readiness conversation?</li>
+</ul>
+
+<p> Readiness conversation:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>Readiness to move – if select no – got confused why it said ‘readiness to move’ again. Expected to see something like ‘review readiness’ or something along those lines to highlight more that they haven’t been ready but may be after</li>
+</ul>
+
+<p> Migration notice:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li> Useful, no problems going through – the date is the key thing she needs so was all good “I’d just go off and add this date to the letter”</li>
+  <li>Ideally want it in the system (so gave Sarah a sneak peek of 2b) and she was super happy as was something mentioned spontaneously to save time. Also there were some concerns over saving and changing templates which has happened in the past (but she was thinking when this scales up – it will be fine for day one)</li>
+</ul>
+
+<p> Reminders:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>Visit could be an option</li>
+  <li>Ideally want it in the system (so gave Sarah a sneak peek of 2b) Also there were some concerns over saving and changing templates which has happened in the past (but she was thinking when this scales up – it will be fine for day one)</li>
+</ul>
+
+<p> Extension notice:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>  Envisage it being done the same – process wise - as the migration notice and cancellation notice</li>
+  <li>Would wait until the last moment to do this. E.g. John Doe tells Sarah he is going in to hospital in 3 weeks for 6 weeks, then Sarah would wait until the last appointment/moment to extend. She may do it there and then and keep extending but more likely to the former</li>
+</ul>
+
+<p> Log claim made:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>Confusion over this wording, driven by the fact it didn’t have UC in the title – “I don’t understand this, is this that the claim has been submitted by the claimant? It’s not clear”</li>
+</ul>
+
+<p> Complete:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>Confusion over this, as in her mind it was that legacy had been shut down, so didn’t know what this was about</li>
+  <li>Upon probing when she thought it might end, “it would be after the first AP, that’s when TP and payments are done”</li>
+</ul>
+
+
+<!-- <a href="" role="button" draggable="false" class="govuk-button govuk-button--start">
+Start
+</a> -->
+<!-- <p class="govuk-body govuk-!-font-weight-bold">Key user needs</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>If work coaches had the ability to record when an inital discussion about UC took place then they would know when to progress that conversation further becuase they have traceability.</li>
+  <li>If work coaches were able to record when a claimant is and isn't ready to receive a Migration Notice then they can manage the claimants needs effectively because they have traceability of their circumstances.</li>
+  <li>If a claimant had a change in circumstances the work coach needs the ability to record this because they need to know when to review the case.</li>
+  <li>If work coaches have the ability to record when they have reminded a claimant then it provides reassurance because it allows traceability when the reminder has been issued and in what method.</Li>
+</ul> -->
+</div>
+</div>
+</div>
+
+{% endblock %}

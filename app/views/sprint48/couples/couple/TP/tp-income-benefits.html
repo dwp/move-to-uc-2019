@@ -1,0 +1,102 @@
+{% extends "layout.html" %}
+{% block main %}
+{% block content %}
+<div class="govuk-width-container">
+    <a href="tp-carer.html" class="govuk-back-link">Back</a>
+
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <span class="govuk-caption-l">Step 4 of 6</span>
+        <h2 class="govuk-heading-l">Income and other benefits</h2>
+      </div>
+  </div>
+
+
+<fieldset class="govuk-fieldset">
+<form action='tp-deductions' method='post' class='form' autocomplete='off'>
+
+
+<p class="govuk-body govuk-!-font-weight-bold">Is the claimant receiving any other income or benefits?</p>
+
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="citizenship-conditional-hint">
+    <span id="citizenship-conditional-hint" class="govuk-hint">
+      Select all that apply.
+    </span>
+    <div class="govuk-checkboxes" data-module="checkboxes">
+
+      <!-- <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="citizenship-conditional-1" name="award" type="checkbox" data-aria-controls="conditional-citizenship-conditional-1" value="Housing element" {{ checked("award", "Housing element") }}>
+        <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-1">
+          Housing
+        </label>
+      </div> -->
+      <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional-1">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="contact-by-email">
+            How much are they receiving per month?
+          </label>
+          <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="amount-1" spellcheck="false" value="£" {{ checked("amount", "How much per month") }}>
+        </div>
+
+      </div>
+
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="citizenship-conditional-2" name="award" type="checkbox" data-aria-controls="conditional-citizenship-conditional-2" value="Housing element" {{ checked("award", "Housing element") }}>
+        <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-2">
+          Carer's Allowance
+        </label>
+      </div>
+      <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional-2">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="contact-by-email">
+            How much are they receiving per month?
+          </label>
+          <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="amount-2" spellcheck="false" value="£" {{ checked("amount", "How much per month") }}>
+        </div>
+
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="citizenship-conditional-3" name="award" type="checkbox" value="Child care costs" data-aria-controls="conditional-citizenship-conditional-3" value="Child care costs" {{ checked("childcare", "Child care costs") }}>
+        <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-3">
+          Childcare costs
+        </label>
+      </div>
+      <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional-3">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="contact-by-phone">
+            How much are they receiving per month?
+          </label>
+          <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="amount-3" spellcheck="false" value="£" {{ checked("amount2", "How much per month") }}>
+          <p class="govuk-body govuk-!-margin-bottom-4"></p>
+          <label class="govuk-label" for="contact-by-phone">
+            Number of children receiving childcare
+          </label>
+          <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="numberchildren" type="tel" value="" {{ checked("numberchildren", "children") }}>
+        </div>
+
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+                    <p class="govuk-body govuk-!-margin-bottom-7"></p>
+
+                          <button type="submit" class="govuk-button">
+                            Continue
+                          </button>
+
+
+  </fieldset>
+  <div>
+  <a href="tp-task-list-income" class="govuk-link">Save and continue later</a>
+  </div>
+  </main>
+<p class="govuk-body govuk-!-margin-bottom-7"></p>
+
+</div>
+{% endblock %}
+
+{% endblock %}

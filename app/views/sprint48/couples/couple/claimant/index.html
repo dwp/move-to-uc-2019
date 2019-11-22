@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{# Set the last letter variabble for use in the reissue page #}
+{% set lastLetter %}
+  {% for i in claimant.history %}
+    {{ i.link }}
+  {% endfor %}
+{% endset -%}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      {% include "includes/case-header.html" %}
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+      {% if claimant.status != "Claimed" %}
+        {% include "includes/case-actions.html" %}
+      {% endif %}
+
+      {% include "includes/case-history.html" %}
+    </div>
+
+    <div class="govuk-grid-column-two-thirds">
+      <div class="case-main-content">
+        {% include "includes/personal-details.html" %}
+
+        {% if claimant.appointee == "true" %}
+          {% include "includes/appointee-details.html" %}
+        {% endif %}
+
+        {% if claimant.children %}
+          {% for child in claimant.children %}
+            {% include "includes/child-details.html" %}
+          {% endfor %}
+        {% endif %}
+      </div>
+    </div>
+
+
+
+  </div>
+{% endblock %}
