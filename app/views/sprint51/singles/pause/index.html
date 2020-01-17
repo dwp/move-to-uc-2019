@@ -1,0 +1,128 @@
+{% set claimStatus = 'IN SCOPE TO MOVE' %}
+{% extends "sprint51/singles/layout3.html" %}
+
+{% block main %}
+{% block content %}
+<div class="govuk-width-container">
+    <a href="../claimantdash/selected.html" class="govuk-back-link">Back</a>
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+        <p class="govuk-body govuk-!-margin-bottom-2"></p>
+        <h2 class="govuk-heading-l">What is the reason for deferring the claimant?</h2>
+      </div>
+    </div>
+  <!-- <div class="govuk-inset-text govuk-inset-text--wide">
+    The current deadline is 12 December 2019
+  </div> -->
+
+
+  <fieldset class="govuk-fieldset">
+    <form action='success' method='post' class='form' autocomplete='off'>
+
+        <div class="govuk-radios govuk-radios">
+
+
+                <div id="conditional-citizenship-conditional-1">
+
+                 <div class="govuk-radios__item">
+                   <input class="govuk-radios__input" id="citizenship-conditional-12" name="reason" type="radio" value="Claimant in hospital" {{ checked("reason", "Claimant in hospital") }}>
+                   <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
+                     Claimant between 16 and 17 years old
+                   </label>
+                 </div>
+                 <div class="govuk-radios__item">
+                   <input class="govuk-radios__input" id="citizenship-conditional-13" name="reason" type="radio" value="Fraud case under investigation"  {{ checked("reason", "Fraud case under investigation") }}>
+                   <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
+                     Fraud case under investigation
+                   </label>
+                 </div>
+                 <div class="govuk-radios__item">
+                   <input class="govuk-radios__input" id="citizenship-conditional-14" name="reason" type="radio" value="Claimant identified as a frontier worker" {{ checked("reason", "Claimant indentifeid as a frontier worker") }}>
+                   <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
+                     Claimant identified as a frontier worker
+                   </label>
+                 </div>
+                 <div class="govuk-radios__item">
+                   <input class="govuk-radios__input" id="citizenship-conditional-15" name="reason" type="radio" value="Waiting on outcome of work capability assessment"  {{ checked("reason", "Waiting on outcome of work capability assessment") }}>
+                   <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
+                     Waiting on outcome of work capability assessment
+                   </label>
+                 </div>
+                 <div class="govuk-radios__item">
+                   <input class="govuk-radios__input" id="citizenship-conditional-16" name="reason" type="radio" value="Claimant in prison" {{ checked("reason", "Claimant in prison") }}>
+                   <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
+                     Claimant in prison
+                   </label>
+                 </div>
+                 <div class="govuk-radios__item">
+                   <input class="govuk-radios__input" id="citizenship-conditional-17" name="reason" type="radio" value="Claimant within 6 months of state pension age" {{ checked("reason", "Claimant within 6 months of state pension age") }}>
+                   <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
+                     Claimant within 6 months of state pension age
+                   </label>
+                 </div>
+                 <div class="govuk-radios__item">
+                   <input class="govuk-radios__input" id="citizenship-conditional-18" name="reason" type="radio" value="Claimant receiving tax credits nil award" {{ checked("reason", "Claimant receiving tax credits nil award") }}>
+                   <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
+                     Claimant receiving tax credits nil award
+                   </label>
+                 </div>
+                 <div class="govuk-radios__item">
+                   <input class="govuk-radios__input" id="citizenship-conditional-19" name="reason" type="radio" value="Claimant receiving tax credits nil award" {{ checked("reason", "Claimant receiving tax credits nil award") }}>
+                   <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
+                     Dead letter addresses
+                   </label>
+                 </div>
+
+                 <p class="govuk-body govuk-!-margin-bottom-7"></p>
+                 <h2 class="govuk-heading-s">Date to be reviewed</h2>
+                     <div class="govuk-date-input" id="passport-issued">
+                       <div class="govuk-date-input__item">
+                         <div class="govuk-form-group">
+                           <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                             Day
+                           </label>
+                           <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="number" pattern="[0-9]*">
+                         </div>
+                       </div>
+                       <div class="govuk-date-input__item">
+                         <div class="govuk-form-group">
+                           <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                             Month
+                           </label>
+                           <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="number" pattern="[0-9]*">
+                         </div>
+                       </div>
+                       <div class="govuk-date-input__item">
+                         <div class="govuk-form-group">
+                           <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                             Year
+                           </label>
+                           <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="number" pattern="[0-9]*">
+                         </div>
+                       </div>
+                     </div>
+
+                   </div>
+
+
+
+
+
+
+
+
+                                                        </fieldset>
+                                                          <p class="govuk-body govuk-!-margin-bottom-7"></p>
+                                                        <div>
+                                                          <button type="submit" class="govuk-button">
+                                                            Submit
+                                                          </button>
+                                                           </form>
+                                                        </div>
+                                                        </main>
+                                                      <p class="govuk-body govuk-!-margin-bottom-7"></p>
+
+                                                      </div>
+                                                      {% endblock %}
+                                                      {% endblock %}

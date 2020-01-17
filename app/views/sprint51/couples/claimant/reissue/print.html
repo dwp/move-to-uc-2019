@@ -1,0 +1,45 @@
+{% extends "layout_unbranded.html" %}
+
+{% block beforeContent %}
+  <a href="/results?find={{ data['find'] }}" class="govuk-back-link">Back to claimant&rsquo;s account</a>
+{% endblock %}
+
+{% block content %}
+<style>
+  .govuk-width-container {
+    max-width: 700px;
+  }
+  .govuk-section-break--l {
+    margin-top: 0
+  }
+</style>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <img src="/public/images/universal-credit.png" width="150px" alt="Universal Credit" class="govuk-!-margin-bottom-6">
+  </div>
+  <div class="govuk-grid-column-two-thirds">
+    <p class="govuk-body">
+      {{ claimant.firstName }} {{ claimant.lastName }}<br>
+      {{ claimant.address.street }}<br>
+      {% if claimant.address.street2 %}
+        {{ claimant.address.street2 }}<br>
+      {% endif %}
+      {{ claimant.address.city }}<br>
+      {{ claimant.address.postcode }}
+    </p>
+  </div>
+  <div class="govuk-grid-column-one-third">
+    <p class="govuk-body" style="text-align:right">{{ date | date("D MMMM YYYY") }}</p>
+  </div>
+  {% if claimant.lastLetter.title == "Preparation letter" %}
+    {% include "includes/preparation-letter.html" %}
+  {% elif claimant.lastLetter.title == "Notification letter" %}
+    {% include "includes/notification-letter.html" %}
+  {% endif %}
+</div>
+
+<script>
+  window.print();
+</script>
+{% endblock %}

@@ -1,0 +1,146 @@
+{% extends "layout.html" %}
+
+{% block main %}
+{% block content %}
+<div class="govuk-width-container">
+    <a href="tp-deductions.html" class="govuk-back-link">Back</a>
+
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <span class="govuk-caption-l">Step 6 of 6</span>
+        <h2 class="govuk-heading-l">Legacy awards</h2>
+      </div>
+  </div>
+
+  <fieldset class="govuk-fieldset">
+  <form action='tp-check-answers' method='post' class='form' autocomplete='off'>
+
+  <p class="govuk-body govuk-!-font-weight-bold">Which legacy benefits or tax credits is the claimant receiving?</p>  
+
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="citizenship-conditional-hint">
+      <span id="citizenship-conditional-hint" class="govuk-hint">
+        Select all that apply.
+      </span>
+      <div class="govuk-checkboxes" data-module="checkboxes">
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="citizenship-conditional-1" name="citizen" type="checkbox" value="Job Seekers Allowance" data-aria-controls="conditional-citizenship-conditional-1" {{ checked("vehicle-features", "Jobseeker Allowance") }}>
+          <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-1">
+            Job Seeker's Allowance (JSA)
+          </label>
+        </div>
+        <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional-1">
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="contact-by-email">
+              How much are they receiving per month?
+            </label>
+            <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" value="£" name="income-1" spellcheck="false" {{ checked("vehicle-features", "Jobseeker Allowance") }}>
+          </div>
+
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="citizenship-conditional-2" name="citizen" type="checkbox" value="Employment and Support Allowance" data-aria-controls="conditional-citizenship-conditional-2" {{ checked("vehicle-features", "Employment and Support Allowance") }}>
+          <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-2">
+            Employment and Support Allowance (ESA)
+          </label>
+        </div>
+        <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional-2">
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="contact-by-phone">
+              How much are they receiving per month?
+            </label>
+            <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" value="£" type="tel" name="income-2" {{ checked("vehicle-features", "Employment and Support Allowance") }}>
+          </div>
+
+        </div>
+
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="citizenship-conditional-3" name="citizen" type="checkbox" value="Income Support" data-aria-controls="conditional-citizenship-conditional-3" {{ checked("vehicle-features", "Income Support") }}>
+          <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-3">
+            Income Support
+          </label>
+        </div>
+        <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional-3">
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="contact-by-text">
+              How much are they receiving per month?
+            </label>
+            <input class="govuk-input govuk-!-width-one-third" id="contact-by-text" name="income-3" value="£" type="tel" {{ checked("vehicle-features", "Jobseeker Allowance") }}>
+          </div>
+        </div>
+
+
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="citizenship-conditional-4" name="citizen" type="checkbox" value="Housing Benefit" data-aria-controls="conditional-citizenship-conditional-4" {{ checked("vehicle-features", "Housing Benefit") }}>
+          <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-4">
+            Housing Benefit
+          </label>
+        </div>
+        <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional-4">
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="contact-by-text">
+              How much are they receiving per month?
+            </label>
+            <input class="govuk-input govuk-!-width-one-third" id="contact-by-text" name="income-5" value="£" type="tel" {{ checked("vehicle-features", "Jobseeker Allowance") }}>
+          </div>
+        </div>
+
+
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="citizenship-conditional-5" name="citizen" type="checkbox" value="Working Tax Credit" data-aria-controls="conditional-citizenship-conditional-5" {{ checked("vehicle-features", "Working Tax Credit") }}>
+          <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-5">
+          Working Tax Credit
+          </label>
+        </div>
+        <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional-5">
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="contact-by-text">
+              How much are they receiving per month?
+            </label>
+            <input class="govuk-input govuk-!-width-one-third" id="contact-by-text" name="income-6" value="£" type="tel" {{ checked("vehicle-features", "Jobseeker Allowance") }}>
+          </div>
+        </div>
+
+
+
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="citizenship-conditional-6" name="citizen" type="checkbox" value="Child Tax Credit" data-aria-controls="conditional-citizenship-conditional-6" {{ checked("vehicle-features", "Child Tax Credit") }}>
+                  <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-6">
+                  Child Tax Credit
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional-6">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="contact-by-text">
+                      How much are they receiving per month?
+                    </label>
+                    <input class="govuk-input govuk-!-width-one-third" id="contact-by-text" value="£" type="tel" {{ checked("vehicle-features", "Jobseeker Allowance") }}>
+                  </div>
+                </div>
+
+
+      </div>
+    </fieldset>
+  </div>
+
+
+
+
+                        <p class="govuk-body govuk-!-margin-bottom-7"></p>
+
+                          <button type="submit" class="govuk-button">
+                            Continue
+                          </button>
+
+
+  </fieldset>
+  <div>
+  <a href="tp-task-list-legacy" class="govuk-link">Save and continue later</a>
+  </div>
+  </main>
+<p class="govuk-body govuk-!-margin-bottom-7"></p>
+
+</div>
+{% endblock %}
+{% endblock %}

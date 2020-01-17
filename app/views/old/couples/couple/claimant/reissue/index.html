@@ -1,0 +1,117 @@
+{% set claimStatus = 'reminder sent' %}
+{% extends "../layout3-couple.html" %}
+
+{% block main %}
+{% block content %}
+
+{% block beforeContent %}
+  <a href="/results?find={{ data['find'] }}" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action='/claimant/reissue/confirm' method='post' class='form' autocomplete='off'>
+
+        {% set newAddressConditional %}
+          {{ govukInput({
+            label: {
+              html: 'Building and street <span class="govuk-visually-hidden">line 1 of 2</span>'
+            },
+            id: "address-line-1",
+            name: "address-line-1"
+          }) }}
+
+          {{ govukInput({
+            label: {
+              html: '<span class="govuk-visually-hidden">Building and street line 2 of 2</span>'
+            },
+            id: "address-line-2",
+            name: "address-line-2"
+          }) }}
+
+          {{ govukInput({
+            label: {
+              text: "Town or city"
+            },
+            classes: "govuk-!-width-two-thirds",
+            id: "address-town",
+            name: "address-town"
+          }) }}
+
+          {{ govukInput({
+            label: {
+              text: "County"
+            },
+            classes: "govuk-!-width-two-thirds",
+            id: "address-county",
+            name: "address-county"
+          }) }}
+
+          {{ govukInput({
+            label: {
+              text: "Postcode"
+            },
+            classes: "govuk-input--width-10",
+            id: "address-postcode",
+            name: "address-postcode"
+          }) }}
+        {% endset -%}
+
+        {% if claimant.lastLetter.title == "Preparation letter" %}
+          <h1 class='govuk-heading-l'>
+            Reissue preparation letter
+          </h1>
+        {% elif claimant.lastLetter.title == "Notification letter" %}
+          <h1 class='govuk-heading-l'>
+            Reissue notification letter
+          </h1>
+        {% else %}
+        <h1 class='govuk-heading-l'>
+          Reissue letter
+        </h1>
+        {% endif %}
+
+        {{ govukRadios({
+          classes: '',
+          idPrefix: 'reissueType',
+          name: 'reissueType',
+          fieldset: {
+            legend: {
+              text: "How do you want to reissue the letter?",
+              isPageHeading: false,
+              classes: ""
+            }
+          },
+          items: [
+            {
+              value: 'sameaddress',
+              text: 'Reissue to current address ('+claimant.address.street+', '+claimant.address.city+', '+claimant.address.postcode+')'
+            },
+            {
+              value: 'newaddress',
+              text: 'Reissue to a new address',
+              conditional: {
+                html: newAddressConditional
+              }
+            },
+            {
+              value: 'print',
+              text: 'Print and hand over'
+            }
+          ]
+        }) }}
+
+        {{ govukButton({
+          text: "Submit",
+          classes: ""
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+    {% endblock %}
+    {% endblock %}
