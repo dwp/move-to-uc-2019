@@ -1,0 +1,108 @@
+{% set claimStatus = 'migration notice issued' %}
+{% extends "sprint51/couples/layout3-no-couple-addpartner-mn2.html" %}
+
+{% block main %}
+{% block content %}
+<div class="govuk-width-container">
+    <!-- <a href="../claimantdash/selected-single" class="govuk-back-link">Back</a> -->
+
+
+    <p class="govuk-body govuk-!-margin-bottom-6"></p>
+        <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+          <h2 class="govuk-error-summary__title" id="error-summary-title">
+            There is a problem
+          </h2>
+          <div class="govuk-error-summary__body">
+            <ul class="govuk-list govuk-error-summary__list">
+              <li>
+                <a href="../../singles/cancel/index2.html">
+                  This claimant does not exist in the system.
+<br><br>
+                  You must go to 'add a claimant' and add as a single claimant before linking them.
+
+                  <!-- <p class="govuk-body">You can buy:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>apples</li>
+  <li>oranges</li>
+  <li>pears</li>
+</ul>
+                </a> -->
+              </li>
+            </ul>
+          </div>
+        </div>
+
+
+      <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+
+  <h2 class="govuk-heading-l">Link a claimant</h2>
+
+  <fieldset class="govuk-fieldset">
+  <form action='success' method='post' class='form' autocomplete='off'>
+
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="contact-by-phone">
+      Claimant's National Insurance number
+    </label>
+    <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="contact-by-phone" type="tel" value="QQ423881A">
+    &nbsp; &nbsp;<button type="submit" class="govuk-button--secondary">
+       &nbsp;Search&nbsp;
+  </div>
+
+
+      </div>
+    </div>
+
+
+
+
+                                                          </fieldset>
+
+                                                          <div>
+                                                            <!-- <button type="submit" class="govuk-button--secondary">
+                                                                Look up
+                                                            </button> -->
+
+
+
+                                                            <!-- <table class="govuk-table">
+
+                                                              <thead class="govuk-table__head">
+                                                                <tr class="govuk-table__row">
+                                                                  <th scope="col" class="govuk-table__header">Claimant details</th>
+                                                                  <th scope="col" class="govuk-table__header"></th>
+                                                                </tr>
+                                                              </thead>
+                                                              <tbody class="govuk-table__body">
+                                                                <tr class="govuk-table__row">
+                                                                  <th scope="row" class="govuk-table__header">National Insurance number</th>
+                                                                  <td class="govuk-table__cell">QQ423881A</td>
+                                                                </tr>
+                                                                <tr class="govuk-table__row">
+                                                                  <th scope="row" class="govuk-table__header">Date of birth</th>
+                                                                  <td class="govuk-table__cell">July 1981</td>
+                                                                </tr>
+                                                                <tr class="govuk-table__row">
+                                                                  <th scope="row" class="govuk-table__header">Status</th>
+                                                                  <td class="govuk-table__cell">In scope to move</td>
+                                                                </tr>
+
+                                                              </tbody>
+                                                            </table> -->
+<!-- 
+
+                                                            <button type="submit" class="govuk-button">
+                                                                Link claimant record
+                                                            </button> -->
+
+
+                                                          </div>
+                                                            <a href="../claimantdash/selected-single-alternate" class="govuk-link">Cancel and return to case</a>
+                                                          </main>
+                                                        <p class="govuk-body govuk-!-margin-bottom-7"></p>
+
+                                                        </div>
+                                                        {% endblock %}
+                                                        {% endblock %}
