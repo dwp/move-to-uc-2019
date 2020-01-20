@@ -788,5 +788,129 @@ router.post('/sprint50/couples/eligibility/confirm-answer', function (req, res) 
 
 
 
+// ROUTES FOR SPRINT 51
+
+
+router.post('/sprint51/singles/readytomove/confirm-answer', function (req, res) {
+
+  let readytomove = req.session.data['readytomove']
+
+  if (readytomove === 'ready') {
+    res.redirect('success')
+  // } else if (migrationnotice === 'no') {
+  //   res.redirect('no')
+  } else {
+    res.redirect('success-2')
+  }
+})
+
+
+router.post('/sprint51/couples/readytomove/confirm-answer', function (req, res) {
+
+  let readytomove = req.session.data['readytomove']
+
+  if (readytomove === 'ready') {
+    res.redirect('success')
+  // } else if (migrationnotice === 'no') {
+  //   res.redirect('no')
+  } else {
+    res.redirect('success-2')
+  }
+})
+
+
+
+// No more action
+
+router.post('/sprint51/couples/nomoreaction/confirm-answer', function (req, res) {
+
+  let nomoreaction = req.session.data['nomoreaction']
+
+  if (nomoreaction === 'died') {
+    res.redirect('success-died')
+  // } else if (migrationnotice === 'no') {
+  //   res.redirect('no')
+  } else {
+    res.redirect('success')
+  }
+})
+
+
+// Stop a move
+
+router.post('/sprint51/couples/cancel/confirm-answer', function (req, res) {
+
+ let cancel = req.session.data['cancel']
+
+ if (cancel === 'died') {
+   res.redirect('../cancel/success-died')
+ } else if (cancel === 'exclude') {
+    res.redirect('../cancel/success-exclude')
+ } else {
+   res.redirect('../cancel/success')
+ }
+})
+
+router.post('/sprint51/singles/cancel/confirm-answer', function (req, res) {
+
+ let cancel = req.session.data['cancel']
+
+ if (cancel === 'withdraw') {
+   res.redirect('../cancel/success-withdraw')
+ } else if (cancel === 'exclude') {
+    res.redirect('../cancel/success-exclude')
+ } else {
+   res.redirect('../cancel/success')
+ }
+})
+
+
+// Pause/Exclude
+
+router.post('/sprint51/couples/pauseexclude/confirm-answer', function (req, res) {
+
+  let pauseexclude = req.session.data['pauseexclude']
+
+  if (pauseexclude === 'defer') {
+    res.redirect('success-defer')
+  // } else if (migrationnotice === 'no') {
+  //   res.redirect('no')
+  } else {
+    res.redirect('success-exclude')
+  }
+})
+
+
+router.post('/sprint51/singles/pauseexclude/confirm-answer', function (req, res) {
+
+  let pauseexclude = req.session.data['pauseexclude']
+
+  if (pauseexclude === 'defer') {
+    res.redirect('success-defer')
+  // } else if (migrationnotice === 'no') {
+  //   res.redirect('no')
+  } else {
+    res.redirect('success-exclude')
+  }
+})
+
+
+router.post('/sprint51/couples/eligibility/confirm-answer', function (req, res) {
+
+  let pauseexclude = req.session.data['pauseexclude']
+
+  if (pauseexclude === 'defer') {
+    res.redirect('success-defer')
+  // } else if (migrationnotice === 'no') {
+  //   res.redirect('no')
+  } else {
+    res.redirect('success-exclude')
+  }
+})
+
+
+
+
+
 // Add your routes above the module.exports line
 module.exports = router
