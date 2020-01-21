@@ -11,6 +11,16 @@
   <main class="govuk-main-wrapper">
 
     <div class="govuk-grid-row">
+
+      <div class="alert alert--default" role="alert" style="margin-left: 14px; margin-right: 14px;">
+                    <span style="font-size: 15px !important; color: black; font-family:verdana;">
+                      <span style="font-size: 15px !important; color: black; font-family:verdana; font-weight: bold;">
+                        Action required: </span>You need to determind if the claimant is eligible for TP.
+
+                    </span>
+            </div>
+
+
       <div class="govuk-grid-column-one-quarter">
 
         <p class="govuk-body govuk-!-margin-bottom-7">
@@ -22,10 +32,11 @@
                 <li><a class="govuk-link govuk-link--no-visited-state" href="../claimmade/claim.html">Log claim made</a></li>
                 <li><a class="govuk-link govuk-link--no-visited-state" href="../reminder/index.html">Log reminder issued</a></li> -->
                 <!-- <li><a class="govuk-link govuk-link--no-visited-state" href="../changecircs3/index.html">Log a change in circumstances</a></li> -->
+                    <li><a class="govuk-link govuk-link--no-visited-state" href="../eligibility/index.html">TP eligibility outcome</a></li>
                     <li><a class="govuk-link govuk-link--no-visited-state" href="../nomoreaction/index.html">Withdrawn</a></li>
                     <li><a class="govuk-link govuk-link--no-visited-state" href="../complete/index.html">Case complete</a></li>
                 <!-- <li><a class="govuk-link govuk-link--no-visited-state" href="../claimdatecalc/index.html">Calculate the claim by date</a></li> -->
-                <li><a class="govuk-link govuk-link--no-visited-state" href="#">Calculate Transitional Protection</a></li>
+                <!-- <li><a class="govuk-link govuk-link--no-visited-state" href="#">Calculate Transitional Protection</a></li> -->
         </ul>
 
 
@@ -97,21 +108,20 @@
                         <ol class="govuk-list timeline">
 
                           <li class="timeline-entry">
-                            <h3 class="govuk-heading-s timeline-title notice">Eligibility outcome</h3>
+                            <h3 class="govuk-heading-s timeline-title notice">TP data received</h3>
                             <p class="timeline-info govuk-body-s">
                               <span class="timeline-date">2 May 2019</span>
-                              <p>Outcome: Eligible for TP</p>
+                               <!-- <p>Outcome: Eligible for TP</p>  -->
                             </p>
                           </li>
 
                           <li class="timeline-entry">
-                             <h3 class="govuk-heading-s timeline-title notice">TP eligibility checked</h3>
-                             <p class="timeline-info govuk-body-s">
-                               <span class="timeline-date">2 May 2019</span>
-                               <p>Outcome: Partner NINO does not match</p>
-                               <!-- <p><i class="icon icon-success"></i><span style="vertical-align:12px">ID verified: 2 May 2019</span></p> -->
-                             </p>
-                           </li>
+                            <h3 class="govuk-heading-s timeline-title notice">NINO investigation outcome</h3>
+                            <p class="timeline-info govuk-body-s">
+                              <span class="timeline-date">2 May 2019</span>
+                               <p>Reason: Incorrect couple status</p>
+                            </p>
+                          </li>
 
                           </ol>
                 <a href="#" class="govuk-link govuk-link--no-visited-state">View full history</a>

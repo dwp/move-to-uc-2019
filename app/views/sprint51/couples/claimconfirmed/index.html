@@ -1,4 +1,4 @@
-{% extends "sprint51/singles/layout3-calcdue.html" %}
+{% extends "sprint51/singles/layout3-investigate.html" %}
 
 {% block main %}
 {% block content %}
@@ -8,18 +8,37 @@
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
         <p class="govuk-body govuk-!-margin-bottom-2"></p>
-        <h2 class="govuk-heading-l">Is the claimant eligible for TP?</h2>
+        <h2 class="govuk-heading-l">What was the reason for the NINO mismatch?</h2>
       </div>
     </div>
   <!-- <div class="govuk-inset-text govuk-inset-text--wide">
     The current deadline is 12 December 2019
   </div> -->
 
-<form action='/sprint51/couples/eligibility/confirm-answer' method='post' class='form' autocomplete='off'>
+<form action='/sprint51/couples/claimconfirmed/success' method='post' class='form' autocomplete='off'>
   <fieldset class="govuk-fieldset">
 
+    <div class="govuk-radios">
+         <div class="govuk-radios__item">
+           <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+           <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+             Reason 1
+           </label>
+         </div>
+         <div class="govuk-radios__item">
+           <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+           <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+             Reason 2
+           </label>
+         </div>
+         <div class="govuk-radios__item">
+           <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
+           <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+             Reason 3
+           </label>
+         </div>
 
-        <div class="govuk-radios govuk-radios">
+        <!-- <div class="govuk-radios govuk-radios">
               <div class="govuk-radios govuk-radios--conditional" data-module="radios">
 
                 <div class="govuk-radios__item">
@@ -33,10 +52,10 @@
                 <label class="govuk-label govuk-radios__label" for="pauseexclude-2">
                   No
                 </label>
-            </div>
+            </div> -->
 
 
-<p class="govuk-body govuk-!-margin-bottom-7"></p>
+<!-- <p class="govuk-body govuk-!-margin-bottom-7"></p>
 
                       <div class="govuk-radios govuk-radios" id="conditional-citizenship-conditional-2">
                         <p class="govuk-body govuk-!-font-weight-bold">Reason for ineligibility</p>
@@ -44,13 +63,25 @@
                                      <div class="govuk-radios__item">
                                        <input class="govuk-radios__input" id="citizenship-conditional-3" name="reason3" type="radio" value="SDP" {{ checked("reason", "Claimant in hospital") }}>
                                        <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
-                                         Incorrect couple status
+                                         Change in couple status
                                        </label>
                                      </div>
                                      <div class="govuk-radios__item">
                                        <input class="govuk-radios__input" id="citizenship-conditional-4" name="reason3" type="radio" value="Reduced entitlement (Benefit Cap not applied)"{{ checked("reason", "Fraud case under investigation") }}>
                                        <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
-                                         Another reason
+                                         XXXX
+                                       </label>
+                                     </div>
+                                     <div class="govuk-radios__item">
+                                       <input class="govuk-radios__input" id="citizenship-conditional-6" name="reason3" type="radio" value="Benefit cap grace period" {{ checked("reason", "Waiting on outcome of work capability assessment") }}>
+                                       <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
+                                         XXXX
+                                       </label>
+                                     </div>
+                                     <div class="govuk-radios__item">
+                                       <input class="govuk-radios__input" id="citizenship-conditional-6" name="reason3" type="radio" value="Benefit cap grace period" {{ checked("reason", "Waiting on outcome of work capability assessment") }}>
+                                       <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
+                                         XXXX
                                        </label>
                                      </div>
 
@@ -58,7 +89,7 @@
 
                                          </div>
 
-                                       </div>
+                                       </div> -->
 
 
 
