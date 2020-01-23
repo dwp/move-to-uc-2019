@@ -1,0 +1,91 @@
+{% set claimStatus = 'ready to move' %}
+{% extends "layout3.html" %}
+
+{% block main %}
+{% block content %}
+
+
+<div class="govuk-width-container">
+  <a href="../claimantdash/readytomove.html" class="govuk-back-link">Back</a>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <p class="govuk-body govuk-!-margin-bottom-2"></p>
+      <h2 class="govuk-heading-l">Are you reissuing the Migration Notice today?</h2>
+    </div>
+  </div>
+
+  <form action='/reissue/confirm-answer' method='post' class='form' autocomplete='off'>
+     <fieldset class="govuk-fieldset" aria-describedby="how-contacted-conditional-hint">
+
+        <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="migrationnotice-1" name="migrationnotice" type="radio" value="yes">
+            <label class="govuk-label govuk-radios__label" for="migrationnotice-1">
+              Yes
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="migrationnotice-2" name="migrationnotice" type="radio" value="no" data-aria-controls="conditional-migrationnotice-2">
+            <label class="govuk-label govuk-radios__label" for="migrationnotice-2">
+              No
+            </label>
+          </div>
+          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-migrationnotice-2">
+            <div class="govuk-date-input" id="passport-issued">
+     <div class="govuk-date-input__item">
+       <div class="govuk-form-group">
+         <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+           Day
+         </label>
+         <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="number" pattern="[0-9]*">
+       </div>
+     </div>
+     <div class="govuk-date-input__item">
+       <div class="govuk-form-group">
+        <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+          Month
+        </label>
+        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="number" pattern="[0-9]*">
+       </div>
+     </div>
+     <div class="govuk-date-input__item">
+       <div class="govuk-form-group">
+         <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+           Year
+         </label>
+         <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="number" pattern="[0-9]*">
+       </div>
+     </div>
+          </div>
+        </div>
+      </fieldset>
+  <p class="govuk-body govuk-!-margin-bottom-5"></p>
+      <div class="govuk-radios govuk-radios">
+   <p class="govuk-body govuk-!-font-weight-bold">Why are you reissuing the letter?</p>
+                  <div class="govuk-radios" data-module="radios">
+                     <div class="govuk-radios__item">
+                       <input class="govuk-radios__input" id="citizenship-conditional-12" name="reason" type="radio" value="Claimant in hospital" data-aria-controls="conditional-citizenship-conditional-2" {{ checked("reason", "Claimant in hospital") }}>
+                       <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
+                         Claimant didn't attend their appointment
+                       </label>
+                     </div>
+                     <div class="govuk-radios__item">
+                       <input class="govuk-radios__input" id="citizenship-conditional-12" name="reason" type="radio" value="Fraud case under investigation" data-aria-controls="conditional-citizenship-conditional-2" {{ checked("reason", "Fraud case under investigation") }}>
+                       <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
+                         An other reason
+                       </label>
+                     </div></div></div>
+
+
+  <p class="govuk-body govuk-!-margin-bottom-5"></p>
+
+    <div>
+      <button type="submit" class="govuk-button">Continue</button>
+    </div>
+      <p class="govuk-body govuk-!-margin-bottom-5"></p>
+  </form>
+
+</div>
+
+{% endblock %}
+{% endblock %}

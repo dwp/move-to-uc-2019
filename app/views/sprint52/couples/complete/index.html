@@ -1,0 +1,60 @@
+{% set claimStatus = 'UC claim submitted' %}
+{% extends "sprint52/couples/layout.html" %}
+
+
+{% block main %}
+{% block content %}
+<div class="govuk-width-container">
+    <a href="../claimantdash/selected.html" class="govuk-back-link">Back</a>
+
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+        <p class="govuk-body govuk-!-margin-bottom-2"></p>
+        <h2 class="govuk-heading-l">Log case as complete</h2>
+      </div>
+  </div>
+
+
+  <form action='/complete/success' method='post' class='form' autocomplete='off'>
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+        <span id="waste-hint" class="govuk-hint">
+          Select all that apply.
+        </span>
+        <div class="govuk-checkboxes">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste-1" name="waste" type="checkbox" value="Universal Credit paid">
+            <label class="govuk-label govuk-checkboxes__label" for="waste-1">
+              Universal Credit paid
+            </label> </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="  Transitional Protection paid">
+            <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+              Transitional Protection paid
+            </label> </div>
+        </div>
+      </fieldset>
+    </div>
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="citizenship-conditional-hint">
+      </div>
+
+
+
+
+                                                          </fieldset>
+
+
+                                                        <div>
+                                                          <button type="submit" class="govuk-button">
+                                                            Submit
+                                                          </button>
+                                                        </div>
+                                                        </main>
+                                                      <p class="govuk-body govuk-!-margin-bottom-7"></p>
+
+                                                      </div>
+                                                      {% endblock %}
+                                                      {% endblock %}

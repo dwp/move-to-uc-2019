@@ -1,0 +1,83 @@
+{% set claimStatus = 'READINESS CONVERSATION 1: READY' %}
+{% extends "layout3.html" %}
+
+{% block main %}
+{% block content %}
+<div class="govuk-width-container">
+    <a href="#" class="govuk-back-link">Back</a>
+
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+        <p class="govuk-body govuk-!-margin-bottom-2"></p>
+        <h2 class="govuk-heading-l">Calculate Migration Notice claim by date</h2>
+      </div>
+  </div>
+
+
+<form action='../claimdatecalc/confirm' method='post' class='form' autocomplete='off'>
+<h4 class="govuk-heading-s">Do you plan to issue the Migration Notice today?</h4>
+
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="how-contacted-conditional-hint">
+      <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="how-contacted-conditional-1" name="how-contacted" type="radio" value="email" data-aria-controls="conditional-how-contacted-conditional-1">
+          <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-1">
+            Yes
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="how-contacted-conditional-2" name="how-contacted" type="radio" value="phone" data-aria-controls="conditional-how-contacted-conditional-2">
+          <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-2">
+            No
+          </label> </div>
+        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-2">
+          <div class="govuk-date-input" id="passport-issued">
+              <p>When do you plan to issue the Migration Notice?</p>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                  Day
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="number" pattern="[0-9]*">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                  Month
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="number" pattern="[0-9]*">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                  Year
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="number" pattern="[0-9]*">
+              </div>
+            </div>
+
+
+        </div>
+      </div>
+    </fieldset>
+  </div>
+
+
+
+
+                                                        <div>
+                                                          <button type="submit" class="govuk-button">
+                                                            Continue
+                                                          </button>
+                                                        </div>
+                                                      </form>
+                                                        </main>
+                                                      <p class="govuk-body govuk-!-margin-bottom-7"></p>
+
+                                                      </div>
+                                                      {% endblock %}
+                                                      {% endblock %}

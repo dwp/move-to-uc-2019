@@ -1,0 +1,126 @@
+{% set claimStatus = 'READINESS CONVERSATION 1: READY' %}
+{% extends "sprint52/singles/layout3.html" %}
+
+{% block main %}
+{% block content %}
+
+<div class="govuk-width-container">
+    <a href="issue.html" class="govuk-back-link">Back</a>
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+        <p class="govuk-body govuk-!-margin-bottom-2"></p>
+        <h2 class="govuk-heading-l">Create a Migration Notice
+        <!-- {{ data['passport-issued-day'] }}
+        {% if data['passport-issued-month'] === "1" %}
+          January
+        {% elif data['passport-issued-month'] === "2" %}
+          February
+        {% elif data['passport-issued-month'] === "3" %}
+          March
+        {% elif data['passport-issued-month'] === "4" %}
+          April
+        {% elif data['passport-issued-month'] === "5" %}
+          May
+        {% elif data['passport-issued-month'] === "6" %}
+          June
+        {% elif data['passport-issued-month'] === "7" %}
+          July
+        {% elif data['passport-issued-month'] === "8" %}
+          August
+        {% elif data['passport-issued-month'] === "9" %}
+          September
+        {% elif data['passport-issued-month'] === "10" %}
+          October
+        {% elif data['passport-issued-month'] === "11" %}
+          November
+        {% elif data['passport-issued-month'] === "12" %}
+          December
+        {% endif %}
+        {{ data['passport-issued-year'] }} -->
+      </h2>
+      </div>
+  </div>
+  <div class="govuk-warning-text">
+    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+    <strong class="govuk-warning-text__text">
+      <span class="govuk-warning-text__assistive">Warning</span>
+      You must create the Migration Notice on the day you're due to see the claimant
+    </strong>
+  </div>
+<h4 class="govuk-heading-s">You need to include:</h4>
+  <ol class="govuk-list govuk-list--number">
+    <li>Postal address:
+23 River View, Bedlington, NE2 5LS</li>
+    <li>Claimant name: John Doe</li>
+    <li>Claim by date: 2 August 2019</li>
+    <li>Legacy benefits: Housing benefit, Income support</li>
+  </ol>
+<fieldset class="govuk-fieldset">
+<form action='../claimantdash/readytomove2' method='post' class='form' autocomplete='off'>
+
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="citizenship-conditional-hint">
+    <div class="govuk-checkboxes" data-module="checkboxes">
+
+
+
+
+      <div id="conditional-citizenship-conditional-1">
+        <div class="govuk-form-group">
+          <!-- <label class="govuk-label" for="contact-by-email">
+            <p class="govuk-body govuk-!-font-weight-bold">How are you issue the Migration Notice?</p>
+          </label> -->
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+
+              <!-- <div class="govuk-checkboxes">
+
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                  <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                    I’ve created and printed the Migration Notice
+                  </label> </div>
+              </div> -->
+            </fieldset>
+          </div>
+
+                          <div class="govuk-radios">
+                            <!-- <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="vehicle-type-car" name="vehicle-type" type="radio" value="Working" {{ checked("vehicle-type", "Working") }}>
+                              <label class="govuk-label govuk-radios__label" for="vehicle-type-car">
+                                I gave it to the claimant
+                              </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="vehicle-type-lorry" name="vehicle-type" type="radio" value="Not working" {{ checked("vehicle-type", "Not working") }}>
+                              <label class="govuk-label govuk-radios__label" for="vehicle-type-lorry">
+                                  I posted it
+                              </label>
+                            </div> -->
+
+                          </div>
+                        </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+                                                        </fieldset>
+
+                                                        <div>
+                                                          <button type="submit" class="govuk-button">
+                                                            I've created a Migration Notice
+                                                          </button>
+                                                        </div>
+                                                        </main>
+                                                      <p class="govuk-body govuk-!-margin-bottom-7"></p>
+
+                                                      </div>
+                                                      {% endblock %}
+                                                      {% endblock %}
