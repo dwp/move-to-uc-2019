@@ -1,5 +1,5 @@
 
-{% extends "sprint52/couples/layout3-unlink-2.html" %}
+{% extends "sprint52/couples/layout3-unlink-5.html" %}
 
 {% block main %}
 {% block content %}
@@ -12,8 +12,8 @@
 
     <div class="govuk-grid-row">
 
-<!--
-        <div class="alert alert--default" role="alert" style="margin-left: 14px; margin-right: 14px;">
+
+        <!-- <div class="alert alert--default" role="alert" style="margin-left: 14px; margin-right: 14px;">
                     <span style="font-size: 15px !important; color: black; font-family:verdana;">
                       <span style="font-size: 15px !important; color: black; font-family:verdana; font-weight: bold;">
                         Action required: </span>You need to reissue Migration Notices to the claimant and their partner.
@@ -24,7 +24,7 @@
 
 
       <div class="govuk-grid-column-one-quarter">
-        <div class="sidemenu-bar-noselect"></div>
+        <!-- <div class="sidemenu-bar-noselect"></div> -->
           <h2 class="govuk-heading-s">Log an action</h2>
   <ul class="govuk-list">
 <!-- <li><a class="govuk-link govuk-link--no-visited-state" href="../initialconversation/index.html">Log initial conversation</a></li>
@@ -47,9 +47,62 @@
 
       <div class="govuk-grid-column-three-quarters">
 
-                <div class="claimant-heading">Claimant details</div>
 
-        <hr>
+        <div class="govuk-tabs" data-module="tabs">
+          <h2 class="govuk-tabs__title">
+            Contents
+          </h2>
+
+          <ul class="govuk-tabs__list">
+            <li class="govuk-tabs__list-item">
+              <a class="govuk-tabs__tab govuk-tabs__tab--selected" href="#past-day">
+                Timeline
+              </a>
+            </li>
+            <li class="govuk-tabs__list-item">
+              <a class="govuk-tabs__tab" href="#past-week">
+                Claimant details
+              </a>
+            </li>
+          </ul>
+
+          <section class="govuk-tabs__panel" id="past-day">
+
+            <h2 class="govuk-heading-m">Timeline</h2>
+            <p class="govuk-body govuk-!-margin-bottom-7">
+            <ol class="govuk-list timeline">
+              <li class="timeline-entry">
+                <h3 class="govuk-heading-s timeline-title">Partner added</h3>
+                <p class="timeline-info govuk-body-s">
+                  <span class="timeline-date">2 May 2019</span>
+                </p>
+              </li>
+              <li class="timeline-entry">
+                <h3 class="govuk-heading-s timeline-title">Migration Notice issued</h3>
+                <p class="timeline-info govuk-body-s">
+                  <span class="timeline-date">2 May 2019</span>
+                  Issue date: 1 May 2019<br>
+                  Claim by date: 12 July 2019<br>
+                  Claimant method: Given to the claimant<br>
+                  <!-- Partner method: Posted -->
+                </p>
+              </li>
+              </ol>
+<p class="govuk-body govuk-!-margin-bottom-7">
+              <ul class="govuk-list">
+            <li>
+              <a class="govuk-link govuk-link--no-visited-state" href="#">View full history</a>
+            </li>
+            </ul>
+
+          </section>
+
+
+          <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week">
+            <h2 class="govuk-heading-m">Claimant details</h2>
+            <p class="govuk-body govuk-!-margin-bottom-7">
+
+            <p>National Insurance number &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; JC123456X</p>
 
 
                 <div class="govuk-grid-row">
@@ -57,46 +110,22 @@
                     <p>Date of birth</p>
                   </div>
                   <div class="govuk-grid-column-one-third">
-                    <p>October 1979</p>
+                    <p>&nbsp;&nbsp;&nbsp;3 October 1979</p>
                   </div>
                   <div class="govuk-grid-column-one-third">
                   </div>
                   <div class="govuk-grid-column-one-third">
                   </div>
                 </div>
-              <!-- <a href="../edit/index-single.html" class="govuk-link">Edit claimant details</a> -->
-                <!-- <div class="govuk-grid-row">
-                  <div class="govuk-grid-column-one-third">
-                    <p>Lead claimant</p>
-                  </div>
-                  <div class="govuk-grid-column-one-third">
-                    <p>Yes</p>
-                  </div>
-                  <div class="govuk-grid-column-one-third">
-                  </div>
-                  <div class="govuk-grid-column-one-third">
-                  </div>
-                </div> -->
 
 
-                          <!-- <p class="govuk-body govuk-!-margin-bottom-6">
 
-                                <h2 class="govuk-heading-m">Partner details</h2>
-                                    <hr>
-                                    <div class="govuk-grid-row">
-                                      <div class="govuk-grid-column-one-third">
-                                        <p>Date of birth</p>
-                                      </div>
-                                      <div class="govuk-grid-column-one-third">
-                                        <p>July 1982</p>
-                                      </div>
-                                      <div class="govuk-grid-column-one-third">
-                                      </div>
-                                      <div class="govuk-grid-column-one-third">
-                                      </div>
-                                    </div> -->
+          </section>
+
+        </div>
 
 
+<!--
 
           <p class="govuk-body govuk-!-margin-bottom-4">
 
@@ -119,11 +148,11 @@
                               Issue date: 1 May 2019<br>
                               Claim by date: 12 July 2019<br>
                               Claimant method: Given to the claimant<br>
-                              <!-- Partner method: Posted -->
+
                             </p>
                           </li>
                           </ol>
-                <a href="#" class="govuk-link govuk-link--no-visited-state">View full history</a>
+                <a href="#" class="govuk-link govuk-link--no-visited-state">View full history</a> -->
 
       </div>
     </div>

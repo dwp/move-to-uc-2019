@@ -682,6 +682,19 @@ input.form-control.block {
   box-sizing: border-box;
 }
 
+.key-details-bar-clear {
+  background-color: #fff;
+  margin: 0;
+  margin-top: -10px;
+  width: 100%;
+  padding: 20px 30px;
+  color: #ffffff;
+  position: relative;
+  font-family: "ntatabularnumbers", "nta", Arial, sans-serif;
+  font-size: 18px;
+  box-sizing: border-box;
+}
+
 .key-details-wrapper {
   margin: 0 auto;
   max-width: 960px;
@@ -693,10 +706,30 @@ input.form-control.block {
 
 .key-details-link {
   margin: 0 auto;
-
   color: #ffffff;
   position: relative;
 }
+
+.key-details-link-clear {
+  margin: 0 auto;
+  color: #005EA5;
+  position: relative;
+}
+
+.key-details-link-copy-clear {
+  margin: 0 auto;
+  color: #626a6e;
+  position: relative;
+}
+
+a:link {
+  color: #005EA5;
+}
+
+a:visited {
+  color: #005EA5;
+}
+
 
 
 .key-details-ni {
@@ -708,6 +741,8 @@ input.form-control.block {
   font-size: 38px;
 }
 
+
+
 .key-details-nino {
   margin: 0 auto;
   color: #ffffff;
@@ -717,6 +752,41 @@ input.form-control.block {
   font-size: 25px;
   padding-left: 10px;
 }
+
+.key-details-name {
+  margin: 0 auto;
+  color: #ffffff;
+  position: relative;
+  font-weight: bold;
+  font-family: "ntatabularnumbers", "nta", Arial, sans-serif;
+  font-size: 40px;
+}
+
+.key-details-name-clear {
+  margin: 0 auto;
+  color: #000;
+  position: relative;
+  font-weight: bold;
+  font-family: "ntatabularnumbers", "nta", Arial, sans-serif;
+  font-size: 40px;
+}
+
+.key-details-nino-sml {
+  color: #ffffff;
+  font-weight: normal;
+  font-family: "ntatabularnumbers", "nta", Arial, sans-serif;
+  font-size: 24px;
+
+}
+
+.key-details-nino-sml-clear {
+  color: #626a6e;
+  font-weight: normal;
+  font-family: "ntatabularnumbers", "nta", Arial, sans-serif;
+  font-size: 24px;
+
+}
+
 
 .key-details-claimant-details {
   margin: 0 auto;
@@ -753,7 +823,19 @@ input.form-control.block {
   background: #528FC1;
   border: 0;
   height: 1px;
-  margin-top: 0px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  padding: 0;
+}
+
+.key-details-line-clear {
+  margin: 0 auto;
+  color: #ffffff;
+  display: block;
+  background: #D8D8D8;
+  border: 0;
+  height: 1px;
+  margin-top: 20px;
   margin-bottom: 0px;
   padding: 0;
 }
@@ -812,6 +894,20 @@ input.form-control.block {
   text-align: right;
 }
 
+.key-details-tag-clear {
+  background-color: #005ea5;
+  color: #fff;
+  display: inline-block;
+  font-family: 'nta', Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 4px 8px 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: right;
+}
+
 .key-details-review-tag {
   background-color: #df3034;
   color: #fff;
@@ -825,6 +921,7 @@ input.form-control.block {
   text-transform: uppercase;
   text-align: right;
   margin-right: 20px;
+
 }
 
 
@@ -1931,4 +2028,39 @@ input.form-control.block {
     background-color: #fff;
     height: 125px;
 
+}
+
+.worklist-nino {
+    font-family: "nta",Arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 16px;
+    margin-top: 4px;
+    color: #626a6e;
+    display: block;
+
+}
+
+.govuk-tabs {
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.govuk-tabs__title {
+    font-size: 19px;
+    font-size: 1.1875rem;
+    line-height: 1.31579;
+}
+
+.govuk-tabs__title {
+    font-family: "GDS Transport",Arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.25;
+    color: #0b0c0c;
+    margin-bottom: 10px;
 }
