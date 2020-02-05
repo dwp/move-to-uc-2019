@@ -55,33 +55,28 @@
 <div class="key-details-bar" style="vertical-align:top;">
   <div class="key-details-wrapper">
 
-  <div class="key-details-tag" style="float: right;">{{ claimStatus | default('MIGRATION NOTICE ISSUED')}}</div>
+  <div class="key-details-tag" style="float: right; margin-top: 150px;">{{ claimStatus | default('MIGRATION NOTICE ISSUED')}}</div>
 
   <h1 class="key-details-ni">
 
     <span class="key-details-name">
-    <div style="background-color:white; margin-bottom: 20px; width: 660px" class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+    <div style="background-color:white; margin-bottom: 20px;" class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
   <h2 class="govuk-error-summary__title" id="error-summary-title">
     There is a problem
   </h2>
   <div class="govuk-error-summary__body">
     <ul class="govuk-list govuk-error-summary__list">
       <li>
-        <a href="#">Unable to display name</a>
-      </li>
-      <li>
-        <a href="#">Unable to display NINO</a>
+        <a href="#">There has been an error in retrieving the claimant name</a>
       </li>
     </ul>
   </div>
 </div>
 </span>
 
-
-
-
   </h1>
-
+  <span class="key-details-name">Unable to display name</span><br>
+    <span class="key-details-nino-sml">JC123456X</span>
 
     <hr class="key-details-line">
     <p class="govuk-body govuk-!-margin-bottom-3"></p>
