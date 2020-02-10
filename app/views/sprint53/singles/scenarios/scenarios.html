@@ -1,0 +1,39 @@
+{% extends "sprint53/singles/layout.html" %}
+
+{% block header %}
+  {# Set serviceName in config.js. #}
+  {{ govukHeader({
+    serviceName: serviceName + " prototype",
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h2 class="govuk-heading-l">Scenarios</h2>
+    <a href="../claimantdash/selected.html" class="govuk-link">1. Take a claimant from 'in scope to move' to making a claim</a><br>
+    <a href="../claimantdash/selected.html" class="govuk-link">2. Withdraw claimant from journey (Claimant has moved to Pension Credit)</a><br>
+    <a href="../claimantdash/cancel2.html" class="govuk-link">3. Give the claimant more time (Claimant going into hospital)</a><br>
+    <a href="../claimantdash/cancel2.html" class="govuk-link">4. Cancel Migration Notice (Fraud case under investigation)</a><br>
+    <a href="../claimantdash/selected.html" class="govuk-link">5. Defer a move (Claimant in prison)</a><br>
+    <a href="../claimantdash/selected.html" class="govuk-link">6. Day 1 exclusion (Claimant on SDP)</a><br>
+  </div>
+</div>
+
+<div class="govuk-!-padding-bottom-8"></div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+  <span class="govuk-caption-m">Last updated:</span>
+      <p class="govuk-body-s">23 July 2019</p>
+  </div>
+</div>
+
+
+
+{% endblock %}
