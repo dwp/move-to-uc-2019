@@ -55,7 +55,7 @@
 <div class="key-details-bar" style="vertical-align:top;">
   <div class="key-details-wrapper">
 
-  <div class="key-details-tag" style="float: right; margin-top: 150px;">{{ claimStatus | default('MIGRATION NOTICE ISSUED')}}</div>
+  <div class="key-details-tag" style="float: right; margin-top: 180px;">{{ claimStatus | default('MIGRATION NOTICE ISSUED')}}</div>
 
   <h1 class="key-details-ni">
 
@@ -67,7 +67,8 @@
   <div class="govuk-error-summary__body">
     <ul class="govuk-list govuk-error-summary__list">
       <li>
-        <a href="#">There has been an error in retrieving the claimant name</a>
+        <a href="#">The claimant name could not be retrieved from the server.<br><br>
+        Try reloading the browser. If the problem persists raise an incident.</a>
       </li>
     </ul>
   </div>
@@ -76,7 +77,6 @@
 
   </h1>
   <span class="key-details-name">Unable to display name</span><br>
-    <span class="key-details-nino-sml">JC123456X</span>
 
     <hr class="key-details-line">
     <p class="govuk-body govuk-!-margin-bottom-3"></p>
