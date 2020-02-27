@@ -1,0 +1,52 @@
+{% extends "sprint54/singles/layout-nameonly.html" %}
+
+
+{% block main %}
+{% block content %}
+
+<div class="govuk-width-container">
+
+  <form action='../worklist/index2' method='post' class='form' autocomplete='off'>
+    <fieldset class="govuk-fieldset">
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+        <p class="govuk-body govuk-!-margin-bottom-2"></p>
+        <h2 class="govuk-heading-l">Sign in</h2>
+      </div>
+    </div>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="width-10">
+        User ID
+      </label>
+      <input class="govuk-input govuk-input--width-10" id="width-10" name="width-10" type="text">
+    </div>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="width-10">
+        Password
+      </label>
+      <input class="govuk-input govuk-input--width-10" id="width-10" name="width-10" type="text">
+    </div>
+
+
+    <button type="submit" class="govuk-button">
+      Sign in
+    </button>
+
+  </fieldset>
+</form>
+<div class="govuk-!-padding-bottom-6"></div>
+
+<h4 class="govuk-heading-s">Problems signing in</h4>
+
+    <a href="#" class="govuk-link">Forgotten password</a>
+    <!-- <li><a href="#0">Forgotten user ID</a></li>
+    <li><a href="register">Need to create an account</a></li> -->
+
+</div>
+<div class="govuk-!-padding-bottom-6"></div>
+
+{% endblock %}
+{% endblock %}
