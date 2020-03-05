@@ -232,7 +232,7 @@ hr {
 
 hr.filters {
     display: block;
-    background: #dee0e2;
+    background: #BFC1C3;
     border: 0;
     height: 1px;
     margin-top: -9px;
@@ -2159,6 +2159,22 @@ a:visited {
     margin-top: 4px;
     color: #626a6e;
     display: block;
+
+}
+
+.filter-title {
+    font-family: "nta",Arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    margin-top: 4px;
+    font-weight: bold;;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.25;
+    color: #0B0C0C;
+    display: block;
+    margin-bottom: -2px;
 
 }
 

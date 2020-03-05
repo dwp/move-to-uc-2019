@@ -19,7 +19,7 @@
   <p class="govuk-body govuk-!-margin-bottom-2">
     <div class="govuk-form-group">
       <fieldset class="govuk-fieldset">
-        <h4 class="govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">Filter by task</h4>
+        <p class="filter-title">Filter by status</p><br>
         <hr class="filters">
         <div class="govuk-checkboxes govuk-checkboxes--small">
           <div class="govuk-checkboxes__item">
@@ -68,7 +68,7 @@
       </fieldset>
     </div>
 
-
+<!--
     <p class="govuk-body govuk-!-margin-bottom-2">
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
@@ -105,11 +105,11 @@
                 </label>
               </div>
           </fieldset>
-        </div>
+        </div> -->
 
                     <div>
                         <button class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" style="margin-top: 20px;">
-                                  Apply
+                                  Filter
                                 </button>
                                 <button class="govuk-button govuk-button--secondary" data-module="govuk-button" style="margin-top: 20px;">
                                   Reset
@@ -131,9 +131,9 @@
         <tr class="govuk-table__row">
           <th class="govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold govuk-table__cell" scope="col">NINO</th>
           <th class="govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold govuk-table__cell" scope="col">Status</th>
-          <th class="govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold govuk-table__cell" scope="col">Claim by date</th>
-          <th class="govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold govuk-table__cell" scope="col">Reminder due</th>
-          <th class="govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold govuk-table__cell" scope="col">Review due</th>
+          <th class="govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold govuk-table__cell" scope="col"><a href="#" class="govuk-link">Claim by date&nbsp;&nbsp;<img src="../../../public/images/arrow.png" width="12px"></a></th>
+          <th class="govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold govuk-table__cell" scope="col"><a href="#" class="govuk-link">Reminder due&nbsp;&nbsp;<img src="../../../public/images/arrow.png" width="12px"></a></th>
+          <th class="govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold govuk-table__cell" scope="col"><a href="#" class="govuk-link">Review due&nbsp;&nbsp;<img src="../../../public/images/arrow.png" width="12px"></a></th>
         </tr>
       </thead>
       <tbody class="govuk-table__body">
@@ -147,7 +147,7 @@
               Migration Notice issued</span></td>
             <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 June 2020</td>
           <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 February 2020</td>
-          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 February 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right"></td>
         </tr>
 
         <tr class="govuk-table__row">
@@ -286,6 +286,32 @@
 
       </tbody>
     </table>
+    <p class="govuk-body govuk-!-margin-bottom-8">
+
+
+    <div class="govuk-grid-column-one-quarter" style="width:10px; margin-left:-14px;">
+  <a href="#" class="govuk-link"><img src="../../../public/images/pagination-back.png" width="12px"></a>
+    </div>
+    <div class="govuk-grid-column-one-quarter" style="width:80px;">
+  <a href="#" class="govuk-link" style="margin-top:1px;">Previous</a>
+    </div>
+    <div class="govuk-grid-column-one-quarter" style="width:10px;">
+  <a href="#" class="govuk-link" style="margin-top:1px;">1</a>
+    </div>
+    <div class="govuk-grid-column-one-quarter" style="width:10px;">
+  <a href="#" class="govuk-link" style="margin-top:1px;">2</a>
+    </div>
+    <div class="govuk-grid-column-one-quarter" style="width:10px;">
+  <p class="govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold"  style="margin-top:1px;">3</p>
+    </div>
+    <div class="govuk-grid-column-one-quarter" style="width:60px;">
+  <a href="#" class="govuk-link" style="margin-top:1px;">Next</a>
+    </div>
+    <div class="govuk-grid-column-one-quarter" style="width:10px;" >
+  <a href="#" class="govuk-link"><img src="../../../public/images/pagination-forward.png" width="12px"></a>
+    </div>
+
+
 
   </div>
 </div>
