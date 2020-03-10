@@ -11,37 +11,40 @@
 <h1 class="govuk-heading-xl">Issue Migration Notice</h1>
 
 
-  <div class="govuk-grid-row">
-   <div class="govuk-grid-column-one-quarter" style="width:450px; padding-top:1px; padding-bottom:-50px; ">
-     <p class="govuk-body govuk-!-font-size-19 govuk-!-font-weight-bold">Filter by approach</p>
-   </div>
 
-   <div class="govuk-grid-column-one-quarter" style="width:990px; padding-top:-300px;">
-     <!-- <select class="govuk-select" id="sort" name="sort">
-       <option value="published">Select status</option>
-       <option value="updated">In scope to move</option>
-       <option value="views">Selected to move</option>
-       <option value="comments">Initial conversation</option>
-       <option value="comments">Ready for Migration Notice</option>
-       <option value="comments" selected>Migration Notice issued</option>
-       <option value="comments">UC claim submitted</option>
-         <option value="comments">TP data received</option>
-     </select>
-     &nbsp;&nbsp;&nbsp; -->
-     <select class="govuk-select" id="sort" name="sort">
-       <option value="published">Select approach</option>
-       <option value="updated">Work coach led</option>
-       <option value="views" selected>Partner led</option>
-     </select>
-     &nbsp;
-     <button class="govuk-button govuk-!-margin-right-1" data-module="govuk-button">
-       Filter
-     </button>
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-one-quarter" style="width:72px; padding-top:1px; padding-bottom:-50px; ">
+   <p class="govuk-body govuk-!-font-size-19 govuk-!-font-weight-bold">Cases</p>
+ </div>
+ <div class="govuk-grid-column-one-quarter" style="width:72px; padding-top:1px; padding-left:165px;">
+   <p class="govuk-body govuk-!-font-size-19 govuk-!-font-weight-bold">Approach</p>
+ </div>
+ <div class="govuk-grid-column-one-quarter" style="width:990px; padding-top:-300px;">
+   <select class="govuk-select" id="sort" name="sort">
+     <option value="published">Select status</option>
+     <option value="comments" selected>Only my cases</option>
+     <option value="comments">Sarah Jones's cases</option>
+     <option value="comments">James Smith's cases</option>
+      <option value="comments">Sally Wilsons's cases</option>
+     <option value="comments">Jill Readman's cases</option>
+   </select>
+   &nbsp;&nbsp;&nbsp;
+   <select class="govuk-select" id="sort" name="sort">
+     <option value="published">Select approach</option>
+     <option value="updated" selected>Work coach led</option>
+     <option value="views">Partner led</option>
+   </select>
+   &nbsp;
+   <button class="govuk-button govuk-!-margin-right-1" data-module="govuk-button">
+     Filter
+   </button>
 
-     <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
-       Reset
-     </button>
-   </div>
+   <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+     Reset
+   </button>
+ </div>
+
+
 
    </div>
 <p class="govuk-body govuk-!-margin-bottom-5">
@@ -56,7 +59,7 @@
         <th class="govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold govuk-table__cell" scope="col">Name</th>
         <th class="govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold govuk-table__cell" scope="col">NINO</th>
         <th class="govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold govuk-table__cell" scope="col">Approach</th>
-        <th class="govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold govuk-table__cell" scope="col"><a href="#" class="govuk-link">Task created&nbsp;&nbsp;<img src="../../../public/images/arrow.png" width="12px"></a></th>
+        <th class="govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold govuk-table__cell" scope="col"><a href="#" class="govuk-link">Action due&nbsp;&nbsp;<img src="../../../public/images/arrow.png" width="12px"></a></th>
       </tr>
     </thead>
     <tbody class="govuk-table__body">
