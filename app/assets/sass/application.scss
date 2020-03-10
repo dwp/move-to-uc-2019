@@ -1962,6 +1962,16 @@ a:visited {
 
 }
 
+.approach-2{
+  background-color: #fff;
+  color: #6E777B;
+  font-family: 'nta', Arial, sans-serif;
+  font-size: 19px;
+  font-weight: 500;
+  text-decoration: none;
+
+}
+
 
 .alert {
     -webkit-box-sizing: border-box;
@@ -2184,6 +2194,21 @@ a:visited {
     font-weight: bold;;
     font-size: 16px;
     font-size: 1rem;
+    line-height: 1.25;
+    color: #0B0C0C;
+    display: block;
+    margin-bottom: -2px;
+
+}
+
+.filter-title-2 {
+    font-family: "nta",Arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    margin-top: 4px;
+    font-weight: bold;;
+    font-size: 19px;
     line-height: 1.25;
     color: #0B0C0C;
     display: block;
