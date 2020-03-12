@@ -11,7 +11,7 @@
   <div class="govuk-grid-column-one-quarter">
 
 
-  <p class="govuk-body govuk-!-margin-bottom-2">
+  <!-- <p class="govuk-body govuk-!-margin-bottom-2">
     <div class="govuk-form-group">
       <fieldset class="govuk-fieldset">
         <p class="filter-title">Filter by cases</p><br>
@@ -49,7 +49,7 @@
           </div>
         </div>
       </fieldset>
-    </div>
+    </div> -->
 
 
     <p class="govuk-body govuk-!-margin-bottom-2">
@@ -61,7 +61,13 @@
             <div class="govuk-checkboxes__item">
               <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
               <label class="govuk-label govuk-checkboxes__label govuk-body govuk-!-font-size-16" for="organisation" style="margin-top: 1px;">
-                 Work coach led
+                 WC led (BAU)
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+              <label class="govuk-label govuk-checkboxes__label govuk-body govuk-!-font-size-16" for="organisation" style="margin-top: 1px;">
+                 WC led (Alt)
               </label>
             </div>
             <div class="govuk-checkboxes__item">
@@ -70,16 +76,43 @@
                  Partner led
               </label>
             </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+              <label class="govuk-label govuk-checkboxes__label govuk-body govuk-!-font-size-16" for="organisation" style="margin-top: 1px;">
+                HMRC led
+              </label>
+            </div>
           </div>
         </fieldset>
       </div>
 
 
+
+      <!-- <p class="govuk-body govuk-!-margin-bottom-2">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <h4 class="govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">Filter by cases</h4>
+            <hr class="filters">
+            <div class="govuk-checkboxes govuk-checkboxes--small">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc" checked>
+                <label class="govuk-label govuk-checkboxes__label govuk-body govuk-!-font-size-16" for="organisation" style="margin-top: 1px;">
+                  See only my cases
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div> -->
+
+
+
+
+
                     <div>
-                        <button class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" style="margin-top: 20px;">
+                        <button class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" style="margin-top: 5px;">
                                   Filter
                                 </button>
-                                <button class="govuk-button govuk-button--secondary" data-module="govuk-button" style="margin-top: 20px;">
+                                <button class="govuk-button govuk-button--secondary" data-module="govuk-button" style="margin-top: 5px;">
                                   Reset
                           </button>
                     </div>
@@ -315,7 +348,11 @@
     <div class="govuk-grid-column-one-quarter" style="width:10px;" >
   <a href="#" class="govuk-link"><img src="../../../public/images/pagination-forward.png" width="12px"></a>
     </div>
+    <div class="govuk-grid-column-one-quarter" style="width:430px; text-align: right; padding-right:0px;" >
+  <p class="govuk-body govuk-!-font-size-16">
 
+  Showing <b>200</b> to <b>300</b> of <b>300</b> results</p>
+    </div>
 
 
   </div>

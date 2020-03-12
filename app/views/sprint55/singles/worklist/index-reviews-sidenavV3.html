@@ -66,19 +66,49 @@
     <p class="govuk-body govuk-!-margin-bottom-2">
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
+          <h4 class="govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">Filter by cases</h4>
+          <hr class="filters">
+          <div class="govuk-checkboxes govuk-checkboxes--small">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc" checked>
+              <label class="govuk-label govuk-checkboxes__label govuk-body govuk-!-font-size-16" for="organisation" style="margin-top: 1px;">
+                 See my cases only
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+
+
+    <p class="govuk-body govuk-!-margin-bottom-2">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
           <h4 class="govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">Filter by approach</h4>
           <hr class="filters">
           <div class="govuk-checkboxes govuk-checkboxes--small">
             <div class="govuk-checkboxes__item">
               <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
               <label class="govuk-label govuk-checkboxes__label govuk-body govuk-!-font-size-16" for="organisation" style="margin-top: 1px;">
-                Work coach led
+                 WC led (BAU)
               </label>
             </div>
             <div class="govuk-checkboxes__item">
               <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
               <label class="govuk-label govuk-checkboxes__label govuk-body govuk-!-font-size-16" for="organisation" style="margin-top: 1px;">
-                Partner led
+                 WC led (Alt)
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+              <label class="govuk-label govuk-checkboxes__label govuk-body govuk-!-font-size-16" for="organisation" style="margin-top: 1px;">
+                 Partner led
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+              <label class="govuk-label govuk-checkboxes__label govuk-body govuk-!-font-size-16" for="organisation" style="margin-top: 1px;">
+                HMRC led
               </label>
             </div>
           </div>
