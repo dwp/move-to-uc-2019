@@ -1,0 +1,81 @@
+{% set claimStatus = 'in scope to move' %}
+{% extends "sprint56/couples/layout3-no-couple-addpartner.html" %}
+
+{% block main %}
+{% block content %}
+<div class="govuk-width-container">
+    <!-- <a href="../claimantdash/selected-single" class="govuk-back-link">Back</a> -->
+
+      <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+          <p class="govuk-body govuk-!-margin-bottom-2"></p>
+  <h2 class="govuk-heading-l">Add a partner</h2>
+
+  <fieldset class="govuk-fieldset">
+  <form action='success' method='post' class='form' autocomplete='off'>
+
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="contact-by-phone">
+      Partner's National Insurance number
+    </label>
+    <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="contact-by-phone" type="tel" value="JC123456X">
+    &nbsp; &nbsp;<button type="submit" class="govuk-button--secondary">
+       &nbsp;Search&nbsp;
+  </div>
+
+
+      </div>
+    </div>
+
+
+
+
+                                                          </fieldset>
+
+                                                          <div>
+                                                            <!-- <button type="submit" class="govuk-button--secondary">
+                                                                Look up
+                                                            </button> -->
+
+
+
+                                                            <table class="govuk-table">
+                                                              <!-- <caption class="govuk-table__caption">Dates and amounts</caption> -->
+                                                              <thead class="govuk-table__head">
+                                                                <tr class="govuk-table__row">
+                                                                  <th scope="col" class="govuk-table__header">Partner details</th>
+                                                                  <th scope="col" class="govuk-table__header"></th>
+                                                                </tr>
+                                                              </thead>
+                                                              <tbody class="govuk-table__body">
+                                                                <tr class="govuk-table__row">
+                                                                  <th scope="row" class="govuk-table__header">National Insurance number</th>
+                                                                  <td class="govuk-table__cell">JC123456X</td>
+                                                                </tr>
+                                                                <tr class="govuk-table__row">
+                                                                  <th scope="row" class="govuk-table__header">Date of birth</th>
+                                                                  <td class="govuk-table__cell">July 1981</td>
+                                                                </tr>
+                                                                <tr class="govuk-table__row">
+                                                                  <th scope="row" class="govuk-table__header">Status</th>
+                                                                  <td class="govuk-table__cell">Migration Notice issued</td>
+                                                                </tr>
+
+                                                              </tbody>
+                                                            </table>
+
+
+                                                            <button type="submit" class="govuk-button">
+                                                                Link partner record
+                                                            </button>
+
+
+                                                          </div>
+                                                            <a href="../claimantdash/selected-single-alternate" class="govuk-link">Cancel and return to case</a>
+                                                          </main>
+                                                        <p class="govuk-body govuk-!-margin-bottom-7"></p>
+
+                                                        </div>
+                                                        {% endblock %}
+                                                        {% endblock %}

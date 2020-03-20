@@ -1,0 +1,56 @@
+{% set claimStatus = 'migration notice issued' %}
+{% extends "sprint56/couples/layout.html" %}
+
+{% block main %}
+{% block content %}
+<div class="govuk-width-container">
+    <a href="index.html" class="govuk-back-link">Back</a>
+
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+        <p class="govuk-body govuk-!-margin-bottom-2"></p>
+        <h2 class="govuk-heading-l">How did you issue the Extension Notice?</h2>
+      </div>
+  </div>
+
+
+
+<fieldset class="govuk-fieldset">
+<form action='success' method='post' class='form' autocomplete='off'>
+
+
+<div class="govuk-form-group">
+
+
+
+                                        <div class="govuk-radios">
+                                          <div class="govuk-radios__item">
+                                            <input class="govuk-radios__input" id="vehicle-type-car" name="vehicle-type" type="radio" value="Working" {{ checked("vehicle-type", "Working") }}>
+                                            <label class="govuk-label govuk-radios__label" for="vehicle-type-car">
+                                              I gave it to the claimant
+                                            </label>
+                                          </div>
+                                          <div class="govuk-radios__item">
+                                            <input class="govuk-radios__input" id="vehicle-type-lorry" name="vehicle-type" type="radio" value="Not working" {{ checked("vehicle-type", "Not working") }}>
+                                            <label class="govuk-label govuk-radios__label" for="vehicle-type-lorry">
+                                              I posted it
+                                            </label>
+                                          </div>  </div>
+
+
+
+
+                                                        </fieldset>
+
+                                                        <div>
+                                                          <button type="submit" class="govuk-button">
+                                                            Submit
+                                                          </button>
+                                                        </div>
+                                                        </main>
+                                                      <p class="govuk-body govuk-!-margin-bottom-7"></p>
+
+                                                      </div>
+                                                      {% endblock %}
+                                                      {% endblock %}

@@ -1,0 +1,231 @@
+{% extends "sprint56/singles/layout2.html" %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-one-quarter">
+
+  <h2 class="govuk-heading-l">My cases</h2>
+
+
+  <form action='index-reviews-sidenavV3' method='post' class='form' autocomplete='off'>
+  <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  Show filters
+  </button>
+  </form>
+
+
+</div>
+<div class="col-md-12" style="height:129px;">
+</div>
+
+
+
+  <div class="govuk-grid-column-full">
+
+    <table class="govuk-table" border="0px">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th class="govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold govuk-table__cell" scope="col">Task</th>
+          <th class="govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold govuk-table__cell" scope="col"><a href="#" class="govuk-link">Claimant details&nbsp;&nbsp;<img src="../../../public/images/arrow.png" width="12px"></a></th>
+          <th class="govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold govuk-table__cell" scope="col"><a href="#" class="govuk-link">Claim by date&nbsp;&nbsp;<img src="../../../public/images/arrow.png" width="12px"></a></th>
+          <th class="govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold govuk-table__cell" scope="col"><a href="#" class="govuk-link">Task due date&nbsp;&nbsp;<img src="../../../public/images/arrow.png" width="12px"></a></th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+
+        <tr class="govuk-table__row">
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top"><a href="../../couples/claimantdash/selected-single-addpartner" class="govuk-link">
+            Issue Migration Notice</a></td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <span class="govuk-body govuk-!-font-size-16">
+              Andrew Smith</span><br><span class="approach">Partner led</span></td>
+            <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">Not yet determind</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right"><span class="work-list-review-due-text2">1 day overdue</span></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top"><a href="#" class="govuk-link">
+            Review deferral</a></td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <span class="govuk-body govuk-!-font-size-16">
+              Ben Jones</span><br><span class="approach">Work coach led</span></td>
+            <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">Not yet determind</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right"><span class="work-list-review-due-text2">1 day overdue</span></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top"><a href="#" class="govuk-link">
+            Calculate TP</a></td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <span class="govuk-body govuk-!-font-size-16">
+              Beth Smithson</span><br><span class="approach">Work coach led</span></td>
+            <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">3 August 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right"><span class="work-list-review-due-text2">Due</span></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top"><a href="#" class="govuk-link">
+            Calculate TP</a></td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <span class="govuk-body govuk-!-font-size-16">
+              Caroline Turner</span><br><span class="approach">Partner led</span></td>
+            <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">3 August 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right"><span class="work-list-review-due-text2">Due</span></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top"><a href="#" class="govuk-link">
+            Calculate TP</a></td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <span class="govuk-body govuk-!-font-size-16">
+              Daniel Smart</span><br><span class="approach">Partner led</span></td>
+            <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">3 August 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right"><span class="work-list-review-due-text2">Due</span></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top"><a href="#" class="govuk-link">
+            Calculate TP</a></td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <span class="govuk-body govuk-!-font-size-16">
+              Lee Smith</span><br><span class="approach">Partner led</span></td>
+            <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">13 August 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right"><span class="work-list-review-due-text2">Due</span></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top"><a href="#" class="govuk-link">
+            Calculate TP</a></td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <span class="govuk-body govuk-!-font-size-16">
+              Helen Scott</span><br><span class="approach">Partner led</span></td>
+            <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 August 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right"><span class="work-list-review-due-text2">Due</span></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top"><a href="#" class="govuk-link">
+            Calculate TP</a></td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <span class="govuk-body govuk-!-font-size-16">
+              Karen Cannon</span><br><span class="approach">Work coach led</span></td>
+            <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">21 August 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right"><span class="work-list-review-due-text2">Due</span></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top"><a href="#" class="govuk-link">
+            Calculate TP</a></td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <span class="govuk-body govuk-!-font-size-16">
+              Sarah Turner</span><br><span class="approach">Partner led</span></td>
+            <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">25 August 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right"><span class="work-list-review-due-text2">Due</span></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top"><a href="#" class="govuk-link">
+            Calculate TP</a></td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <span class="govuk-body govuk-!-font-size-16">
+              Simon Richards</span><br><span class="approach">Work coach led</span></td>
+            <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">29 August 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right"><span class="work-list-review-due-text2">Due</span></td>
+        </tr>
+
+
+                <tr class="govuk-table__row">
+                  <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top"><a href="#" class="govuk-link">
+                    Calculate TP</a></td>
+                  <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+                    <span class="govuk-body govuk-!-font-size-16">
+                      Lee Smith</span><br><span class="approach">Partner led</span></td>
+                    <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">13 August 2020</td>
+                  <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right"><span class="work-list-review-due-text2">Due</span></td>
+                </tr>
+
+                <tr class="govuk-table__row">
+                  <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top"><a href="#" class="govuk-link">
+                    Calculate TP</a></td>
+                  <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+                    <span class="govuk-body govuk-!-font-size-16">
+                      Helen Scott</span><br><span class="approach">Partner led</span></td>
+                    <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 August 2020</td>
+                  <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right"><span class="work-list-review-due-text2">Due</span></td>
+                </tr>
+
+                <tr class="govuk-table__row">
+                  <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top"><a href="#" class="govuk-link">
+                    Calculate TP</a></td>
+                  <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+                    <span class="govuk-body govuk-!-font-size-16">
+                      Karen Cannon</span><br><span class="approach">Partner led</span></td>
+                    <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">21 August 2020</td>
+                  <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right"><span class="work-list-review-due-text2">Due</span></td>
+                </tr>
+
+                <tr class="govuk-table__row">
+                  <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top"><a href="#" class="govuk-link">
+                    Calculate TP</a></td>
+                  <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+                    <span class="govuk-body govuk-!-font-size-16">
+                      Sarah Turner</span><br><span class="approach">Partner led</span></td>
+                    <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">25 August 2020</td>
+                  <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right"><span class="work-list-review-due-text2">Due</span></td>
+                </tr>
+
+                <tr class="govuk-table__row">
+                  <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top"><a href="#" class="govuk-link">
+                    Calculate TP</a></td>
+                  <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+                    <span class="govuk-body govuk-!-font-size-16">
+                      Simon Richards</span><br><span class="approach">Partner led</span></td>
+                    <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">29 August 2020</td>
+                  <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right"><span class="work-list-review-due-text2">Due</span></td>
+                </tr>
+
+      </tbody>
+    </table>
+
+
+
+        <p class="govuk-body govuk-!-margin-bottom-8">
+
+
+        <div class="govuk-grid-column-one-quarter" style="width:10px; margin-left:-14px;">
+      <a href="#" class="govuk-link"><img src="../../../public/images/pagination-back.png" width="12px"></a>
+        </div>
+        <div class="govuk-grid-column-one-quarter" style="width:80px;">
+      <a href="#" class="govuk-link" style="margin-top:1px;">Previous</a>
+        </div>
+        <div class="govuk-grid-column-one-quarter" style="width:10px;">
+      <a href="#" class="govuk-link" style="margin-top:1px;">1</a>
+        </div>
+        <div class="govuk-grid-column-one-quarter" style="width:10px;">
+      <a href="#" class="govuk-link" style="margin-top:1px;">2</a>
+        </div>
+        <div class="govuk-grid-column-one-quarter" style="width:10px;">
+      <p class="govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold"  style="margin-top:1px;">3</p>
+        </div>
+        <div class="govuk-grid-column-one-quarter" style="width:60px;">
+      <a href="#" class="govuk-link" style="margin-top:1px;">Next</a>
+        </div>
+        <div class="govuk-grid-column-one-quarter" style="width:10px;" >
+      <a href="#" class="govuk-link"><img src="../../../public/images/pagination-forward.png" width="12px"></a>
+        </div>
+        <div class="govuk-grid-column-one-quarter" style="width:674px; text-align: right; padding-right:0px;" >
+      <p class="govuk-body govuk-!-font-size-16">
+
+      Showing <b>200</b> to <b>300</b> of <b>300</b> results</p>
+        </div>
+
+
+
+  </div>
+</div>
+
+
+{% endblock %}
