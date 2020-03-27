@@ -1,16 +1,15 @@
-
 {% extends "sprint56/singles/layout3.html" %}
 
 {% block main %}
 {% block content %}
 <div class="govuk-width-container">
-    <a href="issue.html" class="govuk-back-link">Back</a>
+    <a href="#" class="govuk-back-link">Back</a>
 
 
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
         <p class="govuk-body govuk-!-margin-bottom-2"></p>
-        <h2 class="govuk-heading-l">When was the Migration Notice issued?</h2>
+        <h2 class="govuk-heading-l">Generate a Migration Notice</h2>
       </div>
   </div>
 
@@ -22,6 +21,22 @@
     <fieldset class="govuk-fieldset" aria-describedby="how-contacted-conditional-hint">
 
 
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="event-name">
+          Full name
+        </label>
+        <input class="govuk-input" id="event-name" name="event-name" type="text">
+      </div>
+
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="more-detail">
+          Address and postcode
+        </label>
+        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+      </div>
+
+<h2 class="govuk-heading-s">When are you issuing the Migration Notice?</h2>
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset" aria-describedby="how-contacted-conditional-hint">
           <div class="govuk-radios govuk-radios--conditional" data-module="radios">
@@ -66,45 +81,31 @@
                 </div>
             </div>
           </div>
-            <!-- <div id="conditional-how-contacted-conditional-1">
-              <div class="govuk-inset-text">
-                The claim by date is 2 August 2019
-              </div>
-            </div> -->
+
           </div>
       </div>
 
-
-<h2 class="govuk-heading-s">How did you issue the Migration Notice?</h2>
-      <div class="govuk-radios">
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="vehicle-type-car" name="vehicle-type" type="radio" value="Working" {{ checked("vehicle-type", "Working") }}>
-          <label class="govuk-label govuk-radios__label" for="vehicle-type-car">
-            I gave it to the claimant
-          </label>
-        </div>
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="vehicle-type-lorry" name="vehicle-type" type="radio" value="Not working" {{ checked("vehicle-type", "Not working") }}>
-          <label class="govuk-label govuk-radios__label" for="vehicle-type-lorry">
-              I posted it
-          </label>
-        </div>
-
-      </div>
+<p class="govuk-body govuk-!-margin-bottom-4"></p>
+      <a href="#" class="govuk-link">Preview letter</a>
 
     </fieldset>
   </div>
 
+  <div>
+  <button type="submit" class="govuk-button" download>Continue and download the letter PDF</button>
+
+<!-- <p class="govuk-body">The letter will be saved in your 'downloads' folder.</p>
+
+<div class="govuk-inset-text">
+  Do you want to log that you have issued a Migration Notice for <a href="../migrationnotice2/index" class="govuk-link">JC123456X</a>?
+</div>
+
+<a href="../claimantdash/selected-single-addpartner" class="govuk-link">Go back to the claimant's case</a> -->
 
 
-
-                                                        <div>
-                                                          <button type="submit" class="govuk-button">
-                                                            Submit
-                                                          </button>
-                                                        </div>
-                                                        </main>
-                                                      <p class="govuk-body govuk-!-margin-bottom-7"></p>
+</div>
+</main>
+<p class="govuk-body govuk-!-margin-bottom-7"></p>
 
                                                       </div>
                                                       {% endblock %}

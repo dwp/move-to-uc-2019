@@ -36,13 +36,13 @@
     <nav class="inline-nav">
       <ul class="" aria-label="Top Level Navigation">
         <li class="govuk-header__navigation-ite">
-          <a class="govuk-header__link header-link" href="#">My tasks</a>
-        </li>
-        <li class="govuk-header__navigation-ite">
           <a class="govuk-header__link header-link" href="#">Add a claimant</a>
         </li>
         <li class="govuk-header__navigation-ite">
           <a class="govuk-header__link header-link" href="#">Find a claimant</a>
+        </li>
+        <li class="govuk-header__navigation-ite">
+          <a class="govuk-header__link header-link" href="#">Sign out</a>
         </li>
       </ul>
     </nav>
@@ -58,20 +58,32 @@
 
     <span class="key-details-name">JC123456X</span>
 
-    <div class="key-details-tag" style="float: right;">{{ claimStatus | default('READY FOR MIGRATION NOTICE')}}</div>
+    <div class="key-details-tag" style="float: right;">{{ claimStatus | default('MIGRATION NOTICE ISSUED')}}</div>
 
-    <div class="key-details-tag-approach" style="float: right;">{{ claimStatus | default('PARTNER LED')}}</div>
+    <div class="key-details-tag-approach-alt" style="float: right;">{{ claimStatus | default('WC LED (ALT)')}}</div>
 
   </h1>
+
+<div class="key-details-link">
+    Partner of <a href="../couple/claimantdash/selected-couple.html">QQ123456X</a>&ensp;&ensp;
+    <a href="../unlink/index.html" class="govuk-body govuk-!-font-size-17">Unlink from partner</a>
+  <p class="govuk-body govuk-!-margin-bottom-3"></p>
+</div>
 
     <hr class="key-details-line">
     <p class="govuk-body govuk-!-margin-bottom-3"></p>
 
     <div class="key-details-link">
-      Partner of <a href="../couple/claimantdash/selected-couple.html">QQ123456X</a>&ensp;&ensp;<a href="../unlink/index.html" class="govuk-body govuk-!-font-size-17">Unlink from partner</a>
-      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
-      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
-      Claim by date: Not yet determind
+
+  Claim by date: 2 August 2020
+      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+      <div style="float: right;">
+      <span class="key-details-tag-role">WC</span>
+      Sarah Smith (you)&ensp;<a href="../assign/index.html">Change</a>&ensp;&ensp;
+      <span class="key-details-tag-role">CM</span><a href="../assign/index.html">Assign</a>
+
+      </div>
 
     </div>
   </div>
