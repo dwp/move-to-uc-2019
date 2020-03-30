@@ -4,25 +4,21 @@
 {% block content %}
 <div class="govuk-width-container">
     <a href="#" class="govuk-back-link">Back</a>
-
-    <div class="govuk-inset-text">
+<p class="govuk-body govuk-!-margin-bottom-4"></p>
+    <!-- <div class="govuk-inset-text">
       You currently have 24 cases available to assign
-    </div>
+    </div> -->
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
-        <h2 class="govuk-heading-l">How many cases would you like to assign per person?</h2>
+        <h2 class="govuk-heading-l">Total number of unassigned cases</h2>
+        <p class="govuk-body govuk-!-font-size-80 govuk-body govuk-!-font-weight-bold" style="margin-bottom:15px; margin-top:-15px;">24</p>
       </div>
   </div>
 
 
 <form action='success-allocator' method='post' class='form' autocomplete='off'>
 
-  <div class="govuk-form-group">
-    <!-- <label class="govuk-label" for="width-5">
-      5 character width
-    </label> -->
-    <input class="govuk-input govuk-input--width-5" id="width-5" name="width-5" type="text">
-  </div>
+
 
   <div class="govuk-form-group">
     <fieldset class="govuk-fieldset" aria-describedby="how-contacted-conditional-hint">
@@ -44,31 +40,38 @@
         <div>
 
           <div class="govuk-date-input" id="passport-issued">
-            <h4 class="govuk-heading-s">Choose which team members you would like to assign cases to</h4>
-            <div class="govuk-checkboxes__item">
-                 <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-                 <label class="govuk-label govuk-checkboxes__label" for="waste">
-                  Andrew Jones (12 cases)
-                 </label>
+            <h4 class="govuk-heading-s">How many cases would you like to assign to each team member?</h4>
+
+            <div class="govuk-form-group">
+              <input class="govuk-input govuk-input--width-4" id="width-4" name="width-4" type="text">
             </div>
-            <div class="govuk-checkboxes__item">
-                 <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-                 <label class="govuk-label govuk-checkboxes__label" for="waste">
-                  Caroline Smith (2 cases)
-                 </label>
+            <div style="margin-top:-62px; margin-left:100px; margin-bottom:120px float:left;">
+              <p>Andrew Jones (12 cases)</p>
             </div>
-            <div class="govuk-checkboxes__item">
-                 <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-                 <label class="govuk-label govuk-checkboxes__label" for="waste">
-                  Jen Simpson (8 cases)
-                 </label>
+
+            <div class="govuk-form-group">
+              <input class="govuk-input govuk-input--width-4" id="width-4" name="width-4" type="text">
             </div>
-            <div class="govuk-checkboxes__item">
-                 <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-                 <label class="govuk-label govuk-checkboxes__label" for="waste">
-                  Sarah Smith (7 cases)
-                 </label>
+            <div style="margin-top:-62px; margin-left:100px; margin-bottom:120px float:left;">
+              <p>Caroline Smith (2 cases)</p>
             </div>
+
+            <div class="govuk-form-group">
+              <input class="govuk-input govuk-input--width-4" id="width-4" name="width-4" type="text">
+            </div>
+            <div style="margin-top:-62px; margin-left:100px; margin-bottom:120px float:left;">
+              <p>Jen Simpson (8 cases)</p>
+            </div>
+
+            <div class="govuk-form-group">
+              <input class="govuk-input govuk-input--width-4" id="width-4" name="width-4" type="text">
+            </div>
+            <div style="margin-top:-62px; margin-left:100px; margin-bottom:120px float:left;">
+              <p>Sarah Smith (7 cases)</p>
+            </div>
+
+
+
         </div>
       </div>
     </div>
