@@ -1,0 +1,133 @@
+{% extends "sprint56/singles/layout2-allocator.html" %}
+
+{% block main %}
+{% block content %}
+<div class="govuk-width-container">
+    <a href="#" class="govuk-back-link">Back</a>
+<p class="govuk-body govuk-!-margin-bottom-5"></p>
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+        <h2 class="govuk-heading-l">Sarah Smith's cases</h2>
+      </div>
+  </div>
+
+
+<form action='success-reassign' method='post' class='form' autocomplete='off'>
+
+
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="how-contacted-conditional-hint">
+
+      <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+
+        <div>
+
+          <div class="govuk-date-input" id="passport-issued">
+          <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">NINO</th>
+              <th scope="col" class="govuk-table__header">Status</th>
+              <th scope="col" class="govuk-table__header">Reassign by case</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"><a href="" class="govuk-link">JC123456X</a></td>
+              <td class="govuk-table__cell">Migration Notice issued</td>
+              <td class="govuk-table__cell">
+                <div class="govuk-checkboxes govuk-checkboxes--small govuk-radios govuk-radios--conditional">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" iid="pauseexclude-1" name="pauseexclude" type="radio" value="defer" data-aria-controls="conditional-citizenship-conditional-1">
+                    <label class="govuk-label govuk-checkboxes__label" for="pauseexclude-1" style="margin-bottom: 20px;">
+                    </label>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"><a href="" class="govuk-link">QQ123456X</a></td>
+              <td class="govuk-table__cell">Migration Notice issued</td>
+              <td class="govuk-table__cell">
+                <div class="govuk-checkboxes govuk-checkboxes--small">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" iid="pauseexclude-2" name="pauseexclude2" type="radio" value="defer">
+                    <label class="govuk-label govuk-checkboxes__label" for="pauseexclude-2" style="margin-bottom: 20px;">
+                    </label>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"><a href="" class="govuk-link">AA123456X</a></td>
+              <td class="govuk-table__cell">Migration Notice issued</td>
+              <td class="govuk-table__cell">
+                <div class="govuk-checkboxes govuk-checkboxes--small govuk-radios govuk-radios--conditional">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" iid="pauseexclude-1" name="pauseexclude3" type="radio" value="defer">
+                    <label class="govuk-label govuk-checkboxes__label" for="pauseexclude-1" style="margin-bottom: 20px;">
+                    </label>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"><a href="" class="govuk-link">KL123456X</a></td>
+              <td class="govuk-table__cell">Migration Notice issued</td>
+              <td class="govuk-table__cell">
+                <div class="govuk-checkboxes govuk-checkboxes--small govuk-radios govuk-radios--conditional">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" iid="pauseexclude-1" name="pauseexclude4" type="radio" value="defer">
+                    <label class="govuk-label govuk-checkboxes__label" for="pauseexclude-1" style="margin-bottom: 20px;">
+                    </label>
+                  </div>
+                </div>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+        </div>
+
+    </div>
+
+<p class="govuk-body govuk-!-margin-bottom-8"></p>
+    <div class="govuk-radios__conditional--hidden" id="conditional-citizenship-conditional-1">
+      <h4 class="govuk-heading-s">Who would you like to reassign Sarah's cases to?</h4>
+      <div>
+        <div class="govuk-date-input" id="passport-issued">
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="sort">
+              Select a team member
+            </label>
+            <select class="govuk-select" id="sort" name="sort">
+              <option value="published" selected>Select</option>
+              <option value="updated">Andrew Jones (2 cases)</option>
+              <option value="views">Sarah Smith (12 cases)</option>
+              <option value="comments">Sally Wilson (5 cases)</option>
+              <option value="comments">Trevor Halliday (5 cases)</option>
+            </select>
+          </div>
+      </div>
+    </div>
+
+
+
+
+  </div>
+<p class="govuk-body govuk-!-margin-bottom-4"></p>
+
+    </fieldset>
+  </div>
+
+  <div>
+  <button type="submit" class="govuk-button" download>Submit</button>
+
+
+</div>
+</main>
+<p class="govuk-body govuk-!-margin-bottom-7"></p>
+
+                                                      </div>
+                                                      {% endblock %}
+                                                      {% endblock %}
