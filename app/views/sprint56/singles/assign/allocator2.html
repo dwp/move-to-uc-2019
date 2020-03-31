@@ -22,50 +22,68 @@
     <fieldset class="govuk-fieldset" aria-describedby="how-contacted-conditional-hint">
 
       <div class="govuk-radios govuk-radios--conditional" data-module="radios">
-        <!-- <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="how-contacted-conditional-1" name="how-contacted" type="radio" value="email">
-          <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-1">
-            Myself
-          </label>
-        </div>
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="how-contacted-conditional-2" name="how-contacted" type="radio" value="phone" data-aria-controls="conditional-how-contacted-conditional-2">
-          <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-2">
-            Another colleague
-          </label>
-        </div> -->
+
 
         <div>
 
+
+            <div>
+              <div class="govuk-date-input" id="passport-issued">
+                <h4 class="govuk-heading-s">1. Choose the type of case you want to assign</h4>
+                <div class="govuk-checkboxes__item">
+                     <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                     <label class="govuk-label govuk-checkboxes__label" for="waste">
+                      In scope to move (12 cases)
+                     </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                     <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                     <label class="govuk-label govuk-checkboxes__label" for="waste">
+                      Selected to move (12 cases)
+                     </label>
+                </div>
+            </div>
+          </div>
+
+
+          <p class="govuk-body govuk-!-margin-bottom-8"></p>
+
+            <!-- <div class="govuk-form-group">
+            <h4 class="govuk-heading-s">2. How many cases would you like to assign per person?</h4>
+
+              <input class="govuk-input govuk-input--width-5" id="width-5" name="width-5" type="text">
+
+            </div> -->
+
           <div class="govuk-date-input" id="passport-issued">
-            <h4 class="govuk-heading-s">How many cases would you like to assign to each team member?</h4>
+            <h4 class="govuk-heading-s">2. How many cases would you like to assign to each team member?</h4>
 
             <div class="govuk-form-group">
               <input class="govuk-input govuk-input--width-4" id="width-4" name="width-4" type="text">
             </div>
             <div style="margin-top:-62px; margin-left:100px; margin-bottom:120px float:left;">
-              <p>Andrew Jones (12 cases)</p>
-            </div>
-
-            <div class="govuk-form-group">
-              <input class="govuk-input govuk-input--width-4" id="width-4" name="width-4" type="text">
-            </div>
-            <div style="margin-top:-62px; margin-left:100px; margin-bottom:120px float:left;">
-              <p>Caroline Smith (2 cases)</p>
+              <p> <span class="key-details-tag-role-assign">WC</span>Andrew Jones (12 cases)</p>
             </div>
 
             <div class="govuk-form-group">
               <input class="govuk-input govuk-input--width-4" id="width-4" name="width-4" type="text">
             </div>
             <div style="margin-top:-62px; margin-left:100px; margin-bottom:120px float:left;">
-              <p>Jen Simpson (8 cases)</p>
+              <p><span class="key-details-tag-role-assign">WC</span> Caroline Smith (2 cases)</p>
             </div>
 
             <div class="govuk-form-group">
               <input class="govuk-input govuk-input--width-4" id="width-4" name="width-4" type="text">
             </div>
             <div style="margin-top:-62px; margin-left:100px; margin-bottom:120px float:left;">
-              <p>Sarah Smith (7 cases)</p>
+              <p><span class="key-details-tag-role-assign">CM</span> Jen Simpson (8 cases)</p>
+            </div>
+
+            <div class="govuk-form-group">
+              <input class="govuk-input govuk-input--width-4" id="width-4" name="width-4" type="text">
+            </div>
+            <div style="margin-top:-62px; margin-left:100px; margin-bottom:120px float:left;">
+              <p><span class="key-details-tag-role-assign">CM</span> Sarah Smith (7 cases)</p>
             </div>
 
 
