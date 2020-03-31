@@ -33,7 +33,7 @@
           </thead>
           <tbody class="govuk-table__body">
             <tr class="govuk-table__row">
-              <td class="govuk-table__cell"><a href="" class="govuk-link">Andrew Jackson</a></th>
+              <td class="govuk-table__cell"><a href="reassign-bycase" class="govuk-link">Andrew Jackson</a></th>
               <td class="govuk-table__cell">10</td>
               <td class="govuk-table__cell">
                 <div class="govuk-checkboxes govuk-checkboxes--small govuk-radios govuk-radios--conditional">
@@ -51,7 +51,7 @@
               <td class="govuk-table__cell">
                 <div class="govuk-checkboxes govuk-checkboxes--small govuk-radios govuk-radios--conditional">
                   <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" iid="pauseexclude-1" name="pauseexclude2" type="radio" value="defer" data-aria-controls="conditional-citizenship-conditional-1">
+                    <input class="govuk-checkboxes__input" iid="pauseexclude-1" name="pauseexclude2" type="radio" value="defer">
                     <label class="govuk-label govuk-checkboxes__label" for="pauseexclude-1" style="margin-bottom: 20px;">
                     </label>
                   </div>
@@ -59,12 +59,12 @@
               </td>
             </tr>
             <tr class="govuk-table__row">
-              <td class="govuk-table__cell"><a href="reassign-bycase" class="govuk-link">Sarah Smith</a></th>
+              <td class="govuk-table__cell"><a href="#" class="govuk-link">Sarah Smith</a></th>
               <td class="govuk-table__cell">4</td>
               <td class="govuk-table__cell">
                 <div class="govuk-checkboxes govuk-checkboxes--small govuk-radios govuk-radios--conditional">
                   <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" iid="pauseexclude-1" name="pauseexclude3" type="radio" value="defer" data-aria-controls="conditional-citizenship-conditional-1">
+                    <input class="govuk-checkboxes__input" iid="pauseexclude-1" name="pauseexclude3" type="radio" value="defer">
                     <label class="govuk-label govuk-checkboxes__label" for="pauseexclude-1" style="margin-bottom: 20px;">
                     </label>
                   </div>
@@ -81,20 +81,32 @@
     <div class="govuk-radios__conditional--hidden" id="conditional-citizenship-conditional-1">
       <h4 class="govuk-heading-s">Who would you like to reassign cases to?</h4>
       <div>
-        <div class="govuk-date-input" id="passport-issued">
-          <div class="govuk-form-group">
-            <label class="govuk-label" for="sort">
-              Select a team member
-            </label>
-            <select class="govuk-select" id="sort" name="sort">
-              <option value="published" selected>Select</option>
-              <option value="updated">Andrew Jones (2 cases)</option>
-              <option value="views">Sarah Smith (12 cases)</option>
-              <option value="comments">Sally Wilson (5 cases)</option>
-              <option value="comments">Trevor Halliday (5 cases)</option>
-            </select>
-          </div>
-      </div>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+            <div class="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                <label class="govuk-label govuk-checkboxes__label" for="waste">
+                  Andy Jones (12 cases)
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+                <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                  Sarah Tuner (14 cases)
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                  Tina Wilson (20 cases)
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
     </div>
 
 
