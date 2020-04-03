@@ -15,74 +15,205 @@
 
 <form action='success-allocator' method='post' class='form' autocomplete='off'>
 
+  <div class="govuk-radios govuk-radios--conditional" data-module="radios">
 
-  <div>
-    <div class="govuk-date-input" id="passport-issued">
-      <h4 class="govuk-heading-s">1. Choose the type of case you want to assign</h4>
-      <div class="govuk-checkboxes__item">
-           <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-           <label class="govuk-label govuk-checkboxes__label" for="waste">
-            In scope to move (12 cases)
-           </label>
+            <div class="govuk-radios  govuk-radios govuk-radios--conditional">
+            <div class="govuk-radios">
+    <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england" data-aria-controls="conditional-citizenship-conditional-1">
+      <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+        Cases with an unassigned Benefit Processor (8 cases)
+      </label>
+    </div>
+    <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland" data-aria-controls="conditional-citizenship-conditional-2">
+      <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+        Cases with an unassigned Case Manager  (8 cases)
+      </label>
+    </div>
+    <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales" data-aria-controls="conditional-citizenship-conditional-3">
+      <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+        Cases with an unassigned Work Coach  (8 cases)
+      </label>
+    </div>
+    </div>
+        </div>
+
+<p class="govuk-body govuk-!-margin-bottom-8"></p>
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="how-contacted-conditional-hint">
+
+      <div data-module="radios" id="conditional-citizenship-conditional-1">
+
+        <div class="govuk-form-group">
+        <h4 class="govuk-heading-s">How many cases would you like to assign per person?</h4>
+          <input class="govuk-input govuk-input--width-5" id="width-5" name="width-5" type="text">
+        </div>
+
+        <p class="govuk-body govuk-!-margin-bottom-8"></p>
+        <div>
+          <div class="govuk-date-input" id="passport-issued">
+            <h4 class="govuk-heading-s">Which Benefit Processor would like to assign cases to?</h4>
+            <div class="govuk-checkboxes__item">
+                 <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                 <label class="govuk-label govuk-checkboxes__label" for="waste">
+                     Andrew Jones (12 cases)
+                 </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+                 <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                 <label class="govuk-label govuk-checkboxes__label" for="waste">
+                  Caroline Smith (2 cases)
+                 </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+                 <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                 <label class="govuk-label govuk-checkboxes__label" for="waste">
+                   Jen Simpson (8 cases)
+                 </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+                 <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                 <label class="govuk-label govuk-checkboxes__label" for="waste">
+                   Sarah Smith (7 cases)
+                 </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+                 <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                 <label class="govuk-label govuk-checkboxes__label" for="waste">
+                   Simon Williamns (8 cases)
+                 </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+                 <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                 <label class="govuk-label govuk-checkboxes__label" for="waste">
+                   Tina Smithson (7 cases)
+                 </label>
+            </div>
+        </div>
       </div>
-      <div class="govuk-checkboxes__item">
-           <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-           <label class="govuk-label govuk-checkboxes__label" for="waste">
-            Selected to move (12 cases)
-           </label>
+  </div>
+
+
+
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="how-contacted-conditional-hint">
+
+      <div data-module="radios" id="conditional-citizenship-conditional-2">
+
+        <div class="govuk-form-group">
+        <h4 class="govuk-heading-s">How many cases would you like to assign per person?</h4>
+          <input class="govuk-input govuk-input--width-5" id="width-5" name="width-5" type="text">
+        </div>
+
+        <p class="govuk-body govuk-!-margin-bottom-8"></p>
+        <div>
+          <div class="govuk-date-input" id="passport-issued">
+            <h4 class="govuk-heading-s">Which Case Manager would like to assign cases to?</h4>
+            <div class="govuk-checkboxes__item">
+                 <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                 <label class="govuk-label govuk-checkboxes__label" for="waste">
+                     Alan Wicks (12 cases)
+                 </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+                 <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                 <label class="govuk-label govuk-checkboxes__label" for="waste">
+                  Karen Smithson (2 cases)
+                 </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+                 <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                 <label class="govuk-label govuk-checkboxes__label" for="waste">
+                   Jennifer Simpson (8 cases)
+                 </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+                 <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                 <label class="govuk-label govuk-checkboxes__label" for="waste">
+                   Sally Smith (7 cases)
+                 </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+                 <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                 <label class="govuk-label govuk-checkboxes__label" for="waste">
+                   Steven Wilson (8 cases)
+                 </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+                 <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                 <label class="govuk-label govuk-checkboxes__label" for="waste">
+                   Trevor Smithson (7 cases)
+                 </label>
+            </div>
+        </div>
       </div>
   </div>
 </div>
 
 
-<p class="govuk-body govuk-!-margin-bottom-8"></p>
-  <div class="govuk-form-group">
-  <h4 class="govuk-heading-s">2. How many cases would you like to assign per person?</h4>
+<div class="govuk-form-group" style="margin-top:-30px;">
+  <fieldset class="govuk-fieldset" aria-describedby="how-contacted-conditional-hint">
 
-  <p class="govuk-caption-m">You currently have 24 unassigned cases</p>
+    <div data-module="radios" id="conditional-citizenship-conditional-3">
 
-    <input class="govuk-input govuk-input--width-5" id="width-5" name="width-5" type="text">
+      <div class="govuk-form-group">
+      <h4 class="govuk-heading-s">How many cases would you like to assign per person?</h4>
+        <input class="govuk-input govuk-input--width-5" id="width-5" name="width-5" type="text">
+      </div>
 
-  </div>
 
-  <div class="govuk-form-group">
-    <fieldset class="govuk-fieldset" aria-describedby="how-contacted-conditional-hint">
-
-      <div class="govuk-radios govuk-radios--conditional" data-module="radios">
-
-        <p class="govuk-body govuk-!-margin-bottom-4"></p>
-        <div>
-          <div class="govuk-date-input" id="passport-issued">
-            <h4 class="govuk-heading-s">3. Choose which team members you would like to assign cases to</h4>
-            <div class="govuk-checkboxes__item">
-                 <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-                 <label class="govuk-label govuk-checkboxes__label" for="waste">
-                    <span class="key-details-tag-role-assign">WC</span> Andrew Jones (12 cases)
-                 </label>
-            </div>
-            <div class="govuk-checkboxes__item">
-                 <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-                 <label class="govuk-label govuk-checkboxes__label" for="waste">
-                  <span class="key-details-tag-role-assign">WC</span> Caroline Smith (2 cases)
-                 </label>
-            </div>
-            <div class="govuk-checkboxes__item">
-                 <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-                 <label class="govuk-label govuk-checkboxes__label" for="waste">
-                  <span class="key-details-tag-role-assign">CM</span> Jen Simpson (8 cases)
-                 </label>
-            </div>
-            <div class="govuk-checkboxes__item">
-                 <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-                 <label class="govuk-label govuk-checkboxes__label" for="waste">
-                   <span class="key-details-tag-role-assign">CM</span> Sarah Smith (7 cases)
-                 </label>
-            </div>
-        </div>
+      <div style="margin-top:50px;">
+        <div class="govuk-date-input" id="passport-issued">
+          <h4 class="govuk-heading-s">Which Work Coach would like to assign cases to?</h4>
+          <div class="govuk-checkboxes__item">
+               <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+               <label class="govuk-label govuk-checkboxes__label" for="waste">
+                   Amy Wicks (12 cases)
+               </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+               <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+               <label class="govuk-label govuk-checkboxes__label" for="waste">
+                Graham Clarke (2 cases)
+               </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+               <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+               <label class="govuk-label govuk-checkboxes__label" for="waste">
+                 Jen Phillips (8 cases)
+               </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+               <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+               <label class="govuk-label govuk-checkboxes__label" for="waste">
+                 Sara Smith (7 cases)
+               </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+               <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+               <label class="govuk-label govuk-checkboxes__label" for="waste">
+                 Stephen Farr (8 cases)
+               </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+               <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+               <label class="govuk-label govuk-checkboxes__label" for="waste">
+                 Tom Smith (7 cases)
+               </label>
+          </div>
       </div>
     </div>
+</div>
+</div>
 
 
+
+
+
+
+</div>
 <p class="govuk-body govuk-!-margin-bottom-4"></p>
 
     </fieldset>

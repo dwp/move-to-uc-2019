@@ -1026,10 +1026,22 @@ router.post('/sprint52/couples/eligibility/confirm-answer', function (req, res) 
   //   res.redirect('no')
   } else {
     res.redirect('success-exclude')
-  }
+  }c
 })
 
 
+router.post('/sprint56/singles/add/confirm-answer', function (req, res) {
+
+ let add = req.session.data['add']
+
+ if (add === 'defer') {
+   res.redirect('../add/success-bulk')
+ } else if (add === 'exclude') {
+    res.redirect('../add/success')
+ } else {
+   res.redirect('../add/success')
+ }
+})
 
 
 

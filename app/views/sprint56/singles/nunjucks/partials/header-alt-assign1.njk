@@ -40,14 +40,14 @@
 
 
 
-      <ul class="" aria-label="Top Level Navigation" style="margin-top:23px; float:left; margin-left:-380px;">
+    <ul class="" aria-label="Top Level Navigation" style="margin-top:5px; float:left; margin-left:-90px;">
     <li class="govuk-header__navigation-ite">
     </li>
     <li class="govuk-header__navigation-ite">
-      <a class="govuk-header__link header-link" href="../adduser/index.html">Add user</a>
+      <a class="govuk-header__link header-link" href="../adduser/index.html">Add a user</a>
     </li>
     <li class="govuk-header__navigation-ite">
-      <a class="govuk-header__link header-link" href="../add/index.html">Add claimant</a>
+      <a class="govuk-header__link header-link" href="../add/index.html">Add a claimant</a>
     </li>
     <li class="govuk-header__navigation-ite">
       <a class="govuk-header__link header-link" href="../worklist/index-allocator">Allocate cases</a>
@@ -56,11 +56,12 @@
       <a class="govuk-header__link header-link" href="../worklist/index-reviews-sidenavV5">My cases</a>
     </li>
       <li class="govuk-header__navigation-ite">
-        <a class="govuk-header__link header-link" href="../find/index">Find claimant</a>
+        <a class="govuk-header__link header-link" href="../find/index">Find a claimant</a>
       </li>
       <li class="govuk-header__navigation-ite">
         <a class="govuk-header__link header-link" href="../team/index.html">Team</a>
       </li>
+
       </ul>
     </nav>
     </div>
@@ -75,31 +76,24 @@
 
     <span class="key-details-name">JC123456X</span>
 
-    <div class="key-details-tag" style="float: right;">{{ claimStatus | default('MIGRATION NOTICE ISSUED')}}</div>
+    <div class="key-details-tag" style="float: right;">{{ claimStatus | default('IN SCOPE TO MOVE')}}</div>
 
     <div class="key-details-tag-approach-alt" style="float: right;">{{ claimStatus | default('WC LED (ALT)')}}</div>
-
   </h1>
 
-<div class="key-details-link">
-    Partner of <a href="../couple/claimantdash/selected-couple.html">QQ123456X</a>&ensp;&ensp;
-    <a href="../unlink/index.html" class="govuk-body govuk-!-font-size-17">Unlink from partner</a>
-<div style="float: right; height:20px;">Claim by date: 2 August 2020</div>
-</div>
+<p class="govuk-body govuk-!-margin-bottom-3">
+  <div style="float: right; margin-top:-20px;">Claim by date: Net yet determind</div>
+    <hr class="key-details-line2">
 
-    <hr class="key-details-line">
     <p class="govuk-body govuk-!-margin-bottom-3"></p>
 
     <div class="key-details-link2">
 
-
-    <div style="float: left;">
-    <span class="key-details-tag-role">WC</span>
-    Sarah Smith (you)&ensp;<a href="#" class="link">Reassign</a>&ensp;
-    <span class="key-details-tag-role">CM</span>Andrew Jones&ensp;<a href="#" class="link">Reassign</a>&ensp;
-    <span class="key-details-tag-role">BP</span>Simon Williams&ensp;<a href="#" class="link">Reassign</a>
-    </div>
-
+      <div style="float: left;">
+      <span class="key-details-tag-role">WC</span>
+      David Lennie (you)&ensp;<a href="#" class="link">Reassign</a>&ensp;
+      <span class="key-details-tag-role">CM</span>Unassigned&ensp;<a href="#" class="link">Assign</a>&ensp;
+      <span class="key-details-tag-role">BP</span>Unassigned&ensp;<a href="#" class="link">Assign</a>
       </div>
 
     </div>

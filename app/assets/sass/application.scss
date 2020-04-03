@@ -743,6 +743,33 @@ input.form-control.block {
   position: relative;
 }
 
+.key-details-link2 {
+  margin: 0 auto;
+  color: #ffffff;
+  position: relative;
+  height: 20px;
+}
+
+a.link.link {
+  margin: 0 auto;
+  color: #ffffff;
+  position: relative;
+}
+
+a:link.visited {
+  color: white;
+}
+
+/* mouse over link */
+a:link.hover {
+  color: white;
+}
+
+/* selected link */
+a:link.active {
+  color: white;
+}
+
 .key-details-link-clear {
   margin: 0 auto;
   color: #005EA5;
@@ -867,6 +894,19 @@ a:visited {
   height: 1px;
   margin-top: 10px;
   margin-bottom: 0px;
+  padding: 0;
+}
+
+.key-details-line2 {
+  margin: 0 auto;
+  color: #ffffff;
+  display: block;
+  background: #528FC1;
+  border: 0;
+  height: 1px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  padding-top: 50px;
   padding: 0;
 }
 

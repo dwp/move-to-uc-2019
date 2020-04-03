@@ -26,24 +26,41 @@
         </span>
       </a>
     </div>
-    <div class="header-text-wrapper">
+    <div class="header-text-wrapper" style="margin-top:0px;">
 
     <a href="/" class="govuk-header__link govuk-header__link--service-name service-name">
       {{ serviceName }}
     </a>
+    <div style="font-weight: regular; padding-top:10px; margin-right:15px;">
+    <a class="govuk-header__link header-link" href="#">David Lennie: <span style="font-weight:bold">Sign out </span></a>
+    </div>
 
     {# <button role="button" class="govuk-header__menu-button js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button> #}
     <nav class="inline-nav">
-      <ul class="" aria-label="Top Level Navigation">
+
+
+
+      <ul class="" aria-label="Top Level Navigation" style="margin-top:23px; float:left; margin-left:-380px;">
+    <li class="govuk-header__navigation-ite">
+    </li>
+    <li class="govuk-header__navigation-ite">
+      <a class="govuk-header__link header-link" href="../adduser/index.html">Add user</a>
+    </li>
+    <li class="govuk-header__navigation-ite">
+      <a class="govuk-header__link header-link" href="../add/index.html">Add claimant</a>
+    </li>
+    <li class="govuk-header__navigation-ite">
+      <a class="govuk-header__link header-link" href="../worklist/index-allocator">Allocate cases</a>
+    </li>
+    <li class="govuk-header__navigation-ite">
+      <a class="govuk-header__link header-link" href="../worklist/index-reviews-sidenavV5">My cases</a>
+    </li>
       <li class="govuk-header__navigation-ite">
-        <a class="govuk-header__link header-link" href="#">My cases</a>
+        <a class="govuk-header__link header-link" href="../find/index">Find claimant</a>
       </li>
-        <li class="govuk-header__navigation-ite">
-          <a class="govuk-header__link header-link" href="../../couples/add/index-allocator.html">Add a claimant</a>
-        </li>
-        <li class="govuk-header__navigation-ite">
-          <a class="govuk-header__link header-link" href="#">Sign out</a>
-        </li>
+      <li class="govuk-header__navigation-ite">
+        <a class="govuk-header__link header-link" href="../team/index.html">Team</a>
+      </li>
 
       </ul>
     </nav>
