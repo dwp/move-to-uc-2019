@@ -40,7 +40,7 @@
 
 
 
-      <ul class="" aria-label="Top Level Navigation" style="margin-top:23px; float:left; margin-left:-380px;">
+  <ul class="" aria-label="Top Level Navigation" style="margin-top:23px; float:left; margin-left:-380px;">
     <li class="govuk-header__navigation-ite">
     </li>
     <li class="govuk-header__navigation-ite">
@@ -53,7 +53,7 @@
       <a class="govuk-header__link header-link" href="../worklist/index-reviews-sidenavV5">My cases</a>
     </li>
       <li class="govuk-header__navigation-ite">
-        <a class="govuk-header__link header-link" href="../find/index">Find claimant</a>
+        <a class="govuk-header__link header-link" href="../find/index">Find a claimant</a>
       </li>
       <li class="govuk-header__navigation-ite">
         <a class="govuk-header__link header-link" href="../team/index.html">Team</a>
@@ -66,3 +66,30 @@
 
 
 </header>
+
+<div class="key-details-bar" style="vertical-align:top;">
+  <div class="key-details-wrapper">
+  <h1 class="key-details-ni">
+
+    <span class="key-details-name">JC123456X</span>
+
+    <div class="key-details-tag" style="float: right;">{{ claimStatus | default('MIGRATION NOTICE ISSUED')}}</div>
+
+    <div class="key-details-tag-approach-alt" style="float: right;">{{ claimStatus | default('WC LED (ALT)')}}</div>
+  </h1>
+
+
+    <hr class="key-details-line3">
+
+    <p class="govuk-body govuk-!-margin-bottom-3"></p>
+
+    <div class="key-details-link2">
+
+      <div style="float: left;">
+      Claim by date: 2 August 2020
+      </div>
+
+    </div>
+  </div>
+
+</div>

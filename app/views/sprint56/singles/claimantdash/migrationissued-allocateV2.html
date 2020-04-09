@@ -1,5 +1,5 @@
 
-{% extends "sprint56/singles/layout-alt.html" %}
+{% extends "sprint56/singles/layout-alt-sidepanel.html" %}
 
 {% block main %}
 {% block content %}
@@ -11,22 +11,85 @@
 
   <main class="govuk-main-wrapper">
 
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-one-quarter">
 
-        <div class="sidemenu-bar-noselect"></div>
-          <h2 class="govuk-heading-s">Log an action</h2>
+
+    <div class="govuk-grid-row">
+
+      <div class="govuk-grid-column-one-quarter">
+      <!-- <div style="float: left; background-color: white; padding:12px; border-style: solid; border-width: 1px; border-color: lightgrey; width:190px;">
+      <h4 class="govuk-heading-s">Claim details</h4>
+      <span class="key-details-tag-role-side">Location</span>
+      <p class="govuk-body govuk-!-margin-bottom-2"></p>
+      <span class="govuk-body govuk-!-font-size-16">Harrogate Job Centre</span>
+      <p class="govuk-body govuk-!-margin-bottom-2"></p>
+      <hr>
+      <span class="key-details-tag-role-side">Benefit Processor</span>
+      <p class="govuk-body govuk-!-margin-bottom-2"></p>
+      <span class="govuk-body govuk-!-font-size-16">Matt Jackson</span>
+      <p class="govuk-body govuk-!-margin-bottom-0"></p>
+      <a href="../assign/assign2.html" class="govuk-link">Reassign</a>
+      <p class="govuk-body govuk-!-margin-bottom-2"></p>
+      <hr>
+      <span class="key-details-tag-role-side">Case Manager</span>
+      <p class="govuk-body govuk-!-margin-bottom-2"></p>
+      <span class="govuk-body govuk-!-font-size-16">Sally Jones</span>
+      <p class="govuk-body govuk-!-margin-bottom-0"></p>
+      <a href="../assign/assign2.html" class="govuk-link">Reassign</a>
+      <p class="govuk-body govuk-!-margin-bottom-2"></p>
+      <hr>
+      <span class="key-details-tag-role-side">Work Coach</span>
+      <p class="govuk-body govuk-!-margin-bottom-2"></p>
+      <span class="govuk-body govuk-!-font-size-16">Sarah Smith (you)</span>
+      <p class="govuk-body govuk-!-margin-bottom-0"></p>
+      <a href="../assign/assign2.html" class="govuk-link">Reassign</a>
+      </div> -->
+
+      <div class="accordion">
+              <div class="accordion-section" aria-expanded="true">
+                <div class="accordion-section-header">
+                  <h2 class="govuk-heading-s">Claim details</h2>
+
+                </div>
+                <div class="accordion-section-body" style="padding-top: 10px;">
+
+                  <span class="key-details-tag-role-side">Location</span>
+                  <p class="govuk-body govuk-!-margin-bottom-2"></p>
+                  <span class="govuk-body govuk-!-font-size-16">Harrogate Job Centre</span>
+                  <p class="govuk-body govuk-!-margin-bottom-2"></p>
+                  <hr>
+                  <span class="key-details-tag-role-side">Benefit Processor</span>
+                  <p class="govuk-body govuk-!-margin-bottom-2"></p>
+                  <span class="govuk-body govuk-!-font-size-16">Matt Jackson</span>
+                  <p class="govuk-body govuk-!-margin-bottom-0"></p>
+                  <a href="../assign/assign2.html" class="govuk-link">Reassign</a>
+                  <p class="govuk-body govuk-!-margin-bottom-2"></p>
+                  <hr>
+                  <span class="key-details-tag-role-side">Case Manager</span>
+                  <p class="govuk-body govuk-!-margin-bottom-2"></p>
+                  <span class="govuk-body govuk-!-font-size-16">Sally Jones</span>
+                  <p class="govuk-body govuk-!-margin-bottom-0"></p>
+                  <a href="../assign/assign2.html" class="govuk-link">Reassign</a>
+                  <p class="govuk-body govuk-!-margin-bottom-2"></p>
+                  <hr>
+                  <span class="key-details-tag-role-side">Work Coach</span>
+                  <p class="govuk-body govuk-!-margin-bottom-2"></p>
+                  <span class="govuk-body govuk-!-font-size-16">Sarah Smith (you)</span>
+                  <p class="govuk-body govuk-!-margin-bottom-0"></p>
+                  <a href="../assign/assign2.html" class="govuk-link">Reassign</a>
+                  <p class="govuk-body govuk-!-margin-bottom-2"></p>
+                </div>
+              </div>
+            </div>
+
+  <p class="govuk-body govuk-!-margin-bottom-4">
+
+        <h2 class="govuk-heading-s">Log an action</h2>
         <ul class="govuk-list">
                 <li><a class="govuk-link govuk-link--no-visited-state" href="../reminder/index.html">Reminder sent</a></li>
                 <li><a class="govuk-link govuk-link--no-visited-state" href="../claimmade/claim.html">UC claim made</a></li>
                 <li><a class="govuk-link govuk-link--no-visited-state" href="../extended/index.html">More time given</a></li>
                 <li><a class="govuk-link govuk-link--no-visited-state" href="../cancel/index2.html">Stop a move</a></li>
         </ul>
-    
-
-
-
-
 
       </div>
 
@@ -34,9 +97,9 @@
 
 
 
-                  <div class="claimant-heading">Claimant details</div>
-          <hr>
-
+          <div class="claimant-heading">Claimant details</div>
+          <hr class="claimant-details">
+<p class="govuk-body govuk-!-margin-bottom-6">
                 <div class="govuk-grid-row">
                   <div class="govuk-grid-column-one-third">
                     <p>Date of birth</p>
@@ -52,7 +115,7 @@
 
                 <p class="govuk-body govuk-!-margin-bottom-6">
                 <h2 class="govuk-heading-m">Case history</h2>
-              <hr>
+              <hr class="claimant-details">
               <p class="govuk-body govuk-!-margin-bottom-6">
 
                         <ol class="govuk-list timeline">
