@@ -1,5 +1,5 @@
-{% set claimStatus = 'reminder sent' %}
-{% extends "sprint56/singles/layout.html" %}
+
+{% extends "sprint56/singles/layout-reminder.html" %}
 
 {% block main %}
 {% block content %}
@@ -12,21 +12,28 @@
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-one-quarter">
 
-      <div class="sidemenu-bar-noselect"></div>
-        <h2 class="govuk-heading-s">Log an action</h2>
-<ul class="govuk-list">
-<!-- <li><a class="govuk-link govuk-link--no-visited-state" href="../readytomove/index.html">Log preperation conversation</a></li>
+        <div class="sidemenu-bar-noselect"></div>
+          <h2 class="govuk-heading-s">Log an action</h2>
+  <ul class="govuk-list">
+<!-- <li><a class="govuk-link govuk-link--no-visited-state" href="../initialconversation/index.html">Log initial conversation</a></li>
+<li><a class="govuk-link govuk-link--no-visited-state" href="../readytomove/index.html">Log claimant ready to move</a></li>
 <li><a class="govuk-link govuk-link--no-visited-state" href="../migrationnotice/issue.html">Log Migration Notice issued</a></li> -->
-<li><a class="govuk-link govuk-link--no-visited-state" href="../reminder/index.html">Reminder sent</a></li>
 <li><a class="govuk-link govuk-link--no-visited-state" href="../claimmade/claim.html">UC claim made</a></li>
+<li><a class="govuk-link govuk-link--no-visited-state" href="../reminder/index2.html">Reminder issued</a></li>
 <li><a class="govuk-link govuk-link--no-visited-state" href="../extended/index.html">More time given</a></li>
 <li><a class="govuk-link govuk-link--no-visited-state" href="../cancel/index2.html">Stop a move</a></li>
+<!-- <li><a class="govuk-link govuk-link--no-visited-state" href="../nomoreaction/index.html">Withdrawn</a></li> -->
 <!-- <li><a class="govuk-link govuk-link--no-visited-state" href="../complete/index.html">Log case as complete</a></li> -->
 <!-- <li><a class="govuk-link govuk-link--no-visited-state" href="../claimdatecalc/index.html">Calculate the claim by date</a></li> -->
 <!-- <li><a class="govuk-link govuk-link--no-visited-state" href="#">Calculate Transitional Protection</a></li> -->
 </ul>
 
-
+<h2 class="govuk-heading-s">Generate a reminder</h2>
+  <ul class="govuk-list">
+    <li><a class="govuk-link govuk-link--no-visited-state" href="../reminder/index-sms">Send an SMS reminder</a></li>
+    <!-- <li><a class="govuk-link govuk-link--no-visited-state" href="#">Extension Notice</a></li>
+    <li><a class="govuk-link govuk-link--no-visited-state" href="#">Cancellation Notice</a></li> -->
+  </ul>
 
 
       </div>
