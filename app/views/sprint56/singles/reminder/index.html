@@ -5,20 +5,15 @@
 {% block content %}
 <div class="govuk-width-container">
     <a href="../claimantdash/migrationissued.html" class="govuk-back-link">Back</a>
-
-
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
         <p class="govuk-body govuk-!-margin-bottom-2"></p>
-      <h2 class="govuk-heading-l">When did you remind the claimant?</h2>
-
+      <h2 class="govuk-heading-l">Which reminder did you use?</h2>
       <p class="govuk-body govuk-!-margin-bottom-4"></p>
       </div>
   </div>
 
-<fieldset class="govuk-fieldset">
-<form action='success' method='post' class='form' autocomplete='off'>
-
+<!--
   <div class="govuk-form-group">
     <fieldset class="govuk-fieldset" aria-describedby="passport-issued-hint" role="group">
       <div class="govuk-form-group">
@@ -63,11 +58,27 @@
                 </div>
 
     </fieldset>
-  </div>
+  </div> -->
+
 <div class="govuk-form-group">
-  <fieldset class="govuk-fieldset" aria-describedby="citizenship-conditional-hint">
+  <fieldset class="govuk-fieldset">
+  <form action='success' method='post' class='form' autocomplete='off'>
     <div class="govuk-radios" data-module="radios">
-      <h4 class="govuk-heading-s">How did you remind the claimant?</h4>
+
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="how-contacted-conditional-12" name="reminder" type="radio" value="phone" data-aria-controls="conditional-how-contacted-conditional-20">
+        <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-12">
+          SMS
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-20">
+               <div class="govuk-form-group">
+                 <label class="govuk-label" for="contact-by-email">
+                   Claimant's mobile phone number
+                 </label>
+                 <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="reminder" type="email" spellcheck="false">
+               </div>
+             </div>
 
       <div class="govuk-radios__item">
         <input class="govuk-radios__input" id="citizenship-conditional-00" name="reminder" type="radio" value="Face to face" data-aria-controls="conditional-citizenship-conditional-00" {{ checked("vehicle-features", "Jobseeker Allowance") }}>
@@ -91,20 +102,7 @@
                </label>
              </div>
 
-                    <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="how-contacted-conditional-12" name="reminder" type="radio" value="phone" data-aria-controls="conditional-how-contacted-conditional-12">
-                      <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-12">
-                        SMS
-                      </label>
-                    </div>
-                    <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-12">
-                             <div class="govuk-form-group">
-                               <label class="govuk-label" for="contact-by-email">
-                                 Claimant's mobile phone number
-                               </label>
-                               <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="reminder" type="email" spellcheck="false">
-                             </div>
-                           </div>
+
 
 
       <div class="govuk-radios__item">
@@ -120,11 +118,8 @@
           Home visit
         </label>
       </div>
-      </div></div></div>
-
-
-
-
+      </div>
+    </div>
 
                                                         </fieldset>
 
