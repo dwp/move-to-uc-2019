@@ -1,9 +1,10 @@
-{% set claimStatus = 'MIGRATION NOTICE ISSUED' %}
+{% set claimStatus = 'uc claim submitted' %}
 {% extends "sprint56/singles/layout.html" %}
 
 {% block main %}
 {% block content %}
 <div class="govuk-width-container">
+    <!-- <a href="index.html" class="govuk-back-link">Back</a> -->
 
 <div class="govuk-width-container">
 
@@ -11,21 +12,21 @@
 
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-one-quarter">
-        <div class="sidemenu-bar-noselect"></div>
-          <h2 class="govuk-heading-s">Log an action</h2>
-  <ul class="govuk-list">
-<!-- <li><a class="govuk-link govuk-link--no-visited-state" href="../initialconversation/index.html">Log initial conversation</a></li>
-<li><a class="govuk-link govuk-link--no-visited-state" href="../readytomove/index.html">Log claimant ready to move</a></li>
-<li><a class="govuk-link govuk-link--no-visited-state" href="../migrationnotice/issue.html">Log Migration Notice issued</a></li> -->
-<li><a class="govuk-link govuk-link--no-visited-state" href="../claimmade/claim.html">UC claim made</a></li>
-<li><a class="govuk-link govuk-link--no-visited-state" href="../reminder/index.html">Reminder issued</a></li>
-<li><a class="govuk-link govuk-link--no-visited-state" href="../extended/index.html">More time given</a></li>
-<li><a class="govuk-link govuk-link--no-visited-state" href="../cancel/index2.html">Stop a move</a></li>
-<!-- <li><a class="govuk-link govuk-link--no-visited-state" href="../nomoreaction/index.html">Withdrawn</a></li> -->
-<!-- <li><a class="govuk-link govuk-link--no-visited-state" href="../complete/index.html">Log case as complete</a></li> -->
-<!-- <li><a class="govuk-link govuk-link--no-visited-state" href="../claimdatecalc/index.html">Calculate the claim by date</a></li> -->
-<!-- <li><a class="govuk-link govuk-link--no-visited-state" href="#">Calculate Transitional Protection</a></li> -->
-</ul>
+
+        <p class="govuk-body govuk-!-margin-bottom-7">
+          <div class="sidemenu-bar-noselect"></div>
+            <h2 class="govuk-heading-s">Log an action</h2>
+        <ul class="govuk-list">
+                <!-- <li><a class="govuk-link govuk-link--no-visited-state" href="../readytomove/index.html">Log preperation conversation</a></li>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="../migrationnotice/issue.html">Log Migration Notice issued</a></li>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="../claimmade/claim.html">Log claim made</a></li>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="../reminder/index.html">Log reminder issued</a></li> -->
+                <!-- <li><a class="govuk-link govuk-link--no-visited-state" href="../changecircs3/index.html">Log a change in circumstances</a></li> -->
+                    <li><a class="govuk-link govuk-link--no-visited-state" href="../nomoreaction/index.html">Withdrawn</a></li>
+                    <li><a class="govuk-link govuk-link--no-visited-state" href="../complete/index.html">Case complete</a></li>
+                <!-- <li><a class="govuk-link govuk-link--no-visited-state" href="../claimdatecalc/index.html">Calculate the claim by date</a></li> -->
+                <!-- <li><a class="govuk-link govuk-link--no-visited-state" href="#">Calculate Transitional Protection</a></li> -->
+        </ul>
 
 
 
@@ -41,8 +42,6 @@
           <div class="govuk-grid-column-one-third">
           </div>
         </div>
-
-
         <div class="govuk-grid-row">
           <div class="govuk-grid-column-one-third">
             <p>Telephone number</p>
@@ -61,8 +60,8 @@
             <p>Legacy benefits</p>
           </div>
           <div class="govuk-grid-column-one-third">
-            <p>Housing Benefit<br>
-              Income Support
+            <p>Housing benefit<br>
+              Income support
               <p>
           </div>
           <div class="govuk-grid-column-one-third">
@@ -74,11 +73,8 @@
 
       <div class="govuk-grid-column-three-quarters">
 
-
                   <div class="claimant-heading">Claimant details</div>
           <hr>
-
-
                 <div class="govuk-grid-row">
                   <div class="govuk-grid-column-one-third">
                     <p>Date of birth</p>
@@ -98,19 +94,20 @@
   <p class="govuk-body govuk-!-margin-bottom-6">
                         <ol class="govuk-list timeline">
                           <li class="timeline-entry">
-                            <h3 class="govuk-heading-s timeline-title">Migration Notice Issued</h3>
+                            <h3 class="govuk-heading-s timeline-title">UC claim submitted</h3>
                             <p class="timeline-info govuk-body-s">
-                              <span class="timeline-date">2 May 2019</span>
-                              <p>Migration Notice given to the claimant<br>
-                Claim date: 2 August 2019</p>
+                              <span class="timeline-date">21 May 2019</span>
+                              <p>Claim submitted: 21 May 2019</p>
                             </p>
                           </li>
                           <li class="timeline-entry">
-                            <h3 class="govuk-heading-s timeline-title">Ready to move</h3>
+                            <h3 class="govuk-heading-s timeline-title">Reminder 1 sent</h3>
                             <p class="timeline-info govuk-body-s">
-                              <span class="timeline-date">2 May 2019</span>
-                            </p>
+                              <span class="timeline-date">16 May 2019</span>
+                <p>Issue date: 16 May 2019<br>
+                  Method: {{ data['reminder'] }}<p>
                           </li>
+
                                   <!-- <li class="timeline-entry">
                                     <h3 class="govuk-heading-s timeline-title">Claimant selected</h3>
                                     <p class="timeline-info govuk-body-s">
