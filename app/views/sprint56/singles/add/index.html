@@ -41,19 +41,22 @@
 
 
             <div class="govuk-radios__conditional--hidden" id="conditional-citizenship-conditional-1">
-                  <p class="govuk-body govuk-!-font-weight-bold">Upload a file</p>
 
+                  <p class="govuk-body govuk-!-font-weight-bold">Upload a file</p>
+                  <span id="more-detail-hint" class="govuk-hint">
+                    File format must be .csv or .xsl
+                  </span>
                   <div class="govuk-form-group">
                     <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
                   </div>
 
                   <p class="govuk-body govuk-!-margin-bottom-7"></p>
-                  <p class="govuk-body govuk-!-font-weight-bold">Which location are the claimants associated with?</p>
+                  <p class="govuk-body govuk-!-font-weight-bold">Jobcentre site</p>
 
                       <div class="govuk-form-group">
                         <select class="govuk-select" id="sort" name="sort">
                           <option value="published"selected>Select a location</option>
-                          <option value="updated">Harrogate Job Centre</option>
+                          <option value="updated">Harrogate Jobcentre</option>
 
                         </select>
                       </div>
@@ -75,7 +78,7 @@
                       <p class="govuk-body govuk-!-margin-bottom-6"></p>
                         <div class="govuk-date-input" id="passport-issued">
                           <label class="govuk-label" for="contact-by-phone">
-                            Claimant's date of birth
+                            Month and year of birth
                           </label>
                           <div class="govuk-date-input__item">
                             <div class="govuk-form-group">
@@ -99,7 +102,7 @@
                           <p class="govuk-body govuk-!-margin-bottom-7"></p>
 
 
-                            <h2 class="govuk-heading-s">Which approach is the claimant in?</h2>
+                            <h2 class="govuk-heading-s">Which approach is the claimant part of?</h2>
 
                               <div class="govuk-radios__item">
                                 <input class="govuk-radios__input" name="how-contacted" type="radio" value="email">
@@ -133,7 +136,7 @@
 
 
                           <p class="govuk-body govuk-!-margin-bottom-7"></p>
-                          <p class="govuk-body govuk-!-font-weight-bold">Which location is the claimant associated with?</p>
+                          <p class="govuk-body govuk-!-font-weight-bold">Jobcentre site</p>
 
                               <div class="govuk-form-group">
                                 <select class="govuk-select" id="sort" name="sort">
@@ -178,7 +181,7 @@
         <p class="govuk-body govuk-!-margin-bottom-6"></p>
           <div class="govuk-date-input" id="passport-issued">
             <label class="govuk-label" for="contact-by-phone">
-              Partner's date of birth
+              Partner's month and year of birth
             </label>
             <div class="govuk-date-input__item">
               <div class="govuk-form-group">
@@ -216,7 +219,7 @@
                                                           <p class="govuk-body govuk-!-margin-bottom-7"></p>
                                                         <div>
                                                           <button type="submit" class="govuk-button">
-                                                            Submit
+                                                            Add claimant
                                                           </button>
                                                           </fieldset>
                                                            </form>
