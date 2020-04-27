@@ -1,0 +1,175 @@
+{% extends "sprint58/singles/layout2.html" %}
+
+{% block content %}
+
+<!-- <a href="index-reviews-sidenav-tasks1" class="govuk-back-link" style="margin-top:-400px;">Back</a> -->
+
+
+
+<div class="govuk-grid-row">
+<h1 class="govuk-heading-l" style="margin-left: 15px;">Team members</h1>
+
+<div class="govuk-grid-column-one-quarter">
+
+  <p class="govuk-body govuk-!-margin-bottom-2">
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <h4 class="govuk-body govuk-!-font-size-19 govuk-!-font-weight-bold">Filter by role</h4>
+        <hr class="filters">
+        <div class="govuk-checkboxes govuk-checkboxes--small">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+            <label class="govuk-label govuk-checkboxes__label govuk-body govuk-!-font-size-16" for="organisation" style="margin-top: 1px;">
+               Benefit processor
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+            <label class="govuk-label govuk-checkboxes__label govuk-body govuk-!-font-size-16" for="organisation" style="margin-top: 1px;">
+              Case manager
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+            <label class="govuk-label govuk-checkboxes__label govuk-body govuk-!-font-size-16" for="organisation" style="margin-top: 1px;">
+               Work coach
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+
+                  <div>
+                      <button class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" style="margin-top: -10px;">
+                                Filter
+                              </button>
+                              <button class="govuk-button govuk-button--secondary" data-module="govuk-button" style="margin-top: -10px;">
+                                Reset
+                        </button>
+                  </div>
+
+
+
+</div>
+<div class="col-md-12" style="height:1px;">
+</div>
+
+
+
+<div class="govuk-grid-column-three-quarters">
+
+  <table class="govuk-table" border="0px">
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th class="govuk-body govuk-!-font-size-19 govuk-!-font-weight-bold govuk-table__cell" scope="col">Name</th>
+        <th class="govuk-body govuk-!-font-size-19 govuk-!-font-weight-bold govuk-table__cell" scope="col">Role</th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+
+      <tr class="govuk-table__row">
+        <td class="govuk-body govuk-!-font-size-19 govuk-table__cell" valign="top">
+          <a href="confirm.html" class="govuk-link">Andrew Jackson</a>
+          <td class="govuk-body govuk-!-font-size-19 govuk-table__cell" valign="top" align="right">Work coach</td>
+      </tr>
+
+      <tr class="govuk-table__row">
+        <td class="govuk-body govuk-!-font-size-19 govuk-table__cell" valign="top">
+          <a href="confirm.html" class="govuk-link">Andrew Philips</a>
+          <td class="govuk-body govuk-!-font-size-19 govuk-table__cell" valign="top" align="right">Case manager</td>
+      </tr>
+
+      <tr class="govuk-table__row">
+        <td class="govuk-body govuk-!-font-size-19 govuk-table__cell" valign="top">
+          <a href="confirm.html" class="govuk-link">Andrea Smith</a>
+          <td class="govuk-body govuk-!-font-size-19 govuk-table__cell" valign="top" align="right">Work coach</td>
+      </tr>
+
+      <tr class="govuk-table__row">
+        <td class="govuk-body govuk-!-font-size-19 govuk-table__cell" valign="top">
+          <a href="confirm.html" class="govuk-link">Brian Wilson</a>
+          <td class="govuk-body govuk-!-font-size-19 govuk-table__cell" valign="top" align="right">Benefit processor</td>
+      </tr>
+
+      <tr class="govuk-table__row">
+        <td class="govuk-body govuk-!-font-size-19 govuk-table__cell" valign="top">
+          <a href="confirm.html" class="govuk-link">Karen Lewis</a>
+          <td class="govuk-body govuk-!-font-size-19 govuk-table__cell" valign="top" align="right">Case manager</td>
+      </tr>
+
+      <tr class="govuk-table__row">
+        <td class="govuk-body govuk-!-font-size-19 govuk-table__cell" valign="top">
+          <a href="confirm.html" class="govuk-link">Sally Jones</a>
+          <td class="govuk-body govuk-!-font-size-19 govuk-table__cell" valign="top" align="right">Work coach</td>
+      </tr>
+
+      <tr class="govuk-table__row">
+        <td class="govuk-body govuk-!-font-size-19 govuk-table__cell" valign="top">
+          <a href="confirm.html" class="govuk-link">Sandra Jacklin</a>
+          <td class="govuk-body govuk-!-font-size-19 govuk-table__cell" valign="top" align="right">Work coach</td>
+      </tr>
+
+      <tr class="govuk-table__row">
+        <td class="govuk-body govuk-!-font-size-19 govuk-table__cell" valign="top">
+          <a href="confirm.html" class="govuk-link">Sara West</a>
+          <td class="govuk-body govuk-!-font-size-19 govuk-table__cell" valign="top" align="right">Benefit processor</td>
+      </tr>
+
+      <tr class="govuk-table__row">
+        <td class="govuk-body govuk-!-font-size-19 govuk-table__cell" valign="top">
+          <a href="confirm.html" class="govuk-link">Simon Jones</a>
+          <td class="govuk-body govuk-!-font-size-19 govuk-table__cell" valign="top" align="right">Benefit processor</td>
+      </tr>
+
+      <tr class="govuk-table__row">
+        <td class="govuk-body govuk-!-font-size-19 govuk-table__cell" valign="top">
+          <a href="confirm.html" class="govuk-link">Steven Clarke</a>
+          <td class="govuk-body govuk-!-font-size-19 govuk-table__cell" valign="top" align="right">Work coach</td>
+      </tr>
+
+      <tr class="govuk-table__row">
+        <td class="govuk-body govuk-!-font-size-19 govuk-table__cell" valign="top">
+          <a href="confirm.html" class="govuk-link">Toby Green</a>
+          <td class="govuk-body govuk-!-font-size-19 govuk-table__cell" valign="top" align="right">Work coach</td>
+      </tr>
+
+
+
+    </tbody>
+  </table>
+
+  <!-- <p class="govuk-body govuk-!-margin-bottom-8">
+
+
+  <div class="govuk-grid-column-one-quarter" style="width:10px; margin-left:-14px;">
+<a href="#" class="govuk-link"><img src="../../../public/images/pagination-back.png" width="12px"></a>
+  </div>
+  <div class="govuk-grid-column-one-quarter" style="width:80px;">
+<a href="#" class="govuk-link" style="margin-top:1px;">Previous</a>
+  </div>
+  <div class="govuk-grid-column-one-quarter" style="width:10px;">
+<a href="#" class="govuk-link" style="margin-top:1px;">1</a>
+  </div>
+  <div class="govuk-grid-column-one-quarter" style="width:10px;">
+<a href="#" class="govuk-link" style="margin-top:1px;">2</a>
+  </div>
+  <div class="govuk-grid-column-one-quarter" style="width:10px;">
+<p class="govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold"  style="margin-top:1px;">3</p>
+  </div>
+  <div class="govuk-grid-column-one-quarter" style="width:60px;">
+<a href="#" class="govuk-link" style="margin-top:1px;">Next</a>
+  </div>
+  <div class="govuk-grid-column-one-quarter" style="width:10px;" >
+<a href="#" class="govuk-link"><img src="../../../public/images/pagination-forward.png" width="12px"></a>
+  </div>
+  <div class="govuk-grid-column-one-quarter" style="width:430px; text-align: right; padding: 0px;" >
+<p class="govuk-body govuk-!-font-size-16">
+
+Showing <b>200</b> to <b>300</b> of <b>300</b> results</p>
+  </div>
+ -->
+
+
+
+{% endblock %}

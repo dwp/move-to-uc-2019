@@ -1,0 +1,99 @@
+{% set claimStatus = 'in scope to move' %}
+{% extends "sprint58/singles/layout3.html" %}
+
+{% block main %}
+{% block content %}
+<div class="govuk-width-container">
+    <!-- <a href="index.html" class="govuk-back-link">Back</a> -->
+
+<div class="govuk-width-container">
+
+  <main class="govuk-main-wrapper">
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-three-quarters">
+
+          <div class="claimant-heading">Claimant details</div>
+  <hr>
+
+                <div class="govuk-grid-row">
+                  <div class="govuk-grid-column-one-third">
+                    <p>Date of birth</p>
+                  </div>
+                  <div class="govuk-grid-column-one-third">
+                    <p>October 1979</p>
+                  </div>
+                  <div class="govuk-grid-column-one-third">
+                  </div>
+                  <div class="govuk-grid-column-one-third">
+                  </div>
+                </div>
+
+
+  <p class="govuk-body govuk-!-margin-bottom-6">
+  <h2 class="govuk-heading-m">Case history</h2>
+<hr>
+    <p class="govuk-body govuk-!-margin-bottom-2">
+          <ol class="govuk-list timeline">
+            <li class="timeline-entry">
+              <h3 class="govuk-heading-s timeline-title">Claimant deferred</h3>
+              <p class="timeline-info govuk-body-s">
+                <span class="timeline-date">2 May 2019</span>
+              </p>
+              <p>Reason: {{ data['reason'] }}<br>
+  Deferred until: 22 May 2019</p>
+            </p>
+            </li>
+                    <li class="timeline-entry">
+                      <h3 class="govuk-heading-s timeline-title">Claimant in scope to move</h3>
+                      <p class="timeline-info govuk-body-s">
+                        <span class="timeline-date">2 May 2019</span>
+                      </p>
+                    </li>
+            </ol>
+  <a href="#" class="govuk-link govuk-link--no-visited-state">View full history</a>
+
+
+
+
+      </div>
+
+      <div class="govuk-grid-column-one-quarter">
+
+
+                          <p class="govuk-body govuk-!-margin-bottom-7">
+                <div class="app-related-items">
+                          <h2 class="govuk-heading-s">Case actions</h2>
+          </div>
+                <a href="../claimantdash/readyinitalconvo.html" class="govuk-button govuk-button--secondary govuk-button--small">
+                Select to move</a>
+
+        <ul class="govuk-list">
+          <!-- <li><a class="govuk-link govuk-link--no-visited-state" href="../initialconversation/index.html">Log initial conversation</a></li> -->
+        <!-- <li><a class="govuk-link govuk-link--no-visited-state" href="../readytomove/index.html">Outcome of a readiness conversation</a></li>
+        <li><a class="govuk-link govuk-link--no-visited-state" href="../migrationnotice/issue.html">Log Migration Notice issued</a></li>
+        <li><a class="govuk-link govuk-link--no-visited-state" href="../claimmade/claim.html">Log claim made</a></li>
+        <li><a class="govuk-link govuk-link--no-visited-state" href="../reminder/index.html">Log reminder issued</a></li> -->
+        <li><a class="govuk-link govuk-link--no-visited-state" href="../pauseexclude/index.html">Defer or exclude</a></li>
+        <li><a class="govuk-link govuk-link--no-visited-state" href="../nomoreaction/index.html">Withdraw</a></li>
+        <li><a class="govuk-link govuk-link--no-visited-state" href="../claimmade/claim.html">Log UC claim made</a></li>
+        <!-- <li><a class="govuk-link govuk-link--no-visited-state" href="../complete/index.html">Log case as complete</a></li> -->
+        <!-- <li><a class="govuk-link govuk-link--no-visited-state" href="../claimdatecalc/index.html">Calculate the claim by date</a></li> -->
+        <!-- <li><a class="govuk-link govuk-link--no-visited-state" href="#">Calculate Transitional Protection</a></li> -->
+        </ul>
+
+
+
+
+
+
+
+      </div>
+    </div>
+
+  </main>
+</div>
+
+</div>
+{% endblock %}
+{% endblock %}

@@ -1,0 +1,190 @@
+{% extends "sprint58/singles/layout2.html" %}
+
+{% block content %}
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-quarter">
+    <div class="govuk-!-padding-bottom-1"></div>
+<h2 class="govuk-heading-s">Sort by action required</h2>
+
+            <div class="govuk-radios govuk-radios--small">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="changed-name-1" name="changed-name" type="radio" value="month" checked="checked">
+                <label class="govuk-labelsml govuk-radios__label" for="changed-name-1">
+                  Review TP eligibility
+                </label>
+              </div>
+            </div>
+
+            <div class="govuk-radios govuk-radios--small">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="changed-name-1" name="changed-name" type="radio" value="month">
+                <label class="govuk-labelsml govuk-radios__label" for="changed-name-1">
+                  	 TP calculation due
+                </label>
+              </div>
+            </div>
+
+            <div class="govuk-radios govuk-radios--small">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="changed-name-1" name="changed-name" type="radio" value="month">
+                <label class="govuk-labelsml govuk-radios__label" for="changed-name-1">
+                    Reminder due
+                </label>
+              </div>
+            </div>
+
+            <div class="govuk-radios govuk-radios--small">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="changed-name-1" name="changed-name" type="radio" value="month">
+                <label class="govuk-labelsml govuk-radios__label" for="changed-name-1">
+                    Deferal review due
+                </label>
+              </div>
+            </div>
+
+            <div class="govuk-radios govuk-radios--small">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="changed-name-1" name="changed-name" type="radio" value="month">
+                <label class="govuk-labelsml govuk-radios__label" for="changed-name-1">
+                    Exclusion review due
+                </label>
+              </div>
+            </div>
+
+            <div class="govuk-radios govuk-radios--small">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="changed-name-1" name="changed-name" type="radio" value="month">
+                <label class="govuk-labelsml govuk-radios__label" for="changed-name-1">
+                    Claim by date expired
+                </label>
+              </div>
+            </div>
+
+
+<div style="height: 100px" >
+
+            <button class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" style="margin-top: 20px;">
+              Apply
+            </button>
+
+&nbsp;&nbsp;&nbsp;<a href="#" style="margin-top: 27px; display: inline-block;">Clear sort</a>
+</div>
+
+  </div>
+
+
+
+  <div class="govuk-grid-column-three-quarters">
+    <table class="govuk-table">
+
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+
+          <!-- <th class="govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold govuk-table__cell" scope="col">Name</th> -->
+            <th class="govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold govuk-table__cell" scope="col">National Insurance number</th>
+          <th class="govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold govuk-table__cell" scope="col">Status</th>
+          <th class="govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold govuk-table__cell" scope="col">Claim by date</th>
+          <th class="govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold govuk-table__cell" scope="col">Action required</th>
+
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <!-- <td class="govuk-body govuk-!-font-size-16 govuk-table__cell"><a href="../claimantdash/paused-2" class="govuk-link govuk-link--no-visited-state">Jane Wood</a></td> -->
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell"><a href="../../couples/claimantdash/claimmade-tp-investigateV2" class="govuk-link govuk-link--no-visited-state">JB5432LP</a></th>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell">Review TP eligibility</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell"></td>
+          <!-- <td class="govuk-body govuk-!-font-size-16 govuk-table__cell"></td> -->
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell"><span class="work-list-review-due">1 day overdue</span></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <!-- <td class="govuk-body govuk-!-font-size-16 govuk-table__cell"><a href="../claimantdash/paused-2" class="govuk-link govuk-link--no-visited-state">Jane Wood</a></td> -->
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell"><a href="../../couples/claimantdash/claimmade-tp-calcdue" class="govuk-link govuk-link--no-visited-state">JB5432LP</a></th>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell">TP calculation due</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell"></td>
+          <!-- <td class="govuk-body govuk-!-font-size-16 govuk-table__cell"></td> -->
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell"><span class="work-list-review-due">Due today</span></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <!-- <td class="govuk-body govuk-!-font-size-16 govuk-table__cell"><a href="../claimantdash/paused-2" class="govuk-link govuk-link--no-visited-state">Jane Wood</a></td> -->
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell"><a href="../../couples/claimantdash/claimmade-tp-eligible" class="govuk-link govuk-link--no-visited-state">JB5432LP</a></th>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell">Eligible for TP</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell"></td>
+          <!-- <td class="govuk-body govuk-!-font-size-16 govuk-table__cell"></td> -->
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell"></td>
+        </tr>
+        <tr class="govuk-table__row">
+        <!-- <td class="govuk-body govuk-!-font-size-16 govuk-table__cell"><a href="../claimantdash/migrationissued.html" class="govuk-link govuk-link--no-visited-state">John Hallam</a></td> -->
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell"><a href="../../singles/claimantdash/migrationissued.html" class="govuk-link govuk-link--no-visited-state">EW234ORI</a></th>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell">Migration Notice issued</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell">2 August 2019</td>
+          <!-- <td class="govuk-body govuk-!-font-size-16 govuk-table__cell">30 May 2019</td> -->
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell"></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <!-- <td class="govuk-body govuk-!-font-size-16 govuk-table__cell"><a href="../claimantdash/claimmade.html" class="govuk-link govuk-link--no-visited-state">Sarah Thomas</a></td> -->
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell"><a href="../../singles/claimantdash/claimmade.html" class="govuk-link govuk-link--no-visited-state">JC12325IC</a></th>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell">UC claim submitted</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell">31 August 2019</td>
+          <!-- <td class="govuk-body govuk-!-font-size-16 govuk-table__cell"></td> -->
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell"></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <!-- <td class="govuk-body govuk-!-font-size-16 govuk-table__cell"><a href="../claimantdash/readyinitalconvo" class="govuk-link govuk-link--no-visited-state">John Doe</a></td> -->
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell"><a href="#" class="govuk-link govuk-link--no-visited-state">QQ423881A</a></th>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell">Deferred</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell"></td>
+          <!-- <td class="govuk-body govuk-!-font-size-16 govuk-table__cell"></td> -->
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell">25 October 2019</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <!-- <td class="govuk-body govuk-!-font-size-16 govuk-table__cell"><a href="../claimantdash/selected.html" class="govuk-link govuk-link--no-visited-state">Jane Doe</a></td> -->
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell"><a href="#" class="govuk-link govuk-link--no-visited-state">DW424581A</a></th>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell">Deferred</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell"></td>
+          <!-- <td class="govuk-body govuk-!-font-size-16 govuk-table__cell"></td> -->
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell">1 November 2019</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <!-- <td class="govuk-body govuk-!-font-size-16 govuk-table__cell"><a href="../claimantdash/selected.html" class="govuk-link govuk-link--no-visited-state">Jane Doe</a></td> -->
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell"><a href="../../singles/claimantdash/selected.html" class="govuk-link govuk-link--no-visited-state">DW424581A</a></th>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell">In scope to move</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell"></td>
+          <!-- <td class="govuk-body govuk-!-font-size-16 govuk-table__cell"></td> -->
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell"></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <!-- <td class="govuk-body govuk-!-font-size-16 govuk-table__cell"><a href="../claimantdash/selected.html" class="govuk-link govuk-link--no-visited-state">Jane Doe</a></td> -->
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell"><a href="../../singles/claimantdash/selected.html" class="govuk-link govuk-link--no-visited-state">DW424581A</a></th>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell">In scope to move</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell"></td>
+          <!-- <td class="govuk-body govuk-!-font-size-16 govuk-table__cell"></td> -->
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell"></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <!-- <td class="govuk-body govuk-!-font-size-16 govuk-table__cell"><a href="../claimantdash/selected.html" class="govuk-link govuk-link--no-visited-state">Jane Doe</a></td> -->
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell"><a href="../../singles/claimantdash/selected.html" class="govuk-link govuk-link--no-visited-state">DW424581A</a></th>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell">In scope to move</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell"></td>
+          <!-- <td class="govuk-body govuk-!-font-size-16 govuk-table__cell"></td> -->
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell"></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <!-- <td class="govuk-body govuk-!-font-size-16 govuk-table__cell"><a href="../claimantdash/selected.html" class="govuk-link govuk-link--no-visited-state">Jane Doe</a></td> -->
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell"><a href="../../singles/claimantdash/selected.html" class="govuk-link govuk-link--no-visited-state">DW424581A</a></th>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell">In scope to move</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell"></td>
+          <!-- <td class="govuk-body govuk-!-font-size-16 govuk-table__cell"></td> -->
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell"></td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+
+{% endblock %}

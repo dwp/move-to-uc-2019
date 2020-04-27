@@ -1,0 +1,130 @@
+{% extends "sprint58/singles/layout2-mi.html" %}
+
+{% block main %}
+{% block content %}
+
+<div class="govuk-width-container">
+<a href="index.html" class="govuk-back-link" style="margin-bottom:-20px;">Back</a>
+<p class="govuk-body govuk-!-margin-bottom-6"></p>
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-l">Create your dashboard</h2>
+      </div>
+  </div>
+
+
+<form action='success' method='post' class='form' autocomplete='off'>
+
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-quarter" style="width:235px; padding-top:1px; padding-bottom:-50px; ">
+     <p class="govuk-body govuk-!-font-size-19 govuk-!-font-weight-bold">Choose a category</p>
+   </div>
+   <div class="govuk-grid-column-one-quarter" style="width:150px; padding-top:1px; padding-left:-12px;">
+    <p class="govuk-body govuk-!-font-size-19 govuk-!-font-weight-bold">Filter</p>
+   </div>
+   <div class="govuk-grid-column-one-quarter" style="padding-top:1px; padding-left:-12px;">
+     <p class="govuk-body govuk-!-font-size-19 govuk-!-font-weight-bold">Choose criteria</p>
+   </div>
+   <div class="govuk-grid-column-one-quarter" style="width:990px; padding-top:-300px;">
+     <select class="govuk-select" id="sort" name="sort">
+       <option value="published" selected>Select category</option>
+       <option value="published">Status</option>
+       <option value="updated">Reasons for deferral</option>
+       <option value="updated">Reasons for exclusions</option>
+       <option value="updated">Reasons for withdrawl</option>
+       <option value="updated">Approach</option>
+     </select>
+     &nbsp;&nbsp;&nbsp;
+     <select class="govuk-select" id="sort" name="sort">
+       <option value="published" selected>Select filter</option>
+       <option value="published">Include</option>
+       <option value="updated">Exclude</option>
+     </select>
+     &nbsp;&nbsp;&nbsp;
+     <select class="govuk-select" id="sort" name="sort">
+      <option value="published" selected>Select criteria</option>
+       <option value="published">In scope to move</option>
+       <option value="updated">Selected to move</option>
+       <option value="updated">Initial conversation complete</option>
+       <option value="updated">Ready for Migration Notice</option>
+       <option value="updated">Not ready for Migration Notice</option>
+       <option value="updated">Migration Notice issued</option>
+       <option value="updated">Reminder sent</option>
+       <option value="updated">Deferred</option>
+       <option value="updated">Excluded</option>
+       <option value="updated">Withdrawn</option>
+       <option value="updated">More time given</option>
+       <option value="updated">UC claim submitted</option>
+       <option value="updated">UC claim verified</option>
+       <option value="updated">TP data received</option>
+       <option value="updated">TP calculation sent</option>
+     </select>
+     &nbsp;
+     <!-- <button class="govuk-button govuk-!-margin-right-1" data-module="govuk-button">
+       Filter
+     </button> -->
+     <a href="index-step5.html">
+     <div class="govuk-button govuk-button--secondary" data-module="govuk-button">
+       Add
+     </div>
+     </a>
+   </div>
+  </div>
+
+  <div class="govuk-!-padding-bottom-7"></div>
+  <div class="row">
+    <div class="column" style="background-color:#fff; border-color: #f3f2f1; border-style: solid;">
+      <p class="govuk-body govuk-!-font-weight-bold">In scope</p>
+      <p class="govuk-body govuk-!-font-size-80 govuk-body govuk-!-font-weight-bold" style="margin-top:-15px;">0</p>
+      <div class="govuk-!-padding-bottom-5"></div>
+      <a href="#" class="govuk-link" style="margin-left:-24px;">Remove</a>
+    </div>
+
+     <div class="column" style="background-color:#fff; border-color: #f3f2f1; border-style: solid;">
+      <p class="govuk-body govuk-!-font-weight-bold">Selected to move</p>
+      <p class="govuk-body govuk-!-font-size-80 govuk-body govuk-!-font-weight-bold" style="margin-top:-15px;">0</p>
+      <div class="govuk-!-padding-bottom-5"></div>
+      <a href="#" class="govuk-link" style="margin-left:-23px;">Remove</a>
+    </div>
+    <!-- <div class="column" style="background-color:#fff; border-color: #f3f2f1; border-style: solid;"">
+      <p class="govuk-body govuk-!-font-weight-bold">Initial conversation</p>
+      <p class="govuk-body govuk-!-font-size-80 govuk-body govuk-!-font-weight-bold" style="margin-top:-15px;">0</p>
+      <div class="govuk-!-padding-bottom-5"></div>
+      <a href="#" class="govuk-link" style="margin-left:-20px;">Remove</a>
+    </div>  -->
+  </div>
+
+
+
+<div style="margin-top:70px;">
+    <button type="submit" class="govuk-button" download>Finish and create dashboard</button>
+  </div>
+</div>
+<div class="govuk-!-padding-bottom-6"></div>
+
+
+
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 23%;
+  padding: 20px;
+  margin-right:10px;
+  height: 170px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+{% endblock %}
+{% endblock %}

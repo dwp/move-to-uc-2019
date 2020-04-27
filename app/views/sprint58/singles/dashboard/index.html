@@ -1,0 +1,111 @@
+{% extends "sprint58/singles/layout2-mi.html" %}
+
+{% block main %}
+{% block content %}
+<div class="govuk-width-container">
+
+<p class="govuk-body govuk-!-margin-bottom-6"></p>
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-l">Name your dashboard</h2>
+      </div>
+  </div>
+
+
+<form action='index-step2' method='post' class='form' autocomplete='off'>
+
+<!-- <h4 class="govuk-heading-s">What would you like to name your dashboard?</h4> -->
+  <div class="govuk-form-group">
+    <input class="govuk-input govuk-input--width-20" id="width-20" name="width-20" type="text">
+  </div>
+
+<!-- <h4 class="govuk-heading-s">Select a category</h4>
+<div class="govuk-form-group">
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="published" selected>Status</option>
+    <option value="updated">Reasons for deferral</option>
+    <option value="updated">Reasons for exclusion</option>
+    <option value="updated">Reasons for withdrawl</option>
+    <option value="updated">Approach</option>
+  </select>
+</div>
+
+<h4 class="govuk-heading-s">Select a status</h4>
+<div class="govuk-form-group">
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="published" selected>In scope to move</option>
+    <option value="updated">Reasons for deferral</option>
+    <option value="updated">Selected to move</option>
+    <option value="updated">Initial conversation complete</option>
+    <option value="updated">Ready for Migration Notice</option>
+    <option value="updated">Not ready for Migration Notice</option>
+    <option value="updated">Migration Notice issued</option>
+    <option value="updated">Reminder sent</option>
+    <option value="updated">Deferred</option>
+    <option value="updated">Excluded</option>
+    <option value="updated">Withdrawn</option>
+    <option value="updated">More time given</option>
+    <option value="updated">UC claim submitted</option>
+    <option value="updated">UC claim verified</option>
+    <option value="updated">TP data received</option>
+    <option value="updated">TP calculation sent</option>
+  </select>
+</div>
+
+
+<div class="govuk-!-padding-bottom-6"></div>
+<h4 class="govuk-heading-s">Your dashboard preview</h4>
+<div class="row">
+  <span id="account-number-hint" class="govuk-hint">
+   Select which box you would like to populate
+ </span>
+  <div class="column" style="background-color:#fff; border-color: #f3f2f1; border-style: solid;">
+    <p class="govuk-body govuk-!-font-weight-bold">In scope</p>
+    <p class="govuk-body govuk-!-font-size-80 govuk-body govuk-!-font-weight-bold" style="margin-top:-15px;">0</p>
+  </div>
+  <div class="column" style="background-color:#f3f2f1;">
+    <p class="govuk-body govuk-!-font-weight-bold">Category heading</p>
+    <p class="govuk-body govuk-!-font-size-80 govuk-body govuk-!-font-weight-bold" style="margin-top:-15px;">0</p>
+  </div>
+  <div class="column" style="background-color:#fff; border-color: #f3f2f1; border-style: solid;"">
+    <p class="govuk-body govuk-!-font-weight-bold">Category heading</p>
+    <p class="govuk-body govuk-!-font-size-80 govuk-body govuk-!-font-weight-bold" style="margin-top:-15px;">0</p>
+  </div>
+  <div class="column" style="background-color:#fff; border-color: #f3f2f1; border-style: solid;"">
+    <p class="govuk-body govuk-!-font-weight-bold">Category heading</p>
+    <p class="govuk-body govuk-!-font-size-80 govuk-body govuk-!-font-weight-bold" style="margin-top:-15px;">0</p>
+  </div>
+</div> -->
+
+<div style="margin-top:50px;">
+    <button type="submit" class="govuk-button" download>Continue</button>
+  </div>
+</div>
+<div class="govuk-!-padding-bottom-6"></div>
+
+
+
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 23%;
+  padding: 20px;
+  margin-right:10px;
+  height: 150px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+{% endblock %}
+{% endblock %}

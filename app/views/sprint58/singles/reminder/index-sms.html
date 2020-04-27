@@ -1,0 +1,49 @@
+
+{% extends "sprint58/singles/layout.html" %}
+
+{% block main %}
+{% block content %}
+<div class="govuk-width-container">
+    <a href="#" class="govuk-back-link">Back</a>
+
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+        <p class="govuk-body govuk-!-margin-bottom-2"></p>
+      <h2 class="govuk-heading-l">Send an SMS reminder</h2>
+
+      <p class="govuk-body govuk-!-margin-bottom-4"></p>
+      </div>
+  </div>
+
+<fieldset class="govuk-fieldset">
+<form action='success-sms' method='post' class='form' autocomplete='off'>
+
+  <!-- <div class="govuk-form-group">
+    <label class="govuk-label" for="three-quarters">
+      Claimant's full name
+    </label>
+    <input class="govuk-input govuk-!-width-three-quarters" id="three-quarters" name="three-quarters" type="text">
+  </div> -->
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="telephone-number">
+      Claimant's mobile telephone number
+    </label>
+    <input class="govuk-input govuk-input--width-20" id="telephone-number" name="telephone-number" type="tel" autocomplete="tel">
+  </div>
+
+
+</fieldset>
+
+                                                        <div>
+                                                          <button type="submit" class="govuk-button">
+                                                            Send SMS
+                                                          </button>
+                                                        </div>
+                                                        </main>
+                                                      <p class="govuk-body govuk-!-margin-bottom-7"></p>
+
+                                                      </div>
+                                                      {% endblock %}
+                                                      {% endblock %}
