@@ -78,7 +78,18 @@
                  </label>
                  <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="reminder" type="email" spellcheck="false">
                </div>
-             </div>
+               <div class="govuk-form-group">
+  <label class="govuk-label" for="sort">
+    Reminder type
+  </label>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="published" selected>Select a reminder type</option>
+    <option value="updated">Reminder 1</option>
+    <option value="views">Reminder 2</option>
+    <option value="comments">Reminder 3</option>
+  </select>
+</div>
+       </div>
 
       <div class="govuk-radios__item">
         <input class="govuk-radios__input" id="citizenship-conditional-00" name="reminder" type="radio" value="Face to face" data-aria-controls="conditional-citizenship-conditional-00" {{ checked("vehicle-features", "Jobseeker Allowance") }}>

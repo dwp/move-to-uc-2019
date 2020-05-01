@@ -232,6 +232,16 @@ hr {
     padding: 0;
 }
 
+hr.assign {
+    display: block;
+    background: #BFC1C3;
+    border: 0;
+    height: 1px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 0;
+}
+
 hr.filters {
     display: block;
     background: #BFC1C3;
