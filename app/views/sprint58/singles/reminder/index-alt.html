@@ -116,9 +116,7 @@
 <div class="govuk-!-padding-bottom-5"></div>
 
       <div class="govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-20">
-        <span id="changed-name-hint" class="govuk-hint">
-          Hint copy around checking history for which reminder has been sent
-        </span>
+        <h4 class="govuk-heading-s">SMS</h4>
                <div class="govuk-form-group">
                  <label class="govuk-label" for="contact-by-email">
                    Claimant's mobile phone number
@@ -126,14 +124,20 @@
                  <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="reminder" type="email" spellcheck="false">
                </div>
                <div class="govuk-form-group">
+                 <span id="changed-name-hint" class="govuk-hint">
+                   If you're not sure which reminder to send, check the claimant's case history
+                 </span>
     <label class="govuk-label" for="sort">
-    Reminder type
+    Reminder number
     </label>
     <select class="govuk-select" id="sort" name="sort">
-    <option value="published" selected>Select a reminder type</option>
-    <option value="updated">Reminder 1</option>
-    <option value="views">Reminder 2</option>
-    <option value="comments">Reminder 3</option>
+    <option value="published" selected>Select a reminder</option>
+    <option value="updated">Reminder 1 - 2 months</option>
+    <option value="views">Reminder 2 - 1 month</option>
+    <option value="comments">Reminder 3 - 3 weeks</option>
+    <option value="comments">Reminder 4 - 2 weeks</option>
+    <option value="comments">Reminder 5 - 1 week</option>
+    <option value="comments">Reminder 6 - 1 day</option>
     </select>
     </div>
        </div>
@@ -148,7 +152,7 @@
 
                                                         <div>
                                                           <button type="submit" class="govuk-button">
-                                                            Log a reminder
+                                                            Submit
                                                           </button>
                                                         </div>
                                                         </main>
