@@ -1,0 +1,707 @@
+{% extends "sprint59/singles/layout2.html" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-quarter">
+      <p class="govuk-body govuk-!-font-weight-bold" style="margin-bottom:5px;">Issue reminder</p>
+      <p class="govuk-body govuk-!-font-size-80 govuk-body govuk-!-font-weight-bold" style="margin-bottom:-5px;">4</p>
+      <a href="index-reviews-sidenavV5-dashboard2.html" class="govuk-link">View reminders</a>
+  </div>
+  <div class="govuk-grid-column-one-quarter">
+      <p class="govuk-body govuk-!-font-weight-bold" style="margin-bottom:5px;">Calculate TP</p>
+      <p class="govuk-body govuk-!-font-size-80 govuk-body govuk-!-font-weight-bold" style="margin-bottom:-5px;">5</p>
+      <a href="#" class="govuk-link">View TP</a>
+  </div>
+  <div class="govuk-grid-column-one-quarter">
+      <p class="govuk-body govuk-!-font-weight-bold" style="margin-bottom:5px;">Review deferral</p>
+      <p class="govuk-body govuk-!-font-size-80 govuk-body govuk-!-font-weight-bold" style="margin-bottom:-5px;">9</p>
+      <a href="#" class="govuk-link">View deferrals</a>
+  </div>
+  <div class="govuk-grid-column-one-quarter">
+      <p class="govuk-body govuk-!-font-weight-bold" style="margin-bottom:5px;">Review exclusion</p>
+      <p class="govuk-body govuk-!-font-size-80 govuk-body govuk-!-font-weight-bold" style="margin-bottom:-5px;">9</p>
+      <a href="#" class="govuk-link">View exclusions</a>
+  </div>
+</div>
+
+
+<p class="govuk-body govuk-!-margin-bottom-9">
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-one-quarter">
+
+  <h2 class="govuk-heading-l">My claimants</h2>
+
+
+  <!-- <form action='index-reviews-sidenavV5-collapse' method='post' class='form' autocomplete='off'>
+  <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  Hide filters
+  </button>
+  </form> -->
+
+
+  <p class="govuk-body govuk-!-margin-bottom-2">
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <h4 class="govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">Filter by claimants</h4>
+        <hr class="filters">
+        <div class="govuk-checkboxes govuk-checkboxes--small">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc" checked>
+            <label class="govuk-label govuk-checkboxes__label govuk-body govuk-!-font-size-16" for="organisation" style="margin-top: 1px;">
+               Only my claimants
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+
+
+  <p class="govuk-body govuk-!-margin-bottom-2">
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <p class="filter-title">Filter by status</p><br>
+        <hr class="filters">
+        <div class="govuk-checkboxes govuk-checkboxes--small">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+            <label class="govuk-label govuk-checkboxes__label govuk-body govuk-!-font-size-16" for="organisation-4" style="margin-top: 1px;">
+              In scope to move
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation-3" name="organisation" type="checkbox" value="MOD">
+            <label class="govuk-label govuk-checkboxes__label govuk-body govuk-!-font-size-16" for="organisation-3" style="margin-top: 1px;">
+              Selected to move
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+            <label class="govuk-label govuk-checkboxes__label govuk-body govuk-!-font-size-16" for="organisation-4" style="margin-top: 1px;">
+              Initial conversation complete
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+            <label class="govuk-label govuk-checkboxes__label govuk-body govuk-!-font-size-16" for="organisation-2" style="margin-top: 1px;">
+              Ready for Migration Notice
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+            <label class="govuk-label govuk-checkboxes__label govuk-body govuk-!-font-size-16" for="organisation" style="margin-top: 1px;">
+              Not ready for Migration Notice
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+            <label class="govuk-label govuk-checkboxes__label govuk-body govuk-!-font-size-16" for="organisation-4" style="margin-top: 1px;">
+              Ready for Migration Notice
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal" checked>
+            <label class="govuk-label govuk-checkboxes__label govuk-body govuk-!-font-size-16" for="organisation-2" style="margin-top: 1px;">
+              Migration Notice issued
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+            <label class="govuk-label govuk-checkboxes__label govuk-body govuk-!-font-size-16" for="organisation-2" style="margin-top: 1px;">
+              Reminder sent
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+            <label class="govuk-label govuk-checkboxes__label govuk-body govuk-!-font-size-16" for="organisation-2" style="margin-top: 1px;">
+              Deferred
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+            <label class="govuk-label govuk-checkboxes__label govuk-body govuk-!-font-size-16" for="organisation-2" style="margin-top: 1px;">
+              Excluded
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+            <label class="govuk-label govuk-checkboxes__label govuk-body govuk-!-font-size-16" for="organisation-2" style="margin-top: 1px;">
+              Withdrawn
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+            <label class="govuk-label govuk-checkboxes__label govuk-body govuk-!-font-size-16" for="organisation-2" style="margin-top: 1px;">
+              More time given
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+            <label class="govuk-label govuk-checkboxes__label govuk-body govuk-!-font-size-16" for="organisation-2" style="margin-top: 1px;">
+              UC claim submitted
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+            <label class="govuk-label govuk-checkboxes__label govuk-body govuk-!-font-size-16" for="organisation-2" style="margin-top: 1px;">
+              UC claim verified
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+            <label class="govuk-label govuk-checkboxes__label govuk-body govuk-!-font-size-16" for="organisation-2" style="margin-top: 1px;">
+               TP data received
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+            <label class="govuk-label govuk-checkboxes__label govuk-body govuk-!-font-size-16" for="organisation-2" style="margin-top: 1px;">
+              	 TP calculation sent
+            </label>
+          </div>
+
+        </div>
+      </fieldset>
+    </div>
+
+
+    <p class="govuk-body govuk-!-margin-bottom-2">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <h4 class="govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">Filter by approach</h4>
+          <hr class="filters">
+          <div class="govuk-checkboxes govuk-checkboxes--small">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+              <label class="govuk-label govuk-checkboxes__label govuk-body govuk-!-font-size-16" for="organisation" style="margin-top: 1px;">
+                 Work coach-led
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+              <label class="govuk-label govuk-checkboxes__label govuk-body govuk-!-font-size-16" for="organisation" style="margin-top: 1px;">
+                 Partner-led
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+              <label class="govuk-label govuk-checkboxes__label govuk-body govuk-!-font-size-16" for="organisation" style="margin-top: 1px;">
+                 Alternative engagement
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+              <label class="govuk-label govuk-checkboxes__label govuk-body govuk-!-font-size-16" for="organisation" style="margin-top: 1px;">
+                HMRC-led
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+
+                    <div>
+                        <button class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" style="margin-top: 20px;">
+                                  Filter
+                                </button>
+                                <button class="govuk-button govuk-button--secondary" data-module="govuk-button" style="margin-top: 20px;">
+                                  Reset
+                          </button>
+                    </div>
+
+
+
+</div>
+<div class="col-md-12" style="height:60px;">
+</div>
+
+
+
+  <div class="govuk-grid-column-three-quarters">
+
+    <table class="govuk-table" border="0px">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th class="govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold govuk-table__cell" scope="col">NINO</th>
+          <th class="govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold govuk-table__cell" scope="col">Status</th>
+          <th class="govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold govuk-table__cell" scope="col"><a href="#" class="govuk-link">Sort by claim date&nbsp;&nbsp;<img src="../../../public/images/arrow.png" width="12px"></a></th>
+          <th class="govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold govuk-table__cell" scope="col"><a href="#" class="govuk-link">Sort by action due&nbsp;&nbsp;<img src="../../../public/images/arrow.png" width="12px"></a></th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+
+        <tr class="govuk-table__row">
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <a href="../claimantdash/migrationissued-allocate" class="govuk-link">
+            JC123456X</a><br><span class="approach">Work coach-led</span></td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <span class="govuk-body govuk-!-font-size-16">
+              Migration Notice issued</span></td>
+            <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 June 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 February 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right"></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <a href="#" class="govuk-link">
+            AA123456X</a><br><span class="approach">Work coach-led</span></td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <span class="govuk-body govuk-!-font-size-16">
+              Migration Notice issued</span></td>
+            <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 June 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 February 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right"></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <a href="#" class="govuk-link">
+            LK123456X</a><br><span class="approach">Work coach-led</span></td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <span class="govuk-body govuk-!-font-size-16">
+              Migration Notice issued</span></td>
+            <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 June 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 February 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right"></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <a href="#" class="govuk-link">
+            GH123456X</a><br><span class="approach">Work coach-led</span></td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <span class="govuk-body govuk-!-font-size-16">
+              Migration Notice issued</span></td>
+            <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 June 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 February 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right"></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <a href="#" class="govuk-link">
+            FL123456X</a><br><span class="approach">Work coach-led</span></td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <span class="govuk-body govuk-!-font-size-16">
+              Migration Notice issued</span></td>
+            <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 June 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 February 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right"></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <a href="#" class="govuk-link">
+            JM123456X</a><br><span class="approach">Work coach-led</span></td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <span class="govuk-body govuk-!-font-size-16">
+              Migration Notice issued</span></td>
+            <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 June 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 February 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right"></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <a href="#" class="govuk-link">
+            LP123456X</a><br><span class="approach">Work coach-led</span></td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <span class="govuk-body govuk-!-font-size-16">
+              Migration Notice issued</span></td>
+            <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 June 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 February 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right"></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <a href="#" class="govuk-link">
+            SE123456X</a><br><span class="approach">Work coach-led</span></td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <span class="govuk-body govuk-!-font-size-16">
+              Migration Notice issued</span></td>
+            <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 June 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 February 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right"></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <a href="#" class="govuk-link">
+            PP123456X</a><br><span class="approach">Work coach-led</span></td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <span class="govuk-body govuk-!-font-size-16">
+              Migration Notice issued</span></td>
+            <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 June 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 February 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right"></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <a href="#" class="govuk-link">
+            KK123456X</a><br><span class="approach">Work coach-led</span></td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <span class="govuk-body govuk-!-font-size-16">
+              Migration Notice issued</span></td>
+            <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 June 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 February 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right"></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <a href="#" class="govuk-link">
+            HN123456X</a><br><span class="approach">Work coach-led</span></td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <span class="govuk-body govuk-!-font-size-16">
+              Migration Notice issued</span></td>
+            <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 June 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 February 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right"></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <a href="#" class="govuk-link">
+            WP123456X</a><br><span class="approach">Work coach-led</span></td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <span class="govuk-body govuk-!-font-size-16">
+              Migration Notice issued</span></td>
+            <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 June 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 February 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right"></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <a href="#" class="govuk-link">
+            JC123456X</a><br><span class="approach">Work coach-led</span></td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <span class="govuk-body govuk-!-font-size-16">
+              Migration Notice issued</span></td>
+            <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 June 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 February 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right"></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <a href="#" class="govuk-link">
+            AA123456X</a><br><span class="approach">Work coach-led</span></td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <span class="govuk-body govuk-!-font-size-16">
+              Migration Notice issued</span></td>
+            <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 June 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 February 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right"></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <a href="#" class="govuk-link">
+            LK123456X</a><br><span class="approach">Work coach-led</span></td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <span class="govuk-body govuk-!-font-size-16">
+              Migration Notice issued</span></td>
+            <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 June 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 February 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right"></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <a href="#" class="govuk-link">
+            GH123456X</a><br><span class="approach">Work coach-led</span></td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <span class="govuk-body govuk-!-font-size-16">
+              Migration Notice issued</span></td>
+            <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 June 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 February 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right"></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <a href="#" class="govuk-link">
+            FL123456X</a><br><span class="approach">Work coach-led</span></td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <span class="govuk-body govuk-!-font-size-16">
+              Migration Notice issued</span></td>
+            <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 June 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 February 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right"></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <a href="#" class="govuk-link">
+            JM123456X</a><br><span class="approach">Work coach-led</span></td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <span class="govuk-body govuk-!-font-size-16">
+              Migration Notice issued</span></td>
+            <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 June 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 February 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right"></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <a href="#" class="govuk-link">
+            LP123456X</a><br><span class="approach">Work coach-led</span></td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <span class="govuk-body govuk-!-font-size-16">
+              Migration Notice issued</span></td>
+            <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 June 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 February 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right"></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <a href="#" class="govuk-link">
+            SE123456X</a><br><span class="approach">Work coach-led</span></td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <span class="govuk-body govuk-!-font-size-16">
+              Migration Notice issued</span></td>
+            <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 June 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 February 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right"></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <a href="#" class="govuk-link">
+            PP123456X</a><br><span class="approach">Work coach-led</span></td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <span class="govuk-body govuk-!-font-size-16">
+              Migration Notice issued</span></td>
+            <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 June 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 February 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right"></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <a href="#" class="govuk-link">
+            KK123456X</a><br><span class="approach">Work coach-led</span></td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <span class="govuk-body govuk-!-font-size-16">
+              Migration Notice issued</span></td>
+            <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 June 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 February 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right"></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <a href="#" class="govuk-link">
+            HN123456X</a><br><span class="approach">Work coach-led</span></td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <span class="govuk-body govuk-!-font-size-16">
+              Migration Notice issued</span></td>
+            <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 June 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 February 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right"></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <a href="#" class="govuk-link">
+            WP123456X</a><br><span class="approach">Work coach-led</span></td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <span class="govuk-body govuk-!-font-size-16">
+              Migration Notice issued</span></td>
+            <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 June 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 February 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right"></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <a href="#" class="govuk-link">
+            JC123456X</a><br><span class="approach">Work coach-led</span></td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <span class="govuk-body govuk-!-font-size-16">
+              Migration Notice issued</span></td>
+            <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 June 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 February 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right"></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <a href="#" class="govuk-link">
+            AA123456X</a><br><span class="approach">Work coach-led</span></td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <span class="govuk-body govuk-!-font-size-16">
+              Migration Notice issued</span></td>
+            <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 June 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 February 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right"></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <a href="#" class="govuk-link">
+            LK123456X</a><br><span class="approach">Work coach-led</span></td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <span class="govuk-body govuk-!-font-size-16">
+              Migration Notice issued</span></td>
+            <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 June 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 February 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right"></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <a href="#" class="govuk-link">
+            GH123456X</a><br><span class="approach">Work coach-led</span></td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <span class="govuk-body govuk-!-font-size-16">
+              Migration Notice issued</span></td>
+            <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 June 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 February 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right"></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <a href="#" class="govuk-link">
+            FL123456X</a><br><span class="approach">Work coach-led</span></td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <span class="govuk-body govuk-!-font-size-16">
+              Migration Notice issued</span></td>
+            <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 June 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 February 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right"></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <a href="#" class="govuk-link">
+            JM123456X</a><br><span class="approach">Work coach-led</span></td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <span class="govuk-body govuk-!-font-size-16">
+              Migration Notice issued</span></td>
+            <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 June 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 February 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right"></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <a href="#" class="govuk-link">
+            LP123456X</a><br><span class="approach">Work coach-led</span></td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <span class="govuk-body govuk-!-font-size-16">
+              Migration Notice issued</span></td>
+            <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 June 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 February 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right"></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <a href="#" class="govuk-link">
+            SE123456X</a><br><span class="approach">Work coach-led</span></td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <span class="govuk-body govuk-!-font-size-16">
+              Migration Notice issued</span></td>
+            <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 June 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 February 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right"></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <a href="#" class="govuk-link">
+            PP123456X</a><br><span class="approach">Work coach-led</span></td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <span class="govuk-body govuk-!-font-size-16">
+              Migration Notice issued</span></td>
+            <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 June 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 February 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right"></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <a href="#" class="govuk-link">
+            KK123456X</a><br><span class="approach">Work coach-led</span></td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <span class="govuk-body govuk-!-font-size-16">
+              Migration Notice issued</span></td>
+            <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 June 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 February 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right"></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <a href="#" class="govuk-link">
+            HN123456X</a><br><span class="approach">Work coach-led</span></td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <span class="govuk-body govuk-!-font-size-16">
+              Migration Notice issued</span></td>
+            <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 June 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 February 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right"></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <a href="#" class="govuk-link">
+            WP123456X</a><br><span class="approach">Work coach-led</span></td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+            <span class="govuk-body govuk-!-font-size-16">
+              Migration Notice issued</span></td>
+            <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 June 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 February 2020</td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right"></td>
+        </tr>
+
+
+
+      </tbody>
+    </table>
+    <p class="govuk-body govuk-!-margin-bottom-8">
+
+
+    <div class="govuk-grid-column-one-quarter" style="width:10px; margin-left:-14px;">
+  <a href="#" class="govuk-link"><img src="../../../public/images/pagination-back.png" width="12px"></a>
+    </div>
+    <div class="govuk-grid-column-one-quarter" style="width:80px;">
+  <a href="#" class="govuk-link" style="margin-top:1px;">Previous</a>
+    </div>
+    <div class="govuk-grid-column-one-quarter" style="width:10px;">
+  <a href="#" class="govuk-link" style="margin-top:1px;">1</a>
+    </div>
+    <div class="govuk-grid-column-one-quarter" style="width:10px;">
+  <a href="#" class="govuk-link" style="margin-top:1px;">2</a>
+    </div>
+    <div class="govuk-grid-column-one-quarter" style="width:10px;">
+  <p class="govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold"  style="margin-top:1px;">3</p>
+    </div>
+    <div class="govuk-grid-column-one-quarter" style="width:60px;">
+  <a href="#" class="govuk-link" style="margin-top:1px;">Next</a>
+    </div>
+    <div class="govuk-grid-column-one-quarter" style="width:10px;" >
+  <a href="#" class="govuk-link"><img src="../../../public/images/pagination-forward.png" width="12px"></a>
+    </div>
+    <div class="govuk-grid-column-one-quarter" style="width:430px; text-align: right; padding: 0px;" >
+<p class="govuk-body govuk-!-font-size-16">
+
+  Showing <b>200</b> to <b>300</b> of <b>300</b> results</p>
+    </div>
+
+
+
+  </div>
+</div>
+
+
+{% endblock %}

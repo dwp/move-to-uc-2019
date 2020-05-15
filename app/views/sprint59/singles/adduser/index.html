@@ -1,0 +1,79 @@
+{% set claimStatus = 'MIGRATION NOTICE ISSUED' %}
+{% extends "sprint59/couples/layout2.html" %}
+
+{% block main %}
+{% block content %}
+
+<div class="govuk-width-container">
+    <!-- <a href="#" class="govuk-back-link">Back</a> -->
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+        <p class="govuk-body govuk-!-margin-bottom-2"></p>
+        <h2 class="govuk-heading-l">Add user</h2>
+      </div>
+    </div>
+
+    <form action='success' method='post' class='form' autocomplete='off'>
+  <fieldset class="govuk-fieldset">
+    <p>Enter the details for the user you want to add. They will be emailed a link to complete the process.</p>
+
+                      <div class="govuk-radios govuk-radios" id="conditional-citizenship-conditional-2">
+                  <!-- <p class="govuk-body govuk-!-font-weight-bold">Claimant details</p> -->
+                        <div class="govuk-date-input" id="passport-issued">
+                          <div class="govuk-form-group">
+                            <label class="govuk-label" for="width-20">
+                              Full name
+                            </label>
+                            <input class="govuk-input govuk-input--width-20" id="width-20" name="width-20" type="text">
+                          </div>
+                        </div>
+
+                        <div class="govuk-date-input" id="passport-issued">
+                          <div class="govuk-form-group">
+                            <label class="govuk-label" for="width-20">
+                              Email address
+                            </label>
+                            <input class="govuk-input govuk-input--width-20" id="width-20" name="width-20" type="text">
+                          </div>
+                        </div>
+
+                        <div class="govuk-form-group">
+                          <label class="govuk-label" for="sort">
+                            Job role
+                          </label>
+                          <select class="govuk-select" id="sort" name="sort">
+                            <option value="published" selected>Select a role</option>
+                            <option value="updated">Benefit Processor</option>
+                            <option value="views">Case Manager</option>
+                            <option value="comments">Work Coach</option>
+                          </select>
+                        </div>
+
+                        <div class="govuk-form-group">
+                          <label class="govuk-label" for="sort">
+                            Location
+                          </label>
+                          <select class="govuk-select" id="sort" name="sort">
+                            <option value="published" selected>Select a location</option>
+                            <option value="updated">Harrogate Job Centre</option>
+                          </select>
+                        </div>
+
+
+
+
+                                                          <p class="govuk-body govuk-!-margin-bottom-7"></p>
+                                                        <div>
+                                                          <button type="submit" class="govuk-button">
+                                                            Send invite
+                                                          </button>
+                                                          </fieldset>
+                                                           </form>
+                                                        </div>
+                                                        </main>
+                                                      <p class="govuk-body govuk-!-margin-bottom-7"></p>
+
+                                                      </div>
+                                                      {% endblock %}
+                                                      {% endblock %}

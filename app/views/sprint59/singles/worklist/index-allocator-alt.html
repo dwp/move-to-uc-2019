@@ -1,0 +1,31 @@
+{% extends "sprint59/singles/layout2-allocator.html" %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-full">
+
+<h1 class="govuk-heading-xl">My cases</h1>
+
+
+  </div>
+</div>
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-quarter">
+      <p class="govuk-body govuk-!-font-weight-bold" style="margin-bottom:5px;">Unassigned cases</p>
+      <p class="govuk-body govuk-!-font-size-80 govuk-body govuk-!-font-weight-bold" style="margin-bottom:-5px;">24</p>
+      <a href="../assign/allocator2.html" class="govuk-link">View</a>
+  </div>
+  <div class="govuk-grid-column-one-quarter">
+      <p class="govuk-body govuk-!-font-weight-bold" style="margin-bottom:5px;">Assigned cases</p>
+      <p class="govuk-body govuk-!-font-size-80 govuk-body govuk-!-font-weight-bold" style="margin-bottom:-5px;">24</p>
+      <a href="../assign/reassign.html" class="govuk-link">View</a>
+  </div>
+</div>
+
+<p class="govuk-body govuk-!-margin-bottom-9">
+{% endblock %}

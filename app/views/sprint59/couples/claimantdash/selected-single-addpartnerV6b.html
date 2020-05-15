@@ -1,0 +1,335 @@
+
+{% extends "sprint59/couples/layout3-unlink-2-assigned.html" %}
+
+{% block main %}
+{% block content %}
+<div class="govuk-width-container">
+    <!-- <a href="index.html" class="govuk-back-link">Back</a> -->
+
+<div class="govuk-width-container">
+
+  <main class="govuk-main-wrapper">
+
+    <div class="govuk-grid-row">
+
+<!--
+        <div class="alert alert--default" role="alert" task">
+                    <span style="font-size: 15px !important; color: black; font-family:verdana;">
+                      <span style="font-size: 15px !important; color: black; font-family:verdana; font-weight: bold;">
+                        Action required: </span>You need to reissue Migration Notices to the claimant and their partner.
+
+                    </span>
+            </div> -->
+
+
+
+      <!-- <div class="govuk-grid-column-one-quarter">
+
+
+    <h2 class="govuk-heading-s">Other tasks</h2>
+      <ul class="govuk-list">
+
+<li><a class="govuk-link govuk-link--no-visited-state" href="../pauseexclude/index.html">Deferred or excluded</a></li>
+<li><a class="govuk-link govuk-link--no-visited-state" href="../nomoreaction/index.html">Withdrawn</a></li>
+<li><a class="govuk-link govuk-link--no-visited-state" href="../claimmade/claim.html">UC claim made</a></li>
+</ul>
+
+      </div> -->
+
+      <div class="govuk-grid-column-full">
+
+
+        <div class="govuk-tabs" data-module="tabs">
+          <h2 class="govuk-tabs__title">
+            Contents
+          </h2>
+
+          <ul class="govuk-tabs__list">
+            <li class="govuk-tabs__list-item">
+              <a class="govuk-tabs__tab govuk-tabs__tab--selected" href="#task">
+                Next Task
+              </a>
+            </li>
+            <li class="govuk-tabs__list-item">
+              <a class="govuk-tabs__tab govuk-tabs__tab--selected" href="#past-day">
+                Timeline
+              </a>
+            </li>
+            <li class="govuk-tabs__list-item">
+              <a class="govuk-tabs__tab" href="#past-week">
+                Claimant details
+              </a>
+            </li>
+          </ul>
+
+
+          <section class="govuk-tabs__panel" id="task">
+
+            <div>
+            <p class="govuk-body govuk-!-margin-bottom-2"></p>
+            <h2 class="govuk-heading-l">Do you want to defer or exclude the claimant and their partner?</h2>
+          </div>
+            <div class="govuk-radios govuk-radios">
+                  <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="pauseexclude-1" name="pauseexclude" type="radio" value="defer" data-aria-controls="conditional-citizenship-conditional-1">
+                      <label class="govuk-label govuk-radios__label" for="pauseexclude-1">
+                        Defer
+                      </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="pauseexclude-2" name="pauseexclude" type="radio" value="exclude" data-aria-controls="conditional-citizenship-conditional-2">
+                    <label class="govuk-label govuk-radios__label" for="pauseexclude-2">
+                      Exclude
+                    </label>
+                </div>
+
+                    <p class="govuk-body govuk-!-margin-bottom-7"></p>
+
+
+                    <div class="govuk-radios__conditional--hidden" id="conditional-citizenship-conditional-1">
+                          <p class="govuk-body govuk-!-font-weight-bold">Reasons for deferral</p>
+                     <div class="govuk-radios__item">
+                       <input class="govuk-radios__input" id="citizenship-conditional-12" name="reason2" type="radio" value="Claimant between 16 and 17 years old" {{ checked("reason", "Claimant in hospital") }}>
+                       <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
+                         16 or 17 years old
+                       </label>
+                     </div>
+                     <div class="govuk-radios__item">
+                       <input class="govuk-radios__input" id="citizenship-conditional-13" name="reason2" type="radio" value="Fraud case under investigation"  {{ checked("reason", "Fraud case under investigation") }}>
+                       <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
+                         Fraud case under investigation
+                       </label>
+                     </div>
+                     <div class="govuk-radios__item">
+                       <input class="govuk-radios__input" id="citizenship-conditional-14" name="reason2" type="radio" value="Claimant identified as a frontier worker" {{ checked("reason", "Claimant indentifeid as a frontier worker") }}>
+                       <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
+                         Frontier worker
+                       </label>
+                     </div>
+                     <div class="govuk-radios__item">
+                       <input class="govuk-radios__input" id="citizenship-conditional-15" name="reason2" type="radio" value="Waiting on outcome of work capability assessment"  {{ checked("reason", "Waiting on outcome of work capability assessment") }}>
+                       <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
+                         Waiting on outcome of work capability assessment
+                       </label>
+                     </div>
+                     <div class="govuk-radios__item">
+                       <input class="govuk-radios__input" id="citizenship-conditional-16" name="reason2" type="radio" value="Claimant in prison" {{ checked("reason", "Claimant in prison") }}>
+                       <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
+                         In prison
+                       </label>
+                     </div>
+                     <div class="govuk-radios__item">
+                       <input class="govuk-radios__input" id="citizenship-conditional-17" name="reason2" type="radio" value="Claimant within 6 months of state pension age" {{ checked("reason", "Claimant within 6 months of state pension age") }}>
+                       <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
+                         Within 6 months of state pension age
+                       </label>
+                     </div>
+                     <div class="govuk-radios__item">
+                       <input class="govuk-radios__input" id="citizenship-conditional-18" name="reason2" type="radio" value="Claimant receiving tax credits nil award" {{ checked("reason", "Claimant receiving tax credits nil award") }}>
+                       <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
+                         Tax credits nil award
+                       </label>
+                     </div>
+                     <div class="govuk-radios__item">
+                       <input class="govuk-radios__input" id="citizenship-conditional-19" name="reason2" type="radio" value="Dead letter addresses" {{ checked("reason", "Claimant receiving tax credits nil award") }}>
+                       <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
+                         Dead letter address
+                       </label>
+                     </div>
+
+                     <p class="govuk-body govuk-!-margin-bottom-7"></p>
+                     <h2 class="govuk-heading-s">Date to be reviewed</h2>
+                         <div class="govuk-date-input" id="passport-issued">
+                           <div class="govuk-date-input__item">
+                             <div class="govuk-form-group">
+                               <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                                 Day
+                               </label>
+                               <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="number" pattern="[0-9]*">
+                             </div>
+                           </div>
+                           <div class="govuk-date-input__item">
+                             <div class="govuk-form-group">
+                               <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                                 Month
+                               </label>
+                               <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="number" pattern="[0-9]*">
+                             </div>
+                           </div>
+                           <div class="govuk-date-input__item">
+                             <div class="govuk-form-group">
+                               <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                                 Year
+                               </label>
+                               <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="number" pattern="[0-9]*">
+                             </div>
+                           </div>
+                         </div>
+
+                       </div>
+
+
+
+
+      <p class="govuk-body govuk-!-margin-bottom-7"></p>
+
+                          <div class="govuk-radios govuk-radios" id="conditional-citizenship-conditional-2">
+                            <p class="govuk-body govuk-!-font-weight-bold">Reasons for exclusion</p>
+                                      <div class="govuk-radios" data-module="radios">
+                                         <div class="govuk-radios__item">
+                                           <input class="govuk-radios__input" id="citizenship-conditional-3" name="reason3" type="radio" value="SDP" {{ checked("reason", "Claimant in hospital") }}>
+                                           <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
+                                             SDP
+                                           </label>
+                                         </div>
+                                         <div class="govuk-radios__item">
+                                           <input class="govuk-radios__input" id="citizenship-conditional-4" name="reason3" type="radio" value="Reduced entitlement (Benefit Cap not applied)"{{ checked("reason", "Fraud case under investigation") }}>
+                                           <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
+                                             New/increased Benefit Cap application
+                                           </label>
+                                         </div>
+                                         <div class="govuk-radios__item">
+                                           <input class="govuk-radios__input" id="citizenship-conditional-6" name="reason3" type="radio" value="Benefit cap grace period" {{ checked("reason", "Waiting on outcome of work capability assessment") }}>
+                                           <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
+                                             Claim less than 39 weeks old
+                                           </label>
+                                         </div>
+                                         <div class="govuk-radios__item">
+                                           <input class="govuk-radios__input" id="citizenship-conditional-6" name="reason3" type="radio" value="Benefit cap grace period" {{ checked("reason", "Waiting on outcome of work capability assessment") }}>
+                                           <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
+                                             Corporate appointee
+                                           </label>
+                                         </div>
+
+
+
+
+                                         <p class="govuk-body govuk-!-margin-bottom-7"></p>
+                                         <h2 class="govuk-heading-s">Date to be reviewed</h2>
+                                             <!-- <span id="passport-issued-hint" class="govuk-hint">
+                                               For example, 27 3 2007
+                                             </span> -->
+                                             <div class="govuk-date-input" id="passport-issued">
+                                               <div class="govuk-date-input__item">
+                                                 <div class="govuk-form-group">
+                                                   <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                                                     Day
+                                                   </label>
+                                                   <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="number" pattern="[0-9]*">
+                                                 </div>
+                                               </div>
+                                               <div class="govuk-date-input__item">
+                                                 <div class="govuk-form-group">
+                                                   <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                                                     Month
+                                                   </label>
+                                                   <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="number" pattern="[0-9]*">
+                                                 </div>
+                                               </div>
+                                               <div class="govuk-date-input__item">
+                                                 <div class="govuk-form-group">
+                                                   <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                                                     Year
+                                                   </label>
+                                                   <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="number" pattern="[0-9]*">
+                                                 </div>
+                                               </div>
+                                             </div>
+                                           </div>
+
+                                             </div>
+                                           </div>
+
+                                           <div>
+
+
+                                           <button type="submit" class="govuk-button" style="margin-top: -6px;">Complete task</button>
+                                         <!-- <a href="#" class="govuk-link" style="margin-left: 15px; margin-top: 15px;">Cancel task</a> -->
+
+                                         </div>
+
+
+
+<p class="govuk-body govuk-!-margin-bottom-3">
+<h2 class="govuk-heading-s">Or complete another task</h2>
+  <ul class="govuk-list">
+
+<li><a class="govuk-link govuk-link--no-visited-state" href="selected-single-addpartnerV6.html">Issue Migration Notice</a></li>
+<li><a class="govuk-link govuk-link--no-visited-state" href="#">Withdraw</a></li>
+<li><a class="govuk-link govuk-link--no-visited-state" href="#">UC claim made</a></li>
+</ul>
+
+          </section>
+
+          <section class="govuk-tabs__panel" id="past-day">
+
+            <h2 class="govuk-heading-l">Timeline</h2>
+            <p class="govuk-body govuk-!-margin-bottom-7">
+            <ol class="govuk-list timeline">
+              <li class="timeline-entry">
+                <h3 class="govuk-heading-s timeline-title">Partner added</h3>
+                <p class="timeline-info govuk-body-s">
+                  <span class="timeline-date">2 May 2019</span>
+                </p>
+              </li>
+              <li class="timeline-entry">
+                <h3 class="govuk-heading-s timeline-title">Migration Notice issued</h3>
+                <p class="timeline-info govuk-body-s">
+                  <span class="timeline-date">2 May 2019</span>
+                  Issue date: 1 May 2019<br>
+                  Claim by date: 12 July 2019<br>
+                  Claimant method: Given to the claimant<br>
+                  <!-- Partner method: Posted -->
+                </p>
+              </li>
+              </ol>
+
+              <p class="govuk-body govuk-!-margin-bottom-7">
+
+              <ul class="govuk-list">
+            <li>
+              <a class="govuk-link govuk-link--no-visited-state" href="#">View full history</a>
+            </li>
+            </ul>
+
+          </section>
+
+
+          <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week">
+            <h2 class="govuk-heading-l">Claimant details</h2>
+            <p class="govuk-body govuk-!-margin-bottom-7">
+
+             <p>National Insurance number
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;
+               JC123456X</p>
+
+
+                <div class="govuk-grid-row">
+                  <div class="govuk-grid-column-one-third">
+                    <p>Date of birth</p>
+                  </div>
+                  <div class="govuk-grid-column-one-third">
+                    <p>3 October 1979</p>
+                  </div>
+                  <div class="govuk-grid-column-one-third">
+                  </div>
+                  <div class="govuk-grid-column-one-third">
+                  </div>
+                </div>
+
+
+
+
+          </section>
+
+        </div>
+  </main>
+</div>
+
+</div>
+{% endblock %}
+{% endblock %}

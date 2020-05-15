@@ -1,0 +1,68 @@
+
+{% extends "sprint59/couples/layout3-no-couple-addpartner-mn2.html" %}
+
+{% block main %}
+{% block content %}
+<div class="govuk-width-container">
+    <a href="../claimantdash/selected-single" class="govuk-back-link">Back</a>
+
+
+    <p class="govuk-body govuk-!-margin-bottom-6"></p>
+        <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+          <h2 class="govuk-error-summary__title" id="error-summary-title">
+            There is a problem
+          </h2>
+          <div class="govuk-error-summary__body">
+            <ul class="govuk-list govuk-error-summary__list">
+              <li>
+                <a href="../../couples/add/index.html">
+
+                  This claimant does not exist in the system
+            </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+
+      <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+
+  <h2 class="govuk-heading-l">Link a claimant</h2>
+
+  <fieldset class="govuk-fieldset">
+  <form action='' method='post' class='form' autocomplete='off'>
+
+
+  <div class="govuk-form-group govuk-form-group--error">
+
+    <span id="national-insurance-number-error" class="govuk-error-message">
+      <span class="govuk-visually-hidden">Error:</span> Either re-enter the National Insurance number, or go to 'Add claimant' to create a new record
+    </span>
+    <input class="govuk-input govuk-input--width-10 govuk-input--error" id="national-insurance-number" name="national-insurance-number" type="text" aria-describedby="national-insurance-number-hint national-insurance-number-error" spellcheck="false">
+    &nbsp; &nbsp;<button type="submit" class="govuk-button--secondary">
+       &nbsp;Search&nbsp;
+  </div>
+
+
+</div>
+
+
+      </div>
+    </div>
+
+
+
+
+
+
+                                                          <div>
+
+
+                                                          </div>
+
+                                                        <p class="govuk-body govuk-!-margin-bottom-7"></p>
+
+                                                        </div>
+                                                        {% endblock %}
+                                                        {% endblock %}

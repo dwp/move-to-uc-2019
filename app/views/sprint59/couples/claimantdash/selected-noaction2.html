@@ -1,0 +1,187 @@
+{% set claimStatus = 'withdrawn' %}
+{% extends "sprint59/couples/layout3.html" %}
+
+{% block main %}
+{% block content %}
+<div class="govuk-width-container">
+    <!-- <a href="index.html" class="govuk-back-link">Back</a> -->
+
+<div class="govuk-width-container">
+
+  <main class="govuk-main-wrapper">
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-quarter">
+
+          <div class="sidemenu-bar-noselect"></div>
+        <h2 class="govuk-heading-s">Log an action</h2>
+
+<ul class="govuk-list">
+<span class="govuk-caption-m">No further action required</span>
+</ul>
+
+        <!-- <div class="govuk-grid-row">
+          <div class="govuk-grid-column-one-third">
+            <p>Address</p>
+          </div>
+          <div class="govuk-grid-column-one-third">
+            <p>23 River View, Bedlington, NE2 5LS</p>
+          </div>
+          <div class="govuk-grid-column-one-third">
+          </div>
+          <div class="govuk-grid-column-one-third">
+          </div>
+        </div>
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-one-third">
+            <p>Contact</p>
+          </div>
+          <div class="govuk-grid-column-one-third">
+            <p>07886 342345</p>
+          </div>
+          <div class="govuk-grid-column-one-third">
+          </div>
+          <div class="govuk-grid-column-one-third">
+          </div>
+
+        </div> -->
+
+
+<!--
+<p class="govuk-body govuk-!-margin-bottom-6"></p>
+        <h1 class="govuk-heading-l">Partner details</h1>
+
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-one-third">
+            <p>Name</p>
+          </div>
+          <div class="govuk-grid-column-one-third">
+            <p>Jane Doe</p>
+          </div>
+          <div class="govuk-grid-column-one-third">
+          </div>
+          <div class="govuk-grid-column-one-third">
+          </div>
+        </div>
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-one-third">
+            <p>National Insurance number</p>
+          </div>
+          <div class="govuk-grid-column-one-third">
+            <p>QL2356443N</p>
+          </div>
+          <div class="govuk-grid-column-one-third">
+          </div>
+          <div class="govuk-grid-column-one-third">
+          </div>
+        </div>
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-one-third">
+            <p>Date of birth</p>
+          </div>
+          <div class="govuk-grid-column-one-third">
+            <p>3 October 1979</p>
+          </div>
+          <div class="govuk-grid-column-one-third">
+          </div>
+          <div class="govuk-grid-column-one-third">
+          </div>
+        </div>
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-one-third">
+            <p>Address</p>
+          </div>
+          <div class="govuk-grid-column-one-third">
+            <p>23 River View, Bedlington, NE2 5LS</p>
+          </div>
+          <div class="govuk-grid-column-one-third">
+          </div>
+          <div class="govuk-grid-column-one-third">
+          </div>
+        </div>
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-one-third">
+            <p>Contact</p>
+          </div>
+          <div class="govuk-grid-column-one-third">
+            <span class="govuk-caption-m">Not on file</span>
+          </div>
+          <div class="govuk-grid-column-one-third">
+          </div>
+          <div class="govuk-grid-column-one-third">
+          </div>
+        </div> -->
+
+
+
+
+
+      </div>
+
+
+      <div class="govuk-grid-column-three-quarters">
+        <div class="claimant-heading">Claimant details</div>
+<hr>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+          <p>Date of birth</p>
+        </div>
+        <div class="govuk-grid-column-one-third">
+          <p>October 1979</p>
+        </div>
+        <div class="govuk-grid-column-one-third">
+        </div>
+        <div class="govuk-grid-column-one-third">
+        </div>
+      </div>
+
+
+      <!-- <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+          <p>Lead claimant</p>
+        </div>
+        <div class="govuk-grid-column-one-third">
+          <p>Yes </p>
+        </div>
+        <div class="govuk-grid-column-one-third">
+        </div>
+        <div class="govuk-grid-column-one-third">
+        </div>
+      </div> -->
+
+      <p class="govuk-body govuk-!-margin-bottom-6">
+      <h2 class="govuk-heading-m">Case history</h2>
+    <hr>
+    <p class="govuk-body govuk-!-margin-bottom-6">
+              <ol class="govuk-list timeline">
+                <li class="timeline-entry">
+                  <h3 class="govuk-heading-s timeline-title">Withdrawn</h3>
+                <p class="timeline-info govuk-body-s">
+                  <span class="timeline-date">2 May 2019</span>
+                  <p>Reason: Claimant died<br>
+                  <!-- Date of UC claim made: 1 May 2019</p> -->
+                     <!-- Notice issued: 1 May 2019<br>
+                     Method: Given to the claimant -->
+              </li>
+                        <li class="timeline-entry">
+                          <h3 class="govuk-heading-s timeline-title">Migration Notice issued</h3>
+                          <p class="timeline-info govuk-body-s">
+                            <span class="timeline-date">2 May 2019</span>
+                            <p>Notice issued: 1 May 2019<br>
+                            Method: Given to the claimant
+                          </p>
+                        </li>
+                </ol>
+      <a href="#" class="govuk-link govuk-link--no-visited-state">View full history</a>
+
+
+      </div>
+    </div>
+
+  </main>
+</div>
+
+</div>
+{% endblock %}
+{% endblock %}

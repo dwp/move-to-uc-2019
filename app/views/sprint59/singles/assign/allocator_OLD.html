@@ -1,0 +1,114 @@
+{% extends "sprint59/singles/layout2-allocator.html" %}
+
+{% block main %}
+{% block content %}
+<div class="govuk-width-container">
+    <a href="#" class="govuk-back-link">Back</a>
+
+<p class="govuk-body govuk-!-margin-bottom-5"></p>
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-l">Unassigned cases</h2>
+      </div>
+  </div>
+
+
+<form action='success-allocator' method='post' class='form' autocomplete='off'>
+
+
+  <div>
+    <div class="govuk-date-input" id="passport-issued">
+      <h4 class="govuk-heading-s">1. Choose the type of case you want to assign</h4>
+      <div class="govuk-checkboxes__item">
+           <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+           <label class="govuk-label govuk-checkboxes__label" for="waste">
+            In scope to move (12 cases)
+           </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+           <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+           <label class="govuk-label govuk-checkboxes__label" for="waste">
+            Selected to move (12 cases)
+           </label>
+      </div>
+  </div>
+</div>
+
+
+<p class="govuk-body govuk-!-margin-bottom-8"></p>
+  <div class="govuk-form-group">
+  <h4 class="govuk-heading-s">2. How many cases would you like to assign per person?</h4>
+
+  <p class="govuk-caption-m">You currently have 24 unassigned cases</p>
+
+    <input class="govuk-input govuk-input--width-5" id="width-5" name="width-5" type="text">
+
+  </div>
+
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="how-contacted-conditional-hint">
+
+      <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+
+        <p class="govuk-body govuk-!-margin-bottom-4"></p>
+        <div>
+          <div class="govuk-date-input" id="passport-issued">
+            <h4 class="govuk-heading-s">3. Choose which team members you would like to assign cases to</h4>
+            <div class="govuk-checkboxes__item">
+                 <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                 <label class="govuk-label govuk-checkboxes__label" for="waste">
+                    <span class="key-details-tag-role-assign">WC</span> Andrew Jones (12 cases)
+                 </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+                 <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                 <label class="govuk-label govuk-checkboxes__label" for="waste">
+                  <span class="key-details-tag-role-assign">WC</span> Caroline Smith (2 cases)
+                 </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+                 <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                 <label class="govuk-label govuk-checkboxes__label" for="waste">
+                  <span class="key-details-tag-role-assign">CM</span> Jen Simpson (8 cases)
+                 </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+                 <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                 <label class="govuk-label govuk-checkboxes__label" for="waste">
+                   <span class="key-details-tag-role-assign">CM</span> Sarah Smith (7 cases)
+                 </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+                 <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                 <label class="govuk-label govuk-checkboxes__label" for="waste">
+                  <span class="key-details-tag-role-assign">BP</span> Simon Williamns (8 cases)
+                 </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+                 <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                 <label class="govuk-label govuk-checkboxes__label" for="waste">
+                   <span class="key-details-tag-role-assign">BP</span> Tina Smithson (7 cases)
+                 </label>
+            </div>
+        </div>
+      </div>
+    </div>
+
+
+<p class="govuk-body govuk-!-margin-bottom-4"></p>
+
+    </fieldset>
+  </div>
+
+  <div>
+  <button type="submit" class="govuk-button" download>Submit</button>
+
+
+
+</div>
+</main>
+<p class="govuk-body govuk-!-margin-bottom-7"></p>
+
+                                                      </div>
+                                                      {% endblock %}
+                                                      {% endblock %}

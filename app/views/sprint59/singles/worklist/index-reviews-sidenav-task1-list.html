@@ -1,0 +1,286 @@
+{% extends "sprint59/singles/layout2.html" %}
+
+{% block content %}
+
+<a href="index-reviews-sidenav-tasks1" class="govuk-back-link" style="margin-top:-400px;">Back</a>
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-full">
+
+<h1 class="govuk-heading-xl">Issue Migration Notice</h1>
+
+
+
+<div class="govuk-grid-row">
+<!-- <div class="govuk-grid-column-one-quarter" style="width:72px; padding-top:1px; padding-bottom:-50px; ">
+   <p class="govuk-body govuk-!-font-size-19 govuk-!-font-weight-bold">Cases</p>
+ </div> -->
+ <div class="govuk-grid-column-one-quarter" style="width:72px; padding-top:1px; padding-left:10;">
+   <p class="govuk-body govuk-!-font-size-19 govuk-!-font-weight-bold">Approach</p>
+ </div>
+ <div class="govuk-grid-column-one-quarter" style="width:990px; padding-top:-300px;">
+   <!-- <select class="govuk-select" id="sort" name="sort">
+     <option value="published">Select status</option>
+     <option value="comments" selected>Only my cases</option>
+     <option value="comments">Sarah Jones's cases</option>
+     <option value="comments">James Smith's cases</option>
+      <option value="comments">Sally Wilsons's cases</option>
+     <option value="comments">Jill Readman's cases</option>
+   </select>
+   &nbsp;&nbsp;&nbsp; -->
+   <select class="govuk-select" id="sort" name="sort">
+     <option value="published">Select approach</option>
+     <option value="updated">WC led (BAU)</option>
+     <option value="updated">WC led (Alt)</option>
+     <option value="views" selected>Partner led</option>
+     <option value="updated">HMRC led</option>
+   </select>
+   &nbsp;
+   <button class="govuk-button govuk-!-margin-right-1" data-module="govuk-button">
+     Filter
+   </button>
+
+   <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+     Reset
+   </button>
+ </div>
+
+
+
+   </div>
+<p class="govuk-body govuk-!-margin-bottom-5">
+</div>
+<p class="govuk-body govuk-!-margin-bottom-3">
+
+
+  <div class="govuk-grid-column-full">
+  <table class="govuk-table" border="0px">
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th class="govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold govuk-table__cell" scope="col">Name</th>
+        <th class="govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold govuk-table__cell" scope="col">NINO</th>
+        <th class="govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold govuk-table__cell" scope="col">Approach</th>
+        <th class="govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold govuk-table__cell" scope="col"><a href="#" class="govuk-link">Action due&nbsp;&nbsp;<img src="../../../public/images/arrow.png" width="12px"></a></th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+
+      <tr class="govuk-table__row">
+        <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+          <a href="#" class="govuk-link">Andrew Smith</a></td>
+        <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+          <span class="govuk-body govuk-!-font-size-16">
+            JC123456X</span></td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">Partner led</td>
+        <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 February 2020</td>
+      </tr>
+
+      <tr class="govuk-table__row">
+        <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+          <a href="#" class="govuk-link">Sally Jones</a></td>
+        <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+          <span class="govuk-body govuk-!-font-size-16">
+            JC123456X</span></td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">Partner led</td>
+        <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 February 2020</td>
+      </tr>
+
+      <tr class="govuk-table__row">
+        <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+          <a href="#" class="govuk-link">Sarah Wilson</a></td>
+        <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+          <span class="govuk-body govuk-!-font-size-16">
+            JC123456X</span></td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">Partner led</td>
+        <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 February 2020</td>
+      </tr>
+
+      <tr class="govuk-table__row">
+        <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+          <a href="#" class="govuk-link">Simon Stuart</a></td>
+        <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+          <span class="govuk-body govuk-!-font-size-16">
+            JC123456X</span></td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">Partner led</td>
+        <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 February 2020</td>
+      </tr>
+
+      <tr class="govuk-table__row">
+        <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+          <a href="#" class="govuk-link">Jon Swales</a></td>
+        <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+          <span class="govuk-body govuk-!-font-size-16">
+            JC123456X</span></td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">Partner led</td>
+        <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 February 2020</td>
+      </tr>
+
+      <tr class="govuk-table__row">
+        <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+          <a href="#" class="govuk-link">Kevin Leigh</a></td>
+        <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+          <span class="govuk-body govuk-!-font-size-16">
+            JC123456X</span></td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">Partner led</td>
+        <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 February 2020</td>
+      </tr>
+
+      <tr class="govuk-table__row">
+        <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+          <a href="#" class="govuk-link">Phil Haigh</a></td>
+        <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+          <span class="govuk-body govuk-!-font-size-16">
+            JC123456X</span></td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">Partner led</td>
+        <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 February 2020</td>
+      </tr>
+
+      <tr class="govuk-table__row">
+        <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+          <a href="#" class="govuk-link">William Smith</a></td>
+        <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+          <span class="govuk-body govuk-!-font-size-16">
+            JC123456X</span></td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">Partner led</td>
+        <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 February 2020</td>
+      </tr>
+
+      <tr class="govuk-table__row">
+        <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+          <a href="#" class="govuk-link">Ben Stubbs</a></td>
+        <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+          <span class="govuk-body govuk-!-font-size-16">
+            JC123456X</span></td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">Partner led</td>
+        <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 February 2020</td>
+      </tr>
+
+      <tr class="govuk-table__row">
+        <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+          <a href="#" class="govuk-link">Andrew Smith</a></td>
+        <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+          <span class="govuk-body govuk-!-font-size-16">
+            JC123456X</span></td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">Partner led</td>
+        <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 February 2020</td>
+      </tr>
+
+      <tr class="govuk-table__row">
+        <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+          <a href="#" class="govuk-link">Sally Jones</a></td>
+        <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+          <span class="govuk-body govuk-!-font-size-16">
+            JC123456X</span></td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">Partner led</td>
+        <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 February 2020</td>
+      </tr>
+
+      <tr class="govuk-table__row">
+        <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+          <a href="#" class="govuk-link">Sarah Wilson</a></td>
+        <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+          <span class="govuk-body govuk-!-font-size-16">
+            JC123456X</span></td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">Partner led</td>
+        <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 February 2020</td>
+      </tr>
+
+      <tr class="govuk-table__row">
+        <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+          <a href="#" class="govuk-link">Simon Stuart</a></td>
+        <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+          <span class="govuk-body govuk-!-font-size-16">
+            JC123456X</span></td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">Partner led</td>
+        <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 February 2020</td>
+      </tr>
+
+      <tr class="govuk-table__row">
+        <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+          <a href="#" class="govuk-link">Jon Swales</a></td>
+        <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+          <span class="govuk-body govuk-!-font-size-16">
+            JC123456X</span></td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">Partner led</td>
+        <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 February 2020</td>
+      </tr>
+
+      <tr class="govuk-table__row">
+        <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+          <a href="#" class="govuk-link">Kevin Leigh</a></td>
+        <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+          <span class="govuk-body govuk-!-font-size-16">
+            JC123456X</span></td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">Partner led</td>
+        <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 February 2020</td>
+      </tr>
+
+      <tr class="govuk-table__row">
+        <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+          <a href="#" class="govuk-link">Phil Haigh</a></td>
+        <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+          <span class="govuk-body govuk-!-font-size-16">
+            JC123456X</span></td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">Partner led</td>
+        <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 February 2020</td>
+      </tr>
+
+      <tr class="govuk-table__row">
+        <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+          <a href="#" class="govuk-link">William Smith</a></td>
+        <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+          <span class="govuk-body govuk-!-font-size-16">
+            JC123456X</span></td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">Partner led</td>
+        <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 February 2020</td>
+      </tr>
+
+      <tr class="govuk-table__row">
+        <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+          <a href="#" class="govuk-link">Ben Stubbs</a></td>
+        <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top">
+          <span class="govuk-body govuk-!-font-size-16">
+            JC123456X</span></td>
+          <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">Partner led</td>
+        <td class="govuk-body govuk-!-font-size-16 govuk-table__cell" valign="top" align="right">20 February 2020</td>
+      </tr>
+
+
+
+
+    </tbody>
+  </table>
+  <p class="govuk-body govuk-!-margin-bottom-8">
+  </div>
+
+
+  <div class="govuk-grid-column-one-quarter" style="width:10px;">
+<a href="#" class="govuk-link"><img src="../../../public/images/pagination-back.png" width="12px"></a>
+  </div>
+  <div class="govuk-grid-column-one-quarter" style="width:80px;">
+<a href="#" class="govuk-link" style="margin-top:1px;">Previous</a>
+  </div>
+  <div class="govuk-grid-column-one-quarter" style="width:10px;">
+<a href="#" class="govuk-link" style="margin-top:1px;">1</a>
+  </div>
+  <div class="govuk-grid-column-one-quarter" style="width:10px;">
+<a href="#" class="govuk-link" style="margin-top:1px;">2</a>
+  </div>
+  <div class="govuk-grid-column-one-quarter" style="width:10px;">
+<p class="govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold"  style="margin-top:1px;">3</p>
+  </div>
+  <div class="govuk-grid-column-one-quarter" style="width:60px;">
+<a href="#" class="govuk-link" style="margin-top:1px;">Next</a>
+  </div>
+  <div class="govuk-grid-column-one-quarter" style="width:10px;" >
+<a href="#" class="govuk-link"><img src="../../../public/images/pagination-forward.png" width="12px"></a>
+  </div>
+  <div class="govuk-grid-column-one-quarter" style="width:689px; text-align: right; padding-right:0px;" >
+<p class="govuk-body govuk-!-font-size-16">
+
+Showing <b>200</b> to <b>300</b> of <b>300</b> results</p>
+  </div>
+
+
+{% endblock %}

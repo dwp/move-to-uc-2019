@@ -1,0 +1,166 @@
+{% set claimStatus = 'MIGRATION NOTICE ISSUED' %}
+{% extends "sprint59/couples/layout2.html" %}
+
+{% block main %}
+{% block content %}
+
+<div class="govuk-width-container">
+    <!-- <a href="#" class="govuk-back-link">Back</a> -->
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+        <p class="govuk-body govuk-!-margin-bottom-2"></p>
+        <h2 class="govuk-heading-l">Manage users</h2>
+      </div>
+    </div>
+
+    <form action='success' method='post' class='form' autocomplete='off'>
+  <fieldset class="govuk-fieldset">
+    <!-- <p>Enter the details for the user you want to add. They will be emailed a link to complete the process.</p> -->
+
+    <table class="govuk-table">
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header">Name</th>
+        <th scope="col" class="govuk-table__header">Email address</th>
+        <th scope="col" class="govuk-table__header">Job role</th>
+        <th scope="col" class="govuk-table__header">Location</th>
+        <th scope="col" class="govuk-table__header">Remove account</th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="reassign-bycase" class="govuk-link">Andrew Jackson</a></th>
+        <td class="govuk-table__cell">andrew.jackson@.gov.uk</td>
+        <td class="govuk-table__cell">Work coach</td>
+        <td class="govuk-table__cell">Harrogate Job Centre</td>
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes govuk-checkboxes--small govuk-radios govuk-radios--conditional">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" iid="pauseexclude-1" name="pauseexclude" type="radio" value="defer" data-aria-controls="conditional-citizenship-conditional-1">
+              <label class="govuk-label govuk-checkboxes__label" for="pauseexclude-1" style="margin-bottom: 20px;">
+              </label>
+            </div>
+          </div>
+        </td>
+      </tr>
+
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="reassign-bycase" class="govuk-link">Andrea Thomas</a></th>
+        <td class="govuk-table__cell">andrea.thomas@.gov.uk</td>
+        <td class="govuk-table__cell">Work coach</td>
+        <td class="govuk-table__cell">Harrogate Job Centre</td>
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes govuk-checkboxes--small govuk-radios govuk-radios--conditional">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" iid="pauseexclude-1" name="pauseexclude2" type="radio" value="defer" data-aria-controls="conditional-citizenship-conditional-1">
+              <label class="govuk-label govuk-checkboxes__label" for="pauseexclude-1" style="margin-bottom: 20px;">
+              </label>
+            </div>
+          </div>
+        </td>
+      </tr>
+
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="reassign-bycase" class="govuk-link">Brian Wilson</a></th>
+        <td class="govuk-table__cell">brian.wilson@.gov.uk</td>
+        <td class="govuk-table__cell">Benefit Processor</td>
+        <td class="govuk-table__cell">Harrogate Job Centre</td>
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes govuk-checkboxes--small govuk-radios govuk-radios--conditional">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" iid="pauseexclude-1" name="pauseexclude3" type="radio" value="defer" data-aria-controls="conditional-citizenship-conditional-1">
+              <label class="govuk-label govuk-checkboxes__label" for="pauseexclude-1" style="margin-bottom: 20px;">
+              </label>
+            </div>
+          </div>
+        </td>
+      </tr>
+
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="reassign-bycase" class="govuk-link">Caroline Jones</a></th>
+        <td class="govuk-table__cell">caroline.jones@.gov.uk</td>
+        <td class="govuk-table__cell">Benefit Processor</td>
+        <td class="govuk-table__cell">Harrogate Job Centre</td>
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes govuk-checkboxes--small govuk-radios govuk-radios--conditional">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" iid="pauseexclude-1" name="pauseexclude4" type="radio" value="defer" data-aria-controls="conditional-citizenship-conditional-1">
+              <label class="govuk-label govuk-checkboxes__label" for="pauseexclude-1" style="margin-bottom: 20px;">
+              </label>
+            </div>
+          </div>
+        </td>
+      </tr>
+
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="reassign-bycase" class="govuk-link">Karen Lewis</a></th>
+        <td class="govuk-table__cell">karen.lewis@.gov.uk</td>
+        <td class="govuk-table__cell">Case Manager</td>
+        <td class="govuk-table__cell">Harrogate Job Centre</td>
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes govuk-checkboxes--small govuk-radios govuk-radios--conditional">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" iid="pauseexclude-1" name="pauseexclude5" type="radio" value="defer" data-aria-controls="conditional-citizenship-conditional-1">
+              <label class="govuk-label govuk-checkboxes__label" for="pauseexclude-1" style="margin-bottom: 20px;">
+              </label>
+            </div>
+          </div>
+        </td>
+      </tr>
+
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="reassign-bycase" class="govuk-link">Lee West</a></th>
+        <td class="govuk-table__cell">lee.west@.gov.uk</td>
+        <td class="govuk-table__cell">Case Manager</td>
+        <td class="govuk-table__cell">Harrogate Job Centre</td>
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes govuk-checkboxes--small govuk-radios govuk-radios--conditional">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" iid="pauseexclude-1" name="pauseexclude6" type="radio" value="defer" data-aria-controls="conditional-citizenship-conditional-1">
+              <label class="govuk-label govuk-checkboxes__label" for="pauseexclude-1" style="margin-bottom: 20px;">
+              </label>
+            </div>
+          </div>
+        </td>
+      </tr>
+
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="reassign-bycase" class="govuk-link">Sarah Jones</a></th>
+        <td class="govuk-table__cell">sarah.jones@.gov.uk</td>
+        <td class="govuk-table__cell">Work Coach</td>
+        <td class="govuk-table__cell">Harrogate Job Centre</td>
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes govuk-checkboxes--small govuk-radios govuk-radios--conditional">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" iid="pauseexclude-1" name="pauseexclude7" type="radio" value="defer" data-aria-controls="conditional-citizenship-conditional-1">
+              <label class="govuk-label govuk-checkboxes__label" for="pauseexclude-1" style="margin-bottom: 20px;">
+              </label>
+            </div>
+          </div>
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+
+  <p class="govuk-body govuk-!-margin-bottom-8"></p>
+  <div class="govuk-inset-text">
+    On removing an account the users cases will automatically be unassigned.
+  </div>
+
+                                                          <p class="govuk-body govuk-!-margin-bottom-8"></p>
+                                                        <div>
+                                                          <button type="submit" class="govuk-button">
+                                                            Remove account
+                                                          </button>
+                                                          </fieldset>
+                                                           </form>
+                                                        </div>
+                                                        </main>
+                                                      <p class="govuk-body govuk-!-margin-bottom-7"></p>
+
+                                                      </div>
+                                                      {% endblock %}
+                                                      {% endblock %}

@@ -1,0 +1,207 @@
+{% extends "sprint59/singles/layout2-allocator.html" %}
+
+{% block main %}
+{% block content %}
+<div class="govuk-width-container">
+    <!-- <a href="#" class="govuk-back-link">Back</a> -->
+
+<p class="govuk-body govuk-!-margin-bottom-6"></p>
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-l">Assign claimants</h2>
+      </div>
+  </div>
+
+  <span id="more-detail-hint" class="govuk-hint">
+    No more than 20 claimants can be assigned to each person
+  </span>
+
+<form action='success-allocator' method='post' class='form' autocomplete='off'>
+
+  <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+
+    <div class="govuk-radios  govuk-radios govuk-radios--conditional">
+    <div class="govuk-radios">
+    <hr class="assign">
+    <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland" data-aria-controls="conditional-citizenship-conditional-2">
+      <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+        Assign to a case manager
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        8 claimants to be assigned
+      </label>
+    </div>
+    <hr class="assign">
+    <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales" data-aria-controls="conditional-citizenship-conditional-3">
+      <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+        Assign to a work coach
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        8 claimants to be assigned
+      </label>
+    </div>
+    <hr class="assign">
+    </div>
+        </div>
+
+
+  <div class="govuk-form-group">
+
+    <fieldset class="govuk-fieldset" aria-describedby="how-contacted-conditional-hint">
+
+      <div data-module="radios" id="conditional-citizenship-conditional-2">
+
+
+        <p class="govuk-body govuk-!-margin-bottom-8"></p>
+        <div>
+          <div class="govuk-date-input" id="passport-issued">
+            <h4 class="govuk-heading-s">How many claimants would you like to assign?</h4>
+            <span id="more-detail-hint" class="govuk-hint">
+              Partners in joint claims will automatically be assigned together
+            </span>
+              <p class="govuk-body govuk-!-margin-bottom-5"></p>
+
+  <table class="govuk-table">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Case manager name</th>
+      <th scope="col" class="govuk-table__header">Current caseload</th>
+      <th scope="col" class="govuk-table__header">Number of claimants you want to assign</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Andrew Smith</td>
+      <td class="govuk-table__cell">12</td>
+      <td class="govuk-table__cell">
+        <div class="govuk-form-group">
+          <input class="govuk-input govuk-input--width-4" id="width-4" name="width-4" type="text">
+        </div>
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Beth Jones</td>
+      <td class="govuk-table__cell">12</td>
+      <td class="govuk-table__cell">
+        <div class="govuk-form-group">
+          <input class="govuk-input govuk-input--width-4" id="width-4" name="width-4" type="text">
+        </div>
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Caroline Wilson</td>
+      <td class="govuk-table__cell">4</td>
+      <td class="govuk-table__cell">
+        <div class="govuk-form-group">
+          <input class="govuk-input govuk-input--width-4" id="width-4" name="width-4" type="text">
+        </div>
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Karen Smithson</td>
+      <td class="govuk-table__cell">9</td>
+      <td class="govuk-table__cell">
+        <div class="govuk-form-group">
+          <input class="govuk-input govuk-input--width-4" id="width-4" name="width-4" type="text">
+        </div>
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Sara Philips</td>
+      <td class="govuk-table__cell">2</td>
+      <td class="govuk-table__cell">
+        <div class="govuk-form-group">
+          <input class="govuk-input govuk-input--width-4" id="width-4" name="width-4" type="text">
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+</div></div></div>
+
+
+<div class="govuk-form-group" style="margin-top:-30px;">
+  <fieldset class="govuk-fieldset" aria-describedby="how-contacted-conditional-hint">
+
+    <div data-module="radios" id="conditional-citizenship-conditional-3">
+
+      <div style="margin-top:50px;">
+        <div class="govuk-date-input" id="passport-issued">
+          <h4 class="govuk-heading-s">How many claimants would you like to assign?</h4>
+          <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Case manager name</th>
+              <th scope="col" class="govuk-table__header">Current caseload</th>
+              <th scope="col" class="govuk-table__header">Number of claimants you want to assign</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Andrew Smith</td>
+              <td class="govuk-table__cell">12</td>
+              <td class="govuk-table__cell">
+                <div class="govuk-form-group">
+                  <input class="govuk-input govuk-input--width-4" id="width-4" name="width-4" type="text">
+                </div>
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Beth Jones</td>
+              <td class="govuk-table__cell">12</td>
+              <td class="govuk-table__cell">
+                <div class="govuk-form-group">
+                  <input class="govuk-input govuk-input--width-4" id="width-4" name="width-4" type="text">
+                </div>
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Caroline Wilson</td>
+              <td class="govuk-table__cell">4</td>
+              <td class="govuk-table__cell">
+                <div class="govuk-form-group">
+                  <input class="govuk-input govuk-input--width-4" id="width-4" name="width-4" type="text">
+                </div>
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Karen Smithson</td>
+              <td class="govuk-table__cell">9</td>
+              <td class="govuk-table__cell">
+                <div class="govuk-form-group">
+                  <input class="govuk-input govuk-input--width-4" id="width-4" name="width-4" type="text">
+                </div>
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Sara Philips</td>
+              <td class="govuk-table__cell">2</td>
+              <td class="govuk-table__cell">
+                <div class="govuk-form-group">
+                  <input class="govuk-input govuk-input--width-4" id="width-4" name="width-4" type="text">
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+</div>
+</div></div></div>
+
+
+    </fieldset>
+  </div>
+
+  <div>
+  <button type="submit" class="govuk-button" download>Assign claimants</button>
+
+
+</div>
+</main>
+<p class="govuk-body govuk-!-margin-bottom-7"></p>
+
+                                                      </div>
+                                                      {% endblock %}
+                                                      {% endblock %}
