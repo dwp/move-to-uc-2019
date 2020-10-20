@@ -23,7 +23,7 @@
     "express-session": "^1.13.0",
     "express-writer": "0.0.4",
     "govuk-frontend": "^1.1.1",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.0",
     "gulp-clean": "^0.3.2",
     "gulp-mocha": "^4.3.1",
     "gulp-nodemon": "^2.1.0",
