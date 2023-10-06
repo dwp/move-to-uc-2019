@@ -1,0 +1,135 @@
+{% set claimStatus = 'MIGRATION NOTICE ISSUED' %}
+{% extends "layout3.html" %}
+
+{% block main %}
+{% block content %}
+<div class="govuk-width-container">
+    <a href="../claimantdash/selected.html" class="govuk-back-link">Back</a>
+
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+        <p class="govuk-body govuk-!-margin-bottom-2"></p>
+        <h2 class="govuk-heading-l">Why are you withdrawing the claimant from moving?</h2>
+      </div>
+  </div>
+
+<fieldset class="govuk-fieldset">
+<form action='success' method='post' class='form' autocomplete='off'>
+
+
+
+     <div class="govuk-radios govuk-radios">
+
+                 <div class="govuk-radios" data-module="radios">
+                    <div class="govuk-radios__item" class="govuk-radios govuk-radios--conditional" >
+                      <input class="govuk-radios__input" id="citizenship-conditional-12" name="reason" type="radio" value="Claimant already moved to Universal Credit" data-aria-controls="conditional-citizenship-conditional-2" {{ checked("reason", "Claimant already moved the Universal Credit") }}>
+                      <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
+                        Claimant already moved to Universal Credit
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="citizenship-conditional-12" name="reason" type="radio" value="Claimant has moved to Pension Credit" data-aria-controls="conditional-citizenship-conditional-2" {{ checked("reason", "Claimant has moved onto a new benefit") }}>
+                      <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
+                        Claimant has moved to Pension Credit
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="citizenship-conditional-12" name="reason" type="radio" value="Claimant has died" data-aria-controls="conditional-citizenship-conditional-2" {{ checked("reason", "Claimant has died") }}>
+                      <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
+                        Claimant has died
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="citizenship-conditional-20" name="reason" type="radio" value="No longer on legacy benefits" data-aria-controls="conditional-citizenship-conditional-20">
+                      <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
+                        No longer on legacy benefits
+                      </label>
+                    </div>
+
+<!-- 
+
+                  <p class="govuk-body govuk-!-margin-bottom-7"></p>
+                    <div  data-module="radios" class="govuk-radios__conditional--hidden" id="conditional-citizenship-conditional-20">
+                        <p class="govuk-body govuk-!-font-weight-bold">When did you issue the Cancellation Notice?</p>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="how-contacted-conditional-1" name="how-contacted" type="radio" value="email">
+                        <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-1">
+                          Today
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="how-contacted-conditional-2" name="how-contacted" type="radio" value="phone">
+                        <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-2">
+                          Another date
+                        </label> </div>
+                      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-2">
+                        <div class="govuk-date-input" id="passport-issued">
+                          <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                              <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                                Day
+                              </label>
+                              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="number" pattern="[0-9]*">
+                            </div>
+                          </div>
+                          <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                              <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                                Month
+                              </label>
+                              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="number" pattern="[0-9]*">
+                            </div>
+                          </div>
+                          <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                              <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                                Year
+                              </label>
+                              <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="number" pattern="[0-9]*">
+                            </div>
+                          </div>
+
+
+                      </div>
+                    </div>
+
+
+
+
+
+                                      <p class="govuk-body govuk-!-margin-bottom-5">
+                                      <h2 class="govuk-heading-s">How did you issue the Cancellation Notice?</h2>
+                                            <div class="govuk-radios">
+                                              <div class="govuk-radios__item">
+                                                <input class="govuk-radios__input" id="vehicle-type-car" name="vehicle-type" type="radio" value="Working" {{ checked("vehicle-type", "Working") }}>
+                                                <label class="govuk-label govuk-radios__label" for="vehicle-type-car">
+                                                  I gave it to the claimant
+                                                </label>
+                                              </div>
+                                              <div class="govuk-radios__item">
+                                                <input class="govuk-radios__input" id="vehicle-type-lorry" name="vehicle-type" type="radio" value="Not working" {{ checked("vehicle-type", "Not working") }}>
+                                                <label class="govuk-label govuk-radios__label" for="vehicle-type-lorry">
+                                                    I posted it
+                                                </label>
+                                              </div>
+
+                                            </div> -->
+
+
+
+                                                        <p class="govuk-body govuk-!-margin-bottom-7"></p>
+
+                                                        </fieldset>
+                                                          <p class="govuk-body govuk-!-margin-bottom-7"></p>
+                                                        <div>
+                                                          <button type="submit" class="govuk-button">
+                                                            Continue
+                                                          </button>
+                                                        </div>
+                                                        </main>
+                                                      <p class="govuk-body govuk-!-margin-bottom-7"></p>
+
+                                                      </div>
+                                                      {% endblock %}
+                                                      {% endblock %}

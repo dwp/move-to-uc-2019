@@ -3,6 +3,10 @@
 }
 
 .timeline-entry {
+  &, p, ul {
+    @extend %govuk-body-s;
+  }
+
   margin: 2em 0;
   padding-left: 1em;
   position: relative;
