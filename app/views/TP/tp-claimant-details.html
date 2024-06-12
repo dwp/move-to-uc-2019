@@ -1,0 +1,320 @@
+{% extends "layout.html" %}
+
+{% block main %}
+{% block content %}
+<div class="govuk-width-container">
+
+<a href="../claimantdash/claimmade.html" class="govuk-back-link">Back</a>
+
+
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <span class="govuk-caption-l">Step 1 of 6</span>
+        <h2 class="govuk-heading-l">Claimant details</h2>
+      </div>
+  </div>
+
+<fieldset class="govuk-fieldset">
+<form action='tp-children' method='post' class='form' autocomplete='off'>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="address-postcode">
+        <p class="govuk-body govuk-!-font-weight-bold">Postcode</p>
+      </label>
+      <input class="govuk-input govuk-input--width-10" id="address-postcode" name="postcode" type="text"  value="">
+    </div> 
+
+<p class="govuk-body"><p class="govuk-body govuk-!-font-weight-bold">Date of birth</p>
+     <div class="govuk-date-input" id="passport-issued">
+       <div class="govuk-date-input__item">
+         <div class="govuk-form-group">
+           <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+             Day
+           </label>
+           <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="number" pattern="[0-9]*" value="">
+         </div>
+       </div>
+       <div class="govuk-date-input__item">
+         <div class="govuk-form-group">
+           <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+             Month
+           </label>
+           <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="number" pattern="[0-9]*" value="">
+         </div>
+       </div>
+       <div class="govuk-date-input__item">
+         <div class="govuk-form-group">
+           <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+             Year
+           </label>
+           <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="number" pattern="[0-9]*" value="">
+         </div>
+       </div>
+
+<p class="govuk-body govuk-!-font-weight-bold">Which work capability group is the claimant in?</p>
+       <div class="govuk-radios govuk-radios">
+
+       <div class="govuk-radios" data-module="radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="citizenship-conditional-1" name="workrate" type="radio" value="LCW" data-aria-controls="conditional-citizenship-conditional-1" value="No" {{ checked("workrate", "LCW") }}>
+            <label class="govuk-label govuk-radios__label" for="citizenship-conditional-1">
+              LCW
+            </label>
+          </div>
+          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-citizenship-conditional-1">
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="contact-by-email">
+                ESA claim start date
+              </label>
+
+              <div>
+                <div class="govuk-date-input" id="passport-issued">
+     <div class="govuk-date-input__item">
+       <div class="govuk-form-group">
+         <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+           Day
+         </label>
+         <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="number" pattern="[0-9]*">
+       </div>
+     </div>
+     <div class="govuk-date-input__item">
+       <div class="govuk-form-group">
+         <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+           Month
+         </label>
+         <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="number" pattern="[0-9]*">
+       </div>
+     </div>
+     <div class="govuk-date-input__item">
+       <div class="govuk-form-group">
+         <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+           Year
+         </label>
+         <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="number" pattern="[0-9]*">
+       </div>
+     </div>
+   </div>
+                <input class="govuk-radios__input" id="changed-name-1" name="changed-name" type="radio" value="yes">
+
+              </div>
+            </div>
+          </div>
+
+          <div class="govuk-radios" data-module="radios">
+             <div class="govuk-radios__item">
+               <input class="govuk-radios__input" id="citizenship-conditional-2" name="workrate" type="radio" value="LCWWRA" data-aria-controls="conditional-citizenship-conditional-2" value="LCWWRA" {{ checked("workrate", "LCWWRA") }}>
+               <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
+                 LCWRA
+               </label>
+             </div>
+             <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-citizenship-conditional-2">
+               <div class="govuk-form-group">
+
+               </div>
+             </div>
+
+             <div class="govuk-radios" data-module="radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="citizenship-conditional-2" name="workrate" type="radio" value="N/A" data-aria-controls="conditional-citizenship-conditional-2" value="N/A" {{ checked("workrate", "N/A") }}>
+                  <label class="govuk-label govuk-radios__label" for="citizenship-conditional-2">
+                    Not applicable
+                  </label>
+                </div>
+
+<p class="govuk-body govuk-!-margin-bottom-7"></p>
+
+                <p class="govuk-body govuk-!-font-weight-bold">Current employment status</p>
+                       <div class="govuk-radios govuk-radios">
+
+                       <div class="govuk-radios" data-module="radios">
+
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="citizenship-conditional-10" name="workrate" type="radio" value="Working" data-aria-controls="conditional-citizenship-conditional-10" value="Working" {{ checked("workrate", "Working") }}>
+                            <label class="govuk-label govuk-radios__label" for="citizenship-conditional-10">
+                              Working
+                            </label>
+                          </div>
+                          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-citizenship-conditional-10">
+                            <div class="govuk-form-group">
+                              <label class="govuk-label" for="address-postcode">
+                                <p class="govuk-body govuk-!-font-weight-bold">Total earnings per month</p>
+                              </label>
+                              <input class="govuk-input govuk-input--width-10" id="address-postcode" name="earning-amount" type="text" value="£" {{ checked("vehicle-features", "Jobseeker Allowance") }}>
+                            </div>
+                              <div>
+
+                              </div>
+                            </div>
+                          </div>
+
+
+                             <div class="govuk-radios__item">
+                               <input class="govuk-radios__input" id="citizenship-conditional-15" name="workrate" type="radio" value="Not working" data-aria-controls="conditional-citizenship-conditional-15" value="Not working" {{ checked("workrate", "Not working") }}>
+                               <label class="govuk-label govuk-radios__label" for="citizenship-conditional-15">
+                                 Not working
+                               </label>
+                             </div>
+
+
+
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="citizenship-conditional-12" name="workrate" type="radio" value="Exempt" data-aria-controls="conditional-citizenship-conditional-12" value="Exempt" {{ checked("workrate", "Exempt") }}>
+                                  <label class="govuk-label govuk-radios__label" for="citizenship-conditional-12">
+                                    Exempt
+                                  </label>
+                                </div>
+
+
+
+<p class="govuk-body govuk-!-margin-bottom-7"></p>
+            <p class="govuk-body govuk-!-font-weight-bold">Is the claimant receiving any external awards?</p>
+            <span id="waste-hint" class="govuk-hint">
+              Select all that apply.
+            </span>
+            <div class="govuk-checkboxes" data-module="checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="citizenship-conditional-1" name="vehicle-features" type="checkbox" value="Employment and Support Allowance with Support Component" data-aria-controls="conditional-citizenship-conditional-1" {{ checked("vehicle-features", "Jobseeker Allowance") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-1">
+                  Employment and Support Allowance with Support Component
+                </label>
+              </div>
+              <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional-1">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="contact-by-email">
+                    How much are they receiving per month?
+                  </label>
+                  <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" value="£" name="income-1" spellcheck="false" {{ checked("vehicle-features", "Jobseeker Allowance") }}>
+                </div>
+
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="citizenship-conditional-0" name="vehicle-features" type="checkbox" value="Jobseeker Allowance" data-aria-controls="conditional-citizenship-conditional-0" {{ checked("vehicle-features", "Employment and Support Allowance") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-0">
+                  Jobseeker Allowance
+                </label>
+              </div>
+              <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional-0">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="contact-by-phone">
+                    How much are they receiving per month?
+                  </label>
+                  <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" value="£" type="tel" name="income-2" {{ checked("vehicle-features", "Employment and Support Allowance") }}>
+                </div>
+
+              </div>
+
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="citizenship-conditional-3" name="vehicle-features" type="checkbox" value="Bereavement Allowance" data-aria-controls="conditional-citizenship-conditional-3" {{ checked("vehicle-features", "Income Support") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-3">
+                  Bereavement Allowance
+                </label>
+              </div>
+              <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional-3">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="contact-by-text">
+                    How much are they receiving per month?
+                  </label>
+                  <input class="govuk-input govuk-!-width-one-third" id="contact-by-text" name="income-3" value="£" type="tel" {{ checked("vehicle-features", "Jobseeker Allowance") }}>
+                </div>
+              </div>
+
+
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="citizenship-conditional-4" name="vehicle-features" type="checkbox" value="Maternity Allowance" data-aria-controls="conditional-citizenship-conditional-4" {{ checked("vehicle-features", "Housing Benefit") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-4">
+                  Maternity Allowance
+                </label>
+              </div>
+              <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional-4">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="contact-by-text">
+                    How much are they receiving per month?
+                  </label>
+                  <input class="govuk-input govuk-!-width-one-third" id="contact-by-text" name="income-5" value="£" type="tel" {{ checked("vehicle-features", "Jobseeker Allowance") }}>
+                </div>
+              </div>
+
+
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="citizenship-conditional-5" name="vehicle-features" type="checkbox" value="Widowed Mothers Allowance" data-aria-controls="conditional-citizenship-conditional-5" {{ checked("vehicle-features", "Working Tax Credit") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-5">
+                Widowed Mothers Allowance
+                </label>
+              </div>
+              <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional-5">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="contact-by-text">
+                    How much are they receiving per month?
+                  </label>
+                  <input class="govuk-input govuk-!-width-one-third" id="contact-by-text" name="income-6" value="£" type="tel" {{ checked("vehicle-features", "Jobseeker Allowance") }}>
+                </div>
+              </div>
+
+
+
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="citizenship-conditional-6" name="vehicle-features" type="checkbox" value="  Widowed Parents Allowance" data-aria-controls="conditional-citizenship-conditional-6" {{ checked("vehicle-features", "Child Tax Credit") }}>
+                        <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-6">
+                        Widowed Parents Allowance
+                        </label>
+                      </div>
+                      <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional-6">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label" for="contact-by-text">
+                            How much are they receiving per month?
+                          </label>
+                          <input class="govuk-input govuk-!-width-one-third" id="contact-by-text" value="£" type="tel" {{ checked("vehicle-features", "Jobseeker Allowance") }}>
+                        </div>
+                      </div>
+
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="citizenship-conditional-7" name="vehicle-features" type="checkbox" value="Widowed Pension Allowance" data-aria-controls="conditional-citizenship-conditional-7" {{ checked("vehicle-features", "Child Tax Credit") }}>
+                        <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-7">
+                      Widowed Pension Allowance
+                        </label>
+                      </div>
+                      <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional-7">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label" for="contact-by-text">
+                            How much are they receiving per month?
+                          </label>
+                          <input class="govuk-input govuk-!-width-one-third" id="contact-by-text" value="£" type="tel" {{ checked("vehicle-features", "Jobseeker Allowance") }}>
+                        </div>
+                      </div>
+
+
+            <p class="govuk-body govuk-!-margin-bottom-7"></p>
+                   <p class="govuk-body govuk-!-font-weight-bold">Is this part of a joint claim?</p>
+                          <div class="govuk-radios govuk-radios">
+
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="changed-name-1" name="changed-name" type="radio" value="yes">
+                              <label class="govuk-label govuk-radios__label" for="changed-name-1">
+                                Yes
+                              </label>
+                            </div>
+
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="changed-name-1" name="changed-name" type="radio" value="yes">
+                              <label class="govuk-label govuk-radios__label" for="changed-name-1">
+                                No
+                              </label>
+                            </div>
+                          </div>
+
+                          <p class="govuk-body govuk-!-margin-bottom-7"></p>
+                          <button type="submit" class="govuk-button">
+                            Continue
+                          </button>
+
+                            </fieldset>
+                            <div>
+                            <a href="tp-task-list-claimant-details" class="govuk-link">Save and continue later</a>
+                            </div>
+                            </main>
+<p class="govuk-body govuk-!-margin-bottom-7"></p>
+
+                          </div>
+                          {% endblock %}
+                          {% endblock %}

@@ -32,21 +32,7 @@
 
 {% block header %}
   {# Set serviceName in config.js. #}
-  {{ govukHeader({
-    serviceName: serviceName,
-    serviceUrl: "/",
-    containerClasses: "govuk-width-container",
-    navigation: [
-    {
-      href: "/find",
-      text: "Find a claimant"
-    },
-    {
-      href: "/signout",
-      text: "Sign out"
-    }
-  ]
-  }) }}
+  {% include "nunjucks/partials/header.njk" %}
 {% endblock %}
 
 {% if useAutoStoreData %}

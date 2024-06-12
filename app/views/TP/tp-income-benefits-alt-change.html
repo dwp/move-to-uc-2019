@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+
+{% block main %}
+{% block content %}
+<div class="govuk-width-container">
+    <a href="index.html" class="govuk-back-link">Back</a>
+
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <span class="govuk-caption-l">Step 4 of 6</span>
+        <h2 class="govuk-heading-l">Income and other benefits</h2>
+      </div>
+  </div>
+
+
+<p class="govuk-body govuk-!-font-weight-bold">Check the following details are correct.</p>
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-quarter">
+    <p>Housing element</p>
+  </div>
+    <form action='tp-income-benefits-alt-changed' method='post' class='form' autocomplete='off'>
+  <div class="govuk-grid-column-one-quarter">
+    <div class="govuk-form-group">
+
+      <input class="govuk-input govuk-input--width-10" id="address-postcode" name="housing-amount" type="text" value="350">
+
+  </div>
+  </div>
+  <div class="govuk-grid-column-one-quarter">
+    <a href="tp-income-benefits-alt-changed" class="govuk-link">Save</a>
+  </div>
+  <div class="govuk-grid-column-one-quarter">
+    <p></p>
+  </div>
+</div>
+</form>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-quarter">
+    <p>Child care costs</p>
+  </div>
+  <div class="govuk-grid-column-one-quarter">
+    <p>£230</p>
+  </div>
+  <div class="govuk-grid-column-one-quarter">
+    <a href="" class="govuk-link">Change amount</a>
+  </div>
+  <div class="govuk-grid-column-one-quarter">
+    <p></p>
+  </div>
+</div>
+</form>
+
+
+                    <p class="govuk-body govuk-!-margin-bottom-7"></p>
+  <form action='tp-deductions' method='post' class='form' autocomplete='off'>
+                          <button type="submit" class="govuk-button">
+                            Continue
+                          </button>
+</form>
+
+
+
+  <div>
+  <a href="tp-task-list-income" class="govuk-link">Save and continue later</a>
+  </div>
+  </main>
+
+</div>
+{% endblock %}
+
+{% endblock %}

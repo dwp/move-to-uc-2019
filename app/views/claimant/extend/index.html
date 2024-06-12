@@ -1,0 +1,83 @@
+{% extends "layout.html" %}
+
+{% block beforeContent %}
+  <a href="/results?find={{ data['find'] }}" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+  <form action='/claimant/extend/confirmation-page' method='post' class='form' autocomplete='off'>
+    <div class="govuk-grid-row">
+
+      <div class="govuk-grid-column-full">
+        <h1 class='govuk-heading-l'>
+          Extend deadline
+        </h1>
+        <div class="govuk-inset-text govuk-inset-text--wide">
+          The current deadline is {{ date  | date("add", claimant.day1, "days") | date("add", 1, "month") | date("D MMMM YYYY") }}
+        </div>
+      </div>
+
+      <div class="govuk-grid-column-two-thirds">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" role="group">
+
+            <legend class="govuk-fieldset__legend">
+              When do you want to extend to?
+            </legend>
+
+            <div class="govuk-date-input" id="extendDate">
+
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="extendDateDay">
+                    Day
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2 " id="extendDateDay" name="entendDateDay" type="number" pattern="[0-9]*">
+                </div>
+              </div>
+
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="extendDateMonth">
+                    Month
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2 " id="extendDateMonth" name="entendDateMonth" type="number" pattern="[0-9]*">
+                </div>
+              </div>
+
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="extendDateYear">
+                    Year
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-4 " id="extendDateYear" name="entendDateYear" type="number" pattern="[0-9]*">
+                </div>
+              </div>
+
+            </div>
+          </fieldset>
+        </div>
+
+        {{ govukTextarea({
+          classes: '',
+          name: 'extendReason',
+          id: 'extendReason',
+          rows: '6',
+          label: {
+            text: 'Why are you extending the deadline?'
+          },
+          hint: {
+            text: ''
+          }
+        }) }}
+
+        {{ govukButton({
+          text: "Submit",
+          classes: ""
+        }) }}
+
+      </div>
+    </div>
+  </form>
+{% endblock %}

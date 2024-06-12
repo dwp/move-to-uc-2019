@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block beforeContent %}
+  <a href="/results?find={{ data['find'] }}" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+  <form action='/claimant/cancel/confirmation-page' method='post' class='form' autocomplete='off'>
+    <div class="govuk-grid-row">
+
+      <div class="govuk-grid-column-full">
+        <h1 class='govuk-heading-l'>
+          Cancel move
+        </h1>
+      </div>
+
+      <div class="govuk-grid-column-two-thirds">
+
+        {{ govukTextarea({
+          classes: '',
+          name: 'cancelReason',
+          id: 'cancelReason',
+          rows: '6',
+          label: {
+            text: 'Why are you cancelling the move?'
+          },
+          hint: {
+            text: ''
+          }
+        }) }}
+
+        {{ govukButton({
+          text: "Submit",
+          classes: ""
+        }) }}
+
+      </div>
+    </div>
+  </form>
+{% endblock %}

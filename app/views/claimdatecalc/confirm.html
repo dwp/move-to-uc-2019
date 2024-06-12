@@ -1,0 +1,49 @@
+{% set claimStatus = 'READINESS CONVERSATION 1: READY' %}
+{% extends "layout3.html" %}
+
+{% block main %}
+{% block content %}
+
+
+<div class="govuk-width-container">
+  <a href="../claimantdash/readytomove.html" class="govuk-back-link">Back</a>
+
+  <fieldset class="govuk-fieldset">
+  <form action='../migrationnotice2/index' method='post' class='form' autocomplete='off'>
+    <div class="govuk-form-group">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <p class="govuk-body govuk-!-margin-bottom-2"></p>
+      <h2 class="govuk-heading-l">The Migration Notice claim by date is <br>2 August 2019</h2>
+    </div>
+  </div>
+<h2 class="govuk-heading-s">You must include this date in the Migration Notice.</h2>
+      <div class="govuk-inset-text">
+<p>This date will not be recorded in the system until you have logged the Migration Notice has been issued.</p>
+      </div>
+
+
+                  <div>
+                    <button type="submit" class="govuk-button">Confirm the Notice has been issued</button>
+                  </div>
+                  <a href="../claimantdash/readytomove2.html" class="govuk-link">Confirm later and return to case</a>
+                    <p class="govuk-body govuk-!-margin-bottom-8"></p>
+
+                </form></fieldset>
+
+
+            </div>
+          </div>
+        </div>
+
+      </fieldset>
+    </div>
+
+
+
+
+
+</div>
+
+{% endblock %}
+{% endblock %}

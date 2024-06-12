@@ -1,0 +1,15 @@
+<div class="app-related-items">
+  <h2 class='govuk-heading-s'>
+    Account actions
+  </h2>
+  <ul class="govuk-list govuk-body-s">
+    {% if claimant.status == "Cancelled" %}
+      <li><a href="/resume" class="govuk-link">Resume move</a></li>
+    {% else %}
+      <li><a href="/contact" class="govuk-link">Log a query</a></li>
+      <li><a href="/reissue" class="govuk-link">Reissue latest letter</a></li>
+      <li><a href="/extend" class="govuk-link">Extend deadline</a></li>
+      <li><a href="/cancel" class="govuk-link">Cancel move</a></li>
+    {% endif %}
+  </ul>
+</div>

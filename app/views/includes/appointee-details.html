@@ -1,0 +1,72 @@
+<h2 class='govuk-heading-m'>
+  Appointee details
+</h2>
+
+<dl class='app-check-your-answers app-check-your-answers--short govuk-!-margin-bottom-6'>
+  <div class='app-check-your-answers__contents'>
+    <dt class='app-check-your-answers__question'>
+      Appointee type
+    </dt>
+    <dd class='app-check-your-answers__answer'>
+      {{ claimant.appointeeType }}
+    </dd>
+  </div>
+
+  <div class='app-check-your-answers__contents'>
+    <dt class='app-check-your-answers__question'>
+      Name
+    </dt>
+    <dd class='app-check-your-answers__answer'>
+      {{ claimant.appointeeName }}
+    </dd>
+  </div>
+
+  <div class='app-check-your-answers__contents'>
+    <dt class='app-check-your-answers__question'>
+      National Insurance number
+    </dt>
+    <dd class='app-check-your-answers__answer'>
+      {{ claimant.appointeeNino | nino }}
+    </dd>
+  </div>
+
+  <div class='app-check-your-answers__contents'>
+    <dt class='app-check-your-answers__question'>
+      Address
+    </dt>
+    <dd class='app-check-your-answers__answer'>
+      {{ claimant.address.street }},
+      {% if claimant.address.street2 %}
+        {{ claimant.address.street2 }},
+      {% endif %}
+      {{ claimant.address.city }},
+      {{ claimant.address.postcode }}
+    </dd>
+  </div>
+
+  <div class='app-check-your-answers__contents'>
+    <dt class='app-check-your-answers__question'>
+      Telephone
+    </dt>
+    <dd class='app-check-your-answers__answer'>
+      {% if claimant.landline %}
+        {{ claimant.landline }}
+      {% else %}
+        <span class="secondary-text">Not on file</span>
+      {% endif %}
+    </dd>
+  </div>
+
+  <div class='app-check-your-answers__contents'>
+    <dt class='app-check-your-answers__question'>
+      Mobile
+    </dt>
+    <dd class='app-check-your-answers__answer'>
+      {% if claimant.mobile %}
+        {{ claimant.mobile | mobile }}
+      {% else %}
+        <span class="secondary-text">Not on file</span>
+      {% endif %}
+    </dd>
+  </div>
+</dl>
